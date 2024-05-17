@@ -1,10 +1,25 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0100-0199/0173.Binary%20Search%20Tree%20Iterator/README_EN.md
+tags:
+    - Stack
+    - Tree
+    - Design
+    - Binary Search Tree
+    - Binary Tree
+    - Iterator
+---
+
+<!-- problem:start -->
+
 # [173. Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator)
 
 [中文文档](/solution/0100-0199/0173.Binary%20Search%20Tree%20Iterator/README.md)
 
-<!-- tags:Stack,Tree,Design,Binary Search Tree,Binary Tree,Iterator -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Implement the <code>BSTIterator</code> class that represents an iterator over the <strong><a href="https://en.wikipedia.org/wiki/Tree_traversal#In-order_(LNR)" target="_blank">in-order traversal</a></strong> of a binary search tree (BST):</p>
 
@@ -58,11 +73,17 @@ bSTIterator.hasNext(); // return False
 	<li>Could you implement <code>next()</code> and <code>hasNext()</code> to run in average <code>O(1)</code> time and use&nbsp;<code>O(h)</code> memory, where <code>h</code> is the height of the tree?</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for a binary tree node.
@@ -97,6 +118,8 @@ class BSTIterator:
 # param_1 = obj.next()
 # param_2 = obj.hasNext()
 ```
+
+#### Java
 
 ```java
 /**
@@ -147,6 +170,8 @@ class BSTIterator {
  */
 ```
 
+#### C++
+
 ```cpp
 /**
  * Definition for a binary tree node.
@@ -193,6 +218,8 @@ public:
  */
 ```
 
+#### Go
+
 ```go
 /**
  * Definition for a binary tree node.
@@ -236,6 +263,8 @@ func (this *BSTIterator) HasNext() bool {
  * param_2 := obj.HasNext();
  */
 ```
+
+#### TypeScript
 
 ```ts
 /**
@@ -287,6 +316,8 @@ class BSTIterator {
  * var param_2 = obj.hasNext()
  */
 ```
+
+#### Rust
 
 ```rust
 // Definition for a binary tree node.
@@ -353,6 +384,8 @@ impl BSTIterator {
  */
 ```
 
+#### JavaScript
+
 ```js
 /**
  * Definition for a binary tree node.
@@ -401,9 +434,15 @@ BSTIterator.prototype.hasNext = function () {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for a binary tree node.
@@ -436,6 +475,8 @@ class BSTIterator:
 # param_1 = obj.next()
 # param_2 = obj.hasNext()
 ```
+
+#### Java
 
 ```java
 /**
@@ -483,6 +524,8 @@ class BSTIterator {
  */
 ```
 
+#### C++
+
 ```cpp
 /**
  * Definition for a binary tree node.
@@ -526,6 +569,8 @@ public:
  * bool param_2 = obj->hasNext();
  */
 ```
+
+#### TypeScript
 
 ```ts
 /**
@@ -581,6 +626,8 @@ class BSTIterator {
  * var param_2 = obj.hasNext()
  */
 ```
+
+#### Rust
 
 ```rust
 // Definition for a binary tree node.
@@ -651,4 +698,6 @@ impl BSTIterator {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

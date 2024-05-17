@@ -1,12 +1,23 @@
+---
+comments: true
+difficulty: 困难
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0000-0099/0037.Sudoku%20Solver/README.md
+tags:
+    - 数组
+    - 哈希表
+    - 回溯
+    - 矩阵
+---
+
+<!-- problem:start -->
+
 # [37. 解数独](https://leetcode.cn/problems/sudoku-solver)
 
 [English Version](/solution/0000-0099/0037.Sudoku%20Solver/README_EN.md)
 
-<!-- tags:数组,哈希表,回溯,矩阵 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>编写一个程序，通过填充空格来解决数独问题。</p>
 
@@ -49,7 +60,11 @@
 </div>
 </div>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：回溯
 
@@ -60,6 +75,8 @@
 时间复杂度 $O(9^{81})$，空间复杂度 $O(9^2)$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -93,6 +110,8 @@ class Solution:
                     row[i][v] = col[j][v] = block[i // 3][j // 3][v] = True
         dfs(0)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -139,6 +158,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 using pii = pair<int, int>;
 
@@ -183,6 +204,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func solveSudoku(board [][]byte) {
 	var row, col [9][9]bool
@@ -221,6 +244,8 @@ func solveSudoku(board [][]byte) {
 	dfs(0)
 }
 ```
+
+#### C#
 
 ```cs
 public class Solution {
@@ -356,6 +381,8 @@ public class Solution {
 }
 ```
 
+#### PHP
+
 ```php
 class Solution {
     /**
@@ -436,4 +463,6 @@ function isValid($board, $row, $col, $num) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

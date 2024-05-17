@@ -1,12 +1,25 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/3100-3199/3132.Find%20the%20Integer%20Added%20to%20Array%20II/README.md
+rating: 1620
+source: 第 395 场周赛 Q2
+tags:
+    - 数组
+    - 双指针
+    - 枚举
+    - 排序
+---
+
+<!-- problem:start -->
+
 # [3132. 找出与数组相加的整数 II](https://leetcode.cn/problems/find-the-integer-added-to-array-ii)
 
 [English Version](/solution/3100-3199/3132.Find%20the%20Integer%20Added%20to%20Array%20II/README_EN.md)
 
-<!-- tags: -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你两个整数数组 <code>nums1</code> 和 <code>nums2</code>。</p>
 
@@ -65,7 +78,11 @@
 	<li>测试用例以这样的方式生成：存在一个整数 <code>x</code>，<code>nums1</code> 中的每个元素都与 <code>x</code> 相加后，再移除两个元素，<code>nums1</code> 可以与 <code>nums2</code> 相等。</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：排序 + 枚举 + 双指针
 
@@ -74,6 +91,8 @@
 时间复杂度 $O(n \times \log n)$，空间复杂度 $O(\log n)$。其中 $n$ 为数组的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -96,6 +115,8 @@ class Solution:
             if f(x)
         )
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -127,6 +148,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -157,6 +180,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minimumAddedInteger(nums1 []int, nums2 []int) int {
 	sort.Ints(nums1)
@@ -183,6 +208,8 @@ func minimumAddedInteger(nums1 []int, nums2 []int) int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function minimumAddedInteger(nums1: number[], nums2: number[]): number {
@@ -213,4 +240,6 @@ function minimumAddedInteger(nums1: number[], nums2: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

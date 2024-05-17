@@ -1,12 +1,26 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/1200-1299/1245.Tree%20Diameter/README.md
+rating: 1792
+source: 第 12 场双周赛 Q3
+tags:
+    - 树
+    - 深度优先搜索
+    - 广度优先搜索
+    - 图
+    - 拓扑排序
+---
+
+<!-- problem:start -->
+
 # [1245. 树的直径 🔒](https://leetcode.cn/problems/tree-diameter)
 
 [English Version](/solution/1200-1299/1245.Tree%20Diameter/README_EN.md)
 
-<!-- tags:树,深度优先搜索,广度优先搜索,图,拓扑排序 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你这棵「无向树」，请你测算并返回它的「直径」：这棵树上最长简单路径的 <strong>边数</strong>。</p>
 
@@ -47,7 +61,11 @@
 	<li><code>edges</code>&nbsp;会形成一棵无向树</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：两次 DFS
 
@@ -72,6 +90,8 @@
 -   [1522. N 叉树的直径 🔒](https://github.com/doocs/leetcode/blob/main/solution/1500-1599/1522.Diameter%20of%20N-Ary%20Tree/README.md)
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -99,6 +119,8 @@ class Solution:
         dfs(next, 0)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -139,6 +161,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -173,6 +197,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func treeDiameter(edges [][]int) int {
@@ -210,4 +236,6 @@ func treeDiameter(edges [][]int) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

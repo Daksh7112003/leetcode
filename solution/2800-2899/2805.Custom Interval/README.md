@@ -1,12 +1,18 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/2800-2899/2805.Custom%20Interval/README.md
+---
+
+<!-- problem:start -->
+
 # [2805. 自定义间隔 🔒](https://leetcode.cn/problems/custom-interval)
 
 [English Version](/solution/2800-2899/2805.Custom%20Interval/README_EN.md)
 
-<!-- tags: -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p><strong>函数</strong>&nbsp;<code>customInterval</code></p>
 
@@ -73,11 +79,17 @@ setTimeout(() =&gt; {
 	<li><code>20 &lt;= stopTime &lt;= 1000</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一
 
 <!-- tabs:start -->
+
+#### TypeScript
 
 ```ts
 const intervalMap = new Map<number, NodeJS.Timeout>();
@@ -110,4 +122,6 @@ function customClearInterval(id: number) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

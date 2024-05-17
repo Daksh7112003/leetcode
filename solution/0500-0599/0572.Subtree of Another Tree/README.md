@@ -1,12 +1,24 @@
+---
+comments: true
+difficulty: 简单
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0500-0599/0572.Subtree%20of%20Another%20Tree/README.md
+tags:
+    - 树
+    - 深度优先搜索
+    - 二叉树
+    - 字符串匹配
+    - 哈希函数
+---
+
+<!-- problem:start -->
+
 # [572. 另一棵树的子树](https://leetcode.cn/problems/subtree-of-another-tree)
 
 [English Version](/solution/0500-0599/0572.Subtree%20of%20Another%20Tree/README_EN.md)
 
-<!-- tags:树,深度优先搜索,二叉树,字符串匹配,哈希函数 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <div class="original__bRMd">
 <div>
@@ -43,11 +55,17 @@
 </div>
 </div>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for a binary tree node.
@@ -77,6 +95,8 @@ class Solution:
             or self.isSubtree(root.right, subRoot)
         )
 ```
+
+#### Java
 
 ```java
 /**
@@ -116,6 +136,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 /**
  * Definition for a binary tree node.
@@ -143,6 +165,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 /**
  * Definition for a binary tree node.
@@ -169,6 +193,8 @@ func isSubtree(root *TreeNode, subRoot *TreeNode) bool {
 	return dfs(root, subRoot) || isSubtree(root.Left, subRoot) || isSubtree(root.Right, subRoot)
 }
 ```
+
+#### TypeScript
 
 ```ts
 /**
@@ -202,6 +228,8 @@ function isSubtree(root: TreeNode | null, subRoot: TreeNode | null): boolean {
     return dfs(root, subRoot) || isSubtree(root.left, subRoot) || isSubtree(root.right, subRoot);
 }
 ```
+
+#### Rust
 
 ```rust
 // Definition for a binary tree node.
@@ -260,6 +288,8 @@ impl Solution {
 }
 ```
 
+#### JavaScript
+
 ```js
 /**
  * Definition for a binary tree node.
@@ -293,4 +323,6 @@ var isSubtree = function (root, subRoot) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

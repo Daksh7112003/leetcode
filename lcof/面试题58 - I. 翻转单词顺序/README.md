@@ -1,6 +1,16 @@
+---
+comments: true
+difficulty: 简单
+edit_url: https://github.com/doocs/leetcode/edit/main/lcof/%E9%9D%A2%E8%AF%95%E9%A2%9858%20-%20I.%20%E7%BF%BB%E8%BD%AC%E5%8D%95%E8%AF%8D%E9%A1%BA%E5%BA%8F/README.md
+---
+
+<!-- problem:start -->
+
 # [面试题 58 - I. 翻转单词顺序](https://leetcode.cn/problems/fan-zhuan-dan-ci-shun-xu-lcof/)
 
 ## 题目描述
+
+<!-- description:start -->
 
 <p>输入一个英文句子，翻转句子中单词的顺序，但单词内字符的顺序不变。为简单起见，标点符号和普通字母一样处理。例如输入字符串&quot;I am a student. &quot;，则输出&quot;student. a am I&quot;。</p>
 
@@ -40,7 +50,11 @@
 
 <p><strong>注意：</strong>此题对比原题有改动</p>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：字符串分割 + 反转拼接
 
@@ -50,11 +64,15 @@
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def reverseWords(self, s: str) -> str:
         return " ".join(s.strip().split()[::-1])
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -70,6 +88,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -94,6 +114,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func reverseWords(s string) string {
 	s = strings.Trim(s, " ")
@@ -115,11 +137,15 @@ func reverseWords(s string) string {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function reverseWords(s: string): string {
     return s.trim().split(/\s+/).reverse().join(' ');
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -135,6 +161,8 @@ impl Solution {
 }
 ```
 
+#### JavaScript
+
 ```js
 /**
  * @param {string} s
@@ -148,6 +176,8 @@ var reverseWords = function (s) {
         .join(' ');
 };
 ```
+
+#### C#
 
 ```cs
 public class Solution {
@@ -173,9 +203,15 @@ public class Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start-->
+
 ### 方法二
 
 <!-- tabs:start -->
+
+#### TypeScript
 
 ```ts
 function reverseWords(s: string): string {
@@ -197,6 +233,8 @@ function reverseWords(s: string): string {
 }
 ```
 
+#### Rust
+
 ```rust
 impl Solution {
     pub fn reverse_words(s: String) -> String {
@@ -211,9 +249,15 @@ impl Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start-->
+
 ### 方法三
 
 <!-- tabs:start -->
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -225,9 +269,15 @@ impl Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start-->
+
 ### 方法四
 
 <!-- tabs:start -->
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -266,4 +316,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

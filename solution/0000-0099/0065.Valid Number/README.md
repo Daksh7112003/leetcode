@@ -1,12 +1,20 @@
+---
+comments: true
+difficulty: 困难
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0000-0099/0065.Valid%20Number/README.md
+tags:
+    - 字符串
+---
+
+<!-- problem:start -->
+
 # [65. 有效数字](https://leetcode.cn/problems/valid-number)
 
 [English Version](/solution/0000-0099/0065.Valid%20Number/README_EN.md)
 
-<!-- tags:字符串 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p><strong>有效数字</strong>（按顺序）可以分成以下几个部分：</p>
 
@@ -73,7 +81,11 @@
 	<li><code>s</code> 仅含英文字母（大写和小写），数字（<code>0-9</code>），加号 <code>'+'</code> ，减号 <code>'-'</code> ，或者点 <code>'.'</code> 。</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：分情况讨论
 
@@ -94,6 +106,8 @@
 时间复杂度 $O(n)$，其中 $n$ 为字符串长度。空间复杂度 $O(1)$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -126,6 +140,8 @@ class Solution:
             j += 1
         return True
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -168,6 +184,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -195,6 +213,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func isNumber(s string) bool {
@@ -233,6 +253,8 @@ func isNumber(s string) bool {
 	return true
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -294,6 +316,8 @@ impl Solution {
 }
 ```
 
+#### C#
+
 ```cs
 using System.Text.RegularExpressions;
 
@@ -308,4 +332,6 @@ public class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

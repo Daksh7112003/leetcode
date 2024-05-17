@@ -1,10 +1,22 @@
+---
+comments: true
+difficulty: Easy
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/2100-2199/2129.Capitalize%20the%20Title/README_EN.md
+rating: 1274
+source: Biweekly Contest 69 Q1
+tags:
+    - String
+---
+
+<!-- problem:start -->
+
 # [2129. Capitalize the Title](https://leetcode.com/problems/capitalize-the-title)
 
 [中文文档](/solution/2100-2199/2129.Capitalize%20the%20Title/README.md)
 
-<!-- tags:String -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a string <code>title</code> consisting of one or more words separated by a single space, where each word consists of English letters. <strong>Capitalize</strong> the string by changing the capitalization of each word such that:</p>
 
@@ -54,7 +66,11 @@ The remaining words have a length of at least 3, so the first letter of each rem
 	<li>Each word consists of uppercase and lowercase English letters and is <strong>non-empty</strong>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Simulation
 
@@ -64,12 +80,16 @@ The time complexity is $O(n)$, and the space complexity is $O(n)$, where $n$ is 
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def capitalizeTitle(self, title: str) -> str:
         words = [w.lower() if len(w) < 3 else w.capitalize() for w in title.split()]
         return " ".join(words)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -86,6 +106,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -107,6 +129,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func capitalizeTitle(title string) string {
 	title = strings.ToLower(title)
@@ -120,6 +144,8 @@ func capitalizeTitle(title string) string {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function capitalizeTitle(title: string): string {
     return title
@@ -130,6 +156,8 @@ function capitalizeTitle(title: string): string {
         .join(' ');
 }
 ```
+
+#### C#
 
 ```cs
 public class Solution {
@@ -149,4 +177,6 @@ public class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

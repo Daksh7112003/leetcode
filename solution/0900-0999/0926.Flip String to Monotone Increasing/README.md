@@ -1,12 +1,21 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0900-0999/0926.Flip%20String%20to%20Monotone%20Increasing/README.md
+tags:
+    - 字符串
+    - 动态规划
+---
+
+<!-- problem:start -->
+
 # [926. 将字符串翻转到单调递增](https://leetcode.cn/problems/flip-string-to-monotone-increasing)
 
 [English Version](/solution/0900-0999/0926.Flip%20String%20to%20Monotone%20Increasing/README_EN.md)
 
-<!-- tags:字符串,动态规划 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>如果一个二进制字符串，是以一些 <code>0</code>（可能没有 <code>0</code>）后面跟着一些 <code>1</code>（也可能没有 <code>1</code>）的形式组成的，那么该字符串是 <strong>单调递增 </strong>的。</p>
 
@@ -49,7 +58,11 @@
 	<li><code>s[i]</code> 为 <code>'0'</code> 或 <code>'1'</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：前缀和 + 枚举
 
@@ -63,6 +76,8 @@
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def minFlipsMonoIncr(self, s: str) -> int:
@@ -73,6 +88,8 @@ class Solution:
             ans = min(ans, i - cur + tot - cur)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -96,6 +113,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -111,6 +130,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minFlipsMonoIncr(s string) int {
 	tot := strings.Count(s, "0")
@@ -124,6 +145,8 @@ func minFlipsMonoIncr(s string) int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function minFlipsMonoIncr(s: string): number {
@@ -139,6 +162,8 @@ function minFlipsMonoIncr(s: string): number {
     return ans;
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -161,4 +186,6 @@ var minFlipsMonoIncr = function (s) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -1,10 +1,24 @@
+---
+comments: true
+difficulty: Hard
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0900-0999/0995.Minimum%20Number%20of%20K%20Consecutive%20Bit%20Flips/README_EN.md
+tags:
+    - Bit Manipulation
+    - Queue
+    - Array
+    - Prefix Sum
+    - Sliding Window
+---
+
+<!-- problem:start -->
+
 # [995. Minimum Number of K Consecutive Bit Flips](https://leetcode.com/problems/minimum-number-of-k-consecutive-bit-flips)
 
 [中文文档](/solution/0900-0999/0995.Minimum%20Number%20of%20K%20Consecutive%20Bit%20Flips/README.md)
 
-<!-- tags:Bit Manipulation,Queue,Array,Prefix Sum,Sliding Window -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a binary array <code>nums</code> and an integer <code>k</code>.</p>
 
@@ -50,7 +64,11 @@ Flip nums[5],nums[6],nums[7]: nums becomes [1,1,1,1,1,1,1,1]
 	<li><code>1 &lt;= k &lt;= nums.length</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Difference Array
 
@@ -65,6 +83,8 @@ In this way, when we have processed all the elements in the array, we can return
 The time complexity is $O(n)$, and the space complexity is $O(n)$. Here, $n$ is the length of the array $nums$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -83,6 +103,8 @@ class Solution:
                 ans += 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -106,6 +128,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -132,6 +156,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minKBitFlips(nums []int, k int) int {
 	n := len(nums)
@@ -153,6 +179,8 @@ func minKBitFlips(nums []int, k int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function minKBitFlips(nums: number[], k: number): number {
     const n = nums.length;
@@ -173,6 +201,8 @@ function minKBitFlips(nums: number[], k: number): number {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -200,4 +230,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

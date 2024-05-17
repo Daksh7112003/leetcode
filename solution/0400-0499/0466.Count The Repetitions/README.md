@@ -1,12 +1,21 @@
+---
+comments: true
+difficulty: 困难
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0400-0499/0466.Count%20The%20Repetitions/README.md
+tags:
+    - 字符串
+    - 动态规划
+---
+
+<!-- problem:start -->
+
 # [466. 统计重复个数](https://leetcode.cn/problems/count-the-repetitions)
 
 [English Version](/solution/0400-0499/0466.Count%20The%20Repetitions/README_EN.md)
 
-<!-- tags:字符串,动态规划 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>定义 <code>str = [s, n]</code> 表示 <code>str</code> 由 <code>n</code> 个字符串 <code>s</code> 连接构成。</p>
 
@@ -50,7 +59,11 @@
 	<li><code>1 <= n1, n2 <= 10<sup>6</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：预处理 + 递推
 
@@ -63,6 +76,8 @@
 时间复杂度 $O(m \times n + n1)$，空间复杂度 $O(n)$。其中 $m$ 和 $n$ 分别是 $s1$ 和 $s2$ 的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -87,6 +102,8 @@ class Solution:
             ans += cnt
         return ans // n2
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -115,6 +132,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -145,6 +164,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func getMaxRepetitions(s1 string, n1 int, s2 string, n2 int) (ans int) {
 	n := len(s2)
@@ -171,6 +192,8 @@ func getMaxRepetitions(s1 string, n1 int, s2 string, n2 int) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function getMaxRepetitions(s1: string, n1: number, s2: string, n2: number): number {
@@ -200,4 +223,6 @@ function getMaxRepetitions(s1: string, n1: number, s2: string, n2: number): numb
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -1,8 +1,16 @@
+---
+comments: true
+difficulty: 简单
+edit_url: https://github.com/doocs/leetcode/edit/main/lcof/%E9%9D%A2%E8%AF%95%E9%A2%9860.%20n%E4%B8%AA%E9%AA%B0%E5%AD%90%E7%9A%84%E7%82%B9%E6%95%B0/README.md
+---
+
+<!-- problem:start -->
+
 # [面试题 60. n 个骰子的点数](https://leetcode.cn/problems/nge-tou-zi-de-dian-shu-lcof/)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>把n个骰子扔在地上，所有骰子朝上一面的点数之和为s。输入n，打印出s的所有可能的值出现的概率。</p>
 
@@ -29,7 +37,11 @@
 
 <p><code>1 &lt;= n &lt;= 11</code></p>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：动态规划
 
@@ -49,6 +61,8 @@ $$
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def dicesProbability(self, n: int) -> List[float]:
@@ -63,6 +77,8 @@ class Solution:
         m = pow(6, n)
         return [f[n][i] / m for i in range(n, 6 * n + 1)]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -89,6 +105,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -118,6 +136,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func dicesProbability(n int) (ans []float64) {
 	f := make([][]int, n+1)
@@ -143,6 +163,8 @@ func dicesProbability(n int) (ans []float64) {
 	return
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -172,6 +194,8 @@ var dicesProbability = function (n) {
 };
 ```
 
+#### C#
+
 ```cs
 public class Solution {
     public double[] DicesProbability(int n) {
@@ -196,9 +220,15 @@ public class Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start-->
+
 ### 方法二
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -214,6 +244,8 @@ class Solution:
         m = pow(6, n)
         return [f[j] / m for j in range(n, 6 * n + 1)]
 ```
+
+#### Go
 
 ```go
 func dicesProbability(n int) []float64 {
@@ -237,4 +269,6 @@ func dicesProbability(n int) []float64 {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

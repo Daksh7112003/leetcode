@@ -1,8 +1,18 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/lcci/08.07.Permutation%20I/README_EN.md
+---
+
+<!-- problem:start -->
+
 # [08.07. Permutation I](https://leetcode.cn/problems/permutation-i-lcci)
 
 [中文文档](/lcci/08.07.Permutation%20I/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Write a method to compute all permutations of a string of unique characters.</p>
 
@@ -33,7 +43,11 @@
 	<li><code>1 &lt;= S.length &lt;= 9</code></li>
 </ol>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: DFS (Backtracking)
 
@@ -42,6 +56,8 @@ We design a function $dfs(i)$ to represent that the first $i$ positions have bee
 The time complexity is $O(n \times n!)$, where $n$ is the length of the string. There are $n!$ permutations in total, and each permutation takes $O(n)$ time to construct.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -66,6 +82,8 @@ class Solution:
         dfs(0)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -99,6 +117,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -129,6 +149,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func permutation(S string) (ans []string) {
 	t := []byte{}
@@ -154,6 +176,8 @@ func permutation(S string) (ans []string) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function permutation(S: string): string[] {
@@ -181,6 +205,8 @@ function permutation(S: string): string[] {
     return ans;
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -213,6 +239,43 @@ var permutation = function (S) {
 };
 ```
 
+#### Swift
+
+```swift
+class Solution {
+    private var s: [Character] = []
+    private var vis: [Bool] = Array(repeating: false, count: 128)
+    private var ans: [String] = []
+    private var t: String = ""
+
+    func permutation(_ S: String) -> [String] {
+        s = Array(S)
+        dfs(0)
+        return ans
+    }
+
+    private func dfs(_ i: Int) {
+        if i == s.count {
+            ans.append(t)
+            return
+        }
+        for c in s {
+            let index = Int(c.asciiValue!)
+            if vis[index] {
+                continue
+            }
+            vis[index] = true
+            t.append(c)
+            dfs(i + 1)
+            t.removeLast()
+            vis[index] = false
+        }
+    }
+}
+```
+
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

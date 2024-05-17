@@ -1,12 +1,21 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0500-0599/0516.Longest%20Palindromic%20Subsequence/README.md
+tags:
+    - 字符串
+    - 动态规划
+---
+
+<!-- problem:start -->
+
 # [516. 最长回文子序列](https://leetcode.cn/problems/longest-palindromic-subsequence)
 
 [English Version](/solution/0500-0599/0516.Longest%20Palindromic%20Subsequence/README_EN.md)
 
-<!-- tags:字符串,动态规划 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个字符串 <code>s</code> ，找出其中最长的回文子序列，并返回该序列的长度。</p>
 
@@ -39,7 +48,11 @@
 	<li><code>s</code> 仅由小写英文字母组成</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：动态规划
 
@@ -54,6 +67,8 @@
 时间复杂度 $O(n^2)$，空间复杂度 $O(n^2)$。其中 $n$ 为字符串 $s$ 的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -70,6 +85,8 @@ class Solution:
                     f[i][j] = max(f[i + 1][j], f[i][j - 1])
         return f[0][-1]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -92,6 +109,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -117,6 +136,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func longestPalindromeSubseq(s string) int {
 	n := len(s)
@@ -137,6 +158,8 @@ func longestPalindromeSubseq(s string) int {
 	return f[0][n-1]
 }
 ```
+
+#### TypeScript
 
 ```ts
 function longestPalindromeSubseq(s: string): number {
@@ -160,4 +183,6 @@ function longestPalindromeSubseq(s: string): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

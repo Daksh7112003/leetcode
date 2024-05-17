@@ -1,10 +1,22 @@
+---
+comments: true
+difficulty: Easy
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/1500-1599/1550.Three%20Consecutive%20Odds/README_EN.md
+rating: 1221
+source: Weekly Contest 202 Q1
+tags:
+    - Array
+---
+
+<!-- problem:start -->
+
 # [1550. Three Consecutive Odds](https://leetcode.com/problems/three-consecutive-odds)
 
 [中文文档](/solution/1500-1599/1550.Three%20Consecutive%20Odds/README.md)
 
-<!-- tags:Array -->
-
 ## Description
+
+<!-- description:start -->
 
 Given an integer array <code>arr</code>, return <code>true</code>&nbsp;if there are three consecutive odd numbers in the array. Otherwise, return&nbsp;<code>false</code>.
 
@@ -33,11 +45,17 @@ Given an integer array <code>arr</code>, return <code>true</code>&nbsp;if there 
 	<li><code>1 &lt;= arr[i] &lt;= 1000</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -52,6 +70,8 @@ class Solution:
                 return True
         return False
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -72,6 +92,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -89,6 +111,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func threeConsecutiveOdds(arr []int) bool {
 	cnt := 0
@@ -105,6 +129,8 @@ func threeConsecutiveOdds(arr []int) bool {
 	return false
 }
 ```
+
+#### TypeScript
 
 ```ts
 function threeConsecutiveOdds(arr: number[]): boolean {
@@ -125,9 +151,15 @@ function threeConsecutiveOdds(arr: number[]): boolean {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -140,4 +172,6 @@ class Solution:
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

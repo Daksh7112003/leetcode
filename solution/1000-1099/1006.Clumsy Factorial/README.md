@@ -1,12 +1,24 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/1000-1099/1006.Clumsy%20Factorial/README.md
+rating: 1407
+source: 第 127 场周赛 Q2
+tags:
+    - 栈
+    - 数学
+    - 模拟
+---
+
+<!-- problem:start -->
+
 # [1006. 笨阶乘](https://leetcode.cn/problems/clumsy-factorial)
 
 [English Version](/solution/1000-1099/1006.Clumsy%20Factorial/README_EN.md)
 
-<!-- tags:栈,数学,模拟 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>通常，正整数 <code>n</code> 的阶乘是所有小于或等于 <code>n</code> 的正整数的乘积。例如，<code>factorial(10) = 10 * 9 * 8 * 7 * 6 * 5 * 4 * 3 * 2 * 1</code>。</p>
 
@@ -43,11 +55,17 @@
 	<li><code>-2^31 &lt;= answer &lt;= 2^31 - 1</code>&nbsp; （答案保证符合 32 位整数。）</li>
 </ol>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -66,6 +84,8 @@ class Solution:
             op = (op + 1) % 4
         return sum(s)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -96,4 +116,6 @@ class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -1,12 +1,24 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/2600-2699/2653.Sliding%20Subarray%20Beauty/README.md
+rating: 1785
+source: 第 342 场周赛 Q3
+tags:
+    - 数组
+    - 哈希表
+    - 滑动窗口
+---
+
+<!-- problem:start -->
+
 # [2653. 滑动子数组的美丽值](https://leetcode.cn/problems/sliding-subarray-beauty)
 
 [English Version](/solution/2600-2699/2653.Sliding%20Subarray%20Beauty/README_EN.md)
 
-<!-- tags:数组,哈希表,滑动窗口 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个长度为 <code>n</code>&nbsp;的整数数组&nbsp;<code>nums</code>&nbsp;，请你求出每个长度为&nbsp;<code>k</code>&nbsp;的子数组的 <b>美丽值</b>&nbsp;。</p>
 
@@ -64,7 +76,11 @@
 	<li><code>-50&nbsp;&lt;= nums[i] &lt;= 50&nbsp;</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：滑动窗口
 
@@ -75,6 +91,8 @@
 时间复杂度 $O(n \times 50)$，空间复杂度 $O(100)$。其中 $n$ 为数组 $nums$ 的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -98,6 +116,8 @@ class Solution:
         return ans
 ```
 
+#### Python3
+
 ```python
 from sortedcontainers import SortedList
 
@@ -112,6 +132,8 @@ class Solution:
             ans.append(sl[x - 1] if sl[x - 1] < 0 else 0)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -144,6 +166,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -175,6 +199,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func getSubarrayBeauty(nums []int, k int, x int) []int {
 	n := len(nums)
@@ -202,6 +228,8 @@ func getSubarrayBeauty(nums []int, k int, x int) []int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function getSubarrayBeauty(nums: number[], k: number, x: number): number[] {
@@ -233,6 +261,10 @@ function getSubarrayBeauty(nums: number[], k: number, x: number): number[] {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二：双优先队列（大小根堆） + 延迟删除
 
 我们可以使用两个优先队列（大小根堆）维护当前窗口中的元素，其中一个优先队列存储当前窗口中较小的 $x$ 个元素，另一个优先队列存储当前窗口中较大的 $k - x$ 个元素。我们还需要一个延迟删除字典 `delayed`，用于记录当前窗口中的元素是否需要删除。
@@ -262,6 +294,8 @@ function getSubarrayBeauty(nums: number[], k: number, x: number): number[] {
 -   [480. 滑动窗口中位数](https://github.com/doocs/leetcode/blob/main/solution/0400-0499/0480.Sliding%20Window%20Median/README.md)
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class MedianFinder:
@@ -333,6 +367,8 @@ class Solution:
             ans.append(finder.find())
         return ans
 ```
+
+#### Java
 
 ```java
 class MedianFinder {
@@ -426,6 +462,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class MedianFinder {
@@ -525,6 +563,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 type MedianFinder struct {
@@ -635,4 +675,6 @@ func getSubarrayBeauty(nums []int, k int, x int) []int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

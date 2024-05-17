@@ -1,10 +1,21 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/3000-3099/3094.Guess%20the%20Number%20Using%20Bitwise%20Questions%20II/README_EN.md
+tags:
+    - Bit Manipulation
+    - Interactive
+---
+
+<!-- problem:start -->
+
 # [3094. Guess the Number Using Bitwise Questions II 🔒](https://leetcode.com/problems/guess-the-number-using-bitwise-questions-ii)
 
 [中文文档](/solution/3000-3099/3094.Guess%20the%20Number%20Using%20Bitwise%20Questions%20II/README.md)
 
-<!-- tags:Bit Manipulation,Interactive -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>There is a number <code>n</code> between <code>0</code> and <code>2<sup>30</sup> - 1</code> (both inclusive) that you have to find.</p>
 
@@ -52,7 +63,11 @@
 	<li>If you ask for some <code>num</code> out of the given range, the output wouldn&#39;t be reliable.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Bit Manipulation
 
@@ -66,6 +81,8 @@ Therefore, for each bit $i$, we can call `commonBits(1 << i)` twice, denoted as 
 The time complexity is $O(\log n)$, and the space complexity is $O(1)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition of commonBits API.
@@ -82,6 +99,8 @@ class Solution:
                 n |= 1 << i
         return n
 ```
+
+#### Java
 
 ```java
 /**
@@ -103,6 +122,8 @@ public class Solution extends Problem {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 /**
@@ -126,6 +147,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 /**
  * Definition of commonBits API.
@@ -146,4 +169,6 @@ func findNumber() (n int) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

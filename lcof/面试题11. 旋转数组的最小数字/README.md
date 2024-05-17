@@ -1,6 +1,16 @@
+---
+comments: true
+difficulty: 简单
+edit_url: https://github.com/doocs/leetcode/edit/main/lcof/%E9%9D%A2%E8%AF%95%E9%A2%9811.%20%E6%97%8B%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%B0%8F%E6%95%B0%E5%AD%97/README.md
+---
+
+<!-- problem:start -->
+
 # [面试题 11. 旋转数组的最小数字](https://leetcode.cn/problems/xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof/)
 
 ## 题目描述
+
+<!-- description:start -->
 
 <p>把一个数组最开始的若干个元素搬到数组的末尾，我们称之为数组的旋转。</p>
 
@@ -22,7 +32,11 @@
 
 <p>注意：本题与主站 154 题相同：<a href="https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array-ii/">https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array-ii/</a></p>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：二分查找
 
@@ -42,6 +56,8 @@
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def minArray(self, numbers: List[int]) -> int:
@@ -56,6 +72,8 @@ class Solution:
                 r -= 1
         return numbers[l]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -75,6 +93,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -96,6 +116,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minArray(numbers []int) int {
 	l, r := 0, len(numbers)-1
@@ -112,6 +134,8 @@ func minArray(numbers []int) int {
 	return numbers[l]
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -137,6 +161,8 @@ impl Solution {
 }
 ```
 
+#### JavaScript
+
 ```js
 /**
  * @param {number[]} numbers
@@ -159,6 +185,8 @@ var minArray = function (numbers) {
 };
 ```
 
+#### C#
+
 ```cs
 public class Solution {
     public int MinArray(int[] numbers) {
@@ -180,9 +208,15 @@ public class Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start-->
+
 ### 方法二
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -200,6 +234,8 @@ class Solution:
                 l += 1
         return numbers[l]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -222,6 +258,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -246,6 +284,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minArray(numbers []int) int {
 	l, r := 0, len(numbers)-1
@@ -265,6 +305,8 @@ func minArray(numbers []int) int {
 	return numbers[l]
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -293,6 +335,8 @@ impl Solution {
 }
 ```
 
+#### JavaScript
+
 ```js
 /**
  * @param {number[]} numbers
@@ -318,6 +362,8 @@ var minArray = function (numbers) {
 };
 ```
 
+#### C#
+
 ```cs
 public class Solution {
     public int MinArray(int[] numbers) {
@@ -342,4 +388,6 @@ public class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

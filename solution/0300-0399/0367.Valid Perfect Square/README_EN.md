@@ -1,10 +1,21 @@
+---
+comments: true
+difficulty: Easy
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0300-0399/0367.Valid%20Perfect%20Square/README_EN.md
+tags:
+    - Math
+    - Binary Search
+---
+
+<!-- problem:start -->
+
 # [367. Valid Perfect Square](https://leetcode.com/problems/valid-perfect-square)
 
 [中文文档](/solution/0300-0399/0367.Valid%20Perfect%20Square/README.md)
 
-<!-- tags:Math,Binary Search -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Given a positive integer num, return <code>true</code> <em>if</em> <code>num</code> <em>is a perfect square or</em> <code>false</code> <em>otherwise</em>.</p>
 
@@ -36,11 +47,17 @@
 	<li><code>1 &lt;= num &lt;= 2<sup>31</sup> - 1</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Binary search
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -54,6 +71,8 @@ class Solution:
                 left = mid + 1
         return left * left == num
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -72,6 +91,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -89,6 +110,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func isPerfectSquare(num int) bool {
 	left, right := 1, num
@@ -103,6 +126,8 @@ func isPerfectSquare(num int) bool {
 	return left*left == num
 }
 ```
+
+#### TypeScript
 
 ```ts
 function isPerfectSquare(num: number): boolean {
@@ -119,6 +144,8 @@ function isPerfectSquare(num: number): boolean {
     return left * left === num;
 }
 ```
+
+#### Rust
 
 ```rust
 use std::cmp::Ordering;
@@ -148,6 +175,10 @@ impl Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2: Math trick
 
 This is a math problem：
@@ -165,6 +196,8 @@ so 1+3+...+(2n-1) = (2n-1 + 1)n/2 = n²
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def isPerfectSquare(self, num: int) -> bool:
@@ -174,6 +207,8 @@ class Solution:
             i += 2
         return num == 0
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -186,6 +221,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -196,6 +233,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func isPerfectSquare(num int) bool {
 	for i := 1; num > 0; i += 2 {
@@ -204,6 +243,8 @@ func isPerfectSquare(num int) bool {
 	return num == 0
 }
 ```
+
+#### TypeScript
 
 ```ts
 function isPerfectSquare(num: number): boolean {
@@ -215,6 +256,8 @@ function isPerfectSquare(num: number): boolean {
     return num === 0;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -231,4 +274,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -1,12 +1,20 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0000-0099/0038.Count%20and%20Say/README.md
+tags:
+    - 字符串
+---
+
+<!-- problem:start -->
+
 # [38. 外观数列](https://leetcode.cn/problems/count-and-say)
 
 [English Version](/solution/0000-0099/0038.Count%20and%20Say/README_EN.md)
 
-<!-- tags:字符串 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给定一个正整数 <code>n</code> ，输出外观数列的第 <code>n</code> 项。</p>
 
@@ -71,11 +79,17 @@ countAndSay(4) = 读 "21" = 一 个 2 + 一 个 1 = "12" + "11" = "1211"
 	<li><code>1 &lt;= n &lt;= 30</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -94,6 +108,8 @@ class Solution:
             s = ''.join(t)
         return s
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -117,6 +133,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -137,6 +155,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func countAndSay(n int) string {
@@ -159,6 +179,8 @@ func countAndSay(n int) string {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function countAndSay(n: number): string {
     let s = '1';
@@ -180,6 +202,8 @@ function countAndSay(n: number): string {
     return s;
 }
 ```
+
+#### Rust
 
 ```rust
 use std::iter::once;
@@ -205,6 +229,8 @@ impl Solution {
 }
 ```
 
+#### JavaScript
+
 ```js
 const countAndSay = function (n) {
     let s = '1';
@@ -227,6 +253,8 @@ const countAndSay = function (n) {
     return s;
 };
 ```
+
+#### C#
 
 ```cs
 using System.Text;
@@ -268,6 +296,8 @@ public class Solution {
 }
 ```
 
+#### PHP
+
 ```php
 class Solution {
     /**
@@ -302,4 +332,6 @@ class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

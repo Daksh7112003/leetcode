@@ -1,12 +1,24 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0300-0399/0348.Design%20Tic-Tac-Toe/README.md
+tags:
+    - 设计
+    - 数组
+    - 哈希表
+    - 矩阵
+    - 模拟
+---
+
+<!-- problem:start -->
+
 # [348. 设计井字棋 🔒](https://leetcode.cn/problems/design-tic-tac-toe)
 
 [English Version](/solution/0300-0399/0348.Design%20Tic-Tac-Toe/README_EN.md)
 
-<!-- tags:设计,数组,哈希表,矩阵,模拟 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>请在 n &times;&nbsp;n 的棋盘上，实现一个判定井字棋（Tic-Tac-Toe）胜负的神器，判断每一次玩家落子后，是否有胜出的玩家。</p>
 
@@ -67,11 +79,17 @@ toe.move(2, 1, 1); -&gt; 函数返回 1 (此时，玩家 1 赢得了该场比赛
 <p><strong>进阶:</strong><br>
 您有没有可能将每一步的&nbsp;<code>move()</code>&nbsp;操作优化到比&nbsp;O(<em>n</em><sup>2</sup>) 更快吗?</p>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class TicTacToe:
@@ -114,6 +132,8 @@ class TicTacToe:
 # obj = TicTacToe(n)
 # param_1 = obj.move(row,col,player)
 ```
+
+#### Java
 
 ```java
 class TicTacToe {
@@ -162,4 +182,6 @@ class TicTacToe {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

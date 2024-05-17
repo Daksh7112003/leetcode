@@ -1,8 +1,16 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/lcof/%E9%9D%A2%E8%AF%95%E9%A2%9846.%20%E6%8A%8A%E6%95%B0%E5%AD%97%E7%BF%BB%E8%AF%91%E6%88%90%E5%AD%97%E7%AC%A6%E4%B8%B2/README.md
+---
+
+<!-- problem:start -->
+
 # [面试题 46. 把数字翻译成字符串](https://leetcode.cn/problems/ba-shu-zi-fan-yi-cheng-zi-fu-chuan-lcof/)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给定一个数字，我们按照如下规则把它翻译为字符串：0 翻译成 &ldquo;a&rdquo; ，1 翻译成 &ldquo;b&rdquo;，&hellip;&hellip;，11 翻译成 &ldquo;l&rdquo;，&hellip;&hellip;，25 翻译成 &ldquo;z&rdquo;。一个数字可能有多个翻译。请编程实现一个函数，用来计算一个数字有多少种不同的翻译方法。</p>
 
@@ -22,7 +30,11 @@
 	<li><code>0 &lt;= num &lt; 2<sup>31</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：记忆化搜索
 
@@ -41,6 +53,8 @@
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def translateNum(self, num: int) -> int:
@@ -57,6 +71,8 @@ class Solution:
         n = len(s)
         return dfs(0)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -87,6 +103,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -112,6 +130,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func translateNum(num int) int {
 	s := strconv.Itoa(num)
@@ -136,6 +156,8 @@ func translateNum(num int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function translateNum(num: number): number {
     const s = num.toString();
@@ -159,6 +181,8 @@ function translateNum(num: number): number {
 }
 ```
 
+#### Rust
+
 ```rust
 impl Solution {
     pub fn translate_num(num: i32) -> i32 {
@@ -177,6 +201,8 @@ impl Solution {
     }
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -205,6 +231,8 @@ var translateNum = function (num) {
 };
 ```
 
+#### C#
+
 ```cs
 public class Solution {
     public int TranslateNum(int num) {
@@ -226,6 +254,10 @@ public class Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start-->
+
 ### 方法二：动态规划
 
 我们可以将方法一中的记忆化搜索改为动态规划。
@@ -240,6 +272,8 @@ public class Solution {
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def translateNum(self, num: int) -> int:
@@ -253,6 +287,8 @@ class Solution:
             a, b = b, c
         return b
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -272,6 +308,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -293,6 +331,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func translateNum(num int) int {
 	s := strconv.Itoa(num)
@@ -308,6 +348,8 @@ func translateNum(num int) int {
 	return b
 }
 ```
+
+#### TypeScript
 
 ```ts
 function translateNum(num: number): number {
@@ -326,6 +368,8 @@ function translateNum(num: number): number {
     return b;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -349,6 +393,8 @@ impl Solution {
     }
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -374,4 +420,6 @@ var translateNum = function (num) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

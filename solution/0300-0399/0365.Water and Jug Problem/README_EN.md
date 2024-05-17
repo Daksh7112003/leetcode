@@ -1,10 +1,22 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0300-0399/0365.Water%20and%20Jug%20Problem/README_EN.md
+tags:
+    - Depth-First Search
+    - Breadth-First Search
+    - Math
+---
+
+<!-- problem:start -->
+
 # [365. Water and Jug Problem](https://leetcode.com/problems/water-and-jug-problem)
 
 [中文文档](/solution/0300-0399/0365.Water%20and%20Jug%20Problem/README.md)
 
-<!-- tags:Depth-First Search,Breadth-First Search,Math -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You are given two jugs with capacities <code>x</code> liters and <code>y</code> liters. You have an infinite water supply. Return whether the total amount of water in both jugs may reach <code>target</code> using the following operations:</p>
 
@@ -64,7 +76,11 @@
 	<li><code>1 &lt;= x, y, target&nbsp;&lt;= 10<sup>3</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: DFS
 
@@ -85,6 +101,8 @@ The time complexity is $O(x + y)$, and the space complexity is $O(x + y)$. Here,
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def canMeasureWater(self, x: int, y: int, z: int) -> bool:
@@ -103,6 +121,8 @@ class Solution:
         vis = set()
         return dfs(0, 0)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -138,6 +158,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -172,6 +194,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func canMeasureWater(x int, y int, z int) bool {
 	type pair struct{ x, y int }
@@ -199,4 +223,6 @@ func canMeasureWater(x int, y int, z int) bool {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

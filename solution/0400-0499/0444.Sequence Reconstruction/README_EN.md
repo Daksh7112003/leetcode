@@ -1,10 +1,22 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0400-0499/0444.Sequence%20Reconstruction/README_EN.md
+tags:
+    - Graph
+    - Topological Sort
+    - Array
+---
+
+<!-- problem:start -->
+
 # [444. Sequence Reconstruction 🔒](https://leetcode.com/problems/sequence-reconstruction)
 
 [中文文档](/solution/0400-0499/0444.Sequence%20Reconstruction/README.md)
 
-<!-- tags:Graph,Topological Sort,Array -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You are given an integer array <code>nums</code> of length <code>n</code> where <code>nums</code> is a permutation of the integers in the range <code>[1, n]</code>. You are also given a 2D integer array <code>sequences</code> where <code>sequences[i]</code> is a subsequence of <code>nums</code>.</p>
 
@@ -68,7 +80,11 @@ Since nums is the only shortest supersequence, we return true.
 	<li><code>sequences[i]</code> is a subsequence of <code>nums</code>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Topological Sorting
 
@@ -79,6 +95,8 @@ When the number of nodes in the queue is equal to $1$, we take out the head node
 The time complexity is $O(n + m)$, and the space complexity is $O(n + m)$. Where $n$ and $m$ are the number of nodes and edges, respectively.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -102,6 +120,8 @@ class Solution:
                     q.append(j)
         return len(q) == 0
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -135,6 +155,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -170,6 +192,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func sequenceReconstruction(nums []int, sequences [][]int) bool {
 	n := len(nums)
@@ -203,6 +227,8 @@ func sequenceReconstruction(nums []int, sequences [][]int) bool {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function sequenceReconstruction(nums: number[], sequences: number[][]): boolean {
     const n = nums.length;
@@ -230,4 +256,6 @@ function sequenceReconstruction(nums: number[], sequences: number[][]): boolean 
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

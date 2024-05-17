@@ -1,10 +1,25 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/2200-2299/2225.Find%20Players%20With%20Zero%20or%20One%20Losses/README_EN.md
+rating: 1316
+source: Weekly Contest 287 Q2
+tags:
+    - Array
+    - Hash Table
+    - Counting
+    - Sorting
+---
+
+<!-- problem:start -->
+
 # [2225. Find Players With Zero or One Losses](https://leetcode.com/problems/find-players-with-zero-or-one-losses)
 
 [中文文档](/solution/2200-2299/2225.Find%20Players%20With%20Zero%20or%20One%20Losses/README.md)
 
-<!-- tags:Array,Hash Table,Counting,Sorting -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You are given an integer array <code>matches</code> where <code>matches[i] = [winner<sub>i</sub>, loser<sub>i</sub>]</code> indicates that the player <code>winner<sub>i</sub></code> defeated player <code>loser<sub>i</sub></code> in a match.</p>
 
@@ -59,11 +74,17 @@ Thus, answer[0] = [1,2,5,6] and answer[1] = [].
 	<li>All <code>matches[i]</code> are <strong>unique</strong>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -81,6 +102,8 @@ class Solution:
         ans[1].sort()
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -108,6 +131,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -128,6 +153,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func findWinners(matches [][]int) [][]int {
@@ -151,6 +178,8 @@ func findWinners(matches [][]int) [][]int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function findWinners(matches: number[][]): number[][] {
     const cnt: Map<number, number> = new Map();
@@ -169,6 +198,8 @@ function findWinners(matches: number[][]): number[][] {
     return ans;
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -195,9 +226,15 @@ var findWinners = function (matches) {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### JavaScript
 
 ```js
 /**
@@ -231,4 +268,6 @@ var findWinners = function (matches) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

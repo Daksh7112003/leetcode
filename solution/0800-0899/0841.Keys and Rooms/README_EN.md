@@ -1,10 +1,22 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0800-0899/0841.Keys%20and%20Rooms/README_EN.md
+tags:
+    - Depth-First Search
+    - Breadth-First Search
+    - Graph
+---
+
+<!-- problem:start -->
+
 # [841. Keys and Rooms](https://leetcode.com/problems/keys-and-rooms)
 
 [中文文档](/solution/0800-0899/0841.Keys%20and%20Rooms/README.md)
 
-<!-- tags:Depth-First Search,Breadth-First Search,Graph -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>There are <code>n</code> rooms labeled from <code>0</code> to <code>n - 1</code>&nbsp;and all the rooms are locked except for room <code>0</code>. Your goal is to visit all the rooms. However, you cannot enter a locked room without having its key.</p>
 
@@ -46,7 +58,11 @@ Since we were able to visit every room, we return true.
 	<li>All the values of <code>rooms[i]</code> are <strong>unique</strong>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Depth-First Search (DFS)
 
@@ -57,6 +73,8 @@ Finally, we count the number of visited nodes. If it is the same as the total nu
 The time complexity is $O(n + m)$, and the space complexity is $O(n)$, where $n$ is the number of nodes, and $m$ is the number of edges.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -72,6 +90,8 @@ class Solution:
         dfs(0)
         return len(vis) == len(rooms)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -99,6 +119,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -123,6 +145,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func canVisitAllRooms(rooms [][]int) bool {
 	n := len(rooms)
@@ -144,6 +168,8 @@ func canVisitAllRooms(rooms [][]int) bool {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function canVisitAllRooms(rooms: number[][]): boolean {
     const n = rooms.length;
@@ -161,6 +187,8 @@ function canVisitAllRooms(rooms: number[][]): boolean {
     return vis.every(v => v);
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -183,4 +211,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

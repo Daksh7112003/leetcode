@@ -1,12 +1,22 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0300-0399/0365.Water%20and%20Jug%20Problem/README.md
+tags:
+    - 深度优先搜索
+    - 广度优先搜索
+    - 数学
+---
+
+<!-- problem:start -->
+
 # [365. 水壶问题](https://leetcode.cn/problems/water-and-jug-problem)
 
 [English Version](/solution/0300-0399/0365.Water%20and%20Jug%20Problem/README_EN.md)
 
-<!-- tags:深度优先搜索,广度优先搜索,数学 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>有两个水壶，容量分别为&nbsp;<code>x</code>&nbsp;和 <code>y</code> 升。水的供应是无限的。确定是否有可能使用这两个壶准确得到&nbsp;<code>target</code>&nbsp;升。</p>
 
@@ -58,7 +68,11 @@
 	<li><code>1 &lt;= x, y, target &lt;= 10<sup>3</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：DFS
 
@@ -79,6 +93,8 @@
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def canMeasureWater(self, x: int, y: int, z: int) -> bool:
@@ -97,6 +113,8 @@ class Solution:
         vis = set()
         return dfs(0, 0)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -132,6 +150,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -166,6 +186,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func canMeasureWater(x int, y int, z int) bool {
 	type pair struct{ x, y int }
@@ -193,4 +215,6 @@ func canMeasureWater(x int, y int, z int) bool {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

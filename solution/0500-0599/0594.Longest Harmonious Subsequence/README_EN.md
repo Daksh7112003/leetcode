@@ -1,10 +1,24 @@
+---
+comments: true
+difficulty: Easy
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0500-0599/0594.Longest%20Harmonious%20Subsequence/README_EN.md
+tags:
+    - Array
+    - Hash Table
+    - Counting
+    - Sorting
+    - Sliding Window
+---
+
+<!-- problem:start -->
+
 # [594. Longest Harmonious Subsequence](https://leetcode.com/problems/longest-harmonious-subsequence)
 
 [中文文档](/solution/0500-0599/0594.Longest%20Harmonious%20Subsequence/README.md)
 
-<!-- tags:Array,Hash Table,Counting,Sorting,Sliding Window -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>We define a harmonious array as an array where the difference between its maximum value and its minimum value is <b>exactly</b> <code>1</code>.</p>
 
@@ -58,11 +72,17 @@
 
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -74,6 +94,8 @@ class Solution:
                 ans = max(ans, counter[num] + counter[num + 1])
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -92,6 +114,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -112,6 +136,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func findLHS(nums []int) int {
 	counter := make(map[int]int)
@@ -130,9 +156,15 @@ func findLHS(nums []int) int {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -146,4 +178,6 @@ class Solution:
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

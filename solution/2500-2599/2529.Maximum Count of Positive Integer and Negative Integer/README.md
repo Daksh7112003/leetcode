@@ -1,12 +1,24 @@
+---
+comments: true
+difficulty: 简单
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/2500-2599/2529.Maximum%20Count%20of%20Positive%20Integer%20and%20Negative%20Integer/README.md
+rating: 1195
+source: 第 327 场周赛 Q1
+tags:
+    - 数组
+    - 二分查找
+    - 计数
+---
+
+<!-- problem:start -->
+
 # [2529. 正整数和负整数的最大计数](https://leetcode.cn/problems/maximum-count-of-positive-integer-and-negative-integer)
 
 [English Version](/solution/2500-2599/2529.Maximum%20Count%20of%20Positive%20Integer%20and%20Negative%20Integer/README_EN.md)
 
-<!-- tags:数组,二分查找,计数 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个按 <strong>非递减顺序</strong> 排列的数组 <code>nums</code> ，返回正整数数目和负整数数目中的最大值。</p>
 
@@ -56,7 +68,11 @@
 
 <p><strong>进阶：</strong>你可以设计并实现时间复杂度为 <code>O(log(n))</code> 的算法解决此问题吗？</p>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：遍历
 
@@ -66,6 +82,8 @@
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def maximumCount(self, nums: List[int]) -> int:
@@ -73,6 +91,8 @@ class Solution:
         b = sum(x < 0 for x in nums)
         return max(a, b)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -89,6 +109,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -107,6 +129,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func maximumCount(nums []int) int {
 	var a, b int
@@ -121,6 +145,8 @@ func maximumCount(nums []int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function maximumCount(nums: number[]): number {
     let [a, b] = [0, 0];
@@ -134,6 +160,8 @@ function maximumCount(nums: number[]): number {
     return Math.max(a, b);
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -154,6 +182,8 @@ impl Solution {
 }
 ```
 
+#### C
+
 ```c
 #define max(a, b) (a > b ? a : b)
 
@@ -172,6 +202,10 @@ int maximumCount(int* nums, int numsSize) {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二：二分查找
 
 由于数组是按非递减顺序排列的，因此可以使用二分查找找到第一个大于等于 $1$ 的元素的下标 $i$ 以及第一个大于等于 $0$ 的元素的下标 $j$，那么正整数的个数 $a = n - i$，负整数的个数 $b = j$，返回 $a$ 和 $b$ 中的较大值即可。
@@ -180,6 +214,8 @@ int maximumCount(int* nums, int numsSize) {
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def maximumCount(self, nums: List[int]) -> int:
@@ -187,6 +223,8 @@ class Solution:
         b = bisect_left(nums, 0)
         return max(a, b)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -211,6 +249,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -222,6 +262,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func maximumCount(nums []int) int {
 	a := len(nums) - sort.SearchInts(nums, 1)
@@ -229,6 +271,8 @@ func maximumCount(nums []int) int {
 	return max(a, b)
 }
 ```
+
+#### TypeScript
 
 ```ts
 function maximumCount(nums: number[]): number {
@@ -250,6 +294,8 @@ function maximumCount(nums: number[]): number {
     return Math.max(a, b);
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -275,6 +321,8 @@ impl Solution {
     }
 }
 ```
+
+#### C
 
 ```c
 #define max(a, b) (a > b ? a : b)
@@ -302,4 +350,6 @@ int maximumCount(int* nums, int numsSize) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

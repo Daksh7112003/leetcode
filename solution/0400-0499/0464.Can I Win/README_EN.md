@@ -1,10 +1,25 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0400-0499/0464.Can%20I%20Win/README_EN.md
+tags:
+    - Bit Manipulation
+    - Memoization
+    - Math
+    - Dynamic Programming
+    - Bitmask
+    - Game Theory
+---
+
+<!-- problem:start -->
+
 # [464. Can I Win](https://leetcode.com/problems/can-i-win)
 
 [中文文档](/solution/0400-0499/0464.Can%20I%20Win/README.md)
 
-<!-- tags:Bit Manipulation,Memoization,Math,Dynamic Programming,Bitmask,Game Theory -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>In the &quot;100 game&quot; two players take turns adding, to a running total, any integer from <code>1</code> to <code>10</code>. The player who first causes the running total to <strong>reach or exceed</strong> 100 wins.</p>
 
@@ -50,11 +65,17 @@ Same with other integers chosen by the first player, the second player will alwa
 	<li><code>0 &lt;= desiredTotal &lt;= 300</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -73,6 +94,8 @@ class Solution:
             return False
         return dfs(0, 0)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -106,6 +129,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -131,6 +156,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func canIWin(maxChoosableInteger int, desiredTotal int) bool {
@@ -163,4 +190,6 @@ func canIWin(maxChoosableInteger int, desiredTotal int) bool {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

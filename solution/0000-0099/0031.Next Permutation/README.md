@@ -1,12 +1,21 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0000-0099/0031.Next%20Permutation/README.md
+tags:
+    - 数组
+    - 双指针
+---
+
+<!-- problem:start -->
+
 # [31. 下一个排列](https://leetcode.cn/problems/next-permutation)
 
 [English Version](/solution/0000-0099/0031.Next%20Permutation/README_EN.md)
 
-<!-- tags:数组,双指针 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>整数数组的一个 <strong>排列</strong>&nbsp; 就是将其所有成员以序列或线性顺序排列。</p>
 
@@ -58,7 +67,11 @@
 	<li><code>0 &lt;= nums[i] &lt;= 100</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：两次遍历
 
@@ -70,6 +83,8 @@
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def nextPermutation(self, nums: List[int]) -> None:
@@ -80,6 +95,8 @@ class Solution:
             nums[i], nums[j] = nums[j], nums[i]
         nums[i + 1 :] = nums[i + 1 :][::-1]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -113,6 +130,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -135,6 +154,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func nextPermutation(nums []int) {
 	n := len(nums)
@@ -154,6 +175,8 @@ func nextPermutation(nums []int) {
 	}
 }
 ```
+
+#### TypeScript
 
 ```ts
 function nextPermutation(nums: number[]): void {
@@ -175,6 +198,8 @@ function nextPermutation(nums: number[]): void {
     }
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -199,6 +224,8 @@ var nextPermutation = function (nums) {
     }
 };
 ```
+
+#### C#
 
 ```cs
 public class Solution {
@@ -228,6 +255,8 @@ public class Solution {
     }
 }
 ```
+
+#### PHP
 
 ```php
 class Solution {
@@ -268,4 +297,6 @@ class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

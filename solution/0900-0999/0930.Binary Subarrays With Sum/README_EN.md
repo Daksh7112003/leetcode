@@ -1,10 +1,23 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0900-0999/0930.Binary%20Subarrays%20With%20Sum/README_EN.md
+tags:
+    - Array
+    - Hash Table
+    - Prefix Sum
+    - Sliding Window
+---
+
+<!-- problem:start -->
+
 # [930. Binary Subarrays With Sum](https://leetcode.com/problems/binary-subarrays-with-sum)
 
 [中文文档](/solution/0900-0999/0930.Binary%20Subarrays%20With%20Sum/README.md)
 
-<!-- tags:Array,Hash Table,Prefix Sum,Sliding Window -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Given a binary array <code>nums</code> and an integer <code>goal</code>, return <em>the number of non-empty <strong>subarrays</strong> with a sum</em> <code>goal</code>.</p>
 
@@ -56,11 +69,17 @@
 
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -73,6 +92,8 @@ class Solution:
             cnt[s] += 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -91,6 +112,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -112,6 +135,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func numSubarraysWithSum(nums []int, goal int) (ans int) {
 	cnt := map[int]int{0: 1}
@@ -124,6 +149,8 @@ func numSubarraysWithSum(nums []int, goal int) (ans int) {
 	return
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -149,9 +176,15 @@ var numSubarraysWithSum = function (nums, goal) {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -171,6 +204,8 @@ class Solution:
             j += 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -194,6 +229,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -212,6 +249,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func numSubarraysWithSum(nums []int, goal int) int {
@@ -233,6 +272,8 @@ func numSubarraysWithSum(nums []int, goal int) int {
 	return ans
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -262,4 +303,6 @@ var numSubarraysWithSum = function (nums, goal) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

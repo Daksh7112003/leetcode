@@ -1,12 +1,21 @@
+---
+comments: true
+difficulty: 简单
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0100-0199/0171.Excel%20Sheet%20Column%20Number/README.md
+tags:
+    - 数学
+    - 字符串
+---
+
+<!-- problem:start -->
+
 # [171. Excel 表列序号](https://leetcode.cn/problems/excel-sheet-column-number)
 
 [English Version](/solution/0100-0199/0171.Excel%20Sheet%20Column%20Number/README_EN.md)
 
-<!-- tags:数学,字符串 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个字符串&nbsp;<code>columnTitle</code> ，表示 Excel 表格中的列名称。返回 <em>该列名称对应的列序号</em>&nbsp;。</p>
 
@@ -54,7 +63,11 @@ AB -&gt; 28
 	<li><code>columnTitle</code> 在范围 <code>["A", "FXSHRXW"]</code> 内</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：进制转换
 
@@ -66,6 +79,8 @@ Excel 表格中的列名称是一种 26 进制的表示方法。例如，"AB" �
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def titleToNumber(self, columnTitle: str) -> int:
@@ -74,6 +89,8 @@ class Solution:
             ans = ans * 26 + c - ord("A") + 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -86,6 +103,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -100,6 +119,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func titleToNumber(columnTitle string) (ans int) {
 	for _, c := range columnTitle {
@@ -108,6 +129,8 @@ func titleToNumber(columnTitle string) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function titleToNumber(columnTitle: string): number {
@@ -118,6 +141,8 @@ function titleToNumber(columnTitle: string): number {
     return ans;
 }
 ```
+
+#### C#
 
 ```cs
 public class Solution {
@@ -133,4 +158,6 @@ public class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

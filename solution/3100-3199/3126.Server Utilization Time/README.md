@@ -1,12 +1,20 @@
-# [3126. Server Utilization Time](https://leetcode.cn/problems/server-utilization-time)
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/3100-3199/3126.Server%20Utilization%20Time/README.md
+tags:
+    - 数据库
+---
+
+<!-- problem:start -->
+
+# [3126. Server Utilization Time 🔒](https://leetcode.cn/problems/server-utilization-time)
 
 [English Version](/solution/3100-3199/3126.Server%20Utilization%20Time/README_EN.md)
 
-<!-- tags: -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>Table: <code>Servers</code></p>
 
@@ -23,7 +31,7 @@ session_status is an ENUM (category) type of (&#39;start&#39;, &#39;stop&#39;).
 Each row of this table contains server_id, status_time, and session_status.
 </pre>
 
-<p>Write a solution to find the <strong>total time</strong> when servers were <strong>running</strong>. The output should be in units of <strong>full days</strong>.</p>
+<p>Write a solution to find the <strong>total time</strong> when servers were <strong>running</strong>. The output should be rounded down to the nearest number of&nbsp;<strong>full days</strong>.</p>
 
 <p>Return <em>the result table in <strong>any</strong></em><em>&nbsp;order.</em></p>
 
@@ -106,13 +114,19 @@ Each row of this table contains server_id, status_time, and session_status.
 </ul>
 The accumulated runtime for all servers totals approximately 44.46 hours, equivalent to one full day plus some additional hours. However, since we consider only full days, the final output is rounded to 1 full day.</div>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：使用窗口函数
 
 我们可以使用窗口函数 `LEAD` 来获取每个服务器的下一个状态的时间，那么两个状态之间的时间差就是服务器的一次运行时间。最后我们将所有服务器的运行时间相加，然后除以一天的秒数，就得到了服务器的总运行天数。
 
 <!-- tabs:start -->
+
+#### MySQL
 
 ```sql
 # Write your MySQL query statement below
@@ -134,4 +148,6 @@ WHERE session_status = 'start';
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -1,10 +1,24 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0300-0399/0379.Design%20Phone%20Directory/README_EN.md
+tags:
+    - Design
+    - Queue
+    - Array
+    - Hash Table
+    - Linked List
+---
+
+<!-- problem:start -->
+
 # [379. Design Phone Directory 🔒](https://leetcode.com/problems/design-phone-directory)
 
 [中文文档](/solution/0300-0399/0379.Design%20Phone%20Directory/README.md)
 
-<!-- tags:Design,Queue,Array,Hash Table,Linked List -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Design a phone directory that initially has <code>maxNumbers</code> empty slots that can store numbers. The directory should store numbers, check if a certain slot is empty or not, and empty a given slot.</p>
 
@@ -47,11 +61,17 @@ phoneDirectory.check(2);   // Number 2 is available again, return true.
 	<li>At most <code>2 * 10<sup>4</sup></code> calls will be made to <code>get</code>, <code>check</code>, and <code>release</code>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class PhoneDirectory:
@@ -92,6 +112,8 @@ class PhoneDirectory:
 # param_2 = obj.check(number)
 # obj.release(number)
 ```
+
+#### Java
 
 ```java
 class PhoneDirectory {
@@ -142,4 +164,6 @@ class PhoneDirectory {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

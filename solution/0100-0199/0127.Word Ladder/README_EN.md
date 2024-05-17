@@ -1,10 +1,22 @@
+---
+comments: true
+difficulty: Hard
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0100-0199/0127.Word%20Ladder/README_EN.md
+tags:
+    - Breadth-First Search
+    - Hash Table
+    - String
+---
+
+<!-- problem:start -->
+
 # [127. Word Ladder](https://leetcode.com/problems/word-ladder)
 
 [中文文档](/solution/0100-0199/0127.Word%20Ladder/README.md)
 
-<!-- tags:Breadth-First Search,Hash Table,String -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>A <strong>transformation sequence</strong> from word <code>beginWord</code> to word <code>endWord</code> using a dictionary <code>wordList</code> is a sequence of words <code>beginWord -&gt; s<sub>1</sub> -&gt; s<sub>2</sub> -&gt; ... -&gt; s<sub>k</sub></code> such that:</p>
 
@@ -46,7 +58,11 @@
 	<li>All the words in <code>wordList</code> are <strong>unique</strong>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: BFS
 
@@ -86,6 +102,8 @@ def extend(m1, m2, q):
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def ladderLength(self, beginWord: str, endWord: str, wordList: List[str]) -> int:
@@ -111,6 +129,8 @@ class Solution:
                     s[i] = ch
         return 0
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -147,6 +167,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -176,6 +198,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func ladderLength(beginWord string, endWord string, wordList []string) int {
@@ -212,6 +236,8 @@ func ladderLength(beginWord string, endWord string, wordList []string) int {
 	return 0
 }
 ```
+
+#### C#
 
 ```cs
 using System.Collections;
@@ -286,9 +312,15 @@ public class Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -323,6 +355,8 @@ class Solution:
                 return t + 1
         return 0
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -377,6 +411,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -417,6 +453,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func ladderLength(beginWord string, endWord string, wordList []string) int {
@@ -474,4 +512,6 @@ func ladderLength(beginWord string, endWord string, wordList []string) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

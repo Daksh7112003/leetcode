@@ -1,12 +1,27 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/1000-1099/1008.Construct%20Binary%20Search%20Tree%20from%20Preorder%20Traversal/README.md
+rating: 1562
+source: 第 127 场周赛 Q4
+tags:
+    - 栈
+    - 树
+    - 二叉搜索树
+    - 数组
+    - 二叉树
+    - 单调栈
+---
+
+<!-- problem:start -->
+
 # [1008. 前序遍历构造二叉搜索树](https://leetcode.cn/problems/construct-binary-search-tree-from-preorder-traversal)
 
 [English Version](/solution/1000-1099/1008.Construct%20Binary%20Search%20Tree%20from%20Preorder%20Traversal/README_EN.md)
 
-<!-- tags:栈,树,二叉搜索树,数组,二叉树,单调栈 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给定一个整数数组，它表示BST(即 <strong>二叉搜索树</strong> )的 <strong>先</strong><strong>序遍历</strong> ，构造树并返回其根。</p>
 
@@ -46,11 +61,17 @@
 
 <p>&nbsp;</p>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for a binary tree node.
@@ -78,6 +99,8 @@ class Solution:
 
         return dfs(preorder)
 ```
+
+#### Java
 
 ```java
 /**
@@ -122,6 +145,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 /**
  * Definition for a binary tree node.
@@ -158,6 +183,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 /**
  * Definition for a binary tree node.
@@ -190,6 +217,8 @@ func bstFromPreorder(preorder []int) *TreeNode {
 	return dfs(0, len(preorder)-1)
 }
 ```
+
+#### TypeScript
 
 ```ts
 /**
@@ -227,6 +256,8 @@ function bstFromPreorder(preorder: number[]): TreeNode | null {
     return dfs(0, n);
 }
 ```
+
+#### Rust
 
 ```rust
 // Definition for a binary tree node.
@@ -290,4 +321,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

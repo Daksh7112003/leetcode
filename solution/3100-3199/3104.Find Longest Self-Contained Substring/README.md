@@ -1,12 +1,23 @@
+---
+comments: true
+difficulty: 困难
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/3100-3199/3104.Find%20Longest%20Self-Contained%20Substring/README.md
+tags:
+    - 哈希表
+    - 字符串
+    - 二分查找
+    - 前缀和
+---
+
+<!-- problem:start -->
+
 # [3104. Find Longest Self-Contained Substring 🔒](https://leetcode.cn/problems/find-longest-self-contained-substring)
 
 [English Version](/solution/3100-3199/3104.Find%20Longest%20Self-Contained%20Substring/README_EN.md)
 
-<!-- tags:哈希表,字符串,二分查找,前缀和 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>Given a string <code>s</code>, your task is to find the length of the <strong>longest self-contained</strong> <span data-keyword="substring-nonempty">substring</span> of <code>s</code>.</p>
 
@@ -56,7 +67,11 @@ Let&#39;s check the substring <code>&quot;<span class="example-io">abac</span>&q
 	<li><code>s</code> consists only of lowercase English letters.</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：枚举
 
@@ -71,6 +86,8 @@ Let&#39;s check the substring <code>&quot;<span class="example-io">abac</span>&q
 时间复杂度 $O(n \times |\Sigma|)$，空间复杂度 $O(|\Sigma|)$。其中 $n$ 是字符串 $s$ 的长度；而 $|\Sigma|$ 是字符集的大小，本题中字符集为小写字母，所以 $|\Sigma| = 26$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -92,6 +109,8 @@ class Solution:
                     ans = max(ans, j - i + 1)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -131,6 +150,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -169,6 +190,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func maxSubstringLength(s string) int {
 	first := [26]int{}
@@ -205,6 +228,8 @@ func maxSubstringLength(s string) int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function maxSubstringLength(s: string): number {
@@ -243,4 +268,6 @@ function maxSubstringLength(s: string): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

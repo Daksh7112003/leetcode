@@ -1,12 +1,22 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0500-0599/0531.Lonely%20Pixel%20I/README.md
+tags:
+    - 数组
+    - 哈希表
+    - 矩阵
+---
+
+<!-- problem:start -->
+
 # [531. 孤独像素 I 🔒](https://leetcode.cn/problems/lonely-pixel-i)
 
 [English Version](/solution/0500-0599/0531.Lonely%20Pixel%20I/README_EN.md)
 
-<!-- tags:数组,哈希表,矩阵 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个大小为 <code>m x n</code> 的图像 <code>picture</code> ，图像由黑白像素组成，<code>'B'</code> 表示黑色像素，<code>'W'</code> 表示白色像素，请你统计并返回图像中 <strong>黑色</strong> 孤独像素的数量。</p>
 
@@ -40,7 +50,11 @@
 	<li><code>picture[i][j]</code> 为 <code>'W'</code> 或 <code>'B'</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：计数 + 枚举
 
@@ -49,6 +63,8 @@
 时间复杂度 $O(m \times n)$，空间复杂度 $O(m + n)$。其中 $m$ 和 $n$ 分别是矩阵的行数和列数。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -67,6 +83,8 @@ class Solution:
                     ans += 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -94,6 +112,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -123,6 +143,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func findLonelyPixel(picture [][]byte) (ans int) {
 	rows := make([]int, len(picture))
@@ -145,6 +167,8 @@ func findLonelyPixel(picture [][]byte) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function findLonelyPixel(picture: string[][]): number {
@@ -174,4 +198,6 @@ function findLonelyPixel(picture: string[][]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

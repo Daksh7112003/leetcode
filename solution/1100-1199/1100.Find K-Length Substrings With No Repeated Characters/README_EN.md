@@ -1,10 +1,24 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/1100-1199/1100.Find%20K-Length%20Substrings%20With%20No%20Repeated%20Characters/README_EN.md
+rating: 1348
+source: Biweekly Contest 3 Q2
+tags:
+    - Hash Table
+    - String
+    - Sliding Window
+---
+
+<!-- problem:start -->
+
 # [1100. Find K-Length Substrings With No Repeated Characters 🔒](https://leetcode.com/problems/find-k-length-substrings-with-no-repeated-characters)
 
 [中文文档](/solution/1100-1199/1100.Find%20K-Length%20Substrings%20With%20No%20Repeated%20Characters/README.md)
 
-<!-- tags:Hash Table,String,Sliding Window -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Given a string <code>s</code> and an integer <code>k</code>, return <em>the number of substrings in </em><code>s</code><em> of length </em><code>k</code><em> with no repeated characters</em>.</p>
 
@@ -34,7 +48,11 @@
 	<li><code>1 &lt;= k &lt;= 10<sup>4</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Sliding Window + Hash Table
 
@@ -50,6 +68,8 @@ The time complexity is $O(n)$, and the space complexity is $O(\min(k, |\Sigma|))
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def numKLenSubstrNoRepeats(self, s: str, k: int) -> int:
@@ -63,6 +83,8 @@ class Solution:
             ans += int(len(cnt) == k)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -88,6 +110,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -112,6 +136,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func numKLenSubstrNoRepeats(s string, k int) (ans int) {
@@ -140,6 +166,8 @@ func numKLenSubstrNoRepeats(s string, k int) (ans int) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function numKLenSubstrNoRepeats(s: string, k: number): number {
     const n = s.length;
@@ -162,6 +190,8 @@ function numKLenSubstrNoRepeats(s: string, k: number): number {
     return ans;
 }
 ```
+
+#### PHP
 
 ```php
 class Solution {
@@ -204,4 +234,6 @@ class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -1,10 +1,23 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0700-0799/0729.My%20Calendar%20I/README_EN.md
+tags:
+    - Design
+    - Segment Tree
+    - Binary Search
+    - Ordered Set
+---
+
+<!-- problem:start -->
+
 # [729. My Calendar I](https://leetcode.com/problems/my-calendar-i)
 
 [中文文档](/solution/0700-0799/0729.My%20Calendar%20I/README.md)
 
-<!-- tags:Design,Segment Tree,Binary Search,Ordered Set -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You are implementing a program to use as your calendar. We can add a new event if adding the event will not cause a <strong>double booking</strong>.</p>
 
@@ -43,11 +56,17 @@ myCalendar.book(20, 30); // return True, The event can be booked, as the first e
 	<li>At most <code>1000</code> calls will be made to <code>book</code>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 from sortedcontainers import SortedDict
@@ -69,6 +88,8 @@ class MyCalendar:
 # obj = MyCalendar()
 # param_1 = obj.book(start,end)
 ```
+
+#### Java
 
 ```java
 import java.util.Map;
@@ -101,6 +122,8 @@ class MyCalendar {
  */
 ```
 
+#### C++
+
 ```cpp
 class MyCalendar {
 public:
@@ -132,6 +155,8 @@ public:
  */
 ```
 
+#### Go
+
 ```go
 type MyCalendar struct {
 	rbt *redblacktree.Tree
@@ -161,6 +186,8 @@ func (this *MyCalendar) Book(start int, end int) bool {
  */
 ```
 
+#### TypeScript
+
 ```ts
 class MyCalendar {
     private calendar: number[][];
@@ -187,6 +214,8 @@ class MyCalendar {
  * var param_1 = obj.book(start,end)
  */
 ```
+
+#### Rust
 
 ```rust
 use std::collections::BTreeMap;
@@ -230,4 +259,6 @@ impl MyCalendar {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -1,10 +1,20 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0200-0299/0276.Paint%20Fence/README_EN.md
+tags:
+    - Dynamic Programming
+---
+
+<!-- problem:start -->
+
 # [276. Paint Fence 🔒](https://leetcode.com/problems/paint-fence)
 
 [中文文档](/solution/0200-0299/0276.Paint%20Fence/README.md)
 
-<!-- tags:Dynamic Programming -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You are painting a fence of <code>n</code> posts with <code>k</code> different colors. You must paint the posts following these rules:</p>
 
@@ -48,7 +58,11 @@ Note that painting all the posts red or all the posts green is invalid because t
 	<li>The testcases are generated such that the answer is in the range <code>[0, 2<sup>31</sup> - 1]</code> for the given <code>n</code> and <code>k</code>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Dynamic Programming
 
@@ -69,6 +83,8 @@ The time complexity is $O(n)$ and the space complexity is $O(n)$, where $n$ is t
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def numWays(self, n: int, k: int) -> int:
@@ -80,6 +96,8 @@ class Solution:
             g[i] = f[i - 1]
         return f[-1] + g[-1]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -95,6 +113,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -112,6 +132,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func numWays(n int, k int) int {
 	f := make([]int, n)
@@ -124,6 +146,8 @@ func numWays(n int, k int) int {
 	return f[n-1] + g[n-1]
 }
 ```
+
+#### TypeScript
 
 ```ts
 function numWays(n: number, k: number): number {
@@ -140,11 +164,17 @@ function numWays(n: number, k: number): number {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2: Dynamic Programming (Space Optimization)
 
 We notice that $f[i]$ and $g[i]$ are only related to $f[i - 1]$ and $g[i - 1]$. Therefore, we can use two variables $f$ and $g$ to record the values of $f[i - 1]$ and $g[i - 1]$ respectively, thus optimizing the space complexity to $O(1)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -156,6 +186,8 @@ class Solution:
             f = ff
         return f + g
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -170,6 +202,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -186,6 +220,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func numWays(n int, k int) int {
 	f, g := k, 0
@@ -195,6 +231,8 @@ func numWays(n int, k int) int {
 	return f + g
 }
 ```
+
+#### TypeScript
 
 ```ts
 function numWays(n: number, k: number): number {
@@ -210,4 +248,6 @@ function numWays(n: number, k: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

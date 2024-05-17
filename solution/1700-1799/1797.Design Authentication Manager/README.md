@@ -1,12 +1,23 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/1700-1799/1797.Design%20Authentication%20Manager/README.md
+rating: 1534
+source: 第 48 场双周赛 Q2
+tags:
+    - 设计
+    - 哈希表
+---
+
+<!-- problem:start -->
+
 # [1797. 设计一个验证系统](https://leetcode.cn/problems/design-authentication-manager)
 
 [English Version](/solution/1700-1799/1797.Design%20Authentication%20Manager/README_EN.md)
 
-<!-- tags:设计,哈希表 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>你需要设计一个包含验证码的验证系统。每一次验证中，用户会收到一个新的验证码，这个验证码在 <code>currentTime</code> 时刻之后 <code>timeToLive</code> 秒过期。如果验证码被更新了，那么它会在 <code>currentTime</code> （可能与之前的 <code>currentTime</code> 不同）时刻延长 <code>timeToLive</code> 秒。</p>
 
@@ -58,7 +69,11 @@ authenticationManager.<code>countUnexpiredTokens</code>(15); // tokenId 为 "bbb
 	<li>所有函数的调用次数总共不超过 <code>2000</code> 次。</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：哈希表
 
@@ -73,6 +88,8 @@ authenticationManager.<code>countUnexpiredTokens</code>(15); // tokenId 为 "bbb
 空间复杂度为 $O(n)$，其中 $n$ 为哈希表 $d$ 的键值对个数。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class AuthenticationManager:
@@ -98,6 +115,8 @@ class AuthenticationManager:
 # obj.renew(tokenId,currentTime)
 # param_3 = obj.countUnexpiredTokens(currentTime)
 ```
+
+#### Java
 
 ```java
 class AuthenticationManager {
@@ -139,6 +158,8 @@ class AuthenticationManager {
  */
 ```
 
+#### C++
+
 ```cpp
 class AuthenticationManager {
 public:
@@ -174,6 +195,8 @@ private:
  * int param_3 = obj->countUnexpiredTokens(currentTime);
  */
 ```
+
+#### Go
 
 ```go
 type AuthenticationManager struct {
@@ -215,6 +238,8 @@ func (this *AuthenticationManager) CountUnexpiredTokens(currentTime int) int {
  */
 ```
 
+#### TypeScript
+
 ```ts
 class AuthenticationManager {
     private timeToLive: number;
@@ -255,6 +280,8 @@ class AuthenticationManager {
  * var param_3 = obj.countUnexpiredTokens(currentTime)
  */
 ```
+
+#### Rust
 
 ```rust
 use std::collections::HashMap;
@@ -303,4 +330,6 @@ impl AuthenticationManager {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

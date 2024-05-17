@@ -1,10 +1,22 @@
+---
+comments: true
+difficulty: Easy
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/1500-1599/1523.Count%20Odd%20Numbers%20in%20an%20Interval%20Range/README_EN.md
+rating: 1209
+source: Biweekly Contest 31 Q1
+tags:
+    - Math
+---
+
+<!-- problem:start -->
+
 # [1523. Count Odd Numbers in an Interval Range](https://leetcode.com/problems/count-odd-numbers-in-an-interval-range)
 
 [中文文档](/solution/1500-1599/1523.Count%20Odd%20Numbers%20in%20an%20Interval%20Range/README.md)
 
-<!-- tags:Math -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Given two non-negative integers <code>low</code> and <code><font face="monospace">high</font></code>. Return the <em>count of odd numbers between </em><code>low</code><em> and </em><code><font face="monospace">high</font></code><em>&nbsp;(inclusive)</em>.</p>
 
@@ -40,17 +52,25 @@
 
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
     def countOdds(self, low: int, high: int) -> int:
         return ((high + 1) >> 1) - (low >> 1)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -59,6 +79,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -69,17 +91,23 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func countOdds(low int, high int) int {
 	return ((high + 1) >> 1) - (low >> 1)
 }
 ```
 
+#### TypeScript
+
 ```ts
 function countOdds(low: number, high: number): number {
     return ((high + 1) >> 1) - (low >> 1);
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -88,6 +116,8 @@ impl Solution {
     }
 }
 ```
+
+#### PHP
 
 ```php
 class Solution {
@@ -102,6 +132,8 @@ class Solution {
 }
 ```
 
+#### C
+
 ```c
 int countOdds(int low, int high) {
     return ((high + 1) >> 1) - (low >> 1);
@@ -110,4 +142,6 @@ int countOdds(int low, int high) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

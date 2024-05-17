@@ -1,12 +1,24 @@
+---
+comments: true
+difficulty: 困难
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/1500-1599/1542.Find%20Longest%20Awesome%20Substring/README.md
+rating: 2221
+source: 第 32 场双周赛 Q4
+tags:
+    - 位运算
+    - 哈希表
+    - 字符串
+---
+
+<!-- problem:start -->
+
 # [1542. 找出最长的超赞子字符串](https://leetcode.cn/problems/find-longest-awesome-substring)
 
 [English Version](/solution/1500-1599/1542.Find%20Longest%20Awesome%20Substring/README_EN.md)
 
-<!-- tags:位运算,哈希表,字符串 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个字符串 <code>s</code> 。请返回 <code>s</code> 中最长的 <strong>超赞子字符串</strong> 的长度。</p>
 
@@ -54,7 +66,11 @@
 	<li><code>s</code> 仅由数字组成</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：状态压缩 + 前缀和思想
 
@@ -71,6 +87,8 @@
 时间复杂度 $O(n \times C)$，空间复杂度 $O(2^C)$。其中 $n$ 和 $C$ 分别为字符串 $s$ 的长度和数字字符的种类数。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -90,6 +108,8 @@ class Solution:
                     ans = max(ans, i - d[st ^ (1 << v)])
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -117,6 +137,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -143,6 +165,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func longestAwesome(s string) int {
 	d := [1024]int{}
@@ -168,4 +192,6 @@ func longestAwesome(s string) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

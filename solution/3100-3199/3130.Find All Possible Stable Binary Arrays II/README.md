@@ -1,12 +1,23 @@
+---
+comments: true
+difficulty: 困难
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/3100-3199/3130.Find%20All%20Possible%20Stable%20Binary%20Arrays%20II/README.md
+rating: 2824
+source: 第 129 场双周赛 Q4
+tags:
+    - 动态规划
+    - 前缀和
+---
+
+<!-- problem:start -->
+
 # [3130. 找出所有稳定的二进制数组 II](https://leetcode.cn/problems/find-all-possible-stable-binary-arrays-ii)
 
 [English Version](/solution/3100-3199/3130.Find%20All%20Possible%20Stable%20Binary%20Arrays%20II/README_EN.md)
 
-<!-- tags: -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你 3 个正整数&nbsp;<code>zero</code>&nbsp;，<code>one</code>&nbsp;和&nbsp;<code>limit</code>&nbsp;。</p>
 
@@ -70,7 +81,11 @@
 	<li><code>1 &lt;= zero, one, limit &lt;= 1000</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：记忆化搜索
 
@@ -89,6 +104,8 @@
 时间复杂度 $O(zero \times one)$，空间复杂度 $O(zero \times one)$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -116,6 +133,8 @@ class Solution:
         dfs.cache_clear()
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -153,6 +172,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 using ll = long long;
@@ -193,6 +214,8 @@ private:
     }
 };
 ```
+
+#### Go
 
 ```go
 func numberOfStableArrays(zero int, one int, limit int) int {
@@ -238,6 +261,10 @@ func numberOfStableArrays(zero int, one int, limit int) int {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二：动态规划
 
 我们也可以将方法一的记忆化搜索转换为动态规划。
@@ -254,6 +281,8 @@ func numberOfStableArrays(zero int, one int, limit int) int {
 时间复杂度 $O(zero \times one)$，空间复杂度 $O(zero \times one)$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -278,6 +307,8 @@ class Solution:
                 ) % mod
         return sum(f[zero][one]) % mod
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -304,6 +335,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -333,6 +366,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func numberOfStableArrays(zero int, one int, limit int) int {
@@ -365,4 +400,6 @@ func numberOfStableArrays(zero int, one int, limit int) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

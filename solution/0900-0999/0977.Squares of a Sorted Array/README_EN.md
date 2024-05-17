@@ -1,10 +1,22 @@
+---
+comments: true
+difficulty: Easy
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0900-0999/0977.Squares%20of%20a%20Sorted%20Array/README_EN.md
+tags:
+    - Array
+    - Two Pointers
+    - Sorting
+---
+
+<!-- problem:start -->
+
 # [977. Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array)
 
 [中文文档](/solution/0900-0999/0977.Squares%20of%20a%20Sorted%20Array/README.md)
 
-<!-- tags:Array,Two Pointers,Sorting -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Given an integer array <code>nums</code> sorted in <strong>non-decreasing</strong> order, return <em>an array of <strong>the squares of each number</strong> sorted in non-decreasing order</em>.</p>
 
@@ -37,7 +49,11 @@ After sorting, it becomes [0,1,9,16,100].
 <p>&nbsp;</p>
 <strong>Follow up:</strong> Squaring each element and sorting the new array is very trivial, could you find an <code>O(n)</code> solution using a different approach?
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Two Pointers
 
@@ -46,6 +62,8 @@ Since the array $nums$ is already sorted in non-decreasing order, the square val
 The time complexity is $O(n)$, where $n$ is the length of the array $nums$. Ignoring the space consumption of the answer array, the space complexity is $O(1)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -63,6 +81,8 @@ class Solution:
                 j -= 1
         return ans[::-1]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -84,6 +104,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -107,6 +129,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func sortedSquares(nums []int) []int {
 	n := len(nums)
@@ -125,6 +149,8 @@ func sortedSquares(nums []int) []int {
 	return ans
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -148,6 +174,8 @@ impl Solution {
 }
 ```
 
+#### JavaScript
+
 ```js
 /**
  * @param {number[]} nums
@@ -169,6 +197,8 @@ var sortedSquares = function (nums) {
     return ans;
 };
 ```
+
+#### PHP
 
 ```php
 class Solution {
@@ -197,4 +227,6 @@ class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

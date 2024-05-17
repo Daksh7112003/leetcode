@@ -1,10 +1,23 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0500-0599/0539.Minimum%20Time%20Difference/README_EN.md
+tags:
+    - Array
+    - Math
+    - String
+    - Sorting
+---
+
+<!-- problem:start -->
+
 # [539. Minimum Time Difference](https://leetcode.com/problems/minimum-time-difference)
 
 [中文文档](/solution/0500-0599/0539.Minimum%20Time%20Difference/README.md)
 
-<!-- tags:Array,Math,String,Sorting -->
-
 ## Description
+
+<!-- description:start -->
 
 Given a list of 24-hour clock time points in <strong>&quot;HH:MM&quot;</strong> format, return <em>the minimum <b>minutes</b> difference between any two time-points in the list</em>.
 
@@ -24,11 +37,17 @@ Given a list of 24-hour clock time points in <strong>&quot;HH:MM&quot;</strong> 
 	<li><code>timePoints[i]</code> is in the format <strong>&quot;HH:MM&quot;</strong>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -42,6 +61,8 @@ class Solution:
             res = min(res, mins[i] - mins[i - 1])
         return res
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -65,6 +86,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -83,6 +106,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func findMinDifference(timePoints []string) int {
@@ -106,6 +131,8 @@ func findMinDifference(timePoints []string) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function findMinDifference(timePoints: string[]): number {
     const mins = timePoints
@@ -127,4 +154,6 @@ function findMinDifference(timePoints: string[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

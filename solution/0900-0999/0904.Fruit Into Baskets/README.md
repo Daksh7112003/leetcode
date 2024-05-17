@@ -1,12 +1,22 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0900-0999/0904.Fruit%20Into%20Baskets/README.md
+tags:
+    - 数组
+    - 哈希表
+    - 滑动窗口
+---
+
+<!-- problem:start -->
+
 # [904. 水果成篮](https://leetcode.cn/problems/fruit-into-baskets)
 
 [English Version](/solution/0900-0999/0904.Fruit%20Into%20Baskets/README_EN.md)
 
-<!-- tags:数组,哈希表,滑动窗口 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>你正在探访一家农场，农场从左到右种植了一排果树。这些树用一个整数数组 <code>fruits</code> 表示，其中 <code>fruits[i]</code> 是第 <code>i</code> 棵树上的水果 <strong>种类</strong> 。</p>
 
@@ -65,7 +75,11 @@
 	<li><code>0 &lt;= fruits[i] &lt; fruits.length</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：哈希表 + 滑动窗口
 
@@ -95,6 +109,8 @@ j   i
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def totalFruit(self, fruits: List[int]) -> int:
@@ -111,6 +127,8 @@ class Solution:
             ans = max(ans, i - j + 1)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -132,6 +150,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -155,6 +175,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func totalFruit(fruits []int) int {
 	cnt := map[int]int{}
@@ -174,6 +196,8 @@ func totalFruit(fruits []int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function totalFruit(fruits: number[]): number {
     const n = fruits.length;
@@ -192,6 +216,8 @@ function totalFruit(fruits: number[]): number {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 use std::collections::HashMap;
@@ -224,6 +250,10 @@ impl Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二：滑动窗口优化
 
 在方法一中，我们发现，窗口大小会时而变大，时而变小，这就需要我们每一次更新答案。
@@ -233,6 +263,8 @@ impl Solution {
 时间复杂度 $O(n)$，其中 $n$ 为数组 `fruits` 的长度。空间复杂度 $O(1)$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -249,6 +281,8 @@ class Solution:
                 j += 1
         return len(fruits) - j
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -268,6 +302,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -289,6 +325,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func totalFruit(fruits []int) int {
 	cnt := map[int]int{}
@@ -308,6 +346,8 @@ func totalFruit(fruits []int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function totalFruit(fruits: number[]): number {
     const n = fruits.length;
@@ -326,6 +366,8 @@ function totalFruit(fruits: number[]): number {
     return n - j;
 }
 ```
+
+#### Rust
 
 ```rust
 use std::collections::HashMap;
@@ -355,4 +397,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

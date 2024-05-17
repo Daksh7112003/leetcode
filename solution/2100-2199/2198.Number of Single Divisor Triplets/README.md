@@ -1,12 +1,20 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/2100-2199/2198.Number%20of%20Single%20Divisor%20Triplets/README.md
+tags:
+    - 数学
+---
+
+<!-- problem:start -->
+
 # [2198. 单因数三元组 🔒](https://leetcode.cn/problems/number-of-single-divisor-triplets)
 
 [English Version](/solution/2100-2199/2198.Number%20of%20Single%20Divisor%20Triplets/README_EN.md)
 
-<!-- tags:数学 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给定一个下标从 <strong>0</strong> 开始的正整数数组 <code>nums</code>。由三个&nbsp;<strong>不同&nbsp;</strong>索引&nbsp;<code>(i, j, k)</code> 组成的三元组，如果 <code>nums[i] + nums[j] + nums[k]</code> 能被 <code>nums[i]</code>、<code>nums[j]</code>&nbsp;或 <code>nums[k]</code> 中的&nbsp;<strong>一个&nbsp;</strong>整除，则称为 <code>nums</code> 的&nbsp;<strong>单因数三元组</strong>。</p>
 
@@ -56,7 +64,11 @@
 	<li><code>1 &lt;= nums[i] &lt;= 100</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：计数 + 枚举
 
@@ -72,6 +84,8 @@
 时间复杂度 $O(M^3)$，空间复杂度 $O(M)$。其中 $M$ 为数组 $\textit{nums}$ 中元素的取值范围。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -93,6 +107,8 @@ class Solution:
                             ans += x * y * z
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -130,6 +146,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -163,6 +181,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func singleDivisorTriplet(nums []int) (ans int64) {
@@ -199,6 +219,8 @@ func singleDivisorTriplet(nums []int) (ans int64) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function singleDivisorTriplet(nums: number[]): number {
     const cnt: number[] = Array(101).fill(0);
@@ -232,4 +254,6 @@ function singleDivisorTriplet(nums: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

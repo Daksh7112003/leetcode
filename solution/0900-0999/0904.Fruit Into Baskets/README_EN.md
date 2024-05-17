@@ -1,10 +1,22 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0900-0999/0904.Fruit%20Into%20Baskets/README_EN.md
+tags:
+    - Array
+    - Hash Table
+    - Sliding Window
+---
+
+<!-- problem:start -->
+
 # [904. Fruit Into Baskets](https://leetcode.com/problems/fruit-into-baskets)
 
 [中文文档](/solution/0900-0999/0904.Fruit%20Into%20Baskets/README.md)
 
-<!-- tags:Array,Hash Table,Sliding Window -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You are visiting a farm that has a single row of fruit trees arranged from left to right. The trees are represented by an integer array <code>fruits</code> where <code>fruits[i]</code> is the <strong>type</strong> of fruit the <code>i<sup>th</sup></code> tree produces.</p>
 
@@ -53,7 +65,11 @@ If we had started at the first tree, we would only pick from trees [1,2].
 	<li><code>0 &lt;= fruits[i] &lt; fruits.length</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Hash Table + Sliding Window
 
@@ -83,6 +99,8 @@ The time complexity is $O(n)$, and the space complexity is $O(1)$. Here, $n$ is 
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def totalFruit(self, fruits: List[int]) -> int:
@@ -99,6 +117,8 @@ class Solution:
             ans = max(ans, i - j + 1)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -120,6 +140,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -143,6 +165,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func totalFruit(fruits []int) int {
 	cnt := map[int]int{}
@@ -162,6 +186,8 @@ func totalFruit(fruits []int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function totalFruit(fruits: number[]): number {
     const n = fruits.length;
@@ -180,6 +206,8 @@ function totalFruit(fruits: number[]): number {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 use std::collections::HashMap;
@@ -212,6 +240,10 @@ impl Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2: Sliding Window Optimization
 
 In Solution 1, we find that the window size sometimes increases and sometimes decreases, which requires us to update the answer each time.
@@ -221,6 +253,8 @@ But what this problem actually asks for is the maximum number of fruits, that is
 The time complexity is $O(n)$, and the space complexity is $O(1)$. Here, $n$ is the length of the `fruits` array.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -237,6 +271,8 @@ class Solution:
                 j += 1
         return len(fruits) - j
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -256,6 +292,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -277,6 +315,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func totalFruit(fruits []int) int {
 	cnt := map[int]int{}
@@ -296,6 +336,8 @@ func totalFruit(fruits []int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function totalFruit(fruits: number[]): number {
     const n = fruits.length;
@@ -314,6 +356,8 @@ function totalFruit(fruits: number[]): number {
     return n - j;
 }
 ```
+
+#### Rust
 
 ```rust
 use std::collections::HashMap;
@@ -343,4 +387,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

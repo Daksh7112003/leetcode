@@ -1,10 +1,23 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0000-0099/0098.Validate%20Binary%20Search%20Tree/README_EN.md
+tags:
+    - Tree
+    - Depth-First Search
+    - Binary Search Tree
+    - Binary Tree
+---
+
+<!-- problem:start -->
+
 # [98. Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree)
 
 [中文文档](/solution/0000-0099/0098.Validate%20Binary%20Search%20Tree/README.md)
 
-<!-- tags:Tree,Depth-First Search,Binary Search Tree,Binary Tree -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Given the <code>root</code> of a binary tree, <em>determine if it is a valid binary search tree (BST)</em>.</p>
 
@@ -40,7 +53,11 @@
 	<li><code>-2<sup>31</sup> &lt;= Node.val &lt;= 2<sup>31</sup> - 1</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Recursion
 
@@ -51,6 +68,8 @@ Therefore, we use a variable `prev` to save the last node we traversed. Initiall
 The time complexity is $O(n)$, and the space complexity is $O(n)$. Where $n$ is the number of nodes in the binary tree.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for a binary tree node.
@@ -75,6 +94,8 @@ class Solution:
         prev = -inf
         return dfs(root)
 ```
+
+#### Java
 
 ```java
 /**
@@ -115,6 +136,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 /**
  * Definition for a binary tree node.
@@ -149,6 +172,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 /**
  * Definition for a binary tree node.
@@ -177,6 +202,8 @@ func isValidBST(root *TreeNode) bool {
 	return dfs(root)
 }
 ```
+
+#### TypeScript
 
 ```ts
 /**
@@ -211,6 +238,8 @@ function isValidBST(root: TreeNode | null): boolean {
     return dfs(root);
 }
 ```
+
+#### Rust
 
 ```rust
 // Definition for a binary tree node.
@@ -255,6 +284,8 @@ impl Solution {
 }
 ```
 
+#### JavaScript
+
 ```js
 /**
  * Definition for a binary tree node.
@@ -286,6 +317,8 @@ var isValidBST = function (root) {
     return dfs(root);
 };
 ```
+
+#### C#
 
 ```cs
 /**
@@ -326,4 +359,6 @@ public class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

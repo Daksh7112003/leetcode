@@ -1,10 +1,22 @@
+---
+comments: true
+difficulty: Easy
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/2600-2699/2644.Find%20the%20Maximum%20Divisibility%20Score/README_EN.md
+rating: 1257
+source: Weekly Contest 341 Q2
+tags:
+    - Array
+---
+
+<!-- problem:start -->
+
 # [2644. Find the Maximum Divisibility Score](https://leetcode.com/problems/find-the-maximum-divisibility-score)
 
 [中文文档](/solution/2600-2699/2644.Find%20the%20Maximum%20Divisibility%20Score/README.md)
 
-<!-- tags:Array -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You are given two <strong>0-indexed</strong> integer arrays <code>nums</code> and <code>divisors</code>.</p>
 
@@ -56,7 +68,11 @@ Since divisors[0] and divisors[1] both have the maximum divisibility score, we r
 	<li><code>1 &lt;= nums[i], divisors[i] &lt;= 10<sup>9</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Enumeration
 
@@ -71,6 +87,8 @@ The time complexity is $O(m \times n)$, where $m$ and $n$ are the lengths of $nu
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def maxDivScore(self, nums: List[int], divisors: List[int]) -> int:
@@ -83,6 +101,8 @@ class Solution:
                 ans = div
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -108,6 +128,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -131,6 +153,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func maxDivScore(nums []int, divisors []int) int {
 	ans, mx := divisors[0], 0
@@ -151,6 +175,8 @@ func maxDivScore(nums []int, divisors []int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function maxDivScore(nums: number[], divisors: number[]): number {
     let ans: number = divisors[0];
@@ -167,6 +193,8 @@ function maxDivScore(nums: number[], divisors: number[]): number {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -196,4 +224,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

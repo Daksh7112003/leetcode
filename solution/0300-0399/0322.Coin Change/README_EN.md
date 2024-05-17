@@ -1,10 +1,22 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0300-0399/0322.Coin%20Change/README_EN.md
+tags:
+    - Breadth-First Search
+    - Array
+    - Dynamic Programming
+---
+
+<!-- problem:start -->
+
 # [322. Coin Change](https://leetcode.com/problems/coin-change)
 
 [中文文档](/solution/0300-0399/0322.Coin%20Change/README.md)
 
-<!-- tags:Breadth-First Search,Array,Dynamic Programming -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You are given an integer array <code>coins</code> representing coins of different denominations and an integer <code>amount</code> representing a total amount of money.</p>
 
@@ -44,7 +56,11 @@
 	<li><code>0 &lt;= amount &lt;= 10<sup>4</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Dynamic Programming (Complete Knapsack)
 
@@ -76,6 +92,8 @@ The time complexity is $O(m \times n)$, and the space complexity is $O(m \times 
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
@@ -89,6 +107,8 @@ class Solution:
                     f[i][j] = min(f[i][j], f[i][j - x] + 1)
         return -1 if f[m][n] >= inf else f[m][n]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -114,6 +134,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -134,6 +156,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func coinChange(coins []int, amount int) int {
@@ -162,6 +186,8 @@ func coinChange(coins []int, amount int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function coinChange(coins: number[], amount: number): number {
     const m = coins.length;
@@ -182,6 +208,8 @@ function coinChange(coins: number[], amount: number): number {
 }
 ```
 
+#### Rust
+
 ```rust
 impl Solution {
     pub fn coin_change(coins: Vec<i32>, amount: i32) -> i32 {
@@ -201,6 +229,8 @@ impl Solution {
     }
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -237,6 +267,8 @@ Similar problems:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
@@ -247,6 +279,8 @@ class Solution:
                 f[j] = min(f[j], f[j - x] + 1)
         return -1 if f[n] >= inf else f[n]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -266,6 +300,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -283,6 +319,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func coinChange(coins []int, amount int) int {
@@ -304,6 +342,8 @@ func coinChange(coins []int, amount int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function coinChange(coins: number[], amount: number): number {
     const n = amount;
@@ -317,6 +357,8 @@ function coinChange(coins: number[], amount: number): number {
     return f[n] > n ? -1 : f[n];
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -339,4 +381,6 @@ var coinChange = function (coins, amount) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

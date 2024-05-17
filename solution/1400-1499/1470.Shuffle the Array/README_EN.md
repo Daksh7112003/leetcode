@@ -1,10 +1,22 @@
+---
+comments: true
+difficulty: Easy
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/1400-1499/1470.Shuffle%20the%20Array/README_EN.md
+rating: 1120
+source: Weekly Contest 192 Q1
+tags:
+    - Array
+---
+
+<!-- problem:start -->
+
 # [1470. Shuffle the Array](https://leetcode.com/problems/shuffle-the-array)
 
 [中文文档](/solution/1400-1499/1470.Shuffle%20the%20Array/README.md)
 
-<!-- tags:Array -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Given the array <code>nums</code> consisting of <code>2n</code> elements in the form <code>[x<sub>1</sub>,x<sub>2</sub>,...,x<sub>n</sub>,y<sub>1</sub>,y<sub>2</sub>,...,y<sub>n</sub>]</code>.</p>
 
@@ -58,11 +70,17 @@
 
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -73,6 +91,8 @@ class Solution:
             ans.append(nums[i + n])
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -86,6 +106,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -101,6 +123,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func shuffle(nums []int, n int) []int {
 	var ans []int
@@ -112,6 +136,8 @@ func shuffle(nums []int, n int) []int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function shuffle(nums: number[], n: number): number[] {
     let ans = [];
@@ -121,6 +147,8 @@ function shuffle(nums: number[], n: number): number[] {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -135,6 +163,8 @@ impl Solution {
     }
 }
 ```
+
+#### C
 
 ```c
 /**
@@ -153,9 +183,15 @@ int* shuffle(int* nums, int numsSize, int n, int* returnSize) {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -163,6 +199,8 @@ class Solution:
         nums[::2], nums[1::2] = nums[:n], nums[n:]
         return nums
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -186,4 +224,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

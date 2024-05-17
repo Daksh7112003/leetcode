@@ -1,12 +1,25 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0300-0399/0314.Binary%20Tree%20Vertical%20Order%20Traversal/README.md
+tags:
+    - 树
+    - 深度优先搜索
+    - 广度优先搜索
+    - 哈希表
+    - 二叉树
+    - 排序
+---
+
+<!-- problem:start -->
+
 # [314. 二叉树的垂直遍历 🔒](https://leetcode.cn/problems/binary-tree-vertical-order-traversal)
 
 [English Version](/solution/0300-0399/0314.Binary%20Tree%20Vertical%20Order%20Traversal/README_EN.md)
 
-<!-- tags:树,深度优先搜索,广度优先搜索,哈希表,二叉树 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个二叉树的根结点，返回其结点按 <strong>垂直方向</strong>（从上到下，逐列）遍历的结果。</p>
 
@@ -44,7 +57,11 @@
 	<li><code>-100 &lt;= Node.val &lt;= 100</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：DFS
 
@@ -53,6 +70,8 @@ DFS 遍历二叉树，记录每个节点的值、深度，以及横向的偏移�
 时间复杂度 $O(n\log \log n)$，空间复杂度 $O(n)$。其中 $n$ 为二叉树的节点个数。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for a binary tree node.
@@ -78,6 +97,8 @@ class Solution:
             ans.append([x[1] for x in v])
         return ans
 ```
+
+#### Java
 
 ```java
 /**
@@ -123,6 +144,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 /**
  * Definition for a binary tree node.
@@ -166,6 +189,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 /**
  * Definition for a binary tree node.
@@ -208,6 +233,10 @@ func verticalOrder(root *TreeNode) [][]int {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二：BFS
 
 本题较好的做法应该是 BFS，从上往下逐层进行遍历。
@@ -215,6 +244,8 @@ func verticalOrder(root *TreeNode) [][]int {
 时间复杂度 $O(n\log n)$，空间复杂度 $O(n)$。其中 $n$ 是二叉树的结点数。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for a binary tree node.
@@ -239,6 +270,8 @@ class Solution:
                     q.append((root.right, offset + 1))
         return [v for _, v in sorted(d.items())]
 ```
+
+#### Java
 
 ```java
 /**
@@ -284,6 +317,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 /**
  * Definition for a binary tree node.
@@ -321,6 +356,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 /**
@@ -372,4 +409,6 @@ type pair struct {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

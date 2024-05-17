@@ -1,12 +1,21 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/3000-3099/3094.Guess%20the%20Number%20Using%20Bitwise%20Questions%20II/README.md
+tags:
+    - 位运算
+    - 交互
+---
+
+<!-- problem:start -->
+
 # [3094. 使用按位查询猜测数字 II 🔒](https://leetcode.cn/problems/guess-the-number-using-bitwise-questions-ii)
 
 [English Version](/solution/3000-3099/3094.Guess%20the%20Number%20Using%20Bitwise%20Questions%20II/README_EN.md)
 
-<!-- tags:位运算,交互 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>你需要找到一个在 <code>0</code> 和&nbsp;<code>2<sup>30</sup> - 1</code>&nbsp;（均包含）之间的数字 <code>n</code>。</p>
 
@@ -56,7 +65,11 @@
 	<li>如果你查询的&nbsp;<code>num</code>&nbsp;超出了给定的范围，输出将会是不可靠的。</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：位运算
 
@@ -70,6 +83,8 @@
 时间复杂度 $O(\log n)$，空间复杂度 $O(1)$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition of commonBits API.
@@ -86,6 +101,8 @@ class Solution:
                 n |= 1 << i
         return n
 ```
+
+#### Java
 
 ```java
 /**
@@ -107,6 +124,8 @@ public class Solution extends Problem {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 /**
@@ -130,6 +149,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 /**
  * Definition of commonBits API.
@@ -150,4 +171,6 @@ func findNumber() (n int) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

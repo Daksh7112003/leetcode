@@ -1,10 +1,22 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0500-0599/0510.Inorder%20Successor%20in%20BST%20II/README_EN.md
+tags:
+    - Tree
+    - Binary Search Tree
+    - Binary Tree
+---
+
+<!-- problem:start -->
+
 # [510. Inorder Successor in BST II 🔒](https://leetcode.com/problems/inorder-successor-in-bst-ii)
 
 [中文文档](/solution/0500-0599/0510.Inorder%20Successor%20in%20BST%20II/README.md)
 
-<!-- tags:Tree,Binary Search Tree,Binary Tree -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Given a <code>node</code> in a binary search tree, return <em>the in-order successor of that node in the BST</em>. If that node has no in-order successor, return <code>null</code>.</p>
 
@@ -50,7 +62,11 @@ class Node {
 <p>&nbsp;</p>
 <p><strong>Follow up:</strong> Could you solve it without looking up any of the node&#39;s values?</p>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Case Discussion
 
@@ -61,6 +77,8 @@ If the `node` does not have a right subtree, then if `node` is the right child o
 The time complexity is $O(h)$, where $h$ is the height of the binary tree. The space complexity is $O(1)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 """
@@ -84,6 +102,8 @@ class Solution:
             node = node.parent
         return node.parent
 ```
+
+#### Java
 
 ```java
 /*
@@ -112,6 +132,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 /*
@@ -143,6 +165,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 /**
  * Definition for Node.
@@ -168,6 +192,8 @@ func inorderSuccessor(node *Node) *Node {
 	return node.Parent
 }
 ```
+
+#### TypeScript
 
 ```ts
 /**
@@ -201,6 +227,8 @@ function inorderSuccessor(node: Node | null): Node | null {
 }
 ```
 
+#### JavaScript
+
 ```js
 /**
  * // Definition for a Node.
@@ -233,4 +261,6 @@ var inorderSuccessor = function (node) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

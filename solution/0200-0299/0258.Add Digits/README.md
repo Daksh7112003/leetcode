@@ -1,12 +1,22 @@
+---
+comments: true
+difficulty: 简单
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0200-0299/0258.Add%20Digits/README.md
+tags:
+    - 数学
+    - 数论
+    - 模拟
+---
+
+<!-- problem:start -->
+
 # [258. 各位相加](https://leetcode.cn/problems/add-digits)
 
 [English Version](/solution/0200-0299/0258.Add%20Digits/README_EN.md)
 
-<!-- tags:数学,数论,模拟 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给定一个非负整数 <code>num</code>，反复将各个位上的数字相加，直到结果为一位数。返回这个结果。</p>
 
@@ -41,17 +51,25 @@
 
 <p><strong>进阶：</strong>你可以不使用循环或者递归，在 <code>O(1)</code> 时间复杂度内解决这个问题吗？</p>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
     def addDigits(self, num: int) -> int:
         return 0 if num == 0 else (num - 1) % 9 + 1
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -60,6 +78,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -70,6 +90,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func addDigits(num int) int {
 	if num == 0 {
@@ -78,6 +100,8 @@ func addDigits(num int) int {
 	return (num-1)%9 + 1
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -98,9 +122,15 @@ impl Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二
 
 <!-- tabs:start -->
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -112,4 +142,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

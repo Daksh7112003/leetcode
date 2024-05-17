@@ -1,12 +1,22 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0000-0099/0012.Integer%20to%20Roman/README.md
+tags:
+    - 哈希表
+    - 数学
+    - 字符串
+---
+
+<!-- problem:start -->
+
 # [12. 整数转罗马数字](https://leetcode.cn/problems/integer-to-roman)
 
 [English Version](/solution/0000-0099/0012.Integer%20to%20Roman/README_EN.md)
 
-<!-- tags:哈希表,数学,字符串 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>罗马数字包含以下七种字符： <code>I</code>， <code>V</code>， <code>X</code>， <code>L</code>，<code>C</code>，<code>D</code> 和 <code>M</code>。</p>
 
@@ -75,7 +85,11 @@ M             1000</pre>
 	<li><code>1 <= num <= 3999</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：贪心
 
@@ -84,6 +98,8 @@ M             1000</pre>
 时间复杂度为 $O(m)$，空间复杂度为 $O(m)$。其中 $m$ 为符号的个数。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -97,6 +113,8 @@ class Solution:
                 ans.append(c)
         return ''.join(ans)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -116,6 +134,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -134,6 +154,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func intToRoman(num int) string {
 	cs := []string{"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"}
@@ -149,6 +171,8 @@ func intToRoman(num int) string {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function intToRoman(num: number): string {
     const cs: string[] = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I'];
@@ -163,6 +187,8 @@ function intToRoman(num: number): string {
     return ans.join('');
 }
 ```
+
+#### C#
 
 ```cs
 public class Solution {
@@ -180,6 +206,8 @@ public class Solution {
     }
 }
 ```
+
+#### PHP
 
 ```php
 class Solution {
@@ -221,4 +249,6 @@ class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -1,12 +1,20 @@
+---
+comments: true
+difficulty: 简单
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0900-0999/0941.Valid%20Mountain%20Array/README.md
+tags:
+    - 数组
+---
+
+<!-- problem:start -->
+
 # [941. 有效的山脉数组](https://leetcode.cn/problems/valid-mountain-array)
 
 [English Version](/solution/0900-0999/0941.Valid%20Mountain%20Array/README_EN.md)
 
-<!-- tags:数组 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给定一个整数数组 <code>arr</code>，如果它是有效的山脉数组就返回&nbsp;<code>true</code>，否则返回 <code>false</code>。</p>
 
@@ -57,7 +65,11 @@
 	<li><code>0 &lt;= arr[i] &lt;= 10<sup>4</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：双指针
 
@@ -68,6 +80,8 @@
 时间复杂度 $O(n)$，其中 $n$ 是数组的长度。空间复杂度 $O(1)$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -82,6 +96,8 @@ class Solution:
             j -= 1
         return i == j
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -101,6 +117,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -122,6 +140,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func validMountainArray(arr []int) bool {
 	n := len(arr)
@@ -138,6 +158,8 @@ func validMountainArray(arr []int) bool {
 	return i == j
 }
 ```
+
+#### TypeScript
 
 ```ts
 function validMountainArray(arr: number[]): boolean {
@@ -158,4 +180,6 @@ function validMountainArray(arr: number[]): boolean {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

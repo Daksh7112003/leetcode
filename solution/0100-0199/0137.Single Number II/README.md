@@ -1,12 +1,21 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0100-0199/0137.Single%20Number%20II/README.md
+tags:
+    - 位运算
+    - 数组
+---
+
+<!-- problem:start -->
+
 # [137. 只出现一次的数字 II](https://leetcode.cn/problems/single-number-ii)
 
 [English Version](/solution/0100-0199/0137.Single%20Number%20II/README_EN.md)
 
-<!-- tags:位运算,数组 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个整数数组&nbsp;<code>nums</code> ，除某个元素仅出现 <strong>一次</strong> 外，其余每个元素都恰出现 <strong>三次 。</strong>请你找出并返回那个只出现了一次的元素。</p>
 
@@ -38,7 +47,11 @@
 	<li><code>nums</code> 中，除某个元素仅出现 <strong>一次</strong> 外，其余每个元素都恰出现 <strong>三次</strong></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：位运算
 
@@ -47,6 +60,8 @@
 时间复杂度 $O(n \times \log M)$，空间复杂度 $O(1)$。其中 $n$ 和 $M$ 分别是数组的长度和数组中元素的范围。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -61,6 +76,8 @@ class Solution:
                     ans |= 1 << i
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -78,6 +95,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -97,6 +116,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func singleNumber(nums []int) int {
 	ans := int32(0)
@@ -112,6 +133,8 @@ func singleNumber(nums []int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function singleNumber(nums: number[]): number {
     let ans = 0;
@@ -122,6 +145,8 @@ function singleNumber(nums: number[]): number {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -139,6 +164,8 @@ impl Solution {
 }
 ```
 
+#### C
+
 ```c
 int singleNumber(int* nums, int numsSize) {
     int ans = 0;
@@ -154,6 +181,8 @@ int singleNumber(int* nums, int numsSize) {
     return ans;
 }
 ```
+
+#### Swift
 
 ```swift
 class Solution {
@@ -171,6 +200,10 @@ class Solution {
 ```
 
 <!-- tabs:end -->
+
+<!-- solution:end -->
+
+<!-- solution:start -->
 
 ### 方法二：数字电路
 
@@ -211,6 +244,8 @@ $$
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def singleNumber(self, nums: List[int]) -> int:
@@ -221,6 +256,8 @@ class Solution:
             a, b = aa, bb
         return b
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -236,6 +273,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -253,6 +292,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func singleNumber(nums []int) int {
 	a, b := 0, 0
@@ -264,6 +305,8 @@ func singleNumber(nums []int) int {
 	return b
 }
 ```
+
+#### TypeScript
 
 ```ts
 function singleNumber(nums: number[]): number {
@@ -278,6 +321,8 @@ function singleNumber(nums: number[]): number {
     return b;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -299,4 +344,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

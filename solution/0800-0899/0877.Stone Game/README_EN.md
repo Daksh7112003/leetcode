@@ -1,10 +1,23 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0800-0899/0877.Stone%20Game/README_EN.md
+tags:
+    - Array
+    - Math
+    - Dynamic Programming
+    - Game Theory
+---
+
+<!-- problem:start -->
+
 # [877. Stone Game](https://leetcode.com/problems/stone-game)
 
 [中文文档](/solution/0800-0899/0877.Stone%20Game/README.md)
 
-<!-- tags:Array,Math,Dynamic Programming,Game Theory -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Alice and Bob play a game with piles of stones. There are an <strong>even</strong> number of piles arranged in a row, and each pile has a <strong>positive</strong> integer number of stones <code>piles[i]</code>.</p>
 
@@ -45,11 +58,17 @@ This demonstrated that taking the first 5 was a winning move for Alice, so we re
 	<li><code>sum(piles[i])</code> is <strong>odd</strong>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -62,6 +81,8 @@ class Solution:
 
         return dfs(0, len(piles) - 1) > 0
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -87,6 +108,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -107,6 +130,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func stoneGame(piles []int) bool {
@@ -129,6 +154,8 @@ func stoneGame(piles []int) bool {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function stoneGame(piles: number[]): boolean {
     const n = piles.length;
@@ -148,9 +175,15 @@ function stoneGame(piles: number[]): boolean {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -164,6 +197,8 @@ class Solution:
                 f[i][j] = max(piles[i] - f[i + 1][j], piles[j] - f[i][j - 1])
         return f[0][n - 1] > 0
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -182,6 +217,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -203,6 +240,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func stoneGame(piles []int) bool {
 	n := len(piles)
@@ -219,6 +258,8 @@ func stoneGame(piles []int) bool {
 	return f[0][n-1] > 0
 }
 ```
+
+#### TypeScript
 
 ```ts
 function stoneGame(piles: number[]): boolean {
@@ -238,4 +279,6 @@ function stoneGame(piles: number[]): boolean {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

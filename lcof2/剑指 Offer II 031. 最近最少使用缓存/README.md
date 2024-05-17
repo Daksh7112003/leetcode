@@ -1,8 +1,15 @@
+---
+comments: true
+edit_url: https://github.com/doocs/leetcode/edit/main/lcof2/%E5%89%91%E6%8C%87%20Offer%20II%20031.%20%E6%9C%80%E8%BF%91%E6%9C%80%E5%B0%91%E4%BD%BF%E7%94%A8%E7%BC%93%E5%AD%98/README.md
+---
+
+<!-- problem:start -->
+
 # [剑指 Offer II 031. 最近最少使用缓存](https://leetcode.cn/problems/OrIXps)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <div class="title__3Vvk">
 <p>运用所掌握的数据结构，设计和实现一个&nbsp; <a href="https://baike.baidu.com/item/LRU" target="_blank">LRU (Least Recently Used，最近最少使用) 缓存机制</a> 。</p>
@@ -59,7 +66,11 @@ lRUCache.get(4);    // 返回 4
 
 <p><meta charset="UTF-8" />注意：本题与主站 146&nbsp;题相同：<a href="https://leetcode.cn/problems/lru-cache/">https://leetcode.cn/problems/lru-cache/</a>&nbsp;</p>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：哈希表 + 双向链表
 
@@ -75,6 +86,8 @@ lRUCache.get(4);    // 返回 4
 时间复杂度 $O(1)$，空间复杂度 $O(capacity)$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Node:
@@ -142,6 +155,8 @@ class LRUCache:
 # param_1 = obj.get(key)
 # obj.put(key,value)
 ```
+
+#### Java
 
 ```java
 class Node {
@@ -230,6 +245,8 @@ class LRUCache {
  * obj.put(key,value);
  */
 ```
+
+#### C++
 
 ```cpp
 struct Node {
@@ -325,6 +342,8 @@ private:
  */
 ```
 
+#### Go
+
 ```go
 type node struct {
 	key, val   int
@@ -396,6 +415,8 @@ func (this *LRUCache) pushFront(n *node) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 class LRUCache {
     capacity: number;
@@ -431,6 +452,8 @@ class LRUCache {
  * obj.put(key,value)
  */
 ```
+
+#### Rust
 
 ```rust
 use std::cell::RefCell;
@@ -563,6 +586,8 @@ impl LRUCache {
  */
 ```
 
+#### C#
+
 ```cs
 public class LRUCache {
     class Node {
@@ -644,4 +669,6 @@ public class LRUCache {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

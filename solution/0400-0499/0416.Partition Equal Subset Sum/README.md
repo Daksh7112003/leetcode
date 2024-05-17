@@ -1,12 +1,21 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0400-0499/0416.Partition%20Equal%20Subset%20Sum/README.md
+tags:
+    - 数组
+    - 动态规划
+---
+
+<!-- problem:start -->
+
 # [416. 分割等和子集](https://leetcode.cn/problems/partition-equal-subset-sum)
 
 [English Version](/solution/0400-0499/0416.Partition%20Equal%20Subset%20Sum/README_EN.md)
 
-<!-- tags:数组,动态规划 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个 <strong>只包含正整数 </strong>的 <strong>非空 </strong>数组 <code>nums</code> 。请你判断是否可以将这个数组分割成两个子集，使得两个子集的元素和相等。</p>
 
@@ -36,7 +45,11 @@
 	<li><code>1 <= nums[i] <= 100</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：动态规划
 
@@ -58,6 +71,8 @@ $$
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def canPartition(self, nums: List[int]) -> bool:
@@ -72,6 +87,8 @@ class Solution:
                 f[i][j] = f[i - 1][j] or (j >= x and f[i - 1][j - x])
         return f[n][m]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -99,6 +116,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -122,6 +141,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func canPartition(nums []int) bool {
@@ -148,6 +169,8 @@ func canPartition(nums []int) bool {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function canPartition(nums: number[]): boolean {
     const s = nums.reduce((a, b) => a + b, 0);
@@ -169,6 +192,8 @@ function canPartition(nums: number[]): boolean {
     return f[n][m];
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -206,6 +231,8 @@ impl Solution {
 }
 ```
 
+#### JavaScript
+
 ```js
 /**
  * @param {number[]} nums
@@ -234,9 +261,15 @@ var canPartition = function (nums) {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -250,6 +283,8 @@ class Solution:
                 f[j] = f[j] or f[j - x]
         return f[m]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -275,6 +310,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -297,6 +334,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func canPartition(nums []int) bool {
 	s := 0
@@ -318,6 +357,8 @@ func canPartition(nums []int) bool {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function canPartition(nums: number[]): boolean {
     const s = nums.reduce((a, b) => a + b, 0);
@@ -335,6 +376,8 @@ function canPartition(nums: number[]): boolean {
     return f[m];
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -372,6 +415,8 @@ impl Solution {
 }
 ```
 
+#### JavaScript
+
 ```js
 /**
  * @param {number[]} nums
@@ -396,4 +441,6 @@ var canPartition = function (nums) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

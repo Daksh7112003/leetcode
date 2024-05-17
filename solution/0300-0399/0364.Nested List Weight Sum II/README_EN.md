@@ -1,10 +1,22 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0300-0399/0364.Nested%20List%20Weight%20Sum%20II/README_EN.md
+tags:
+    - Stack
+    - Depth-First Search
+    - Breadth-First Search
+---
+
+<!-- problem:start -->
+
 # [364. Nested List Weight Sum II 🔒](https://leetcode.com/problems/nested-list-weight-sum-ii)
 
 [中文文档](/solution/0300-0399/0364.Nested%20List%20Weight%20Sum%20II/README.md)
 
-<!-- tags:Stack,Depth-First Search,Breadth-First Search -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a nested list of integers <code>nestedList</code>. Each element is either an integer or a list whose elements may also be integers or other lists.</p>
 
@@ -42,11 +54,17 @@
 	<li>The maximum <strong>depth</strong> of any integer is less than or equal to <code>50</code>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # """
@@ -114,6 +132,8 @@ class Solution:
         return dfs(nestedList, depth)
 ```
 
+#### Java
+
 ```java
 /**
  * // This is the interface that allows for creating nested lists.
@@ -173,6 +193,8 @@ class Solution {
     }
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -246,4 +268,6 @@ var depthSumInverse = function (nestedList) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

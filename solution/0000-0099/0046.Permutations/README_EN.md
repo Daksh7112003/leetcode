@@ -1,10 +1,21 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0000-0099/0046.Permutations/README_EN.md
+tags:
+    - Array
+    - Backtracking
+---
+
+<!-- problem:start -->
+
 # [46. Permutations](https://leetcode.com/problems/permutations)
 
 [中文文档](/solution/0000-0099/0046.Permutations/README.md)
 
-<!-- tags:Array,Backtracking -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Given an array <code>nums</code> of distinct integers, return <em>all the possible permutations</em>. You can return the answer in <strong>any order</strong>.</p>
 
@@ -28,7 +39,11 @@
 	<li>All the integers of <code>nums</code> are <strong>unique</strong>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: DFS (Backtracking)
 
@@ -42,11 +57,15 @@ Similar problems:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def permute(self, nums: List[int]) -> List[List[int]]:
         return list(permutations(nums))
 ```
+
+#### Python3
 
 ```python
 class Solution:
@@ -69,6 +88,8 @@ class Solution:
         dfs(0)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -102,6 +123,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -130,6 +153,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func permute(nums []int) (ans [][]int) {
 	n := len(nums)
@@ -155,6 +180,8 @@ func permute(nums []int) (ans [][]int) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function permute(nums: number[]): number[][] {
     const n = nums.length;
@@ -173,6 +200,8 @@ function permute(nums: number[]): number[][] {
     return res;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -196,6 +225,8 @@ impl Solution {
     }
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -227,6 +258,8 @@ var permute = function (nums) {
 };
 ```
 
+#### C#
+
 ```cs
 public class Solution {
     public IList<IList<int>> Permute(int[] nums) {
@@ -257,4 +290,6 @@ public class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

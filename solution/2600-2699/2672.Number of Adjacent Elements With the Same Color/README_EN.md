@@ -1,10 +1,22 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/2600-2699/2672.Number%20of%20Adjacent%20Elements%20With%20the%20Same%20Color/README_EN.md
+rating: 1705
+source: Weekly Contest 344 Q3
+tags:
+    - Array
+---
+
+<!-- problem:start -->
+
 # [2672. Number of Adjacent Elements With the Same Color](https://leetcode.com/problems/number-of-adjacent-elements-with-the-same-color)
 
 [中文文档](/solution/2600-2699/2672.Number%20of%20Adjacent%20Elements%20With%20the%20Same%20Color/README.md)
 
-<!-- tags:Array -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>There is a <strong>0-indexed</strong> array <code>nums</code> of length <code>n</code>. Initially, all elements are <strong>uncolored </strong>(has a value of <code>0</code>).</p>
 
@@ -50,11 +62,17 @@
 	<li><code>1 &lt;=&nbsp; color<sub>i</sub>&nbsp;&lt;= 10<sup>5</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -75,6 +93,8 @@ class Solution:
             nums[i] = c
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -103,6 +123,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -133,6 +155,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func colorTheArray(n int, queries [][]int) (ans []int) {
 	nums := make([]int, n)
@@ -157,6 +181,8 @@ func colorTheArray(n int, queries [][]int) (ans []int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function colorTheArray(n: number, queries: number[][]): number[] {
@@ -185,4 +211,6 @@ function colorTheArray(n: number, queries: number[][]): number[] {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

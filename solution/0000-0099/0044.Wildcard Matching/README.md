@@ -1,12 +1,23 @@
+---
+comments: true
+difficulty: 困难
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0000-0099/0044.Wildcard%20Matching/README.md
+tags:
+    - 贪心
+    - 递归
+    - 字符串
+    - 动态规划
+---
+
+<!-- problem:start -->
+
 # [44. 通配符匹配](https://leetcode.cn/problems/wildcard-matching)
 
 [English Version](/solution/0000-0099/0044.Wildcard%20Matching/README_EN.md)
 
-<!-- tags:贪心,递归,字符串,动态规划 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <div class="title__3Vvk">给你一个输入字符串 (<code>s</code>) 和一个字符模式 (<code>p</code>) ，请你实现一个支持 <code>'?'</code> 和 <code>'*'</code> 匹配规则的通配符匹配：</div>
 
@@ -56,7 +67,11 @@
 	<li><code>p</code> 仅由小写英文字母、<code>'?'</code> 或 <code>'*'</code> 组成</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：记忆化搜索
 
@@ -75,6 +90,8 @@
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def isMatch(self, s: str, p: str) -> bool:
@@ -90,6 +107,8 @@ class Solution:
 
         return dfs(0, 0)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -128,6 +147,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -156,6 +177,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func isMatch(s string, p string) bool {
@@ -191,6 +214,8 @@ func isMatch(s string, p string) bool {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function isMatch(s: string, p: string): boolean {
     const m = s.length;
@@ -218,6 +243,8 @@ function isMatch(s: string, p: string): boolean {
     return dfs(0, 0);
 }
 ```
+
+#### C#
 
 ```cs
 public class Solution {
@@ -258,6 +285,10 @@ public class Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二：动态规划
 
 我们可以将方法一中的记忆化搜索转换为动态规划。
@@ -274,6 +305,8 @@ public class Solution {
 时间复杂度 $O(m \times n)$，空间复杂度 $O(m \times n)$。其中 $m$ 和 $n$ 分别是字符串 $s$ 和 $p$ 的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -294,6 +327,8 @@ class Solution:
                     )
         return f[m][n]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -320,6 +355,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -348,6 +385,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func isMatch(s string, p string) bool {
 	m, n := len(s), len(p)
@@ -374,6 +413,8 @@ func isMatch(s string, p string) bool {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function isMatch(s: string, p: string): boolean {
     const m: number = s.length;
@@ -399,6 +440,8 @@ function isMatch(s: string, p: string): boolean {
     return f[m][n];
 }
 ```
+
+#### PHP
 
 ```php
 class Solution {
@@ -438,4 +481,6 @@ class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

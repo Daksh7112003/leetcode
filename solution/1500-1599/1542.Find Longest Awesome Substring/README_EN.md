@@ -1,10 +1,24 @@
+---
+comments: true
+difficulty: Hard
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/1500-1599/1542.Find%20Longest%20Awesome%20Substring/README_EN.md
+rating: 2221
+source: Biweekly Contest 32 Q4
+tags:
+    - Bit Manipulation
+    - Hash Table
+    - String
+---
+
+<!-- problem:start -->
+
 # [1542. Find Longest Awesome Substring](https://leetcode.com/problems/find-longest-awesome-substring)
 
 [中文文档](/solution/1500-1599/1542.Find%20Longest%20Awesome%20Substring/README.md)
 
-<!-- tags:Bit Manipulation,Hash Table,String -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a string <code>s</code>. An <strong>awesome</strong> substring is a non-empty substring of <code>s</code> such that we can make any number of swaps in order to make it a palindrome.</p>
 
@@ -42,11 +56,17 @@
 	<li><code>s</code> consists only of digits.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -66,6 +86,8 @@ class Solution:
                     ans = max(ans, i - d[st ^ (1 << v)])
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -93,6 +115,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -119,6 +143,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func longestAwesome(s string) int {
 	d := [1024]int{}
@@ -144,4 +170,6 @@ func longestAwesome(s string) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

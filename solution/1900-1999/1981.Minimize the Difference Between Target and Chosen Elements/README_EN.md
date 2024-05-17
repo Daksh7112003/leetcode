@@ -1,10 +1,24 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/1900-1999/1981.Minimize%20the%20Difference%20Between%20Target%20and%20Chosen%20Elements/README_EN.md
+rating: 2009
+source: Weekly Contest 255 Q3
+tags:
+    - Array
+    - Dynamic Programming
+    - Matrix
+---
+
+<!-- problem:start -->
+
 # [1981. Minimize the Difference Between Target and Chosen Elements](https://leetcode.com/problems/minimize-the-difference-between-target-and-chosen-elements)
 
 [中文文档](/solution/1900-1999/1981.Minimize%20the%20Difference%20Between%20Target%20and%20Chosen%20Elements/README.md)
 
-<!-- tags:Array,Dynamic Programming,Matrix -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You are given an <code>m x n</code> integer matrix <code>mat</code> and an integer <code>target</code>.</p>
 
@@ -59,7 +73,11 @@ The absolute difference is 1.
 	<li><code>1 &lt;= target &lt;= 800</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Dynamic Programming (Grouped Knapsack)
 
@@ -79,6 +97,8 @@ The time complexity is $O(m^2 \times n \times C)$ and the space complexity is $O
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def minimizeTheDifference(self, mat: List[List[int]], target: int) -> int:
@@ -87,6 +107,8 @@ class Solution:
             f = set(a + b for a in f for b in row)
         return min(abs(v - target) for v in f)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -116,6 +138,8 @@ class Solution {
 }
 ```
 
+#### Java
+
 ```java
 class Solution {
     public int minimizeTheDifference(int[][] mat, int target) {
@@ -138,6 +162,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -164,6 +190,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func minimizeTheDifference(mat [][]int, target int) int {
@@ -197,4 +225,6 @@ func abs(x int) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

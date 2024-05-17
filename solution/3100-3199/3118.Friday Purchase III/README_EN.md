@@ -1,10 +1,20 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/3100-3199/3118.Friday%20Purchase%20III/README_EN.md
+tags:
+    - Database
+---
+
+<!-- problem:start -->
+
 # [3118. Friday Purchase III 🔒](https://leetcode.com/problems/friday-purchase-iii)
 
 [中文文档](/solution/3100-3199/3118.Friday%20Purchase%20III/README.md)
 
-<!-- tags:Database -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Table: <code>Purchases</code></p>
 
@@ -110,7 +120,11 @@ Each row of this table indicates the user_id, membership type.
 <p><strong>Note:</strong> The output table is ordered by week_of_month and membership in ascending order.</p>
 </div>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Recursion + Join
 
@@ -119,6 +133,8 @@ First, we create a recursive table `T` that includes a `week_of_month` column, r
 Next, we create a table `P` that includes `week_of_month`, `membership`, and `amount_spend` columns, filtering out the amount spent by each member on Fridays of each week of the month. Finally, we join tables `T` and `M`, then left join table `P`, and group by `week_of_month` and `membership` columns to calculate the total spending of each type of member each week.
 
 <!-- tabs:start -->
+
+#### MySQL
 
 ```sql
 # Write your MySQL query statement below
@@ -153,4 +169,6 @@ ORDER BY 1, 2;
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

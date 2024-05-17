@@ -1,10 +1,24 @@
+---
+comments: true
+difficulty: Hard
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/2600-2699/2612.Minimum%20Reverse%20Operations/README_EN.md
+rating: 2824
+source: Weekly Contest 339 Q4
+tags:
+    - Breadth-First Search
+    - Array
+    - Ordered Set
+---
+
+<!-- problem:start -->
+
 # [2612. Minimum Reverse Operations](https://leetcode.com/problems/minimum-reverse-operations)
 
 [中文文档](/solution/2600-2699/2612.Minimum%20Reverse%20Operations/README.md)
 
-<!-- tags:Breadth-First Search,Array,Ordered Set -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You are given an integer <code>n</code> and an integer <code>p</code> in the range <code>[<font face="monospace">0</font>, n - 1]</code>. Representing a <strong>0-indexed</strong> array <code>arr</code>&nbsp;of length <code>n</code> where all positions are set to <code>0</code>&#39;s, except position <code>p</code> which is set to <code>1</code>.</p>
 
@@ -58,7 +72,11 @@
 	<li>all values in <code>banned</code>&nbsp;are <strong>unique</strong>&nbsp;</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Ordered Set + BFS
 
@@ -85,6 +103,8 @@ When the search is over, the answer to all indices can be obtained.
 The time complexity is $O(n \times \log n)$ and the space complexity is $O(n)$. Where $n$ is the given array length in the problem.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 from sortedcontainers import SortedSet
@@ -119,6 +139,8 @@ class Solution:
         return ans
 ```
 
+#### Java
+
 ```java
 class Solution {
     public int[] minReverseOperations(int n, int p, int[] banned, int k) {
@@ -151,6 +173,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -188,6 +212,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minReverseOperations(n int, p int, banned []int, k int) []int {
 	ans := make([]int, n)
@@ -220,6 +246,8 @@ func minReverseOperations(n int, p int, banned []int, k int) []int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function minReverseOperations(n: number, p: number, banned: number[], k: number): number[] {
@@ -896,9 +924,15 @@ class TreeMultiSet<T = number> {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### TypeScript
 
 ```ts
 function minReverseOperations(n: number, p: number, banned: number[], k: number): number[] {
@@ -1553,4 +1587,6 @@ class TreapMultiSet<T = number> implements ITreapMultiSet<T> {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

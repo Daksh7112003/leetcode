@@ -1,10 +1,22 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0000-0099/0003.Longest%20Substring%20Without%20Repeating%20Characters/README_EN.md
+tags:
+    - Hash Table
+    - String
+    - Sliding Window
+---
+
+<!-- problem:start -->
+
 # [3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters)
 
 [中文文档](/solution/0000-0099/0003.Longest%20Substring%20Without%20Repeating%20Characters/README.md)
 
-<!-- tags:Hash Table,String,Sliding Window -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Given a string <code>s</code>, find the length of the <strong>longest</strong> <span data-keyword="substring-nonempty"><strong>substring</strong></span> without repeating characters.</p>
 
@@ -42,7 +54,11 @@ Notice that the answer must be a substring, &quot;pwke&quot; is a subsequence an
 	<li><code>s</code> consists of English letters, digits, symbols and spaces.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Two pointers + Hash Table
 
@@ -67,6 +83,8 @@ for (int i = 0, j = 0; i < n; ++i) {
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
@@ -80,6 +98,8 @@ class Solution:
             ans = max(ans, j - i + 1)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -99,6 +119,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -117,6 +139,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func lengthOfLongestSubstring(s string) (ans int) {
 	ss := [128]bool{}
@@ -132,6 +156,8 @@ func lengthOfLongestSubstring(s string) (ans int) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function lengthOfLongestSubstring(s: string): number {
     let ans = 0;
@@ -146,6 +172,8 @@ function lengthOfLongestSubstring(s: string): number {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 use std::collections::HashSet;
@@ -171,6 +199,8 @@ impl Solution {
 }
 ```
 
+#### JavaScript
+
 ```js
 /**
  * @param {string} s
@@ -190,6 +220,8 @@ var lengthOfLongestSubstring = function (s) {
 };
 ```
 
+#### C#
+
 ```cs
 public class Solution {
     public int LengthOfLongestSubstring(string s) {
@@ -206,6 +238,8 @@ public class Solution {
     }
 }
 ```
+
+#### PHP
 
 ```php
 class Solution {
@@ -227,6 +261,8 @@ class Solution {
     }
 }
 ```
+
+#### Swift
 
 ```swift
 class Solution {
@@ -250,6 +286,8 @@ class Solution {
 }
 ```
 
+#### Nim
+
 ```nim
 proc lengthOfLongestSubstring(s: string): int =
   var
@@ -272,4 +310,6 @@ proc lengthOfLongestSubstring(s: string): int =
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

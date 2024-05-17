@@ -1,12 +1,24 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/2800-2899/2857.Count%20Pairs%20of%20Points%20With%20Distance%20k/README.md
+rating: 2081
+source: 第 113 场双周赛 Q3
+tags:
+    - 位运算
+    - 数组
+    - 哈希表
+---
+
+<!-- problem:start -->
+
 # [2857. 统计距离为 k 的点对](https://leetcode.cn/problems/count-pairs-of-points-with-distance-k)
 
 [English Version](/solution/2800-2899/2857.Count%20Pairs%20of%20Points%20With%20Distance%20k/README_EN.md)
 
-<!-- tags:位运算,数组,哈希表 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个 <strong>二维</strong>&nbsp;整数数组&nbsp;<code>coordinates</code>&nbsp;和一个整数&nbsp;<code>k</code>&nbsp;，其中&nbsp;<code>coordinates[i] = [x<sub>i</sub>, y<sub>i</sub>]</code>&nbsp;是第 <code>i</code>&nbsp;个点在二维平面里的坐标。</p>
 
@@ -44,7 +56,11 @@
 	<li><code>0 &lt;= k &lt;= 100</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：哈希表 + 枚举
 
@@ -55,6 +71,8 @@
 时间复杂度 $O(n \times k)$，空间复杂度 $O(n)$。其中 $n$ 是数组 $coordinates$ 的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -69,6 +87,8 @@ class Solution:
             cnt[(x2, y2)] += 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -88,6 +108,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -109,6 +131,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func countPairs(coordinates [][]int, k int) (ans int) {
 	cnt := map[[2]int]int{}
@@ -124,6 +148,8 @@ func countPairs(coordinates [][]int, k int) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function countPairs(coordinates: number[][], k: number): number {
@@ -144,9 +170,15 @@ function countPairs(coordinates: number[][], k: number): number {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二
 
 <!-- tabs:start -->
+
+#### C++
 
 ```cpp
 class Solution {
@@ -173,4 +205,6 @@ public:
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

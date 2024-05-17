@@ -1,10 +1,24 @@
+---
+comments: true
+difficulty: Easy
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0900-0999/0914.X%20of%20a%20Kind%20in%20a%20Deck%20of%20Cards/README_EN.md
+tags:
+    - Array
+    - Hash Table
+    - Math
+    - Counting
+    - Number Theory
+---
+
+<!-- problem:start -->
+
 # [914. X of a Kind in a Deck of Cards](https://leetcode.com/problems/x-of-a-kind-in-a-deck-of-cards)
 
 [中文文档](/solution/0900-0999/0914.X%20of%20a%20Kind%20in%20a%20Deck%20of%20Cards/README.md)
 
-<!-- tags:Array,Hash Table,Math,Counting,Number Theory -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You are given an integer array <code>deck</code> where <code>deck[i]</code> represents the number written on the <code>i<sup>th</sup></code> card.</p>
 
@@ -42,11 +56,17 @@
 	<li><code>0 &lt;= deck[i] &lt; 10<sup>4</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -54,6 +74,8 @@ class Solution:
         vals = Counter(deck).values()
         return reduce(gcd, vals) >= 2
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -77,6 +99,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -93,6 +117,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func hasGroupsSizeX(deck []int) bool {
@@ -123,4 +149,6 @@ func gcd(a, b int) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

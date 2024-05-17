@@ -1,10 +1,22 @@
+---
+comments: true
+difficulty: Hard
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0900-0999/0920.Number%20of%20Music%20Playlists/README_EN.md
+tags:
+    - Math
+    - Dynamic Programming
+    - Combinatorics
+---
+
+<!-- problem:start -->
+
 # [920. Number of Music Playlists](https://leetcode.com/problems/number-of-music-playlists)
 
 [中文文档](/solution/0900-0999/0920.Number%20of%20Music%20Playlists/README.md)
 
-<!-- tags:Math,Dynamic Programming,Combinatorics -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Your music player contains <code>n</code> different songs. You want to listen to <code>goal</code> songs (not necessarily different) during your trip. To avoid boredom, you will create a playlist so that:</p>
 
@@ -46,7 +58,11 @@
 	<li><code>0 &lt;= k &lt; n &lt;= goal &lt;= 100</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Dynamic Programming
 
@@ -71,6 +87,8 @@ Notice that $f[i][j]$ only depends on $f[i - 1][j - 1]$ and $f[i - 1][j]$, so we
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def numMusicPlaylists(self, n: int, goal: int, k: int) -> int:
@@ -85,6 +103,8 @@ class Solution:
                 f[i][j] %= mod
         return f[goal][n]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -105,6 +125,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -128,6 +150,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func numMusicPlaylists(n int, goal int, k int) int {
 	const mod = 1e9 + 7
@@ -149,6 +173,8 @@ func numMusicPlaylists(n int, goal int, k int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function numMusicPlaylists(n: number, goal: number, k: number): number {
     const mod = 1e9 + 7;
@@ -166,6 +192,8 @@ function numMusicPlaylists(n: number, goal: number, k: number): number {
     return f[goal][n];
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -201,9 +229,15 @@ impl Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -221,6 +255,8 @@ class Solution:
             f = g
         return f[n]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -243,6 +279,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -267,6 +305,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func numMusicPlaylists(n int, goal int, k int) int {
 	const mod = 1e9 + 7
@@ -286,6 +326,8 @@ func numMusicPlaylists(n int, goal int, k int) int {
 	return f[n]
 }
 ```
+
+#### TypeScript
 
 ```ts
 function numMusicPlaylists(n: number, goal: number, k: number): number {
@@ -309,4 +351,6 @@ function numMusicPlaylists(n: number, goal: number, k: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -1,10 +1,24 @@
+---
+comments: true
+difficulty: Hard
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/3000-3099/3093.Longest%20Common%20Suffix%20Queries/README_EN.md
+rating: 2118
+source: Weekly Contest 390 Q4
+tags:
+    - Trie
+    - Array
+    - String
+---
+
+<!-- problem:start -->
+
 # [3093. Longest Common Suffix Queries](https://leetcode.com/problems/longest-common-suffix-queries)
 
 [中文文档](/solution/3000-3099/3093.Longest%20Common%20Suffix%20Queries/README.md)
 
-<!-- tags:Trie,Array,String -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You are given two arrays of strings <code>wordsContainer</code> and <code>wordsQuery</code>.</p>
 
@@ -62,7 +76,11 @@
 	<li>Sum of <code>wordsQuery[i].length</code> is at most <code>5 * 10<sup>5</sup></code>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Trie
 
@@ -81,6 +99,8 @@ Next, we traverse the string array `wordsQuery`. For each string, we search for 
 The time complexity is $(L_1 \times |\Sigma| + L_2)$, and the space complexity is $O(L_1 \times |\Sigma|)$. Here, $L_1$ and $L_2$ are the sum of the lengths of the strings in `wordsContainer` and `wordsQuery` respectively; and $\Sigma$ is the size of the character set, in this problem $\Sigma = 26$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Trie:
@@ -124,6 +144,8 @@ class Solution:
             trie.insert(w, i)
         return [trie.query(w) for w in wordsQuery]
 ```
+
+#### Java
 
 ```java
 class Trie {
@@ -179,6 +201,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Trie {
@@ -244,6 +268,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 const inf = 1 << 30
 
@@ -300,6 +326,8 @@ func stringIndices(wordsContainer []string, wordsQuery []string) (ans []int) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 class Trie {
     private children: Trie[] = new Array<Trie>(26);
@@ -354,4 +382,6 @@ function stringIndices(wordsContainer: string[], wordsQuery: string[]): number[]
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

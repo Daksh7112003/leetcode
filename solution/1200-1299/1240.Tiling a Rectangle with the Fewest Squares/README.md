@@ -1,12 +1,22 @@
+---
+comments: true
+difficulty: 困难
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/1200-1299/1240.Tiling%20a%20Rectangle%20with%20the%20Fewest%20Squares/README.md
+rating: 2241
+source: 第 160 场周赛 Q4
+tags:
+    - 回溯
+---
+
+<!-- problem:start -->
+
 # [1240. 铺瓷砖](https://leetcode.cn/problems/tiling-a-rectangle-with-the-fewest-squares)
 
 [English Version](/solution/1200-1299/1240.Tiling%20a%20Rectangle%20with%20the%20Fewest%20Squares/README_EN.md)
 
-<!-- tags:回溯 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>你是一位施工队的工长，根据设计师的要求准备为一套设计风格独特的房子进行室内装修。</p>
 
@@ -53,7 +63,11 @@
 	<li><code>1 &lt;= m&nbsp;&lt;=&nbsp;13</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：递归回溯 + 状态压缩
 
@@ -67,6 +81,8 @@
 由于每个位置只有两种状态：填充或者未填充，因此我们可以使用一个整数来表示当前位置的状态。我们使用一个长度为 $n$ 的整数数组 $filled$，其中 $filled[i]$ 表示第 $i$ 行的状态。如果 $filled[i]$ 的第 $j$ 位为 $1$，则表示第 $i$ 行第 $j$ 列已经被填充，否则表示未填充。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -106,6 +122,8 @@ class Solution:
         dfs(0, 0, 0)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -165,6 +183,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -226,6 +246,8 @@ private:
 };
 ```
 
+#### Go
+
 ```go
 func tilingRectangle(n int, m int) int {
 	ans := n * m
@@ -275,6 +297,8 @@ func tilingRectangle(n int, m int) int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function tilingRectangle(n: number, m: number): number {
@@ -327,9 +351,15 @@ function tilingRectangle(n: number, m: number): number {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -370,6 +400,8 @@ class Solution:
         dfs(0, 0, 0)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -431,6 +463,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -494,6 +528,8 @@ private:
 };
 ```
 
+#### Go
+
 ```go
 func tilingRectangle(n int, m int) int {
 	ans := n * m
@@ -545,6 +581,8 @@ func tilingRectangle(n int, m int) int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function tilingRectangle(n: number, m: number): number {
@@ -599,4 +637,6 @@ function tilingRectangle(n: number, m: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

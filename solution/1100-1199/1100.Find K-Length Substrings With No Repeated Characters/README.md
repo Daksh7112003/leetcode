@@ -1,12 +1,24 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/1100-1199/1100.Find%20K-Length%20Substrings%20With%20No%20Repeated%20Characters/README.md
+rating: 1348
+source: 第 3 场双周赛 Q2
+tags:
+    - 哈希表
+    - 字符串
+    - 滑动窗口
+---
+
+<!-- problem:start -->
+
 # [1100. 长度为 K 的无重复字符子串 🔒](https://leetcode.cn/problems/find-k-length-substrings-with-no-repeated-characters)
 
 [English Version](/solution/1100-1199/1100.Find%20K-Length%20Substrings%20With%20No%20Repeated%20Characters/README_EN.md)
 
-<!-- tags:哈希表,字符串,滑动窗口 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个字符串&nbsp;<code>S</code>，找出所有长度为&nbsp;<code>K</code>&nbsp;且不含重复字符的子串，请你返回全部满足要求的子串的&nbsp;<strong>数目</strong>。</p>
 
@@ -37,7 +49,11 @@
 	<li><code>1 &lt;= K &lt;= 10^4</code></li>
 </ol>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：滑动窗口 + 哈希表
 
@@ -53,6 +69,8 @@
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def numKLenSubstrNoRepeats(self, s: str, k: int) -> int:
@@ -66,6 +84,8 @@ class Solution:
             ans += int(len(cnt) == k)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -91,6 +111,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -115,6 +137,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func numKLenSubstrNoRepeats(s string, k int) (ans int) {
@@ -143,6 +167,8 @@ func numKLenSubstrNoRepeats(s string, k int) (ans int) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function numKLenSubstrNoRepeats(s: string, k: number): number {
     const n = s.length;
@@ -165,6 +191,8 @@ function numKLenSubstrNoRepeats(s: string, k: number): number {
     return ans;
 }
 ```
+
+#### PHP
 
 ```php
 class Solution {
@@ -207,4 +235,6 @@ class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

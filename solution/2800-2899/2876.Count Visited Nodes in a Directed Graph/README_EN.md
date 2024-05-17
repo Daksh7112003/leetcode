@@ -1,10 +1,24 @@
+---
+comments: true
+difficulty: Hard
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/2800-2899/2876.Count%20Visited%20Nodes%20in%20a%20Directed%20Graph/README_EN.md
+rating: 2209
+source: Weekly Contest 365 Q4
+tags:
+    - Graph
+    - Memoization
+    - Dynamic Programming
+---
+
+<!-- problem:start -->
+
 # [2876. Count Visited Nodes in a Directed Graph](https://leetcode.com/problems/count-visited-nodes-in-a-directed-graph)
 
 [中文文档](/solution/2800-2899/2876.Count%20Visited%20Nodes%20in%20a%20Directed%20Graph/README.md)
 
-<!-- tags:Graph,Memoization,Dynamic Programming -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>There is a <strong>directed</strong> graph consisting of <code>n</code> nodes numbered from <code>0</code> to <code>n - 1</code> and <code>n</code> directed edges.</p>
 
@@ -49,7 +63,11 @@
 	<li><code>edges[i] != i</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Basic Tree + Traversal
 
@@ -63,6 +81,8 @@ For each node $i$, if it has not been visited yet, we start traversing from node
 The time complexity is $O(n)$, and the space complexity is $O(n)$, where $n$ is the length of the array edges.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -88,6 +108,8 @@ class Solution:
                     j = edges[j]
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -118,6 +140,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -146,6 +170,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func countVisitedNodes(edges []int) []int {
@@ -176,6 +202,8 @@ func countVisitedNodes(edges []int) []int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function countVisitedNodes(edges: number[]): number[] {
     const n = edges.length;
@@ -205,9 +233,15 @@ function countVisitedNodes(edges: number[]): number[] {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Java
 
 ```java
 class Solution {
@@ -250,4 +284,6 @@ class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

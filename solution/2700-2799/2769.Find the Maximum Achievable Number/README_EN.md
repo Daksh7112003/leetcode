@@ -1,10 +1,22 @@
+---
+comments: true
+difficulty: Easy
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/2700-2799/2769.Find%20the%20Maximum%20Achievable%20Number/README_EN.md
+rating: 1191
+source: Weekly Contest 353 Q1
+tags:
+    - Math
+---
+
+<!-- problem:start -->
+
 # [2769. Find the Maximum Achievable Number](https://leetcode.com/problems/find-the-maximum-achievable-number)
 
 [中文文档](/solution/2700-2799/2769.Find%20the%20Maximum%20Achievable%20Number/README.md)
 
-<!-- tags:Math -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You are given two integers, <code>num</code> and <code>t</code>.</p>
 
@@ -46,7 +58,11 @@ It can be proven that there is no achievable number larger than 7.
 	<li><code>1 &lt;= num, t&nbsp;&lt;= 50</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Mathematics
 
@@ -56,11 +72,15 @@ The time complexity is $O(1)$, and the space complexity is $O(1)$.
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def theMaximumAchievableX(self, num: int, t: int) -> int:
         return num + t * 2
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -69,6 +89,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -79,11 +101,15 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func theMaximumAchievableX(num int, t int) int {
 	return num + t*2
 }
 ```
+
+#### TypeScript
 
 ```ts
 function theMaximumAchievableX(num: number, t: number): number {
@@ -93,4 +119,6 @@ function theMaximumAchievableX(num: number, t: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

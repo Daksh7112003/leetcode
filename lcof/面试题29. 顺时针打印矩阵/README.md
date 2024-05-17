@@ -1,6 +1,16 @@
+---
+comments: true
+difficulty: 简单
+edit_url: https://github.com/doocs/leetcode/edit/main/lcof/%E9%9D%A2%E8%AF%95%E9%A2%9829.%20%E9%A1%BA%E6%97%B6%E9%92%88%E6%89%93%E5%8D%B0%E7%9F%A9%E9%98%B5/README.md
+---
+
+<!-- problem:start -->
+
 # [面试题 29. 顺时针打印矩阵](https://leetcode.cn/problems/shun-shi-zhen-da-yin-ju-zhen-lcof/)
 
 ## 题目描述
+
+<!-- description:start -->
 
 <p>输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字。</p>
 
@@ -29,7 +39,11 @@
 
 <p>注意：本题与主站 54 题相同：<a href="https://leetcode.cn/problems/spiral-matrix/">https://leetcode.cn/problems/spiral-matrix/</a></p>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：模拟
 
@@ -38,6 +52,8 @@
 时间复杂度 $O(m \times n)$，空间复杂度 $O(m \times n)$。其中 $m$ 和 $n$ 分别是矩阵的行数和列数。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -59,6 +75,8 @@ class Solution:
             i, j = x, y
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -87,6 +105,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -118,6 +138,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func spiralOrder(matrix [][]int) []int {
 	if len(matrix) == 0 || len(matrix[0]) == 0 {
@@ -145,6 +167,8 @@ func spiralOrder(matrix [][]int) []int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 var spiralOrder = (matrix: number[][]): number[] => {
     let ans: number[] = [];
@@ -170,6 +194,8 @@ var spiralOrder = (matrix: number[][]): number[] => {
     return ans;
 };
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -219,6 +245,8 @@ impl Solution {
 }
 ```
 
+#### JavaScript
+
 ```js
 /**
  * @param {number[][]} matrix
@@ -252,6 +280,8 @@ var spiralOrder = function (matrix) {
     return ans;
 };
 ```
+
+#### C#
 
 ```cs
 public class Solution {
@@ -298,6 +328,10 @@ public class Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start-->
+
 ### 方法二：逐层模拟
 
 从外往里一圈一圈遍历并存储矩阵元素即可。
@@ -305,6 +339,8 @@ public class Solution {
 时间复杂度 $O(m \times n)$，空间复杂度 $O(1)$。其中 $m$ 和 $n$ 分别是矩阵的行数和列数。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -323,6 +359,8 @@ class Solution:
             top, bottom, left, right = top + 1, bottom - 1, left + 1, right - 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -359,6 +397,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -385,6 +425,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func spiralOrder(matrix [][]int) []int {
@@ -422,4 +464,6 @@ func spiralOrder(matrix [][]int) []int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

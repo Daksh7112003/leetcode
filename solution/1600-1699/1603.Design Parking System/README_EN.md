@@ -1,10 +1,24 @@
+---
+comments: true
+difficulty: Easy
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/1600-1699/1603.Design%20Parking%20System/README_EN.md
+rating: 1324
+source: Biweekly Contest 36 Q1
+tags:
+    - Design
+    - Counting
+    - Simulation
+---
+
+<!-- problem:start -->
+
 # [1603. Design Parking System](https://leetcode.com/problems/design-parking-system)
 
 [中文文档](/solution/1600-1699/1603.Design%20Parking%20System/README.md)
 
-<!-- tags:Design,Counting,Simulation -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Design a parking system for a parking lot. The parking lot has three kinds of parking spaces: big, medium, and small, with a fixed number of slots for each size.</p>
 
@@ -42,11 +56,17 @@ parkingSystem.addCar(1); // return false because there is no available slot for 
 	<li>At most <code>1000</code> calls will be made to <code>addCar</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class ParkingSystem:
@@ -64,6 +84,8 @@ class ParkingSystem:
 # obj = ParkingSystem(big, medium, small)
 # param_1 = obj.addCar(carType)
 ```
+
+#### Java
 
 ```java
 class ParkingSystem {
@@ -88,6 +110,8 @@ class ParkingSystem {
  * boolean param_1 = obj.addCar(carType);
  */
 ```
+
+#### C++
 
 ```cpp
 class ParkingSystem {
@@ -115,6 +139,8 @@ private:
  */
 ```
 
+#### Go
+
 ```go
 type ParkingSystem struct {
 	cnt []int
@@ -139,6 +165,8 @@ func (this *ParkingSystem) AddCar(carType int) bool {
  */
 ```
 
+#### TypeScript
+
 ```ts
 class ParkingSystem {
     private count: [number, number, number];
@@ -162,6 +190,8 @@ class ParkingSystem {
  * var param_1 = obj.addCar(carType)
  */
 ```
+
+#### Rust
 
 ```rust
 struct ParkingSystem {
@@ -194,6 +224,8 @@ impl ParkingSystem {
  */
 ```
 
+#### C#
+
 ```cs
 public class ParkingSystem {
 
@@ -218,6 +250,8 @@ public class ParkingSystem {
  * bool param_1 = obj.AddCar(carType);
  */
 ```
+
+#### C
 
 ```c
 typedef struct {
@@ -257,4 +291,6 @@ void parkingSystemFree(ParkingSystem* obj) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

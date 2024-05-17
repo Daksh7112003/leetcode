@@ -1,10 +1,23 @@
+---
+comments: true
+difficulty: Easy
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/3100-3199/3114.Latest%20Time%20You%20Can%20Obtain%20After%20Replacing%20Characters/README_EN.md
+rating: 1290
+source: Weekly Contest 393 Q1
+tags:
+    - String
+    - Enumeration
+---
+
+<!-- problem:start -->
+
 # [3114. Latest Time You Can Obtain After Replacing Characters](https://leetcode.com/problems/latest-time-you-can-obtain-after-replacing-characters)
 
 [中文文档](/solution/3100-3199/3114.Latest%20Time%20You%20Can%20Obtain%20After%20Replacing%20Characters/README.md)
 
-<!-- tags:String,Enumeration -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a string <code>s</code> representing a 12-hour format time where some of the digits (possibly none) are replaced with a <code>&quot;?&quot;</code>.</p>
 
@@ -45,7 +58,11 @@
 	<li>The input is generated such that there is <strong>at least</strong> one time between <code>&quot;00:00&quot;</code> and <code>&quot;11:59&quot;</code> that you can obtain after replacing the <code>&quot;?&quot;</code> characters.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Enumeration
 
@@ -54,6 +71,8 @@ We can enumerate all times from large to small, where the hour $h$ ranges from $
 The time complexity is $O(h \times m)$, where $h = 12$ and $m = 60$. The space complexity is $O(1)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -64,6 +83,8 @@ class Solution:
                 if all(a == b for a, b in zip(s, t) if a != "?"):
                     return t
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -86,6 +107,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -111,6 +134,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func findLatestTime(s string) string {
 	for h := 11; ; h-- {
@@ -130,6 +155,8 @@ func findLatestTime(s string) string {
 	}
 }
 ```
+
+#### TypeScript
 
 ```ts
 function findLatestTime(s: string): string {
@@ -153,6 +180,10 @@ function findLatestTime(s: string): string {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2: Judge Each Digit
 
 We can judge each digit of $s$ one by one. If it is "?", we determine the value of this digit based on the characters before and after it. Specifically, we have the following rules:
@@ -165,6 +196,8 @@ We can judge each digit of $s$ one by one. If it is "?", we determine the value 
 The time complexity is $O(1)$, and the space complexity is $O(1)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -180,6 +213,8 @@ class Solution:
             s[4] = "9"
         return "".join(s)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -202,6 +237,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -222,6 +259,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func findLatestTime(s string) string {
@@ -250,6 +289,8 @@ func findLatestTime(s string) string {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function findLatestTime(s: string): string {
     const cs = s.split('');
@@ -271,4 +312,6 @@ function findLatestTime(s: string): string {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

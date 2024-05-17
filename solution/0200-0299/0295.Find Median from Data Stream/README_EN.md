@@ -1,10 +1,24 @@
+---
+comments: true
+difficulty: Hard
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0200-0299/0295.Find%20Median%20from%20Data%20Stream/README_EN.md
+tags:
+    - Design
+    - Two Pointers
+    - Data Stream
+    - Sorting
+    - Heap (Priority Queue)
+---
+
+<!-- problem:start -->
+
 # [295. Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream)
 
 [中文文档](/solution/0200-0299/0295.Find%20Median%20from%20Data%20Stream/README.md)
 
-<!-- tags:Design,Two Pointers,Data Stream,Sorting,Heap (Priority Queue) -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>The <strong>median</strong> is the middle value in an ordered integer list. If the size of the list is even, there is no middle value, and the median is the mean of the two middle values.</p>
 
@@ -57,11 +71,17 @@ medianFinder.findMedian(); // return 2.0
 	<li>If <code>99%</code> of all integer numbers from the stream are in the range <code>[0, 100]</code>, how would you optimize your solution?</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class MedianFinder:
@@ -89,6 +109,8 @@ class MedianFinder:
 # obj.addNum(num)
 # param_2 = obj.findMedian()
 ```
+
+#### Java
 
 ```java
 class MedianFinder {
@@ -122,6 +144,8 @@ class MedianFinder {
  * double param_2 = obj.findMedian();
  */
 ```
+
+#### C++
 
 ```cpp
 class MedianFinder {
@@ -159,6 +183,8 @@ private:
  * double param_2 = obj->findMedian();
  */
 ```
+
+#### Go
 
 ```go
 type MedianFinder struct {
@@ -205,6 +231,8 @@ func (h *hp) Pop() any {
 }
 ```
 
+#### TypeScript
+
 ```ts
 class MedianFinder {
     private nums: number[];
@@ -245,6 +273,8 @@ class MedianFinder {
  * var param_2 = obj.findMedian()
  */
 ```
+
+#### Rust
 
 ```rust
 struct MedianFinder {
@@ -290,6 +320,8 @@ impl MedianFinder {
  */
 ```
 
+#### JavaScript
+
 ```js
 /**
  * initialize your data structure here.
@@ -324,6 +356,8 @@ MedianFinder.prototype.findMedian = function () {
     return this.val.length % 2 ? this.val[mid] : (this.val[mid - 1] + this.val[mid]) / 2;
 };
 ```
+
+#### C#
 
 ```cs
 public class MedianFinder {
@@ -386,4 +420,6 @@ public class MedianFinder {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

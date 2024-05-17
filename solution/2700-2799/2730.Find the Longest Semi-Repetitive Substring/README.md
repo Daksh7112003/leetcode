@@ -1,12 +1,23 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/2700-2799/2730.Find%20the%20Longest%20Semi-Repetitive%20Substring/README.md
+rating: 1501
+source: 第 106 场双周赛 Q2
+tags:
+    - 字符串
+    - 滑动窗口
+---
+
+<!-- problem:start -->
+
 # [2730. 找到最长的半重复子字符串](https://leetcode.cn/problems/find-the-longest-semi-repetitive-substring)
 
 [English Version](/solution/2700-2799/2730.Find%20the%20Longest%20Semi-Repetitive%20Substring/README_EN.md)
 
-<!-- tags:字符串,滑动窗口 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个下标从 <strong>0</strong>&nbsp;开始的字符串&nbsp;<code>s</code>&nbsp;，这个字符串只包含&nbsp;<code>0</code>&nbsp;到&nbsp;<code>9</code>&nbsp;的数字字符。</p>
 
@@ -51,7 +62,11 @@
 	<li><code>'0' &lt;= s[i] &lt;= '9'</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：双指针
 
@@ -62,6 +77,8 @@
 时间复杂度 $O(n)$，其中 $n$ 是字符串的长度。空间复杂度 $O(1)$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -76,6 +93,8 @@ class Solution:
             ans = max(ans, i - j + 1)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -93,6 +112,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -109,6 +130,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func longestSemiRepetitiveSubstring(s string) (ans int) {
@@ -128,6 +151,8 @@ func longestSemiRepetitiveSubstring(s string) (ans int) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function longestSemiRepetitiveSubstring(s: string): number {
     const n = s.length;
@@ -145,4 +170,6 @@ function longestSemiRepetitiveSubstring(s: string): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

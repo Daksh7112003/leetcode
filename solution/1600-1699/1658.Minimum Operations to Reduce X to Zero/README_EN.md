@@ -1,10 +1,26 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/1600-1699/1658.Minimum%20Operations%20to%20Reduce%20X%20to%20Zero/README_EN.md
+rating: 1817
+source: Weekly Contest 215 Q3
+tags:
+    - Array
+    - Hash Table
+    - Binary Search
+    - Prefix Sum
+    - Sliding Window
+---
+
+<!-- problem:start -->
+
 # [1658. Minimum Operations to Reduce X to Zero](https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero)
 
 [中文文档](/solution/1600-1699/1658.Minimum%20Operations%20to%20Reduce%20X%20to%20Zero/README.md)
 
-<!-- tags:Array,Hash Table,Binary Search,Prefix Sum,Sliding Window -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You are given an integer array <code>nums</code> and an integer <code>x</code>. In one operation, you can either remove the leftmost or the rightmost element from the array <code>nums</code> and subtract its value from <code>x</code>. Note that this <strong>modifies</strong> the array for future operations.</p>
 
@@ -43,7 +59,11 @@
 	<li><code>1 &lt;= x &lt;= 10<sup>9</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Hash Table + Prefix Sum
 
@@ -59,6 +79,8 @@ The time complexity is $O(n)$, and the space complexity is $O(n)$. Where $n$ is 
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def minOperations(self, nums: List[int], x: int) -> int:
@@ -73,6 +95,8 @@ class Solution:
                 mx = max(mx, i - vis[t - s])
         return -1 if mx == -1 else len(nums) - mx
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -97,6 +121,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -118,6 +144,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func minOperations(nums []int, x int) int {
@@ -143,6 +171,8 @@ func minOperations(nums []int, x int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function minOperations(nums: number[], x: number): number {
     const s = nums.reduce((acc, cur) => acc + cur, -x);
@@ -161,6 +191,8 @@ function minOperations(nums: number[], x: number): number {
     return ~mx ? n - mx : -1;
 }
 ```
+
+#### Rust
 
 ```rust
 use std::collections::HashMap;
@@ -192,6 +224,10 @@ impl Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2: Two Pointers
 
 Based on the analysis of Solution 1, we need to find the length $mx$ of the longest consecutive subarray in the array $nums$ with a sum of $s$. Since all elements in the array $nums$ are positive integers, the prefix sum of the array will only increase monotonically, so we can use two pointers to solve this problem.
@@ -205,6 +241,8 @@ Finally, if $mx = -1$, return $-1$, otherwise return $n - mx$.
 The time complexity is $O(n)$, where $n$ is the length of the array $nums$. The space complexity is $O(1)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -221,6 +259,8 @@ class Solution:
                 mx = max(mx, i - j + 1)
         return -1 if mx == -1 else len(nums) - mx
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -245,6 +285,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -265,6 +307,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func minOperations(nums []int, x int) int {
@@ -289,6 +333,8 @@ func minOperations(nums []int, x int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function minOperations(nums: number[], x: number): number {
     const s = nums.reduce((acc, cur) => acc + cur, -x);
@@ -306,6 +352,8 @@ function minOperations(nums: number[], x: number): number {
     return ~mx ? n - mx : -1;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -335,4 +383,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

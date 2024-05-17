@@ -1,12 +1,20 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/1400-1499/1445.Apples%20%26%20Oranges/README.md
+tags:
+    - 数据库
+---
+
+<!-- problem:start -->
+
 # [1445. 苹果和桔子 🔒](https://leetcode.cn/problems/apples-oranges)
 
 [English Version](/solution/1400-1499/1445.Apples%20%26%20Oranges/README_EN.md)
 
-<!-- tags:数据库 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>表: <code>Sales</code></p>
 
@@ -65,13 +73,19 @@ Sales</code> 表:
 在 2020-05-04, 卖了 15 个苹果 和 16 个桔子 (差异为 15 - 16 = -1).
 </pre>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：分组求和
 
 我们可以将数据按照日期分组，然后用 `sum` 函数求出每天苹果和桔子 🔒 的销售差异。如果是苹果，我们就用正数表示，如果是桔子，我们就用负数表示。最后我们按照日期排序即可。
 
 <!-- tabs:start -->
+
+#### MySQL
 
 ```sql
 # Write your MySQL query statement below
@@ -85,4 +99,6 @@ ORDER BY 1;
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

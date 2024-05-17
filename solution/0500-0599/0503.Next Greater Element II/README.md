@@ -1,12 +1,22 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0500-0599/0503.Next%20Greater%20Element%20II/README.md
+tags:
+    - 栈
+    - 数组
+    - 单调栈
+---
+
+<!-- problem:start -->
+
 # [503. 下一个更大元素 II](https://leetcode.cn/problems/next-greater-element-ii)
 
 [English Version](/solution/0500-0599/0503.Next%20Greater%20Element%20II/README_EN.md)
 
-<!-- tags:栈,数组,单调栈 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给定一个循环数组&nbsp;<code>nums</code>&nbsp;（&nbsp;<code>nums[nums.length - 1]</code>&nbsp;的下一个元素是&nbsp;<code>nums[0]</code>&nbsp;），返回&nbsp;<em><code>nums</code>&nbsp;中每个元素的 <strong>下一个更大元素</strong></em> 。</p>
 
@@ -40,11 +50,17 @@
 	<li><code>-10<sup>9</sup>&nbsp;&lt;= nums[i] &lt;= 10<sup>9</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：单调栈 + 循环数组
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -58,6 +74,8 @@ class Solution:
             stk.append(i % n)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -76,6 +94,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -96,6 +116,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func nextGreaterElements(nums []int) []int {
 	n := len(nums)
@@ -115,6 +137,8 @@ func nextGreaterElements(nums []int) []int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function nextGreaterElements(nums: number[]): number[] {
     const stack: number[] = [],
@@ -131,6 +155,8 @@ function nextGreaterElements(nums: number[]): number[] {
     return res;
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -154,9 +180,15 @@ var nextGreaterElements = function (nums) {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -173,6 +205,8 @@ class Solution:
             stk.append(nums[i])
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -196,6 +230,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -213,6 +249,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func nextGreaterElements(nums []int) []int {
@@ -235,6 +273,8 @@ func nextGreaterElements(nums []int) []int {
 	return ans
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -261,4 +301,6 @@ var nextGreaterElements = function (nums) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

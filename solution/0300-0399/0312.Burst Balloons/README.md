@@ -1,12 +1,21 @@
+---
+comments: true
+difficulty: 困难
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0300-0399/0312.Burst%20Balloons/README.md
+tags:
+    - 数组
+    - 动态规划
+---
+
+<!-- problem:start -->
+
 # [312. 戳气球](https://leetcode.cn/problems/burst-balloons)
 
 [English Version](/solution/0300-0399/0312.Burst%20Balloons/README_EN.md)
 
-<!-- tags:数组,动态规划 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>有 <code>n</code> 个气球，编号为<code>0</code> 到 <code>n - 1</code>，每个气球上都标有一个数字，这些数字存在数组&nbsp;<code>nums</code>&nbsp;中。</p>
 
@@ -41,11 +50,17 @@ coins =  3*1*5    +   3*5*8   +  1*3*8  + 1*8*1 = 167</pre>
 	<li><code>0 &lt;= nums[i] &lt;= 100</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -62,6 +77,8 @@ class Solution:
                     )
         return dp[0][-1]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -86,6 +103,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -106,6 +125,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func maxCoins(nums []int) int {
@@ -131,6 +152,8 @@ func maxCoins(nums []int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function maxCoins(nums: number[]): number {
     let n = nums.length;
@@ -150,4 +173,6 @@ function maxCoins(nums: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

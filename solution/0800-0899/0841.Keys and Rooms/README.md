@@ -1,12 +1,22 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0800-0899/0841.Keys%20and%20Rooms/README.md
+tags:
+    - 深度优先搜索
+    - 广度优先搜索
+    - 图
+---
+
+<!-- problem:start -->
+
 # [841. 钥匙和房间](https://leetcode.cn/problems/keys-and-rooms)
 
 [English Version](/solution/0800-0899/0841.Keys%20and%20Rooms/README_EN.md)
 
-<!-- tags:深度优先搜索,广度优先搜索,图 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>有 <code>n</code> 个房间，房间按从 <code>0</code> 到 <code>n - 1</code> 编号。最初，除 <code>0</code> 号房间外的其余所有房间都被锁住。你的目标是进入所有的房间。然而，你不能在没有获得钥匙的时候进入锁住的房间。</p>
 
@@ -53,7 +63,11 @@
 	<li>所有 <code>rooms[i]</code> 的值 <strong>互不相同</strong></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：DFS
 
@@ -64,6 +78,8 @@
 时间复杂度 $O(n + m)$，空间复杂度 $O(n)$，其中 $n$ 为节点个数，而 $m$ 为边的个数。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -79,6 +95,8 @@ class Solution:
         dfs(0)
         return len(vis) == len(rooms)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -106,6 +124,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -130,6 +150,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func canVisitAllRooms(rooms [][]int) bool {
 	n := len(rooms)
@@ -151,6 +173,8 @@ func canVisitAllRooms(rooms [][]int) bool {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function canVisitAllRooms(rooms: number[][]): boolean {
     const n = rooms.length;
@@ -168,6 +192,8 @@ function canVisitAllRooms(rooms: number[][]): boolean {
     return vis.every(v => v);
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -190,4 +216,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

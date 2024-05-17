@@ -1,12 +1,25 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/2800-2899/2831.Find%20the%20Longest%20Equal%20Subarray/README.md
+rating: 1975
+source: 第 359 场周赛 Q4
+tags:
+    - 数组
+    - 哈希表
+    - 二分查找
+    - 滑动窗口
+---
+
+<!-- problem:start -->
+
 # [2831. 找出最长等值子数组](https://leetcode.cn/problems/find-the-longest-equal-subarray)
 
 [English Version](/solution/2800-2899/2831.Find%20the%20Longest%20Equal%20Subarray/README_EN.md)
 
-<!-- tags:数组,哈希表,二分查找,滑动窗口 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个下标从 <strong>0</strong> 开始的整数数组 <code>nums</code> 和一个整数 <code>k</code> 。</p>
 
@@ -50,7 +63,11 @@
 	<li><code>0 &lt;= k &lt;= nums.length</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：哈希表 + 双指针
 
@@ -66,6 +83,8 @@
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def longestEqualSubarray(self, nums: List[int], k: int) -> int:
@@ -80,6 +99,8 @@ class Solution:
                 l += 1
         return mx
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -98,6 +119,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -115,6 +138,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func longestEqualSubarray(nums []int, k int) int {
 	cnt := map[int]int{}
@@ -130,6 +155,8 @@ func longestEqualSubarray(nums []int, k int) int {
 	return mx
 }
 ```
+
+#### TypeScript
 
 ```ts
 function longestEqualSubarray(nums: number[], k: number): number {
@@ -150,4 +177,6 @@ function longestEqualSubarray(nums: number[], k: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

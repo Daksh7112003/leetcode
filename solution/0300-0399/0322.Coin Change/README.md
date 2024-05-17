@@ -1,12 +1,22 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0300-0399/0322.Coin%20Change/README.md
+tags:
+    - 广度优先搜索
+    - 数组
+    - 动态规划
+---
+
+<!-- problem:start -->
+
 # [322. 零钱兑换](https://leetcode.cn/problems/coin-change)
 
 [English Version](/solution/0300-0399/0322.Coin%20Change/README_EN.md)
 
-<!-- tags:广度优先搜索,数组,动态规划 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个整数数组 <code>coins</code> ，表示不同面额的硬币；以及一个整数 <code>amount</code> ，表示总金额。</p>
 
@@ -46,7 +56,11 @@
 	<li><code>0 &lt;= amount &lt;= 10<sup>4</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：动态规划(完全背包)
 
@@ -78,6 +92,8 @@ $$
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
@@ -91,6 +107,8 @@ class Solution:
                     f[i][j] = min(f[i][j], f[i][j - x] + 1)
         return -1 if f[m][n] >= inf else f[m][n]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -116,6 +134,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -136,6 +156,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func coinChange(coins []int, amount int) int {
@@ -164,6 +186,8 @@ func coinChange(coins []int, amount int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function coinChange(coins: number[], amount: number): number {
     const m = coins.length;
@@ -184,6 +208,8 @@ function coinChange(coins: number[], amount: number): number {
 }
 ```
 
+#### Rust
+
 ```rust
 impl Solution {
     pub fn coin_change(coins: Vec<i32>, amount: i32) -> i32 {
@@ -203,6 +229,8 @@ impl Solution {
     }
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -239,6 +267,8 @@ var coinChange = function (coins, amount) {
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
@@ -249,6 +279,8 @@ class Solution:
                 f[j] = min(f[j], f[j - x] + 1)
         return -1 if f[n] >= inf else f[n]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -268,6 +300,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -285,6 +319,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func coinChange(coins []int, amount int) int {
@@ -306,6 +342,8 @@ func coinChange(coins []int, amount int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function coinChange(coins: number[], amount: number): number {
     const n = amount;
@@ -319,6 +357,8 @@ function coinChange(coins: number[], amount: number): number {
     return f[n] > n ? -1 : f[n];
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -341,4 +381,6 @@ var coinChange = function (coins, amount) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -1,10 +1,25 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/2100-2199/2170.Minimum%20Operations%20to%20Make%20the%20Array%20Alternating/README_EN.md
+rating: 1662
+source: Weekly Contest 280 Q2
+tags:
+    - Greedy
+    - Array
+    - Hash Table
+    - Counting
+---
+
+<!-- problem:start -->
+
 # [2170. Minimum Operations to Make the Array Alternating](https://leetcode.com/problems/minimum-operations-to-make-the-array-alternating)
 
 [中文文档](/solution/2100-2199/2170.Minimum%20Operations%20to%20Make%20the%20Array%20Alternating/README.md)
 
-<!-- tags:Greedy,Array,Hash Table,Counting -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a <strong>0-indexed</strong> array <code>nums</code> consisting of <code>n</code> positive integers.</p>
 
@@ -50,11 +65,17 @@ Note that the array cannot be converted to [<u><strong>2</strong></u>,2,2,2,2] b
 	<li><code>1 &lt;= nums[i] &lt;= 10<sup>5</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -70,6 +91,8 @@ class Solution:
         n = len(nums)
         return min(n - (n1 + n2) for a, n1 in get(0) for b, n2 in get(1) if a != b)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -117,6 +140,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 typedef pair<int, int> PII;
 
@@ -152,6 +177,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minimumOperations(nums []int) int {
 	n := len(nums)
@@ -181,6 +208,8 @@ func minimumOperations(nums []int) int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function minimumOperations(nums: number[]): number {
@@ -213,4 +242,6 @@ function minimumOperations(nums: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

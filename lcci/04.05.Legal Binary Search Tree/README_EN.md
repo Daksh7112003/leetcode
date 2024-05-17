@@ -1,8 +1,18 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/lcci/04.05.Legal%20Binary%20Search%20Tree/README_EN.md
+---
+
+<!-- problem:start -->
+
 # [04.05. Legal Binary Search Tree](https://leetcode.cn/problems/legal-binary-search-tree-lcci)
 
 [中文文档](/lcci/04.05.Legal%20Binary%20Search%20Tree/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Implement a function to check if a binary tree is a binary search tree.</p>
 
@@ -44,7 +54,11 @@
 
 &nbsp;    the value of root node is 5, but its right child has value 4.</pre>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Recursion
 
@@ -55,6 +69,8 @@ Therefore, we use a variable `prev` to save the last node we traversed. Initiall
 The time complexity is $O(n)$, and the space complexity is $O(n)$. Where $n$ is the number of nodes in the binary tree.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for a binary tree node.
@@ -79,6 +95,8 @@ class Solution:
         prev = -inf
         return dfs(root)
 ```
+
+#### Java
 
 ```java
 /**
@@ -119,6 +137,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 /**
  * Definition for a binary tree node.
@@ -153,6 +173,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 /**
  * Definition for a binary tree node.
@@ -181,6 +203,8 @@ func isValidBST(root *TreeNode) bool {
 	return dfs(root)
 }
 ```
+
+#### TypeScript
 
 ```ts
 /**
@@ -215,6 +239,8 @@ function isValidBST(root: TreeNode | null): boolean {
     return dfs(root);
 }
 ```
+
+#### Rust
 
 ```rust
 // Definition for a binary tree node.
@@ -259,6 +285,8 @@ impl Solution {
 }
 ```
 
+#### JavaScript
+
 ```js
 /**
  * Definition for a binary tree node.
@@ -290,6 +318,8 @@ var isValidBST = function (root) {
     return dfs(root);
 };
 ```
+
+#### C#
 
 ```cs
 /**
@@ -327,6 +357,8 @@ public class Solution {
     }
 }
 ```
+
+#### Swift
 
 ```swift
 /* class TreeNode {
@@ -371,4 +403,6 @@ class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

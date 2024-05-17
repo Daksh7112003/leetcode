@@ -1,12 +1,24 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/1300-1399/1329.Sort%20the%20Matrix%20Diagonally/README.md
+rating: 1548
+source: 第 18 场双周赛 Q3
+tags:
+    - 数组
+    - 矩阵
+    - 排序
+---
+
+<!-- problem:start -->
+
 # [1329. 将矩阵按对角线排序](https://leetcode.cn/problems/sort-the-matrix-diagonally)
 
 [English Version](/solution/1300-1399/1329.Sort%20the%20Matrix%20Diagonally/README_EN.md)
 
-<!-- tags:数组,矩阵,排序 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p><strong>矩阵对角线</strong> 是一条从矩阵最上面行或者最左侧列中的某个元素开始的对角线，沿右下方向一直到矩阵末尾的元素。例如，矩阵 <code>mat</code> 有 <code>6</code> 行 <code>3</code> 列，从 <code>mat[2][0]</code> 开始的 <strong>矩阵对角线</strong> 将会经过 <code>mat[2][0]</code>、<code>mat[3][1]</code> 和 <code>mat[4][2]</code> 。</p>
 
@@ -41,7 +53,11 @@
 	<li><code>1 <= mat[i][j] <= 100</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：排序
 
@@ -54,6 +70,8 @@
 时间复杂度 $O(m \times n \times \log \min(m, n))$，空间复杂度 $O(m \times n)$。其中 $m$ 和 $n$ 分别是矩阵的行数和列数。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -70,6 +88,8 @@ class Solution:
                 mat[i][j] = g[m - i + j].pop()
         return mat
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -94,6 +114,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -120,6 +142,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func diagonalSort(mat [][]int) [][]int {
 	m, n := len(mat), len(mat[0])
@@ -143,6 +167,8 @@ func diagonalSort(mat [][]int) [][]int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function diagonalSort(mat: number[][]): number[][] {
     const [m, n] = [mat.length, mat[0].length];
@@ -163,6 +189,8 @@ function diagonalSort(mat: number[][]): number[][] {
     return mat;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -187,6 +215,8 @@ impl Solution {
     }
 }
 ```
+
+#### C#
 
 ```cs
 public class Solution {
@@ -219,4 +249,6 @@ public class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

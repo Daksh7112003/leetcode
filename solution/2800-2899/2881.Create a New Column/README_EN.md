@@ -1,10 +1,18 @@
+---
+comments: true
+difficulty: Easy
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/2800-2899/2881.Create%20a%20New%20Column/README_EN.md
+---
+
+<!-- problem:start -->
+
 # [2881. Create a New Column](https://leetcode.com/problems/create-a-new-column)
 
 [中文文档](/solution/2800-2899/2881.Create%20a%20New%20Column/README.md)
 
-<!-- tags: -->
-
 ## Description
+
+<!-- description:start -->
 
 <pre>
 DataFrame <code>employees</code>
@@ -52,7 +60,11 @@ DataFrame employees
 <strong>Explanation:</strong> 
 A new column bonus is created by doubling the value in the column salary.</pre>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Direct Calculation
 
@@ -61,6 +73,8 @@ We can directly calculate the double of `salary` and then store the result in th
 The time complexity is $O(1)$, and the space complexity is $O(1)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 import pandas as pd
@@ -73,4 +87,6 @@ def createBonusColumn(employees: pd.DataFrame) -> pd.DataFrame:
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

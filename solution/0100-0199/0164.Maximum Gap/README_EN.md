@@ -1,10 +1,23 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0100-0199/0164.Maximum%20Gap/README_EN.md
+tags:
+    - Array
+    - Bucket Sort
+    - Radix Sort
+    - Sorting
+---
+
+<!-- problem:start -->
+
 # [164. Maximum Gap](https://leetcode.com/problems/maximum-gap)
 
 [中文文档](/solution/0100-0199/0164.Maximum%20Gap/README.md)
 
-<!-- tags:Array,Bucket Sort,Radix Sort,Sorting -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Given an integer array <code>nums</code>, return <em>the maximum difference between two successive elements in its sorted form</em>. If the array contains less than two elements, return <code>0</code>.</p>
 
@@ -35,7 +48,11 @@
 	<li><code>0 &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Discuss Different Cases
 
@@ -53,6 +70,8 @@ If the iteration ends, it means that all the characters of $s$ and $t$ that have
 The time complexity is $O(m)$, where $m$ is the length of string $s$. The space complexity is $O(1)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -77,6 +96,8 @@ class Solution:
             prev = curmax
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -117,6 +138,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 using pii = pair<int, int>;
 
@@ -150,6 +173,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func maximumGap(nums []int) int {
@@ -186,6 +211,8 @@ func maximumGap(nums []int) int {
 	return ans
 }
 ```
+
+#### C#
 
 ```cs
 using System;
@@ -231,4 +258,6 @@ public class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

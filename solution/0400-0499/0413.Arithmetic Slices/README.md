@@ -1,12 +1,21 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0400-0499/0413.Arithmetic%20Slices/README.md
+tags:
+    - 数组
+    - 动态规划
+---
+
+<!-- problem:start -->
+
 # [413. 等差数列划分](https://leetcode.cn/problems/arithmetic-slices)
 
 [English Version](/solution/0400-0499/0413.Arithmetic%20Slices/README_EN.md)
 
-<!-- tags:数组,动态规划 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>如果一个数列 <strong>至少有三个元素</strong> ，并且任意两个相邻元素之差相同，则称该数列为等差数列。</p>
 
@@ -48,7 +57,11 @@
 </div>
 </div>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：遍历计数
 
@@ -69,6 +82,8 @@
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def numberOfArithmeticSlices(self, nums: List[int]) -> int:
@@ -83,6 +98,8 @@ class Solution:
             ans += max(0, cnt - 2)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -102,6 +119,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -123,6 +142,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func numberOfArithmeticSlices(nums []int) (ans int) {
 	cnt, d := 0, 3000
@@ -139,6 +160,8 @@ func numberOfArithmeticSlices(nums []int) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function numberOfArithmeticSlices(nums: number[]): number {
@@ -162,9 +185,15 @@ function numberOfArithmeticSlices(nums: number[]): number {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -183,4 +212,6 @@ class Solution:
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

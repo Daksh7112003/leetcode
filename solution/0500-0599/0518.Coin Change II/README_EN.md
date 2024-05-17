@@ -1,10 +1,21 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0500-0599/0518.Coin%20Change%20II/README_EN.md
+tags:
+    - Array
+    - Dynamic Programming
+---
+
+<!-- problem:start -->
+
 # [518. Coin Change II](https://leetcode.com/problems/coin-change-ii)
 
 [中文文档](/solution/0500-0599/0518.Coin%20Change%20II/README.md)
 
-<!-- tags:Array,Dynamic Programming -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You are given an integer array <code>coins</code> representing coins of different denominations and an integer <code>amount</code> representing a total amount of money.</p>
 
@@ -52,7 +63,11 @@
 	<li><code>0 &lt;= amount &lt;= 5000</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Dynamic Programming (Complete Knapsack)
 
@@ -84,6 +99,8 @@ The time complexity is $O(m \times n)$, and the space complexity is $O(m \times 
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def change(self, amount: int, coins: List[int]) -> int:
@@ -97,6 +114,8 @@ class Solution:
                     f[i][j] += f[i][j - x]
         return f[m][n]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -116,6 +135,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -138,6 +159,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func change(amount int, coins []int) int {
 	m, n := len(coins), amount
@@ -157,6 +180,8 @@ func change(amount int, coins []int) int {
 	return f[m][n]
 }
 ```
+
+#### TypeScript
 
 ```ts
 function change(amount: number, coins: number[]): number {
@@ -181,6 +206,8 @@ We notice that $f[i][j]$ is only related to $f[i - 1][j]$ and $f[i][j - x]$. The
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def change(self, amount: int, coins: List[int]) -> int:
@@ -191,6 +218,8 @@ class Solution:
                 f[j] += f[j - x]
         return f[n]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -207,6 +236,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -226,6 +257,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func change(amount int, coins []int) int {
 	n := amount
@@ -239,6 +272,8 @@ func change(amount int, coins []int) int {
 	return f[n]
 }
 ```
+
+#### TypeScript
 
 ```ts
 function change(amount: number, coins: number[]): number {
@@ -256,4 +291,6 @@ function change(amount: number, coins: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

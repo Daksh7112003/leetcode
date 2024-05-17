@@ -1,10 +1,22 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0300-0399/0366.Find%20Leaves%20of%20Binary%20Tree/README_EN.md
+tags:
+    - Tree
+    - Depth-First Search
+    - Binary Tree
+---
+
+<!-- problem:start -->
+
 # [366. Find Leaves of Binary Tree 🔒](https://leetcode.com/problems/find-leaves-of-binary-tree)
 
 [中文文档](/solution/0300-0399/0366.Find%20Leaves%20of%20Binary%20Tree/README.md)
 
-<!-- tags:Tree,Depth-First Search,Binary Tree -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Given the <code>root</code> of a binary tree, collect a tree&#39;s nodes as if you were doing this:</p>
 
@@ -39,11 +51,17 @@ Explanation:
 	<li><code>-100 &lt;= Node.val &lt;= 100</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for a binary tree node.
@@ -74,6 +92,8 @@ class Solution:
             res.append(t)
         return res
 ```
+
+#### Java
 
 ```java
 /**
@@ -121,6 +141,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 /**
  * Definition for a binary tree node.
@@ -160,6 +182,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 /**
@@ -204,4 +228,6 @@ func dfs(root, prev *TreeNode, t *[]int) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

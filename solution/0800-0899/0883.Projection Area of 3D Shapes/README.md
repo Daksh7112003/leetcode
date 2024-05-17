@@ -1,12 +1,23 @@
+---
+comments: true
+difficulty: 简单
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0800-0899/0883.Projection%20Area%20of%203D%20Shapes/README.md
+tags:
+    - 几何
+    - 数组
+    - 数学
+    - 矩阵
+---
+
+<!-- problem:start -->
+
 # [883. 三维形体投影面积](https://leetcode.cn/problems/projection-area-of-3d-shapes)
 
 [English Version](/solution/0800-0899/0883.Projection%20Area%20of%203D%20Shapes/README_EN.md)
 
-<!-- tags:几何,数组,数学,矩阵 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>在<meta charset="UTF-8" />&nbsp;<code>n x n</code>&nbsp;的网格<meta charset="UTF-8" />&nbsp;<code>grid</code>&nbsp;中，我们放置了一些与 x，y，z 三轴对齐的<meta charset="UTF-8" />&nbsp;<code>1 x 1 x 1</code>&nbsp;立方体。</p>
 
@@ -66,7 +77,11 @@
 	<li><code>0 &lt;= grid[i][j] &lt;= 50</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：数学
 
@@ -82,6 +97,8 @@
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def projectionArea(self, grid: List[List[int]]) -> int:
@@ -90,6 +107,8 @@ class Solution:
         zx = sum(max(col) for col in zip(*grid))
         return xy + yz + zx
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -113,6 +132,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -133,6 +154,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func projectionArea(grid [][]int) int {
 	xy, yz, zx := 0, 0, 0
@@ -152,6 +175,8 @@ func projectionArea(grid [][]int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function projectionArea(grid: number[][]): number {
     const xy: number = grid.flat().filter(v => v > 0).length;
@@ -162,6 +187,8 @@ function projectionArea(grid: number[][]): number {
     return xy + yz + zx;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -196,4 +223,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

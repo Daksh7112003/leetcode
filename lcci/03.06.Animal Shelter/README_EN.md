@@ -1,8 +1,18 @@
+---
+comments: true
+difficulty: Easy
+edit_url: https://github.com/doocs/leetcode/edit/main/lcci/03.06.Animal%20Shelter/README_EN.md
+---
+
+<!-- problem:start -->
+
 # [03.06. Animal Shelter](https://leetcode.cn/problems/animal-shelter-lcci)
 
 [中文文档](/lcci/03.06.Animal%20Shelter/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>An animal shelter, which holds only dogs and cats, operates on a strictly&quot;first in, first out&quot; basis. People must adopt either the&quot;oldest&quot; (based on arrival time) of all animals at the shelter, or they can select whether they would prefer a dog or a cat (and will receive the oldest animal of that type). They cannot select which specific animal they would like. Create the data structures to maintain this system and implement operations such as <code>enqueue</code>, <code>dequeueAny</code>, <code>dequeueDog</code>, and <code>dequeueCat</code>. You may use the built-in Linked list data structure.</p>
 
@@ -48,7 +58,11 @@
 	<li>The number of animals in the shelter will not exceed 20000.</li>
 </ol>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Array of Queues
 
@@ -65,6 +79,8 @@ In the `dequeueCat` operation, if $q[0]$ is empty, we return $[-1, -1]$, otherwi
 The time complexity of the above operations is $O(1)$, and the space complexity is $O(n)$, where $n$ is the number of animals in the animal shelter.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class AnimalShelf:
@@ -95,6 +111,8 @@ class AnimalShelf:
 # param_3 = obj.dequeueDog()
 # param_4 = obj.dequeueCat()
 ```
+
+#### Java
 
 ```java
 class AnimalShelf {
@@ -133,6 +151,8 @@ class AnimalShelf {
  * int[] param_4 = obj.dequeueCat();
  */
 ```
+
+#### C++
 
 ```cpp
 class AnimalShelf {
@@ -183,6 +203,8 @@ private:
  */
 ```
 
+#### Go
+
 ```go
 type AnimalShelf struct {
 	q [2][]int
@@ -231,6 +253,8 @@ func (this *AnimalShelf) DequeueCat() []int {
  */
 ```
 
+#### TypeScript
+
 ```ts
 class AnimalShelf {
     private q: number[][] = [[], []];
@@ -272,6 +296,8 @@ class AnimalShelf {
  * var param_4 = obj.dequeueCat()
  */
 ```
+
+#### Rust
 
 ```rust
 use std::collections::VecDeque;
@@ -329,6 +355,8 @@ impl AnimalShelf {
  */
 ```
 
+#### Swift
+
 ```swift
 class AnimalShelf {
     private var q: [[Int]] = Array(repeating: [], count: 2)
@@ -368,4 +396,6 @@ class AnimalShelf {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

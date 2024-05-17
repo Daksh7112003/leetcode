@@ -1,10 +1,27 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0300-0399/0347.Top%20K%20Frequent%20Elements/README_EN.md
+tags:
+    - Array
+    - Hash Table
+    - Divide and Conquer
+    - Bucket Sort
+    - Counting
+    - Quickselect
+    - Sorting
+    - Heap (Priority Queue)
+---
+
+<!-- problem:start -->
+
 # [347. Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements)
 
 [中文文档](/solution/0300-0399/0347.Top%20K%20Frequent%20Elements/README.md)
 
-<!-- tags:Array,Hash Table,Divide and Conquer,Bucket Sort,Counting,Quickselect,Sorting,Heap (Priority Queue) -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Given an integer array <code>nums</code> and an integer <code>k</code>, return <em>the</em> <code>k</code> <em>most frequent elements</em>. You may return the answer in <strong>any order</strong>.</p>
 
@@ -29,11 +46,17 @@
 <p>&nbsp;</p>
 <p><strong>Follow up:</strong> Your algorithm&#39;s time complexity must be better than <code>O(n log n)</code>, where n is the array&#39;s size.</p>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -41,6 +64,8 @@ class Solution:
         cnt = Counter(nums)
         return [v[0] for v in cnt.most_common(k)]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -58,6 +83,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 using pii = pair<int, int>;
@@ -83,6 +110,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func topKFrequent(nums []int, k int) []int {
@@ -114,6 +143,8 @@ func (h *hp) Push(v any)        { *h = append(*h, v.(pair)) }
 func (h *hp) Pop() any          { a := *h; v := a[len(a)-1]; *h = a[:len(a)-1]; return v }
 ```
 
+#### TypeScript
+
 ```ts
 function topKFrequent(nums: number[], k: number): number[] {
     let hashMap = new Map();
@@ -129,6 +160,8 @@ function topKFrequent(nums: number[], k: number): number[] {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 use std::collections::HashMap;
@@ -163,9 +196,15 @@ impl Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -178,6 +217,8 @@ class Solution:
                 heappop(hp)
         return [v[1] for v in hp]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -201,6 +242,8 @@ class Solution {
     }
 }
 ```
+
+#### TypeScript
 
 ```ts
 function topKFrequent(nums: number[], k: number): number[] {
@@ -227,4 +270,6 @@ function topKFrequent(nums: number[], k: number): number[] {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

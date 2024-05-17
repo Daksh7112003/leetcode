@@ -1,12 +1,18 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/2600-2699/2625.Flatten%20Deeply%20Nested%20Array/README.md
+---
+
+<!-- problem:start -->
+
 # [2625. 扁平化嵌套数组](https://leetcode.cn/problems/flatten-deeply-nested-array)
 
 [English Version](/solution/2600-2699/2625.Flatten%20Deeply%20Nested%20Array/README_EN.md)
 
-<!-- tags: -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>请你编写一个函数，它接收一个&nbsp;<strong>多维数组&nbsp;</strong><code>arr</code> 和它的深度 <code>n</code> ，并返回该数组的&nbsp;<strong>扁平化&nbsp;</strong>后的结果。</p>
 
@@ -67,7 +73,11 @@ n = 2
 	<li><code><font face="monospace">0 &lt;= n &lt;= 1000</font></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：递归
 
@@ -78,6 +88,8 @@ n = 2
 时间复杂度 $O(n)$，空间复杂度 $O(n)$。其中 $n$ 是数组的元素个数。
 
 <!-- tabs:start -->
+
+#### TypeScript
 
 ```ts
 type MultiDimensionalArray = (number | MultiDimensionalArray)[];
@@ -100,4 +112,6 @@ var flat = function (arr: MultiDimensionalArray, n: number): MultiDimensionalArr
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

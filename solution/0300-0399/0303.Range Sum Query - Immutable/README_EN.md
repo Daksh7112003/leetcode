@@ -1,10 +1,22 @@
+---
+comments: true
+difficulty: Easy
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0300-0399/0303.Range%20Sum%20Query%20-%20Immutable/README_EN.md
+tags:
+    - Design
+    - Array
+    - Prefix Sum
+---
+
+<!-- problem:start -->
+
 # [303. Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable)
 
 [中文文档](/solution/0300-0399/0303.Range%20Sum%20Query%20-%20Immutable/README.md)
 
-<!-- tags:Design,Array,Prefix Sum -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Given an integer array <code>nums</code>, handle multiple queries of the following type:</p>
 
@@ -46,7 +58,11 @@ numArray.sumRange(0, 5); // return (-2) + 0 + 3 + (-5) + 2 + (-1) = -3
 	<li>At most <code>10<sup>4</sup></code> calls will be made to <code>sumRange</code>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Prefix Sum
 
@@ -55,6 +71,8 @@ We create a prefix sum array $s$ of length $n + 1$, where $s[i]$ represents the 
 The time complexity for initializing the prefix sum array $s$ is $O(n)$, and the time complexity for querying is $O(1)$. The space complexity is $O(n)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class NumArray:
@@ -69,6 +87,8 @@ class NumArray:
 # obj = NumArray(nums)
 # param_1 = obj.sumRange(left,right)
 ```
+
+#### Java
 
 ```java
 class NumArray {
@@ -93,6 +113,8 @@ class NumArray {
  * int param_1 = obj.sumRange(left,right);
  */
 ```
+
+#### C++
 
 ```cpp
 class NumArray {
@@ -120,6 +142,8 @@ private:
  */
 ```
 
+#### Go
+
 ```go
 type NumArray struct {
 	s []int
@@ -145,6 +169,8 @@ func (this *NumArray) SumRange(left int, right int) int {
  */
 ```
 
+#### TypeScript
+
 ```ts
 class NumArray {
     private s: number[];
@@ -168,6 +194,8 @@ class NumArray {
  * var param_1 = obj.sumRange(left,right)
  */
 ```
+
+#### Rust
 
 ```rust
 struct NumArray {
@@ -198,6 +226,8 @@ impl NumArray {
  */
 ```
 
+#### JavaScript
+
 ```js
 /**
  * @param {number[]} nums
@@ -225,6 +255,8 @@ NumArray.prototype.sumRange = function (left, right) {
  * var param_1 = obj.sumRange(left,right)
  */
 ```
+
+#### PHP
 
 ```php
 class NumArray {
@@ -254,6 +286,8 @@ class NumArray {
  * $ret_1 = $obj->sumRange($left, $right);
  */
 ```
+
+#### C
 
 ```c
 typedef struct {
@@ -291,4 +325,6 @@ void numArrayFree(NumArray* obj) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

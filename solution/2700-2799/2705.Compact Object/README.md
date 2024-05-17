@@ -1,12 +1,18 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/2700-2799/2705.Compact%20Object/README.md
+---
+
+<!-- problem:start -->
+
 # [2705. 精简对象](https://leetcode.cn/problems/compact-object)
 
 [English Version](/solution/2700-2799/2705.Compact%20Object/README_EN.md)
 
-<!-- tags: -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>现给定一个对象或数组 <code>obj</code>，返回一个 <strong>精简对象</strong> 。</p>
 
@@ -48,7 +54,11 @@
 	<li><code>2 &lt;= JSON.stringify(obj).length &lt;= 10<sup>6</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：递归
 
@@ -61,6 +71,8 @@
 时间复杂度 $O(n)$, 空间复杂度 $O(n)$。
 
 <!-- tabs:start -->
+
+#### TypeScript
 
 ```ts
 type Obj = Record<any, any>;
@@ -83,6 +95,8 @@ function compactObject(obj: Obj): Obj {
     return obj;
 }
 ```
+
+#### JavaScript
 
 ```js
 var compactObject = function (obj) {
@@ -107,4 +121,6 @@ var compactObject = function (obj) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

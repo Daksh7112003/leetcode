@@ -1,10 +1,24 @@
+---
+comments: true
+difficulty: Easy
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/1000-1099/1002.Find%20Common%20Characters/README_EN.md
+rating: 1279
+source: Weekly Contest 126 Q1
+tags:
+    - Array
+    - Hash Table
+    - String
+---
+
+<!-- problem:start -->
+
 # [1002. Find Common Characters](https://leetcode.com/problems/find-common-characters)
 
 [中文文档](/solution/1000-1099/1002.Find%20Common%20Characters/README.md)
 
-<!-- tags:Array,Hash Table,String -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Given a string array <code>words</code>, return <em>an array of all characters that show up in all strings within the </em><code>words</code><em> (including duplicates)</em>. You may return the answer in <strong>any order</strong>.</p>
 
@@ -25,11 +39,17 @@
 	<li><code>words[i]</code> consists of lowercase English letters.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -44,6 +64,8 @@ class Solution:
             ans.extend([c] * v)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -69,6 +91,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -96,6 +120,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func commonChars(words []string) (ans []string) {
 	cnt := [26]int{}
@@ -121,6 +147,8 @@ func commonChars(words []string) (ans []string) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function commonChars(words: string[]): string[] {
     const freq: number[] = new Array(26).fill(10000);
@@ -145,4 +173,6 @@ function commonChars(words: string[]): string[] {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

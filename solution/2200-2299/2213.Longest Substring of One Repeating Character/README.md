@@ -1,12 +1,25 @@
+---
+comments: true
+difficulty: 困难
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/2200-2299/2213.Longest%20Substring%20of%20One%20Repeating%20Character/README.md
+rating: 2628
+source: 第 285 场周赛 Q4
+tags:
+    - 线段树
+    - 数组
+    - 字符串
+    - 有序集合
+---
+
+<!-- problem:start -->
+
 # [2213. 由单个字符重复的最长子字符串](https://leetcode.cn/problems/longest-substring-of-one-repeating-character)
 
 [English Version](/solution/2200-2299/2213.Longest%20Substring%20of%20One%20Repeating%20Character/README_EN.md)
 
-<!-- tags:线段树,数组,字符串,有序集合 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个下标从 <strong>0</strong> 开始的字符串 <code>s</code> 。另给你一个下标从 <strong>0</strong> 开始、长度为 <code>k</code> 的字符串 <code>queryCharacters</code> ，一个下标从 <code>0</code> 开始、长度也是 <code>k</code> 的整数 <strong>下标</strong> 数组&nbsp;<code>queryIndices</code> ，这两个都用来描述 <code>k</code> 个查询。</p>
 
@@ -51,7 +64,11 @@
 	<li><code>0 &lt;= queryIndices[i] &lt; s.length</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：线段树
 
@@ -71,6 +88,8 @@
 1. 区间首尾字符 `lc, rc`。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Node:
@@ -162,6 +181,8 @@ class Solution:
             ans.append(tree.query(1, 1, len(s)).mx)
         return ans
 ```
+
+#### Java
 
 ```java
 class Node {
@@ -281,6 +302,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Node {
 public:
@@ -378,6 +401,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 type segmentTree struct {
 	str []byte
@@ -456,4 +481,6 @@ func longestRepeating(s string, queryCharacters string, queryIndices []int) []in
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

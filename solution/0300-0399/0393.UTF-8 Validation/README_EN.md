@@ -1,10 +1,21 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0300-0399/0393.UTF-8%20Validation/README_EN.md
+tags:
+    - Bit Manipulation
+    - Array
+---
+
+<!-- problem:start -->
+
 # [393. UTF-8 Validation](https://leetcode.com/problems/utf-8-validation)
 
 [中文文档](/solution/0300-0399/0393.UTF-8%20Validation/README.md)
 
-<!-- tags:Bit Manipulation,Array -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Given an integer array <code>data</code> representing the data, return whether it is a valid <strong>UTF-8</strong> encoding (i.e. it translates to a sequence of valid UTF-8 encoded characters).</p>
 
@@ -60,11 +71,17 @@ But the second continuation byte does not start with 10, so it is invalid.
 	<li><code>0 &lt;= data[i] &lt;= 255</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -87,6 +104,8 @@ class Solution:
                 return False
         return n == 0
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -115,6 +134,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -139,6 +160,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func validUtf8(data []int) bool {
@@ -167,4 +190,6 @@ func validUtf8(data []int) bool {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -1,12 +1,21 @@
+---
+comments: true
+difficulty: 简单
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0600-0699/0643.Maximum%20Average%20Subarray%20I/README.md
+tags:
+    - 数组
+    - 滑动窗口
+---
+
+<!-- problem:start -->
+
 # [643. 子数组最大平均数 I](https://leetcode.cn/problems/maximum-average-subarray-i)
 
 [English Version](/solution/0600-0699/0643.Maximum%20Average%20Subarray%20I/README_EN.md)
 
-<!-- tags:数组,滑动窗口 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个由 <code>n</code> 个元素组成的整数数组 <code>nums</code> 和一个整数 <code>k</code> 。</p>
 
@@ -41,7 +50,11 @@
 	<li><code>-10<sup>4</sup> &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：滑动窗口
 
@@ -50,6 +63,8 @@
 时间复杂度 $O(n)$，其中 $n$ 是数组 $nums$ 的长度。空间复杂度 $O(1)$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -60,6 +75,8 @@ class Solution:
             ans = max(ans, s)
         return ans / k
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -78,6 +95,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -92,6 +111,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func findMaxAverage(nums []int, k int) float64 {
@@ -108,6 +129,8 @@ func findMaxAverage(nums []int, k int) float64 {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function findMaxAverage(nums: number[], k: number): number {
     let s = 0;
@@ -122,6 +145,8 @@ function findMaxAverage(nums: number[], k: number): number {
     return ans / k;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -138,6 +163,8 @@ impl Solution {
     }
 }
 ```
+
+#### PHP
 
 ```php
 class Solution {
@@ -163,4 +190,6 @@ class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

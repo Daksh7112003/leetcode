@@ -1,12 +1,20 @@
+---
+comments: true
+difficulty: 简单
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/1000-1099/1075.Project%20Employees%20I/README.md
+tags:
+    - 数据库
+---
+
+<!-- problem:start -->
+
 # [1075. 项目员工 I](https://leetcode.cn/problems/project-employees-i)
 
 [English Version](/solution/1000-1099/1075.Project%20Employees%20I/README_EN.md)
 
-<!-- tags:数据库 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>项目表&nbsp;<code>Project</code>：&nbsp;</p>
 
@@ -72,13 +80,19 @@ Result 表：
 第一个项目中，员工的平均工作年限是 (3 + 2 + 1) / 3 = 2.00；第二个项目中，员工的平均工作年限是 (3 + 2) / 2 = 2.50
 </pre>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：内连接 + `GROUP BY` 分组
 
 我们可以通过内连接将两张表连接起来，然后通过 `GROUP BY` 分组，最后使用 `AVG` 函数求工作年限的平均值。
 
 <!-- tabs:start -->
+
+#### MySQL
 
 ```sql
 # Write your MySQL query statement
@@ -91,4 +105,6 @@ GROUP BY 1;
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

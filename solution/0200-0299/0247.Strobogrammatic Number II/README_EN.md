@@ -1,10 +1,22 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0200-0299/0247.Strobogrammatic%20Number%20II/README_EN.md
+tags:
+    - Recursion
+    - Array
+    - String
+---
+
+<!-- problem:start -->
+
 # [247. Strobogrammatic Number II 🔒](https://leetcode.com/problems/strobogrammatic-number-ii)
 
 [中文文档](/solution/0200-0299/0247.Strobogrammatic%20Number%20II/README.md)
 
-<!-- tags:Recursion,Array,String -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Given an integer <code>n</code>, return all the <strong>strobogrammatic numbers</strong> that are of length <code>n</code>. You may return the answer in <strong>any order</strong>.</p>
 
@@ -25,7 +37,11 @@
 	<li><code>1 &lt;= n &lt;= 14</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Recursion
 
@@ -49,6 +65,8 @@ Similar problems:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def findStrobogrammatic(self, n: int) -> List[str]:
@@ -67,6 +85,8 @@ class Solution:
 
         return dfs(n)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -99,6 +119,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -119,6 +141,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func findStrobogrammatic(n int) []string {
@@ -148,4 +172,6 @@ func findStrobogrammatic(n int) []string {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

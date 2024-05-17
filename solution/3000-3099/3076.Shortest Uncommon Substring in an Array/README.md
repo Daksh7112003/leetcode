@@ -1,12 +1,25 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/3000-3099/3076.Shortest%20Uncommon%20Substring%20in%20an%20Array/README.md
+rating: 1635
+source: 第 388 场周赛 Q3
+tags:
+    - 字典树
+    - 数组
+    - 哈希表
+    - 字符串
+---
+
+<!-- problem:start -->
+
 # [3076. 数组中的最短非公共子字符串](https://leetcode.cn/problems/shortest-uncommon-substring-in-an-array)
 
 [English Version](/solution/3000-3099/3076.Shortest%20Uncommon%20Substring%20in%20an%20Array/README_EN.md)
 
-<!-- tags:字典树,数组,哈希表,字符串 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个数组 <code>arr</code>&nbsp;，数组中有 <code>n</code>&nbsp;个 <b>非空</b>&nbsp;字符串。</p>
 
@@ -54,7 +67,11 @@
 	<li><code>arr[i]</code>&nbsp;只包含小写英文字母。</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：枚举
 
@@ -65,6 +82,8 @@
 时间复杂度 $O(n^2 \times m^4)$，空间复杂度 $O(m)$。其中 $n$ 是字符串数组 `arr` 的长度，而 $m$ 是字符串的最大长度，本题中 $m \le 20$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -82,6 +101,8 @@ class Solution:
                     break
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -113,6 +134,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -143,6 +166,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func shortestSubstrings(arr []string) []string {
 	ans := make([]string, len(arr))
@@ -169,6 +194,8 @@ func shortestSubstrings(arr []string) []string {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function shortestSubstrings(arr: string[]): string[] {
@@ -199,4 +226,6 @@ function shortestSubstrings(arr: string[]): string[] {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

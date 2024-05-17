@@ -1,12 +1,25 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/1100-1199/1146.Snapshot%20Array/README.md
+rating: 1770
+source: 第 148 场周赛 Q3
+tags:
+    - 设计
+    - 数组
+    - 哈希表
+    - 二分查找
+---
+
+<!-- problem:start -->
+
 # [1146. 快照数组](https://leetcode.cn/problems/snapshot-array)
 
 [English Version](/solution/1100-1199/1146.Snapshot%20Array/README_EN.md)
 
-<!-- tags:设计,数组,哈希表,二分查找 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>实现支持下列接口的「快照数组」-&nbsp;SnapshotArray：</p>
 
@@ -43,7 +56,11 @@ snapshotArr.get(0,0);  // 获取 snap_id = 0 的快照中 array[0] 的值，返�
 	<li><code>0 &lt;=&nbsp;val &lt;= 10^9</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：数组 + 二分查找
 
@@ -58,6 +75,8 @@ snapshotArr.get(0,0);  // 获取 snap_id = 0 的快照中 array[0] 的值，返�
 空间复杂度 $O(n)$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class SnapshotArray:
@@ -84,6 +103,8 @@ class SnapshotArray:
 # param_2 = obj.snap()
 # param_3 = obj.get(index,snap_id)
 ```
+
+#### Java
 
 ```java
 class SnapshotArray {
@@ -127,6 +148,8 @@ class SnapshotArray {
  */
 ```
 
+#### C++
+
 ```cpp
 class SnapshotArray {
 public:
@@ -160,6 +183,8 @@ private:
  * int param_3 = obj->get(index,snap_id);
  */
 ```
+
+#### Go
 
 ```go
 type SnapshotArray struct {
@@ -196,6 +221,8 @@ func (this *SnapshotArray) Get(index int, snap_id int) int {
  * param_3 := obj.Get(index,snap_id);
  */
 ```
+
+#### TypeScript
 
 ```ts
 class SnapshotArray {
@@ -239,4 +266,6 @@ class SnapshotArray {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

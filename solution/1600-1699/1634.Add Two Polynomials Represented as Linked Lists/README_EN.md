@@ -1,10 +1,22 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/1600-1699/1634.Add%20Two%20Polynomials%20Represented%20as%20Linked%20Lists/README_EN.md
+tags:
+    - Linked List
+    - Math
+    - Two Pointers
+---
+
+<!-- problem:start -->
+
 # [1634. Add Two Polynomials Represented as Linked Lists 🔒](https://leetcode.com/problems/add-two-polynomials-represented-as-linked-lists)
 
 [中文文档](/solution/1600-1699/1634.Add%20Two%20Polynomials%20Represented%20as%20Linked%20Lists/README.md)
 
-<!-- tags:Linked List,Math,Two Pointers -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>A polynomial linked list is a special type of linked list where every node represents a term in a polynomial expression.</p>
 
@@ -90,11 +102,17 @@
 
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for polynomial singly-linked list.
@@ -126,6 +144,8 @@ class Solution:
         curr.next = poly1 or poly2
         return dummy.next
 ```
+
+#### Java
 
 ```java
 /**
@@ -175,6 +195,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 /**
  * Definition for polynomial singly-linked list->
@@ -222,6 +244,8 @@ public:
 };
 ```
 
+#### JavaScript
+
 ```js
 /**
  * Definition for polynomial singly-linked list.
@@ -263,6 +287,8 @@ var addPoly = function (poly1, poly2) {
     return dummy.next;
 };
 ```
+
+#### C#
 
 ```cs
 /**
@@ -315,4 +341,6 @@ public class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -1,10 +1,25 @@
+---
+comments: true
+difficulty: Hard
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/1500-1599/1521.Find%20a%20Value%20of%20a%20Mysterious%20Function%20Closest%20to%20Target/README_EN.md
+rating: 2383
+source: Weekly Contest 198 Q4
+tags:
+    - Bit Manipulation
+    - Segment Tree
+    - Array
+    - Binary Search
+---
+
+<!-- problem:start -->
+
 # [1521. Find a Value of a Mysterious Function Closest to Target](https://leetcode.com/problems/find-a-value-of-a-mysterious-function-closest-to-target)
 
 [中文文档](/solution/1500-1599/1521.Find%20a%20Value%20of%20a%20Mysterious%20Function%20Closest%20to%20Target/README.md)
 
-<!-- tags:Bit Manipulation,Segment Tree,Array,Binary Search -->
-
 ## Description
+
+<!-- description:start -->
 
 <p><img alt="" src="https://fastly.jsdelivr.net/gh/doocs/leetcode@main/solution/1500-1599/1521.Find%20a%20Value%20of%20a%20Mysterious%20Function%20Closest%20to%20Target/images/change.png" style="width: 635px; height: 312px;" /></p>
 
@@ -47,7 +62,11 @@
 	<li><code>0 &lt;= target &lt;= 10<sup>7</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Hash Table + Enumeration
 
@@ -59,6 +78,8 @@ The time complexity is $O(n \times \log M)$, and the space complexity is $O(\log
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def closestToTarget(self, arr: List[int], target: int) -> int:
@@ -69,6 +90,8 @@ class Solution:
             ans = min(ans, min(abs(y - target) for y in s))
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -92,6 +115,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -114,6 +139,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func closestToTarget(arr []int, target int) int {
@@ -140,6 +167,8 @@ func abs(x int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function closestToTarget(arr: number[], target: number): number {
     let ans = Math.abs(arr[0] - target);
@@ -162,4 +191,6 @@ function closestToTarget(arr: number[], target: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

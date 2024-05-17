@@ -1,12 +1,23 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0200-0299/0261.Graph%20Valid%20Tree/README.md
+tags:
+    - 深度优先搜索
+    - 广度优先搜索
+    - 并查集
+    - 图
+---
+
+<!-- problem:start -->
+
 # [261. 以图判树 🔒](https://leetcode.cn/problems/graph-valid-tree)
 
 [English Version](/solution/0200-0299/0261.Graph%20Valid%20Tree/README_EN.md)
 
-<!-- tags:深度优先搜索,广度优先搜索,并查集,图 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给定编号从 <code>0</code> 到 <code>n - 1</code>&nbsp;的&nbsp;<code>n</code> 个结点。给定一个整数&nbsp;<code>n</code>&nbsp;和一个&nbsp;<code>edges</code>&nbsp;列表，其中&nbsp;<code>edges[i] = [a<sub>i</sub>, b<sub>i</sub>]</code>&nbsp;表示图中节点&nbsp;<code>a<sub>i</sub></code>&nbsp;和&nbsp;<code>b<sub>i</sub></code>&nbsp;之间存在一条无向边。</p>
 
@@ -43,7 +54,11 @@
 	<li>不存在自循环或重复的边</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：并查集
 
@@ -57,6 +72,8 @@
 时间复杂度 $O(n \times \log n)$，空间复杂度 $O(n)$。其中 $n$ 是节点数。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -75,6 +92,8 @@ class Solution:
             n -= 1
         return n == 1
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -105,6 +124,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -130,6 +151,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func validTree(n int, edges [][]int) bool {
 	p := make([]int, n)
@@ -154,6 +177,8 @@ func validTree(n int, edges [][]int) bool {
 	return n == 1
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -184,6 +209,10 @@ var validTree = function (n, edges) {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二：DFS
 
 我们也可以使用深度优先搜索来判断是否存在环。我们可以使用一个数组 $vis$ 来记录访问过的节点，搜索时，我们先将节点标记为已访问，然后遍历与该节点相邻的节点，如果相邻节点已经访问过，则跳过，否则递归访问相邻节点。最后，我们判断是否所有节点都被访问过，如果有未访问过的节点，说明无法构成树，返回 `false`。
@@ -191,6 +220,8 @@ var validTree = function (n, edges) {
 时间复杂度 $O(n)$，空间复杂度 $O(n)$。其中 $n$ 是节点数。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -211,6 +242,8 @@ class Solution:
         dfs(0)
         return len(vis) == n
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -243,6 +276,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -272,6 +307,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func validTree(n int, edges [][]int) bool {
 	if len(edges) != n-1 {
@@ -298,6 +335,8 @@ func validTree(n int, edges [][]int) bool {
 	return n == 0
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -331,4 +370,6 @@ var validTree = function (n, edges) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -1,10 +1,22 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0300-0399/0375.Guess%20Number%20Higher%20or%20Lower%20II/README_EN.md
+tags:
+    - Math
+    - Dynamic Programming
+    - Game Theory
+---
+
+<!-- problem:start -->
+
 # [375. Guess Number Higher or Lower II](https://leetcode.com/problems/guess-number-higher-or-lower-ii)
 
 [中文文档](/solution/0300-0399/0375.Guess%20Number%20Higher%20or%20Lower%20II/README.md)
 
-<!-- tags:Math,Dynamic Programming,Game Theory -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>We are playing the Guessing Game. The game will work as follows:</p>
 
@@ -70,11 +82,17 @@ The worst case is that you pay $1.
 	<li><code>1 &lt;= n &lt;= 200</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -89,6 +107,8 @@ class Solution:
                     dp[i][j] = min(dp[i][j], t)
         return dp[1][n]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -109,6 +129,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -128,6 +150,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func getMoneyAmount(n int) int {
@@ -151,4 +175,6 @@ func getMoneyAmount(n int) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

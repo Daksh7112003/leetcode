@@ -1,12 +1,25 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/2100-2199/2109.Adding%20Spaces%20to%20a%20String/README.md
+rating: 1315
+source: 第 272 场周赛 Q2
+tags:
+    - 数组
+    - 双指针
+    - 字符串
+    - 模拟
+---
+
+<!-- problem:start -->
+
 # [2109. 向字符串添加空格](https://leetcode.cn/problems/adding-spaces-to-a-string)
 
 [English Version](/solution/2100-2199/2109.Adding%20Spaces%20to%20a%20String/README_EN.md)
 
-<!-- tags:数组,双指针,字符串,模拟 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个下标从 <strong>0</strong> 开始的字符串 <code>s</code> ，以及一个下标从 <strong>0</strong> 开始的整数数组 <code>spaces</code> 。</p>
 
@@ -61,7 +74,11 @@
 	<li><code>spaces</code> 中的所有值 <strong>严格递增</strong></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：双指针
 
@@ -70,6 +87,8 @@
 时间复杂度 $O(n + m)$，其中 $n$ 和 $m$ 分别是字符串 $s$ 和数组 $spaces$ 的长度。忽略答案的空间消耗，空间复杂度 $O(1)$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -83,6 +102,8 @@ class Solution:
             ans.append(c)
         return ''.join(ans)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -99,6 +120,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -117,6 +140,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func addSpaces(s string, spaces []int) string {
 	var ans []byte
@@ -130,6 +155,8 @@ func addSpaces(s string, spaces []int) string {
 	return string(ans)
 }
 ```
+
+#### TypeScript
 
 ```ts
 function addSpaces(s: string, spaces: number[]): string {
@@ -147,9 +174,15 @@ function addSpaces(s: string, spaces: number[]): string {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -167,4 +200,6 @@ class Solution:
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

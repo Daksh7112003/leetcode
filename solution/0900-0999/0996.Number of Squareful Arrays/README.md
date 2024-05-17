@@ -1,12 +1,25 @@
+---
+comments: true
+difficulty: 困难
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0900-0999/0996.Number%20of%20Squareful%20Arrays/README.md
+tags:
+    - 位运算
+    - 数组
+    - 数学
+    - 动态规划
+    - 回溯
+    - 状态压缩
+---
+
+<!-- problem:start -->
+
 # [996. 正方形数组的数目](https://leetcode.cn/problems/number-of-squareful-arrays)
 
 [English Version](/solution/0900-0999/0996.Number%20of%20Squareful%20Arrays/README_EN.md)
 
-<!-- tags:位运算,数组,数学,动态规划,回溯,状态压缩 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给定一个非负整数数组&nbsp;<code>A</code>，如果该数组每对相邻元素之和是一个完全平方数，则称这一数组为<em>正方形</em>数组。</p>
 
@@ -37,7 +50,11 @@
 	<li><code>0 &lt;= A[i] &lt;= 1e9</code></li>
 </ol>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：二进制状态压缩 + 动态规划
 
@@ -54,6 +71,8 @@
 时间复杂度 $O(2^n \times n^2)，空间复杂度 O(2^n \times n)$。其中 $n$ 为数组 $nums$ 的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -77,6 +96,8 @@ class Solution:
             ans //= factorial(v)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -121,6 +142,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -167,6 +190,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func numSquarefulPerms(nums []int) (ans int) {
 	n := len(nums)
@@ -212,4 +237,6 @@ func numSquarefulPerms(nums []int) (ans int) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

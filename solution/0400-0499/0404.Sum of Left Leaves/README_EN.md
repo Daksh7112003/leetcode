@@ -1,10 +1,23 @@
+---
+comments: true
+difficulty: Easy
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0400-0499/0404.Sum%20of%20Left%20Leaves/README_EN.md
+tags:
+    - Tree
+    - Depth-First Search
+    - Breadth-First Search
+    - Binary Tree
+---
+
+<!-- problem:start -->
+
 # [404. Sum of Left Leaves](https://leetcode.com/problems/sum-of-left-leaves)
 
 [中文文档](/solution/0400-0499/0404.Sum%20of%20Left%20Leaves/README.md)
 
-<!-- tags:Tree,Depth-First Search,Breadth-First Search,Binary Tree -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Given the <code>root</code> of a binary tree, return <em>the sum of all left leaves.</em></p>
 
@@ -34,7 +47,11 @@
 	<li><code>-1000 &lt;= Node.val &lt;= 1000</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Recursion
 
@@ -47,6 +64,8 @@ Finally, we return the answer.
 The time complexity is $O(n)$, and the space complexity is $O(n)$, where $n$ is the number of nodes in the binary tree.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for a binary tree node.
@@ -67,6 +86,8 @@ class Solution:
                 ans += self.sumOfLeftLeaves(root.left)
         return ans
 ```
+
+#### Java
 
 ```java
 /**
@@ -102,6 +123,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 /**
  * Definition for a binary tree node.
@@ -133,6 +156,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 /**
  * Definition for a binary tree node.
@@ -157,6 +182,8 @@ func sumOfLeftLeaves(root *TreeNode) int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 /**
@@ -188,6 +215,8 @@ function sumOfLeftLeaves(root: TreeNode | null): number {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 // Definition for a binary tree node.
@@ -233,6 +262,8 @@ impl Solution {
 }
 ```
 
+#### C
+
 ```c
 /**
  * Definition for a binary tree node.
@@ -261,6 +292,10 @@ int sumOfLeftLeaves(struct TreeNode* root) {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2: Stack
 
 We can also convert the recursion in Solution 1 to iteration, using a stack to simulate the recursion process.
@@ -276,6 +311,8 @@ Finally, we return the answer.
 The time complexity is $O(n)$, and the space complexity is $O(n)$, where $n$ is the number of nodes in the binary tree.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for a binary tree node.
@@ -301,6 +338,8 @@ class Solution:
                 stk.append(root.right)
         return ans
 ```
+
+#### Java
 
 ```java
 /**
@@ -344,6 +383,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 /**
  * Definition for a binary tree node.
@@ -382,6 +423,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 /**
  * Definition for a binary tree node.
@@ -413,6 +456,8 @@ func sumOfLeftLeaves(root *TreeNode) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 /**
@@ -454,4 +499,6 @@ function sumOfLeftLeaves(root: TreeNode | null): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

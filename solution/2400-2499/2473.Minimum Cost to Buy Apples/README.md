@@ -1,12 +1,23 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/2400-2499/2473.Minimum%20Cost%20to%20Buy%20Apples/README.md
+tags:
+    - 图
+    - 数组
+    - 最短路
+    - 堆（优先队列）
+---
+
+<!-- problem:start -->
+
 # [2473. 购买苹果的最低成本 🔒](https://leetcode.cn/problems/minimum-cost-to-buy-apples)
 
 [English Version](/solution/2400-2499/2473.Minimum%20Cost%20to%20Buy%20Apples/README_EN.md)
 
-<!-- tags:图,数组,最短路,堆（优先队列） -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个正整数&nbsp; <code>n</code>，表示从 <code>1</code> 到 <code>n</code> 的 <code>n</code> 个城市。还给你一个&nbsp;<strong>二维&nbsp;</strong>数组 <code>roads</code>，其中 <code>roads[i] = [a<sub>i</sub>, b<sub>i</sub>, cost<sub>i</sub>]</code> 表示在城市 <code>a<sub>i</sub></code> 和 <code>b<sub>i</sub></code> 之间有一条双向道路，其旅行成本等于 <code>cost<sub>i</sub></code>。</p>
 
@@ -57,7 +68,11 @@
 	</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：堆优化版 Dijkstra 算法
 
@@ -66,6 +81,8 @@
 时间复杂度 $O(n \times m \times \log m)$，其中 $n$ 和 $m$ 分别是城市数量和道路数量。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -93,6 +110,8 @@ class Solution:
             g[b].append((a, c))
         return [dijkstra(i) for i in range(n)]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -146,6 +165,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 using ll = long long;
 using pii = pair<int, int>;
@@ -190,6 +211,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func minCost(n int, roads [][]int, appleCost []int, k int) []int64 {
@@ -248,4 +271,6 @@ func (a *pairs) Pop() any         { l := len(*a); t := (*a)[l-1]; *a = (*a)[:l-1
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

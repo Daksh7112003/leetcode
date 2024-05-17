@@ -1,6 +1,16 @@
+---
+comments: true
+difficulty: 简单
+edit_url: https://github.com/doocs/leetcode/edit/main/lcof/%E9%9D%A2%E8%AF%95%E9%A2%9830.%20%E5%8C%85%E5%90%ABmin%E5%87%BD%E6%95%B0%E7%9A%84%E6%A0%88/README.md
+---
+
+<!-- problem:start -->
+
 # [面试题 30. 包含 min 函数的栈](https://leetcode.cn/problems/bao-han-minhan-shu-de-zhan-lcof/)
 
 ## 题目描述
+
+<!-- description:start -->
 
 <p>定义栈的数据结构，请在该类型中实现一个能够得到栈的最小元素的 min 函数在该栈中，调用 min、push 及 pop 的时间复杂度都是 O(1)。</p>
 
@@ -47,6 +57,8 @@ minStack.min();   --&gt; 返回 -2.
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
 
+#### Python3
+
 ```python
 class MinStack:
     def __init__(self):
@@ -79,6 +91,8 @@ class MinStack:
 ### **Java**
 
 <!-- 这里可写当前语言的特殊实现逻辑 -->
+
+#### Java
 
 ```java
 class MinStack {
@@ -120,6 +134,8 @@ class MinStack {
 ```
 
 ### **C++**
+
+#### C++
 
 ```cpp
 class MinStack {
@@ -164,6 +180,8 @@ private:
 
 ### **Go**
 
+#### Go
+
 ```go
 type MinStack struct {
 	stk1 []int
@@ -205,6 +223,8 @@ func (this *MinStack) GetMin() int {
 
 ### **TypeScript**
 
+#### TypeScript
+
 ```ts
 class MinStack {
     stack: number[];
@@ -244,6 +264,8 @@ class MinStack {
 ```
 
 ### **Rust**
+
+#### Rust
 
 ```rust
 use std::collections::VecDeque;
@@ -295,6 +317,8 @@ impl MinStack {
 
 ### **C#**
 
+#### C#
+
 ```cs
 public class MinStack {
     private Stack<int> stk1 = new Stack<int>();
@@ -340,11 +364,21 @@ public class MinStack {
 
 ```
 
-<!-- tabs:end -->## 解法
+<!-- tabs:end -->
+
+<!-- solution:end -->
+
+<!-- description:end -->
+
+## 解法
+
+<!-- solution:start -->
 
 ### 方法一
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class MinStack:
@@ -374,6 +408,8 @@ class MinStack:
 # param_3 = obj.top()
 # param_4 = obj.getMin()
 ```
+
+#### Java
 
 ```java
 class MinStack {
@@ -413,6 +449,8 @@ class MinStack {
  * int param_4 = obj.getMin();
  */
 ```
+
+#### C++
 
 ```cpp
 class MinStack {
@@ -455,6 +493,8 @@ private:
  */
 ```
 
+#### Go
+
 ```go
 type MinStack struct {
 	stk1 []int
@@ -494,6 +534,8 @@ func (this *MinStack) GetMin() int {
  */
 ```
 
+#### TypeScript
+
 ```ts
 class MinStack {
     stack: number[];
@@ -531,6 +573,8 @@ class MinStack {
  * var param_4 = obj.getMin()
  */
 ```
+
+#### Rust
 
 ```rust
 use std::collections::VecDeque;
@@ -579,6 +623,8 @@ impl MinStack {
  * let ret_4: i32 = obj.get_min();
  */
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -633,6 +679,8 @@ MinStack.prototype.min = function () {
  */
 ```
 
+#### C#
+
 ```cs
 public class MinStack {
     private Stack<int> stk1 = new Stack<int>();
@@ -674,4 +722,6 @@ public class MinStack {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

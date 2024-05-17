@@ -1,12 +1,22 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0500-0599/0510.Inorder%20Successor%20in%20BST%20II/README.md
+tags:
+    - 树
+    - 二叉搜索树
+    - 二叉树
+---
+
+<!-- problem:start -->
+
 # [510. 二叉搜索树中的中序后继 II 🔒](https://leetcode.cn/problems/inorder-successor-in-bst-ii)
 
 [English Version](/solution/0500-0599/0510.Inorder%20Successor%20in%20BST%20II/README_EN.md)
 
-<!-- tags:树,二叉搜索树,二叉树 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给定一棵二叉搜索树和其中的一个节点 <code>node</code> ，找到该节点在树中的中序后继。如果节点没有中序后继，请返回 <code>null</code> 。</p>
 
@@ -83,7 +93,11 @@ class Node {
 
 <p><strong>进阶：</strong>你能否在不访问任何结点的值的情况下解决问题?</p>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：分情况讨论
 
@@ -94,6 +108,8 @@ class Node {
 时间复杂度 $O(h)$，其中 $h$ 是二叉树的高度。空间复杂度 $O(1)$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 """
@@ -117,6 +133,8 @@ class Solution:
             node = node.parent
         return node.parent
 ```
+
+#### Java
 
 ```java
 /*
@@ -145,6 +163,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 /*
@@ -176,6 +196,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 /**
  * Definition for Node.
@@ -201,6 +223,8 @@ func inorderSuccessor(node *Node) *Node {
 	return node.Parent
 }
 ```
+
+#### TypeScript
 
 ```ts
 /**
@@ -234,6 +258,8 @@ function inorderSuccessor(node: Node | null): Node | null {
 }
 ```
 
+#### JavaScript
+
 ```js
 /**
  * // Definition for a Node.
@@ -266,4 +292,6 @@ var inorderSuccessor = function (node) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

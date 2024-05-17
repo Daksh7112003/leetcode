@@ -1,10 +1,24 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/2000-2099/2028.Find%20Missing%20Observations/README_EN.md
+rating: 1444
+source: Weekly Contest 261 Q2
+tags:
+    - Array
+    - Math
+    - Simulation
+---
+
+<!-- problem:start -->
+
 # [2028. Find Missing Observations](https://leetcode.com/problems/find-missing-observations)
 
 [中文文档](/solution/2000-2099/2028.Find%20Missing%20Observations/README.md)
 
-<!-- tags:Array,Math,Simulation -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You have observations of <code>n + m</code> <strong>6-sided</strong> dice rolls with each face numbered from <code>1</code> to <code>6</code>. <code>n</code> of the observations went missing, and you only have the observations of <code>m</code> rolls. Fortunately, you have also calculated the <strong>average value</strong> of the <code>n + m</code> rolls.</p>
 
@@ -50,7 +64,11 @@
 	<li><code>1 &lt;= rolls[i], mean &lt;= 6</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Construction
 
@@ -64,6 +82,8 @@ The time complexity is $O(n + m)$, and the space complexity is $O(1)$. Here, $n$
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def missingRolls(self, rolls: List[int], mean: int, n: int) -> List[int]:
@@ -76,6 +96,8 @@ class Solution:
             ans[i] += 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -98,6 +120,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -112,6 +136,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func missingRolls(rolls []int, mean int, n int) []int {
@@ -133,6 +159,8 @@ func missingRolls(rolls []int, mean int, n int) []int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function missingRolls(rolls: number[], mean: number, n: number): number[] {
@@ -165,6 +193,8 @@ function missingRolls(rolls: number[], mean: number, n: number): number[] {
     return res;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -205,4 +235,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

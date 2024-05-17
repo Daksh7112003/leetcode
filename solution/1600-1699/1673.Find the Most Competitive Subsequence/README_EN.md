@@ -1,10 +1,25 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/1600-1699/1673.Find%20the%20Most%20Competitive%20Subsequence/README_EN.md
+rating: 1802
+source: Weekly Contest 217 Q2
+tags:
+    - Stack
+    - Greedy
+    - Array
+    - Monotonic Stack
+---
+
+<!-- problem:start -->
+
 # [1673. Find the Most Competitive Subsequence](https://leetcode.com/problems/find-the-most-competitive-subsequence)
 
 [中文文档](/solution/1600-1699/1673.Find%20the%20Most%20Competitive%20Subsequence/README.md)
 
-<!-- tags:Stack,Greedy,Array,Monotonic Stack -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Given an integer array <code>nums</code> and a positive integer <code>k</code>, return <em>the most<strong> competitive</strong> subsequence of </em><code>nums</code> <em>of size </em><code>k</code>.</p>
 
@@ -37,11 +52,17 @@
 	<li><code>1 &lt;= k &lt;= nums.length</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -55,6 +76,8 @@ class Solution:
                 stk.append(v)
         return stk
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -78,6 +101,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -97,6 +122,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func mostCompetitive(nums []int, k int) []int {
 	stk := []int{}
@@ -112,6 +139,8 @@ func mostCompetitive(nums []int, k int) []int {
 	return stk
 }
 ```
+
+#### TypeScript
 
 ```ts
 function mostCompetitive(nums: number[], k: number): number[] {
@@ -131,4 +160,6 @@ function mostCompetitive(nums: number[], k: number): number[] {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

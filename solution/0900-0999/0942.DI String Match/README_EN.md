@@ -1,10 +1,23 @@
+---
+comments: true
+difficulty: Easy
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0900-0999/0942.DI%20String%20Match/README_EN.md
+tags:
+    - Greedy
+    - Array
+    - Two Pointers
+    - String
+---
+
+<!-- problem:start -->
+
 # [942. DI String Match](https://leetcode.com/problems/di-string-match)
 
 [中文文档](/solution/0900-0999/0942.DI%20String%20Match/README.md)
 
-<!-- tags:Greedy,Array,Two Pointers,String -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>A permutation <code>perm</code> of <code>n + 1</code> integers of all the integers in the range <code>[0, n]</code> can be represented as a string <code>s</code> of length <code>n</code> where:</p>
 
@@ -34,11 +47,17 @@
 	<li><code>s[i]</code> is either <code>&#39;I&#39;</code> or <code>&#39;D&#39;</code>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -56,6 +75,8 @@ class Solution:
         ans.append(low)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -75,6 +96,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -96,6 +119,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func diStringMatch(s string) []int {
 	n := len(s)
@@ -115,6 +140,8 @@ func diStringMatch(s string) []int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function diStringMatch(s: string): number[] {
     const n = s.length;
@@ -132,6 +159,8 @@ function diStringMatch(s: string): number[] {
     return res;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -159,4 +188,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

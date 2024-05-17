@@ -1,8 +1,18 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/lcci/02.08.Linked%20List%20Cycle/README_EN.md
+---
+
+<!-- problem:start -->
+
 # [02.08. Linked List Cycle](https://leetcode.cn/problems/linked-list-cycle-lcci)
 
 [中文文档](/lcci/02.08.Linked%20List%20Cycle/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given a circular linked list, implement an algorithm that returns the node at the beginning of the loop.</p>
 
@@ -36,7 +46,11 @@
 
 Can you solve it without using additional space?</p>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Two Pointers
 
@@ -60,6 +74,8 @@ The time complexity is $O(n)$, where $n$ is the number of nodes in the linked li
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 # Definition for singly-linked list.
 # class ListNode:
@@ -81,6 +97,8 @@ class Solution:
                     slow = slow.next
                 return ans
 ```
+
+#### Java
 
 ```java
 /**
@@ -114,6 +132,8 @@ public class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 /**
  * Definition for singly-linked list.
@@ -145,6 +165,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 /**
  * Definition for singly-linked list.
@@ -170,6 +192,8 @@ func detectCycle(head *ListNode) *ListNode {
 	return nil
 }
 ```
+
+#### TypeScript
 
 ```ts
 /**
@@ -202,6 +226,8 @@ function detectCycle(head: ListNode | null): ListNode | null {
 }
 ```
 
+#### JavaScript
+
 ```js
 /**
  * Definition for singly-linked list.
@@ -232,6 +258,8 @@ var detectCycle = function (head) {
     return null;
 };
 ```
+
+#### Swift
 
 ```swift
 /*
@@ -269,4 +297,6 @@ class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

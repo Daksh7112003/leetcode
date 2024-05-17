@@ -1,10 +1,21 @@
+---
+comments: true
+difficulty: Easy
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0000-0099/0014.Longest%20Common%20Prefix/README_EN.md
+tags:
+    - Trie
+    - String
+---
+
+<!-- problem:start -->
+
 # [14. Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix)
 
 [中文文档](/solution/0000-0099/0014.Longest%20Common%20Prefix/README.md)
 
-<!-- tags:Trie,String -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Write a function to find the longest common prefix string amongst an array of strings.</p>
 
@@ -35,7 +46,11 @@
 	<li><code>strs[i]</code> consists of only lowercase English letters.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Character Comparison
 
@@ -47,6 +62,8 @@ The time complexity is $O(n \times m)$, where $n$ and $m$ are the length of the 
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
@@ -56,6 +73,8 @@ class Solution:
                     return s[:i]
         return strs[0]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -72,6 +91,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -90,6 +111,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func longestCommonPrefix(strs []string) string {
 	n := len(strs)
@@ -104,6 +127,8 @@ func longestCommonPrefix(strs []string) string {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function longestCommonPrefix(strs: string[]): string {
     const len = strs.reduce((r, s) => Math.min(r, s.length), Infinity);
@@ -116,6 +141,8 @@ function longestCommonPrefix(strs: string[]): string {
     return '';
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -137,6 +164,8 @@ impl Solution {
 }
 ```
 
+#### JavaScript
+
 ```js
 /**
  * @param {string[]} strs
@@ -154,6 +183,8 @@ var longestCommonPrefix = function (strs) {
 };
 ```
 
+#### C#
+
 ```cs
 public class Solution {
     public string LongestCommonPrefix(string[] strs) {
@@ -169,6 +200,8 @@ public class Solution {
     }
 }
 ```
+
+#### PHP
 
 ```php
 class Solution {
@@ -190,6 +223,8 @@ class Solution {
     }
 }
 ```
+
+#### Ruby
 
 ```rb
 # @param {String[]} strs
@@ -221,4 +256,6 @@ end
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

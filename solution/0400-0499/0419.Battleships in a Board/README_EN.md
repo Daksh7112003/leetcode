@@ -1,10 +1,22 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0400-0499/0419.Battleships%20in%20a%20Board/README_EN.md
+tags:
+    - Depth-First Search
+    - Array
+    - Matrix
+---
+
+<!-- problem:start -->
+
 # [419. Battleships in a Board](https://leetcode.com/problems/battleships-in-a-board)
 
 [中文文档](/solution/0400-0499/0419.Battleships%20in%20a%20Board/README.md)
 
-<!-- tags:Depth-First Search,Array,Matrix -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Given an <code>m x n</code> matrix <code>board</code> where each cell is a battleship <code>&#39;X&#39;</code> or empty <code>&#39;.&#39;</code>, return <em>the number of the <strong>battleships</strong> on</em> <code>board</code>.</p>
 
@@ -38,11 +50,17 @@
 <p>&nbsp;</p>
 <p><strong>Follow up:</strong> Could you do it in one-pass, using only <code>O(1)</code> extra memory and without modifying the values <code>board</code>?</p>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -60,6 +78,8 @@ class Solution:
                 ans += 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -85,6 +105,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -103,6 +125,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func countBattleships(board [][]byte) int {
@@ -128,4 +152,6 @@ func countBattleships(board [][]byte) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

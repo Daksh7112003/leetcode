@@ -1,10 +1,21 @@
+---
+comments: true
+difficulty: Easy
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0100-0199/0190.Reverse%20Bits/README_EN.md
+tags:
+    - Bit Manipulation
+    - Divide and Conquer
+---
+
+<!-- problem:start -->
+
 # [190. Reverse Bits](https://leetcode.com/problems/reverse-bits)
 
 [中文文档](/solution/0100-0199/0190.Reverse%20Bits/README.md)
 
-<!-- tags:Bit Manipulation,Divide and Conquer -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Reverse bits of a given 32 bits unsigned integer.</p>
 
@@ -42,7 +53,11 @@
 <p>&nbsp;</p>
 <p><strong>Follow up:</strong> If this function is called many times, how would you optimize it?</p>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Bit Manipulation
 
@@ -54,6 +69,8 @@ The time complexity is $O(\log n)$, and the space complexity is $O(1)$.
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def reverseBits(self, n: int) -> int:
@@ -63,6 +80,8 @@ class Solution:
             n >>= 1
         return ans
 ```
+
+#### Java
 
 ```java
 public class Solution {
@@ -78,6 +97,8 @@ public class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -92,6 +113,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func reverseBits(n uint32) (ans uint32) {
 	for i := 0; i < 32; i++ {
@@ -101,6 +124,8 @@ func reverseBits(n uint32) (ans uint32) {
 	return
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -114,6 +139,8 @@ impl Solution {
     }
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -132,4 +159,6 @@ var reverseBits = function (n) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

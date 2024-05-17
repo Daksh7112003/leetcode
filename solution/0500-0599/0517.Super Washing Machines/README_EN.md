@@ -1,10 +1,21 @@
+---
+comments: true
+difficulty: Hard
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0500-0599/0517.Super%20Washing%20Machines/README_EN.md
+tags:
+    - Greedy
+    - Array
+---
+
+<!-- problem:start -->
+
 # [517. Super Washing Machines](https://leetcode.com/problems/super-washing-machines)
 
 [中文文档](/solution/0500-0599/0517.Super%20Washing%20Machines/README.md)
 
-<!-- tags:Greedy,Array -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You have <code>n</code> super washing machines on a line. Initially, each washing machine has some dresses or is empty.</p>
 
@@ -52,7 +63,11 @@ It&#39;s impossible to make all three washing machines have the same number of d
 	<li><code>0 &lt;= machines[i] &lt;= 10<sup>5</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Greedy
 
@@ -75,6 +90,8 @@ The time complexity is $O(n)$, where $n$ is the number of washing machines. The 
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def findMinMoves(self, machines: List[int]) -> int:
@@ -89,6 +106,8 @@ class Solution:
             ans = max(ans, abs(s), x)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -114,6 +133,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -135,6 +156,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func findMinMoves(machines []int) (ans int) {
@@ -164,6 +187,8 @@ func abs(x int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function findMinMoves(machines: number[]): number {
     const n = machines.length;
@@ -185,4 +210,6 @@ function findMinMoves(machines: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

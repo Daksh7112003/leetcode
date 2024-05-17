@@ -1,10 +1,27 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/2100-2199/2101.Detonate%20the%20Maximum%20Bombs/README_EN.md
+rating: 1880
+source: Biweekly Contest 67 Q3
+tags:
+    - Depth-First Search
+    - Breadth-First Search
+    - Graph
+    - Geometry
+    - Array
+    - Math
+---
+
+<!-- problem:start -->
+
 # [2101. Detonate the Maximum Bombs](https://leetcode.com/problems/detonate-the-maximum-bombs)
 
 [中文文档](/solution/2100-2199/2101.Detonate%20the%20Maximum%20Bombs/README.md)
 
-<!-- tags:Depth-First Search,Breadth-First Search,Graph,Geometry,Array,Math -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a list of bombs. The <strong>range</strong> of a bomb is defined as the area where its effect can be felt. This area is in the shape of a <strong>circle</strong> with the center as the location of the bomb.</p>
 
@@ -58,11 +75,17 @@ Thus all 5 bombs are detonated.
 	<li><code>1 &lt;= x<sub>i</sub>, y<sub>i</sub>, r<sub>i</sub> &lt;= 10<sup>5</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -96,6 +119,8 @@ class Solution:
             ans = max(ans, cnt)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -144,6 +169,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -184,6 +211,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func maximumDetonation(bombs [][]int) int {
@@ -229,4 +258,6 @@ func maximumDetonation(bombs [][]int) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

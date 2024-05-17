@@ -1,10 +1,25 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/2700-2799/2747.Count%20Zero%20Request%20Servers/README_EN.md
+rating: 2405
+source: Biweekly Contest 107 Q4
+tags:
+    - Array
+    - Hash Table
+    - Sorting
+    - Sliding Window
+---
+
+<!-- problem:start -->
+
 # [2747. Count Zero Request Servers](https://leetcode.com/problems/count-zero-request-servers)
 
 [中文文档](/solution/2700-2799/2747.Count%20Zero%20Request%20Servers/README.md)
 
-<!-- tags:Array,Hash Table,Sorting,Sliding Window -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You are given an integer <code>n</code> denoting the total number of servers and a <strong>2D</strong> <strong>0-indexed </strong>integer array <code>logs</code>, where <code>logs[i] = [server_id, time]</code> denotes that the server with id <code>server_id</code> received a request at time <code>time</code>.</p>
 
@@ -51,11 +66,17 @@ For queries[1]: Only server with id 3 gets no request in the duration [2,4].
 	<li><code>x &lt;&nbsp;queries[i]&nbsp;&lt;= 10<sup>6</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -79,6 +100,8 @@ class Solution:
             ans[i] = n - len(cnt)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -111,6 +134,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -146,6 +171,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func countServers(n int, logs [][]int, x int, queries []int) []int {
 	sort.Slice(logs, func(i, j int) bool { return logs[i][1] < logs[j][1] })
@@ -177,6 +204,8 @@ func countServers(n int, logs [][]int, x int, queries []int) []int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function countServers(n: number, logs: number[][], x: number, queries: number[]): number[] {
@@ -212,4 +241,6 @@ function countServers(n: number, logs: number[][], x: number, queries: number[])
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

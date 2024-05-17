@@ -1,10 +1,21 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0400-0499/0454.4Sum%20II/README_EN.md
+tags:
+    - Array
+    - Hash Table
+---
+
+<!-- problem:start -->
+
 # [454. 4Sum II](https://leetcode.com/problems/4sum-ii)
 
 [中文文档](/solution/0400-0499/0454.4Sum%20II/README.md)
 
-<!-- tags:Array,Hash Table -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Given four integer arrays <code>nums1</code>, <code>nums2</code>, <code>nums3</code>, and <code>nums4</code> all of length <code>n</code>, return the number of tuples <code>(i, j, k, l)</code> such that:</p>
 
@@ -44,13 +55,19 @@ The two tuples are:
 	<li><code>-2<sup>28</sup> &lt;= nums1[i], nums2[i], nums3[i], nums4[i] &lt;= 2<sup>28</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: HashMap
 
 Time complexity $O(n^2)$, Space complexity $O(n^2)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -60,6 +77,8 @@ class Solution:
         cnt = Counter(a + b for a in nums1 for b in nums2)
         return sum(cnt[-(c + d)] for c in nums3 for d in nums4)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -80,6 +99,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -102,6 +123,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func fourSumCount(nums1 []int, nums2 []int, nums3 []int, nums4 []int) (ans int) {
 	cnt := map[int]int{}
@@ -118,6 +141,8 @@ func fourSumCount(nums1 []int, nums2 []int, nums3 []int, nums4 []int) (ans int) 
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function fourSumCount(nums1: number[], nums2: number[], nums3: number[], nums4: number[]): number {
@@ -141,4 +166,6 @@ function fourSumCount(nums1: number[], nums2: number[], nums3: number[], nums4: 
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

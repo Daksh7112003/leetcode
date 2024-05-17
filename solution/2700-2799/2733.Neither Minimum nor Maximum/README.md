@@ -1,12 +1,23 @@
+---
+comments: true
+difficulty: 简单
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/2700-2799/2733.Neither%20Minimum%20nor%20Maximum/README.md
+rating: 1147
+source: 第 349 场周赛 Q1
+tags:
+    - 数组
+    - 排序
+---
+
+<!-- problem:start -->
+
 # [2733. 既不是最小值也不是最大值](https://leetcode.cn/problems/neither-minimum-nor-maximum)
 
 [English Version](/solution/2700-2799/2733.Neither%20Minimum%20nor%20Maximum/README_EN.md)
 
-<!-- tags:数组,排序 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个整数数组 <code>nums</code> ，数组由 <strong>不同正整数</strong> 组成，请你找出并返回数组中 <strong>任一</strong> 既不是 <strong>最小值</strong> 也不是 <strong>最大值</strong> 的数字，如果不存在这样的数字，返回 <strong><code>-1</code></strong> 。</p>
 
@@ -45,7 +56,11 @@
 	<li><code>nums</code> 中的所有数字互不相同</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：模拟
 
@@ -55,12 +70,16 @@
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def findNonMinOrMax(self, nums: List[int]) -> int:
         mi, mx = min(nums), max(nums)
         return next((x for x in nums if x != mi and x != mx), -1)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -80,6 +99,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -95,6 +116,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func findNonMinOrMax(nums []int) int {
 	mi, mx := slices.Min(nums), slices.Max(nums)
@@ -106,6 +129,8 @@ func findNonMinOrMax(nums []int) int {
 	return -1
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -135,9 +160,15 @@ impl Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -151,4 +182,6 @@ class Solution:
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

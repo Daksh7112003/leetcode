@@ -1,10 +1,22 @@
+---
+comments: true
+difficulty: Hard
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0000-0099/0030.Substring%20with%20Concatenation%20of%20All%20Words/README_EN.md
+tags:
+    - Hash Table
+    - String
+    - Sliding Window
+---
+
+<!-- problem:start -->
+
 # [30. Substring with Concatenation of All Words](https://leetcode.com/problems/substring-with-concatenation-of-all-words)
 
 [中文文档](/solution/0000-0099/0030.Substring%20with%20Concatenation%20of%20All%20Words/README.md)
 
-<!-- tags:Hash Table,String,Sliding Window -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a string <code>s</code> and an array of strings <code>words</code>. All the strings of <code>words</code> are of <strong>the same length</strong>.</p>
 
@@ -66,7 +78,11 @@ The substring starting at 12 is <code>&quot;thefoobar&quot;</code>. It is the co
 	<li><code>s</code> and <code>words[i]</code> consist of lowercase English letters.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Hash Table + Sliding Window
 
@@ -79,6 +95,8 @@ Each time, we extract the string $s[r:r+k]$. If $s[r:r+k]$ is not in the hash ta
 The time complexity is $O(m \times k)$, and the space complexity is $O(n \times k)$. Here, $m$ and $n$ are the lengths of the string $s$ and the string array $words$ respectively, and $k$ is the length of the words in the string array $words$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -110,6 +128,8 @@ class Solution:
                     ans.append(l)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -152,6 +172,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -193,6 +215,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func findSubstring(s string, words []string) (ans []int) {
 	cnt := map[string]int{}
@@ -226,6 +250,8 @@ func findSubstring(s string, words []string) (ans []int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function findSubstring(s: string, words: string[]): number[] {
@@ -267,6 +293,8 @@ function findSubstring(s: string, words: string[]): number[] {
     return ans;
 }
 ```
+
+#### C#
 
 ```cs
 public class Solution {
@@ -311,6 +339,8 @@ public class Solution {
     }
 }
 ```
+
+#### PHP
 
 ```php
 class Solution {
@@ -370,9 +400,15 @@ class Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### C++
 
 ```cpp
 class Solution {
@@ -404,4 +440,6 @@ public:
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

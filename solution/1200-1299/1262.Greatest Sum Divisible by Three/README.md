@@ -1,12 +1,25 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/1200-1299/1262.Greatest%20Sum%20Divisible%20by%20Three/README.md
+rating: 1762
+source: 第 163 场周赛 Q3
+tags:
+    - 贪心
+    - 数组
+    - 动态规划
+    - 排序
+---
+
+<!-- problem:start -->
+
 # [1262. 可被三整除的最大和](https://leetcode.cn/problems/greatest-sum-divisible-by-three)
 
 [English Version](/solution/1200-1299/1262.Greatest%20Sum%20Divisible%20by%20Three/README_EN.md)
 
-<!-- tags:贪心,数组,动态规划,排序 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个整数数组&nbsp;<code>nums</code>，请你找出并返回能被三整除的元素最大和。</p>
 
@@ -44,7 +57,11 @@
 	<li><code>1 &lt;= nums[i] &lt;= 10^4</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：动态规划
 
@@ -69,6 +86,8 @@ $$
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def maxSumDivThree(self, nums: List[int]) -> int:
@@ -80,6 +99,8 @@ class Solution:
                 f[i][j] = max(f[i - 1][j], f[i - 1][(j - x) % 3] + x)
         return f[n][0]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -98,6 +119,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -119,6 +142,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func maxSumDivThree(nums []int) int {
 	n := len(nums)
@@ -134,6 +159,8 @@ func maxSumDivThree(nums []int) int {
 	return f[n][0]
 }
 ```
+
+#### TypeScript
 
 ```ts
 function maxSumDivThree(nums: number[]): number {
@@ -155,9 +182,15 @@ function maxSumDivThree(nums: number[]): number {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -170,6 +203,8 @@ class Solution:
             f = g
         return f[0]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -187,6 +222,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -206,6 +243,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func maxSumDivThree(nums []int) int {
 	const inf = 1 << 30
@@ -220,6 +259,8 @@ func maxSumDivThree(nums []int) int {
 	return f[0]
 }
 ```
+
+#### TypeScript
 
 ```ts
 function maxSumDivThree(nums: number[]): number {
@@ -237,4 +278,6 @@ function maxSumDivThree(nums: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -1,10 +1,20 @@
-# [3126. Server Utilization Time](https://leetcode.com/problems/server-utilization-time)
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/3100-3199/3126.Server%20Utilization%20Time/README_EN.md
+tags:
+    - Database
+---
+
+<!-- problem:start -->
+
+# [3126. Server Utilization Time 🔒](https://leetcode.com/problems/server-utilization-time)
 
 [中文文档](/solution/3100-3199/3126.Server%20Utilization%20Time/README.md)
 
-<!-- tags: -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Table: <code>Servers</code></p>
 
@@ -21,7 +31,7 @@ session_status is an ENUM (category) type of (&#39;start&#39;, &#39;stop&#39;).
 Each row of this table contains server_id, status_time, and session_status.
 </pre>
 
-<p>Write a solution to find the <strong>total time</strong> when servers were <strong>running</strong>. The output should be in units of <strong>full days</strong>.</p>
+<p>Write a solution to find the <strong>total time</strong> when servers were <strong>running</strong>. The output should be rounded down to the nearest number of&nbsp;<strong>full days</strong>.</p>
 
 <p>Return <em>the result table in <strong>any</strong></em><em>&nbsp;order.</em></p>
 
@@ -104,13 +114,19 @@ Each row of this table contains server_id, status_time, and session_status.
 </ul>
 The accumulated runtime for all servers totals approximately 44.46 hours, equivalent to one full day plus some additional hours. However, since we consider only full days, the final output is rounded to 1 full day.</div>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Using Window Functions
 
 We can use the window function `LEAD` to get the time of the next status for each server. The time difference between two statuses is the running time of the server. Finally, we add up the running time of all servers, then divide by the number of seconds in a day to get the total running days of the servers.
 
 <!-- tabs:start -->
+
+#### MySQL
 
 ```sql
 # Write your MySQL query statement below
@@ -132,4 +148,6 @@ WHERE session_status = 'start';
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

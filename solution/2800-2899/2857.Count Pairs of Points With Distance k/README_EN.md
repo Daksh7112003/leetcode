@@ -1,10 +1,24 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/2800-2899/2857.Count%20Pairs%20of%20Points%20With%20Distance%20k/README_EN.md
+rating: 2081
+source: Biweekly Contest 113 Q3
+tags:
+    - Bit Manipulation
+    - Array
+    - Hash Table
+---
+
+<!-- problem:start -->
+
 # [2857. Count Pairs of Points With Distance k](https://leetcode.com/problems/count-pairs-of-points-with-distance-k)
 
 [中文文档](/solution/2800-2899/2857.Count%20Pairs%20of%20Points%20With%20Distance%20k/README.md)
 
-<!-- tags:Bit Manipulation,Array,Hash Table -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a <strong>2D</strong> integer array <code>coordinates</code> and an integer <code>k</code>, where <code>coordinates[i] = [x<sub>i</sub>, y<sub>i</sub>]</code> are the coordinates of the <code>i<sup>th</sup></code> point in a 2D plane.</p>
 
@@ -40,7 +54,11 @@
 	<li><code>0 &lt;= k &lt;= 100</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Hash Table + Enumeration
 
@@ -51,6 +69,8 @@ Next, we enumerate each point $(x_2, y_2)$ in the array $coordinates$. Since the
 The time complexity is $O(n \times k)$, and the space complexity is $O(n)$. Here, $n$ is the length of the array $coordinates$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -65,6 +85,8 @@ class Solution:
             cnt[(x2, y2)] += 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -84,6 +106,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -105,6 +129,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func countPairs(coordinates [][]int, k int) (ans int) {
 	cnt := map[[2]int]int{}
@@ -120,6 +146,8 @@ func countPairs(coordinates [][]int, k int) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function countPairs(coordinates: number[][], k: number): number {
@@ -140,9 +168,15 @@ function countPairs(coordinates: number[][], k: number): number {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### C++
 
 ```cpp
 class Solution {
@@ -169,4 +203,6 @@ public:
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -1,10 +1,23 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0800-0899/0853.Car%20Fleet/README_EN.md
+tags:
+    - Stack
+    - Array
+    - Sorting
+    - Monotonic Stack
+---
+
+<!-- problem:start -->
+
 # [853. Car Fleet](https://leetcode.com/problems/car-fleet)
 
 [中文文档](/solution/0800-0899/0853.Car%20Fleet/README.md)
 
-<!-- tags:Stack,Array,Sorting,Monotonic Stack -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>There are <code>n</code> cars going to the same destination along a one-lane road. The destination is <code>target</code> miles away.</p>
 
@@ -61,11 +74,17 @@ Then, the fleet (speed 2) and the car starting at 4 (speed 1) become one fleet, 
 	<li><code>0 &lt; speed[i] &lt;= 10<sup>6</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -79,6 +98,8 @@ class Solution:
                 pre = t
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -102,6 +123,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -127,6 +150,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func carFleet(target int, position []int, speed []int) (ans int) {
 	n := len(position)
@@ -146,6 +171,8 @@ func carFleet(target int, position []int, speed []int) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function carFleet(target: number, position: number[], speed: number[]): number {
@@ -169,4 +196,6 @@ function carFleet(target: number, position: number[], speed: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

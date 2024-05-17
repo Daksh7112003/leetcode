@@ -1,12 +1,21 @@
+---
+comments: true
+difficulty: 困难
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0900-0999/0906.Super%20Palindromes/README.md
+tags:
+    - 数学
+    - 枚举
+---
+
+<!-- problem:start -->
+
 # [906. 超级回文数](https://leetcode.cn/problems/super-palindromes)
 
 [English Version](/solution/0900-0999/0906.Super%20Palindromes/README_EN.md)
 
-<!-- tags:数学,枚举 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>如果一个正整数自身是回文数，而且它也是一个回文数的平方，那么我们称这个数为超级回文数。</p>
 
@@ -35,7 +44,11 @@
 
 <p>&nbsp;</p>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：预处理 + 枚举
 
@@ -52,6 +65,8 @@
 -   [2967. 使数组成为等数数组的最小代价](https://github.com/doocs/leetcode/blob/main/solution/2900-2999/2967.Minimum%20Cost%20to%20Make%20Array%20Equalindromic/README.md)
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 ps = []
@@ -75,6 +90,8 @@ class Solution:
         l, r = int(left), int(right)
         return sum(l <= x <= r and is_palindrome(x) for x in map(lambda x: x * x, ps))
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -113,6 +130,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 using ll = unsigned long long;
@@ -156,6 +175,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 var ps [2 * 100000]int64
 
@@ -197,6 +218,8 @@ func superpalindromesInRange(left string, right string) (ans int) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 const ps = Array(2e5).fill(0);
 
@@ -230,4 +253,6 @@ function superpalindromesInRange(left: string, right: string): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -1,12 +1,23 @@
+---
+comments: true
+difficulty: 简单
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/3000-3099/3083.Existence%20of%20a%20Substring%20in%20a%20String%20and%20Its%20Reverse/README.md
+rating: 1173
+source: 第 389 场周赛 Q1
+tags:
+    - 哈希表
+    - 字符串
+---
+
+<!-- problem:start -->
+
 # [3083. 字符串及其反转中是否存在同一子字符串](https://leetcode.cn/problems/existence-of-a-substring-in-a-string-and-its-reverse)
 
 [English Version](/solution/3000-3099/3083.Existence%20of%20a%20Substring%20in%20a%20String%20and%20Its%20Reverse/README_EN.md)
 
-<!-- tags:哈希表,字符串 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个字符串 <code>s</code> ，请你判断字符串 <code>s</code> 是否存在一个长度为 <code>2</code> 的子字符串，在其反转后的字符串中也出现。</p>
 
@@ -53,7 +64,11 @@
 	<li>字符串 <code>s</code> 仅由小写英文字母组成。</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：哈希表或数组
 
@@ -65,12 +80,16 @@
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def isSubstringPresent(self, s: str) -> bool:
         st = {(a, b) for a, b in pairwise(s[::-1])}
         return any((a, b) in st for a, b in pairwise(s))
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -89,6 +108,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -109,6 +130,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func isSubstringPresent(s string) bool {
 	st := [26][26]bool{}
@@ -123,6 +146,8 @@ func isSubstringPresent(s string) bool {
 	return false
 }
 ```
+
+#### TypeScript
 
 ```ts
 function isSubstringPresent(s: string): boolean {
@@ -141,4 +166,6 @@ function isSubstringPresent(s: string): boolean {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

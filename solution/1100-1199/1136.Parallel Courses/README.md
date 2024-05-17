@@ -1,12 +1,23 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/1100-1199/1136.Parallel%20Courses/README.md
+rating: 1710
+source: 第 5 场双周赛 Q4
+tags:
+    - 图
+    - 拓扑排序
+---
+
+<!-- problem:start -->
+
 # [1136. 并行课程 🔒](https://leetcode.cn/problems/parallel-courses)
 
 [English Version](/solution/1100-1199/1136.Parallel%20Courses/README_EN.md)
 
-<!-- tags:图,拓扑排序 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个整数 <code>n</code> ，表示编号从 <code>1</code> 到 <code>n</code> 的 <code>n</code> 门课程。另给你一个数组 <code>relations</code> ，其中 <code>relations[i] = [prevCourse<sub>i</sub>, nextCourse<sub>i</sub>]</code> ，表示课程 <code>prevCourse<sub>i</sub></code> 和课程 <code>nextCourse<sub>i</sub></code> 之间存在先修关系：课程 <code>prevCourse<sub>i</sub></code> 必须在 <code>nextCourse<sub>i</sub></code> 之前修读完成。</p>
 
@@ -53,7 +64,11 @@
 </div>
 </div>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：拓扑排序
 
@@ -64,6 +79,8 @@
 时间复杂度 $O(n + m)$，空间复杂度 $O(n + m)$。其中 $n$ 和 $m$ 分别为课程数和先修关系数。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -87,6 +104,8 @@ class Solution:
                         q.append(j)
         return -1 if n else ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -122,6 +141,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -159,6 +180,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minimumSemesters(n int, relations [][]int) (ans int) {
 	g := make([][]int, n)
@@ -195,9 +218,11 @@ func minimumSemesters(n int, relations [][]int) (ans int) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function minimumSemesters(n: number, relations: number[][]): number {
-    const g = Array.from({ length: n }, () => []);
+    const g: number[][] = Array.from({ length: n }, () => []);
     const indeg = new Array(n).fill(0);
     for (const [prev, nxt] of relations) {
         g[prev - 1].push(nxt - 1);
@@ -228,4 +253,6 @@ function minimumSemesters(n: number, relations: number[][]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

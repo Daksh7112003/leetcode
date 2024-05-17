@@ -1,10 +1,21 @@
+---
+comments: true
+difficulty: Easy
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0100-0199/0191.Number%20of%201%20Bits/README_EN.md
+tags:
+    - Bit Manipulation
+    - Divide and Conquer
+---
+
+<!-- problem:start -->
+
 # [191. Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits)
 
 [中文文档](/solution/0100-0199/0191.Number%20of%201%20Bits/README.md)
 
-<!-- tags:Bit Manipulation,Divide and Conquer -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Write a function that takes the binary representation of a positive integer and returns the number of <span data-keyword="set-bit">set bits</span> it has (also known as the <a href="http://en.wikipedia.org/wiki/Hamming_weight" target="_blank">Hamming weight</a>).</p>
 
@@ -55,11 +66,17 @@
 <p>&nbsp;</p>
 <strong>Follow up:</strong> If this function is called many times, how would you optimize it?
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -70,6 +87,8 @@ class Solution:
             ans += 1
         return ans
 ```
+
+#### Java
 
 ```java
 public class Solution {
@@ -85,6 +104,8 @@ public class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -99,6 +120,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func hammingWeight(num uint32) int {
 	ans := 0
@@ -109,6 +132,8 @@ func hammingWeight(num uint32) int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function hammingWeight(n: number): number {
@@ -121,6 +146,8 @@ function hammingWeight(n: number): number {
 }
 ```
 
+#### Rust
+
 ```rust
 impl Solution {
     pub fn hammingWeight(n: u32) -> i32 {
@@ -128,6 +155,8 @@ impl Solution {
     }
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -144,6 +173,8 @@ var hammingWeight = function (n) {
 };
 ```
 
+#### C
+
 ```c
 int hammingWeight(uint32_t n) {
     int ans = 0;
@@ -157,9 +188,15 @@ int hammingWeight(uint32_t n) {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -170,6 +207,8 @@ class Solution:
             ans += 1
         return ans
 ```
+
+#### Java
 
 ```java
 public class Solution {
@@ -185,6 +224,8 @@ public class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -199,6 +240,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func hammingWeight(num uint32) int {
 	ans := 0
@@ -209,6 +252,8 @@ func hammingWeight(num uint32) int {
 	return ans
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -225,4 +270,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

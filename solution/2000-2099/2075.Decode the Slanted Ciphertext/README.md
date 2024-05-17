@@ -1,12 +1,23 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/2000-2099/2075.Decode%20the%20Slanted%20Ciphertext/README.md
+rating: 1759
+source: 第 267 场周赛 Q3
+tags:
+    - 字符串
+    - 模拟
+---
+
+<!-- problem:start -->
+
 # [2075. 解码斜向换位密码](https://leetcode.cn/problems/decode-the-slanted-ciphertext)
 
 [English Version](/solution/2000-2099/2075.Decode%20the%20Slanted%20Ciphertext/README_EN.md)
 
-<!-- tags:字符串,模拟 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>字符串 <code>originalText</code> 使用 <strong>斜向换位密码</strong> ，经由 <strong>行数固定</strong> 为 <code>rows</code> 的矩阵辅助，加密得到一个字符串 <code>encodedText</code> 。</p>
 
@@ -77,7 +88,11 @@
 	<li>生成的测试用例满足 <strong>仅存在一个</strong> 可能的 <code>originalText</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：模拟
 
@@ -88,6 +103,8 @@
 时间复杂度 $O(n)$，空间复杂度 $O(n)$。其中 $n$ 为字符串 $encodedText$ 的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -101,6 +118,8 @@ class Solution:
                 x, y = x + 1, y + 1
         return ''.join(ans).rstrip()
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -119,6 +138,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -139,6 +160,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func decodeCiphertext(encodedText string, rows int) string {
 	ans := []byte{}
@@ -155,6 +178,8 @@ func decodeCiphertext(encodedText string, rows int) string {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function decodeCiphertext(encodedText: string, rows: number): string {
     const cols = Math.ceil(encodedText.length / rows);
@@ -170,4 +195,6 @@ function decodeCiphertext(encodedText: string, rows: number): string {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

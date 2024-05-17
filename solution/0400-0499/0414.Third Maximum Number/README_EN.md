@@ -1,10 +1,21 @@
+---
+comments: true
+difficulty: Easy
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0400-0499/0414.Third%20Maximum%20Number/README_EN.md
+tags:
+    - Array
+    - Sorting
+---
+
+<!-- problem:start -->
+
 # [414. Third Maximum Number](https://leetcode.com/problems/third-maximum-number)
 
 [中文文档](/solution/0400-0499/0414.Third%20Maximum%20Number/README.md)
 
-<!-- tags:Array,Sorting -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Given an integer array <code>nums</code>, return <em>the <strong>third distinct maximum</strong> number in this array. If the third maximum does not exist, return the <strong>maximum</strong> number</em>.</p>
 
@@ -53,11 +64,17 @@ The third distinct maximum is 1.
 <p>&nbsp;</p>
 <strong>Follow up:</strong> Can you find an <code>O(n)</code> solution?
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -74,6 +91,8 @@ class Solution:
                 m3 = num
         return m3 if m3 != -inf else m1
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -101,6 +120,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -123,6 +144,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func thirdMax(nums []int) int {
@@ -148,4 +171,6 @@ func thirdMax(nums []int) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

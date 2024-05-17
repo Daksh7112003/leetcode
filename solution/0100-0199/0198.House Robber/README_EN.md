@@ -1,10 +1,21 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0100-0199/0198.House%20Robber/README_EN.md
+tags:
+    - Array
+    - Dynamic Programming
+---
+
+<!-- problem:start -->
+
 # [198. House Robber](https://leetcode.com/problems/house-robber)
 
 [中文文档](/solution/0100-0199/0198.House%20Robber/README.md)
 
-<!-- tags:Array,Dynamic Programming -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed, the only constraint stopping you from robbing each of them is that adjacent houses have security systems connected and <b>it will automatically contact the police if two adjacent houses were broken into on the same night</b>.</p>
 
@@ -37,11 +48,17 @@ Total amount you can rob = 2 + 9 + 1 = 12.
 	<li><code>0 &lt;= nums[i] &lt;= 400</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -53,6 +70,8 @@ class Solution:
             f[i] = max(f[i - 1], f[i - 2] + nums[i - 1])
         return f[n]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -67,6 +86,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -84,6 +105,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func rob(nums []int) int {
 	n := len(nums)
@@ -96,6 +119,8 @@ func rob(nums []int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function rob(nums: number[]): number {
     const n = nums.length;
@@ -107,6 +132,8 @@ function rob(nums: number[]): number {
     return f[n];
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -122,9 +149,15 @@ impl Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -134,6 +167,8 @@ class Solution:
             f, g = max(f, g), f + x
         return max(f, g)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -148,6 +183,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -164,6 +201,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func rob(nums []int) int {
 	f, g := 0, 0
@@ -173,6 +212,8 @@ func rob(nums []int) int {
 	return max(f, g)
 }
 ```
+
+#### TypeScript
 
 ```ts
 function rob(nums: number[]): number {
@@ -186,4 +227,6 @@ function rob(nums: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

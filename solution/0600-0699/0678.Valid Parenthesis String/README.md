@@ -1,12 +1,23 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0600-0699/0678.Valid%20Parenthesis%20String/README.md
+tags:
+    - 栈
+    - 贪心
+    - 字符串
+    - 动态规划
+---
+
+<!-- problem:start -->
+
 # [678. 有效的括号字符串](https://leetcode.cn/problems/valid-parenthesis-string)
 
 [English Version](/solution/0600-0699/0678.Valid%20Parenthesis%20String/README_EN.md)
 
-<!-- tags:栈,贪心,字符串,动态规划 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个只包含三种字符的字符串，支持的字符类型分别是 <code>'('</code>、<code>')'</code> 和 <code>'*'</code>。请你检验这个字符串是否为有效字符串，如果是有效字符串返回 <code>true</code> 。</p>
 
@@ -52,7 +63,11 @@
 	<li><code>s[i]</code> 为 <code>'('</code>、<code>')'</code> 或 <code>'*'</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：动态规划
 
@@ -68,6 +83,8 @@
 时间复杂度 $O(n^3)$，空间复杂度 $O(n^2)$。其中 $n$ 为字符串 `s` 的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -86,6 +103,8 @@ class Solution:
                 )
         return dp[0][-1]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -110,6 +129,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -132,6 +153,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func checkValidString(s string) bool {
@@ -156,6 +179,10 @@ func checkValidString(s string) bool {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二：贪心 + 两遍扫描
 
 两遍扫描，第一遍从左往右，确定每一个右括号都可以成功配对，第二遍从右往左，确定每一个左括号都可以成功配对。
@@ -167,6 +194,8 @@ func checkValidString(s string) bool {
 -   [2116. 判断一个括号字符串是否有效](https://github.com/doocs/leetcode/blob/main/solution/2100-2199/2116.Check%20if%20a%20Parentheses%20String%20Can%20Be%20Valid/README.md)
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -189,6 +218,8 @@ class Solution:
                 return False
         return True
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -219,6 +250,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -248,6 +281,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func checkValidString(s string) bool {
 	x := 0
@@ -276,4 +311,6 @@ func checkValidString(s string) bool {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -1,10 +1,22 @@
+---
+comments: true
+difficulty: Hard
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0900-0999/0903.Valid%20Permutations%20for%20DI%20Sequence/README_EN.md
+tags:
+    - String
+    - Dynamic Programming
+    - Prefix Sum
+---
+
+<!-- problem:start -->
+
 # [903. Valid Permutations for DI Sequence](https://leetcode.com/problems/valid-permutations-for-di-sequence)
 
 [中文文档](/solution/0900-0999/0903.Valid%20Permutations%20for%20DI%20Sequence/README.md)
 
-<!-- tags:String,Dynamic Programming,Prefix Sum -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a string <code>s</code> of length <code>n</code> where <code>s[i]</code> is either:</p>
 
@@ -52,7 +64,11 @@
 	<li><code>s[i]</code> is either <code>&#39;I&#39;</code> or <code>&#39;D&#39;</code>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Dynamic Programming
 
@@ -69,6 +85,8 @@ The final answer is $\sum_{j=0}^n f[n][j]$.
 The time complexity is $O(n^3)$, and the space complexity is $O(n^2)$. Here, $n$ is the length of the string.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -88,6 +106,8 @@ class Solution:
                         f[i][j] = (f[i][j] + f[i - 1][k]) % mod
         return sum(f[n][j] for j in range(n + 1)) % mod
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -119,6 +139,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -153,6 +175,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func numPermsDISequence(s string) (ans int) {
 	const mod = 1e9 + 7
@@ -183,6 +207,8 @@ func numPermsDISequence(s string) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function numPermsDISequence(s: string): number {
@@ -221,6 +247,8 @@ We can optimize the time complexity to $O(n^2)$ using prefix sums.
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def numPermsDISequence(self, s: str) -> int:
@@ -240,6 +268,8 @@ class Solution:
                     pre = (pre + f[i - 1][j]) % mod
         return sum(f[n][j] for j in range(n + 1)) % mod
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -270,6 +300,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -303,6 +335,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func numPermsDISequence(s string) (ans int) {
 	const mod = 1e9 + 7
@@ -332,6 +366,8 @@ func numPermsDISequence(s string) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function numPermsDISequence(s: string): number {
@@ -369,6 +405,8 @@ Additionally, we can optimize the space complexity to $O(n)$ using a rolling arr
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def numPermsDISequence(self, s: str) -> int:
@@ -389,6 +427,8 @@ class Solution:
             f = g
         return sum(f) % mod
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -421,6 +461,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -455,6 +497,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func numPermsDISequence(s string) (ans int) {
 	const mod = 1e9 + 7
@@ -483,6 +527,8 @@ func numPermsDISequence(s string) (ans int) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function numPermsDISequence(s: string): number {
@@ -516,4 +562,6 @@ function numPermsDISequence(s: string): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

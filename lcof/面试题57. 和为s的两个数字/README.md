@@ -1,6 +1,16 @@
+---
+comments: true
+difficulty: 简单
+edit_url: https://github.com/doocs/leetcode/edit/main/lcof/%E9%9D%A2%E8%AF%95%E9%A2%9857.%20%E5%92%8C%E4%B8%BAs%E7%9A%84%E4%B8%A4%E4%B8%AA%E6%95%B0%E5%AD%97/README.md
+---
+
+<!-- problem:start -->
+
 # [面试题 57. 和为 s 的两个数字](https://leetcode.cn/problems/he-wei-sde-liang-ge-shu-zi-lcof/)
 
 ## 题目描述
+
+<!-- description:start -->
 
 <p>输入一个递增排序的数组和一个数字s，在数组中查找两个数，使得它们的和正好是s。如果有多对数字的和等于s，则输出任意一对即可。</p>
 
@@ -37,6 +47,8 @@
 
 ### **Python3**
 
+#### Python3
+
 ```python
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
@@ -51,6 +63,8 @@ class Solution:
 ```
 
 ### **Java**
+
+#### Java
 
 ```java
 class Solution {
@@ -71,6 +85,8 @@ class Solution {
 ```
 
 ### **C++**
+
+#### C++
 
 ```cpp
 class Solution {
@@ -93,6 +109,8 @@ public:
 
 ### **Go**
 
+#### Go
+
 ```go
 func twoSum(nums []int, target int) []int {
 	l, r := 0, len(nums)-1
@@ -110,6 +128,8 @@ func twoSum(nums []int, target int) []int {
 ```
 
 ### **JavaScript**
+
+#### JavaScript
 
 ```js
 /**
@@ -135,6 +155,8 @@ var twoSum = function (nums, target) {
 
 ### **TypeScript**
 
+#### TypeScript
+
 ```ts
 function twoSum(nums: number[], target: number): number[] {
     let l = 0;
@@ -151,6 +173,8 @@ function twoSum(nums: number[], target: number): number[] {
 ```
 
 ### **Rust**
+
+#### Rust
 
 ```rust
 use std::cmp::Ordering;
@@ -178,6 +202,8 @@ impl Solution {
 
 ### **C#**
 
+#### C#
+
 ```cs
 public class Solution {
     public int[] TwoSum(int[] nums, int target) {
@@ -202,11 +228,21 @@ public class Solution {
 
 ```
 
-<!-- tabs:end -->## 解法
+<!-- tabs:end -->
+
+<!-- solution:end -->
+
+<!-- description:end -->
+
+## 解法
+
+<!-- solution:start -->
 
 ### 方法一
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -220,6 +256,8 @@ class Solution:
             else:
                 l += 1
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -238,6 +276,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -258,6 +298,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func twoSum(nums []int, target int) []int {
 	l, r := 0, len(nums)-1
@@ -274,6 +316,8 @@ func twoSum(nums []int, target int) []int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function twoSum(nums: number[], target: number): number[] {
     let l = 0;
@@ -288,6 +332,8 @@ function twoSum(nums: number[], target: number): number[] {
     return [nums[l], nums[r]];
 }
 ```
+
+#### Rust
 
 ```rust
 use std::cmp::Ordering;
@@ -313,6 +359,8 @@ impl Solution {
 }
 ```
 
+#### JavaScript
+
 ```js
 /**
  * @param {number[]} nums
@@ -335,6 +383,8 @@ var twoSum = function (nums, target) {
 };
 ```
 
+#### C#
+
 ```cs
 public class Solution {
     public int[] TwoSum(int[] nums, int target) {
@@ -355,4 +405,6 @@ public class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

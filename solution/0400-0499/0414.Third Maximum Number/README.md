@@ -1,12 +1,21 @@
+---
+comments: true
+difficulty: 简单
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0400-0499/0414.Third%20Maximum%20Number/README.md
+tags:
+    - 数组
+    - 排序
+---
+
+<!-- problem:start -->
+
 # [414. 第三大的数](https://leetcode.cn/problems/third-maximum-number)
 
 [English Version](/solution/0400-0499/0414.Third%20Maximum%20Number/README_EN.md)
 
-<!-- tags:数组,排序 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个非空数组，返回此数组中 <strong>第三大的数</strong> 。如果不存在，则返回数组中最大的数。</p>
 
@@ -48,11 +57,17 @@
 
 <p><strong>进阶：</strong>你能设计一个时间复杂度 <code>O(n)</code> 的解决方案吗？</p>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -69,6 +84,8 @@ class Solution:
                 m3 = num
         return m3 if m3 != -inf else m1
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -96,6 +113,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -118,6 +137,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func thirdMax(nums []int) int {
@@ -143,4 +164,6 @@ func thirdMax(nums []int) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

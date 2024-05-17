@@ -1,12 +1,22 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0400-0499/0433.Minimum%20Genetic%20Mutation/README.md
+tags:
+    - 广度优先搜索
+    - 哈希表
+    - 字符串
+---
+
+<!-- problem:start -->
+
 # [433. 最小基因变化](https://leetcode.cn/problems/minimum-genetic-mutation)
 
 [English Version](/solution/0400-0499/0433.Minimum%20Genetic%20Mutation/README_EN.md)
 
-<!-- tags:广度优先搜索,哈希表,字符串 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>基因序列可以表示为一条由 8 个字符组成的字符串，其中每个字符都是 <code>'A'</code>、<code>'C'</code>、<code>'G'</code> 和 <code>'T'</code> 之一。</p>
 
@@ -57,11 +67,17 @@
 	<li><code>start</code>、<code>end</code> 和 <code>bank[i]</code> 仅由字符 <code>['A', 'C', 'G', 'T']</code> 组成</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：BFS
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -81,6 +97,8 @@ class Solution:
                         s.remove(next)
         return -1
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -118,6 +136,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -151,6 +171,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func minMutation(start string, end string, bank []string) int {
@@ -189,6 +211,8 @@ func minMutation(start string, end string, bank []string) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function minMutation(start: string, end: string, bank: string[]): number {
     const queue = [start];
@@ -219,6 +243,8 @@ function minMutation(start: string, end: string, bank: string[]): number {
     return -1;
 }
 ```
+
+#### Rust
 
 ```rust
 use std::collections::VecDeque;
@@ -257,9 +283,15 @@ impl Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二：DFS
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -282,6 +314,8 @@ class Solution:
         dfs(start, 0)
         return -1 if ans == inf else ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -321,6 +355,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -354,6 +390,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func minMutation(start string, end string, bank []string) int {
@@ -395,4 +433,6 @@ func minMutation(start string, end string, bank []string) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

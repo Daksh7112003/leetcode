@@ -1,10 +1,24 @@
+---
+comments: true
+difficulty: Easy
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/1400-1499/1460.Make%20Two%20Arrays%20Equal%20by%20Reversing%20Subarrays/README_EN.md
+rating: 1151
+source: Biweekly Contest 27 Q1
+tags:
+    - Array
+    - Hash Table
+    - Sorting
+---
+
+<!-- problem:start -->
+
 # [1460. Make Two Arrays Equal by Reversing Subarrays](https://leetcode.com/problems/make-two-arrays-equal-by-reversing-subarrays)
 
 [中文文档](/solution/1400-1499/1460.Make%20Two%20Arrays%20Equal%20by%20Reversing%20Subarrays/README.md)
 
-<!-- tags:Array,Hash Table,Sorting -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You are given two integer arrays of equal length <code>target</code> and <code>arr</code>. In one step, you can select any <strong>non-empty subarray</strong> of <code>arr</code> and reverse it. You are allowed to make any number of steps.</p>
 
@@ -49,7 +63,11 @@ There are multiple ways to convert arr to target, this is not the only way to do
 	<li><code>1 &lt;= arr[i] &lt;= 1000</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Sorting
 
@@ -61,11 +79,15 @@ The time complexity is $O(n \times \log n)$, and the space complexity is $O(\log
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def canBeEqual(self, target: List[int], arr: List[int]) -> bool:
         return sorted(target) == sorted(arr)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -76,6 +98,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -88,6 +112,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func canBeEqual(target []int, arr []int) bool {
 	sort.Ints(target)
@@ -96,6 +122,8 @@ func canBeEqual(target []int, arr []int) bool {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function canBeEqual(target: number[], arr: number[]): boolean {
     target.sort((a, b) => a - b);
@@ -103,6 +131,8 @@ function canBeEqual(target: number[], arr: number[]): boolean {
     return target.join() === arr.join();
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -113,6 +143,8 @@ impl Solution {
     }
 }
 ```
+
+#### PHP
 
 ```php
 class Solution {
@@ -128,6 +160,8 @@ class Solution {
     }
 }
 ```
+
+#### C
 
 ```c
 int compare(const void* a, const void* b) {
@@ -148,6 +182,10 @@ bool canBeEqual(int* target, int targetSize, int* arr, int arrSize) {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2: Counting
 
 We note that the range of the array elements given in the problem is $1 \sim 1000$. Therefore, we can use two arrays `cnt1` and `cnt2` of length $1001$ to record the number of times each element appears in the arrays `target` and `arr` respectively. Finally, we just need to check if the two arrays are equal.
@@ -158,11 +196,15 @@ The time complexity is $O(n + M)$, and the space complexity is $O(M)$. Here, $n$
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def canBeEqual(self, target: List[int], arr: List[int]) -> bool:
         return Counter(target) == Counter(arr)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -179,6 +221,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -197,6 +241,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func canBeEqual(target []int, arr []int) bool {
 	cnt1 := make([]int, 1001)
@@ -211,6 +257,8 @@ func canBeEqual(target []int, arr []int) bool {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function canBeEqual(target: number[], arr: number[]): boolean {
     const n = target.length;
@@ -222,6 +270,8 @@ function canBeEqual(target: number[], arr: number[]): boolean {
     return cnt.every(v => !v);
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -239,4 +289,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

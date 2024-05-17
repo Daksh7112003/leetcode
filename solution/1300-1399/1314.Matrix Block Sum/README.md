@@ -1,12 +1,24 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/1300-1399/1314.Matrix%20Block%20Sum/README.md
+rating: 1483
+source: 第 17 场双周赛 Q2
+tags:
+    - 数组
+    - 矩阵
+    - 前缀和
+---
+
+<!-- problem:start -->
+
 # [1314. 矩阵区域和](https://leetcode.cn/problems/matrix-block-sum)
 
 [English Version](/solution/1300-1399/1314.Matrix%20Block%20Sum/README_EN.md)
 
-<!-- tags:数组,矩阵,前缀和 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个 <code>m x n</code> 的矩阵 <code>mat</code> 和一个整数 <code>k</code> ，请你返回一个矩阵 <code>answer</code> ，其中每个 <code>answer[i][j]</code> 是所有满足下述条件的元素 <code>mat[r][c]</code> 的和： </p>
 
@@ -43,7 +55,11 @@
 	<li><code>1 <= mat[i][j] <= 100</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：二维前缀和
 
@@ -67,6 +83,8 @@ $$
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def matrixBlockSum(self, mat: List[List[int]], k: int) -> List[List[int]]:
@@ -85,6 +103,8 @@ class Solution:
                 )
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -112,6 +132,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -141,6 +163,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func matrixBlockSum(mat [][]int, k int) [][]int {
@@ -174,6 +198,8 @@ func matrixBlockSum(mat [][]int, k int) [][]int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function matrixBlockSum(mat: number[][], k: number): number[][] {
     const m: number = mat.length;
@@ -203,4 +229,6 @@ function matrixBlockSum(mat: number[][], k: number): number[][] {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

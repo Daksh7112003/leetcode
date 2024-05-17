@@ -1,12 +1,22 @@
+---
+comments: true
+difficulty: 简单
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0100-0199/0110.Balanced%20Binary%20Tree/README.md
+tags:
+    - 树
+    - 深度优先搜索
+    - 二叉树
+---
+
+<!-- problem:start -->
+
 # [110. 平衡二叉树](https://leetcode.cn/problems/balanced-binary-tree)
 
 [English Version](/solution/0100-0199/0110.Balanced%20Binary%20Tree/README_EN.md)
 
-<!-- tags:树,深度优先搜索,二叉树 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给定一个二叉树，判断它是否是 <span data-keyword="height-balanced">平衡二叉树</span> &nbsp;</p>
 
@@ -42,7 +52,11 @@
 	<li><code>-10<sup>4</sup> &lt;= Node.val &lt;= 10<sup>4</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：自底向上的递归
 
@@ -56,6 +70,8 @@
 时间复杂度 $O(n)$，空间复杂度 $O(n)$。其中 $n$ 是二叉树的节点数。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for a binary tree node.
@@ -76,6 +92,8 @@ class Solution:
 
         return height(root) >= 0
 ```
+
+#### Java
 
 ```java
 /**
@@ -112,6 +130,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 /**
  * Definition for a binary tree node.
@@ -142,6 +162,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 /**
@@ -178,6 +200,8 @@ func abs(x int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 /**
  * Definition for a binary tree node.
@@ -208,6 +232,8 @@ function isBalanced(root: TreeNode | null): boolean {
     return dfs(root) > -1;
 }
 ```
+
+#### Rust
 
 ```rust
 // Definition for a binary tree node.
@@ -250,6 +276,8 @@ impl Solution {
 }
 ```
 
+#### JavaScript
+
 ```js
 /**
  * Definition for a binary tree node.
@@ -281,4 +309,6 @@ var isBalanced = function (root) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

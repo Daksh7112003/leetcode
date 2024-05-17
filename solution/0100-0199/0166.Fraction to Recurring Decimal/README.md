@@ -1,12 +1,22 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0100-0199/0166.Fraction%20to%20Recurring%20Decimal/README.md
+tags:
+    - 哈希表
+    - 数学
+    - 字符串
+---
+
+<!-- problem:start -->
+
 # [166. 分数到小数](https://leetcode.cn/problems/fraction-to-recurring-decimal)
 
 [English Version](/solution/0100-0199/0166.Fraction%20to%20Recurring%20Decimal/README_EN.md)
 
-<!-- tags:哈希表,数学,字符串 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给定两个整数，分别表示分数的分子&nbsp;<code>numerator</code> 和分母 <code>denominator</code>，以 <strong>字符串形式返回小数</strong> 。</p>
 
@@ -48,7 +58,11 @@
 	<li><code>denominator != 0</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：数学 + 哈希表
 
@@ -67,6 +81,8 @@
 时间复杂度 $O(l)$，空间复杂度 $O(l)$，其中 $l$ 为结果的长度，本题中 $l < 10^4$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -95,6 +111,8 @@ class Solution:
                 break
         return "".join(ans)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -128,6 +146,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -164,6 +184,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func fractionToDecimal(numerator int, denominator int) string {
@@ -206,6 +228,8 @@ func abs(x int64) int64 {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function fractionToDecimal(numerator: number, denominator: number): string {
     if (numerator === 0) {
@@ -237,6 +261,8 @@ function fractionToDecimal(numerator: number, denominator: number): string {
     return sb.join('');
 }
 ```
+
+#### C#
 
 ```cs
 public class Solution {
@@ -273,4 +299,6 @@ public class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

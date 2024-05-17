@@ -1,10 +1,23 @@
+---
+comments: true
+difficulty: Easy
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/2600-2699/2660.Determine%20the%20Winner%20of%20a%20Bowling%20Game/README_EN.md
+rating: 1324
+source: Weekly Contest 343 Q1
+tags:
+    - Array
+    - Simulation
+---
+
+<!-- problem:start -->
+
 # [2660. Determine the Winner of a Bowling Game](https://leetcode.com/problems/determine-the-winner-of-a-bowling-game)
 
 [中文文档](/solution/2600-2699/2660.Determine%20the%20Winner%20of%20a%20Bowling%20Game/README.md)
 
-<!-- tags:Array,Simulation -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You are given two <strong>0-indexed</strong> integer arrays <code><font face="monospace">player1</font></code> and <code>player2</code>, that represent the number of pins that player 1 and player 2 hit in a bowling game, respectively.</p>
 
@@ -68,7 +81,11 @@ The score of player1 equals to the score of player2, so, there is a draw, and th
 	<li><code>0 &lt;= player1[i], player2[i] &lt;= 10</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Simulation
 
@@ -77,6 +94,8 @@ We can define a function $f(arr)$ to calculate the scores of the two players, de
 The time complexity is $O(n)$, where $n$ is the length of the array. The space complexity is $O(1)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -91,6 +110,8 @@ class Solution:
         a, b = f(player1), f(player2)
         return 1 if a > b else (2 if b > a else 0)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -110,6 +131,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -127,6 +150,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func isWinner(player1 []int, player2 []int) int {
@@ -152,6 +177,8 @@ func isWinner(player1 []int, player2 []int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function isWinner(player1: number[], player2: number[]): number {
     const f = (arr: number[]): number => {
@@ -169,6 +196,8 @@ function isWinner(player1: number[], player2: number[]): number {
     return a > b ? 1 : a < b ? 2 : 0;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -200,4 +229,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

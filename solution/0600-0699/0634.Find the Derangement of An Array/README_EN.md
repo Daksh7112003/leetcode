@@ -1,10 +1,21 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0600-0699/0634.Find%20the%20Derangement%20of%20An%20Array/README_EN.md
+tags:
+    - Math
+    - Dynamic Programming
+---
+
+<!-- problem:start -->
+
 # [634. Find the Derangement of An Array 🔒](https://leetcode.com/problems/find-the-derangement-of-an-array)
 
 [中文文档](/solution/0600-0699/0634.Find%20the%20Derangement%20of%20An%20Array/README.md)
 
-<!-- tags:Math,Dynamic Programming -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>In combinatorial mathematics, a <strong>derangement</strong> is a permutation of the elements of a set, such that no element appears in its original position.</p>
 
@@ -33,7 +44,11 @@
 	<li><code>1 &lt;= n &lt;= 10<sup>6</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Dynamic Programming
 
@@ -56,6 +71,8 @@ The time complexity is $O(n)$, where $n$ is the length of the array. The space c
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def findDerangement(self, n: int) -> int:
@@ -65,6 +82,8 @@ class Solution:
             f[i] = (i - 1) * (f[i - 1] + f[i - 2]) % mod
         return f[n]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -79,6 +98,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -96,6 +117,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func findDerangement(n int) int {
 	f := make([]int, n+1)
@@ -110,11 +133,17 @@ func findDerangement(n int) int {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2: Dynamic Programming (Space Optimization)
 
 We notice that the state transition equation only relates to $f[i - 1]$ and $f[i - 2]$. Therefore, we can use two variables $a$ and $b$ to represent $f[i - 1]$ and $f[i - 2]$ respectively, thereby reducing the space complexity to $O(1)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -125,6 +154,8 @@ class Solution:
             a, b = b, ((i - 1) * (a + b)) % mod
         return b
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -140,6 +171,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -157,6 +190,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func findDerangement(n int) int {
 	a, b := 1, 0
@@ -170,4 +205,6 @@ func findDerangement(n int) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

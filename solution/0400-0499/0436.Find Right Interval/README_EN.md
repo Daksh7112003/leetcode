@@ -1,10 +1,22 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0400-0499/0436.Find%20Right%20Interval/README_EN.md
+tags:
+    - Array
+    - Binary Search
+    - Sorting
+---
+
+<!-- problem:start -->
+
 # [436. Find Right Interval](https://leetcode.com/problems/find-right-interval)
 
 [中文文档](/solution/0400-0499/0436.Find%20Right%20Interval/README.md)
 
-<!-- tags:Array,Binary Search,Sorting -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You are given an array of <code>intervals</code>, where <code>intervals[i] = [start<sub>i</sub>, end<sub>i</sub>]</code> and each <code>start<sub>i</sub></code> is <strong>unique</strong>.</p>
 
@@ -50,11 +62,17 @@ The right interval for [2,3] is [3,4] since start<sub>2</sub> = 3 is the smalles
 	<li>The start point of each interval is <strong>unique</strong>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -70,6 +88,8 @@ class Solution:
                 ans[i] = intervals[j][2]
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -100,6 +120,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -127,6 +149,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func findRightInterval(intervals [][]int) []int {
@@ -161,6 +185,8 @@ func findRightInterval(intervals [][]int) []int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function findRightInterval(intervals: number[][]): number[] {
     const n = intervals.length;
@@ -192,4 +218,6 @@ function findRightInterval(intervals: number[][]): number[] {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -1,10 +1,22 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0600-0699/0633.Sum%20of%20Square%20Numbers/README_EN.md
+tags:
+    - Math
+    - Two Pointers
+    - Binary Search
+---
+
+<!-- problem:start -->
+
 # [633. Sum of Square Numbers](https://leetcode.com/problems/sum-of-square-numbers)
 
 [中文文档](/solution/0600-0699/0633.Sum%20of%20Square%20Numbers/README.md)
 
-<!-- tags:Math,Two Pointers,Binary Search -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Given a non-negative integer <code>c</code>, decide whether there&#39;re two integers <code>a</code> and <code>b</code> such that <code>a<sup>2</sup> + b<sup>2</sup> = c</code>.</p>
 
@@ -31,7 +43,11 @@
 	<li><code>0 &lt;= c &lt;= 2<sup>31</sup> - 1</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Mathematics + Two Pointers
 
@@ -40,6 +56,8 @@ We can use the two-pointer method to solve this problem. Define two pointers $a$
 The time complexity is $O(\sqrt{c})$, where $c$ is the given non-negative integer. The space complexity is $O(1)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -55,6 +73,8 @@ class Solution:
                 b -= 1
         return False
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -75,6 +95,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -97,6 +119,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func judgeSquareSum(c int) bool {
 	a, b := 0, int(math.Sqrt(float64(c)))
@@ -115,6 +139,8 @@ func judgeSquareSum(c int) bool {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function judgeSquareSum(c: number): boolean {
     let [a, b] = [0, Math.floor(Math.sqrt(c))];
@@ -132,6 +158,8 @@ function judgeSquareSum(c: number): boolean {
     return false;
 }
 ```
+
+#### Rust
 
 ```rust
 use std::cmp::Ordering;
@@ -161,4 +189,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

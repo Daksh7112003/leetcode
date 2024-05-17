@@ -1,10 +1,25 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/1000-1099/1027.Longest%20Arithmetic%20Subsequence/README_EN.md
+rating: 1758
+source: Weekly Contest 132 Q3
+tags:
+    - Array
+    - Hash Table
+    - Binary Search
+    - Dynamic Programming
+---
+
+<!-- problem:start -->
+
 # [1027. Longest Arithmetic Subsequence](https://leetcode.com/problems/longest-arithmetic-subsequence)
 
 [中文文档](/solution/1000-1099/1027.Longest%20Arithmetic%20Subsequence/README.md)
 
-<!-- tags:Array,Hash Table,Binary Search,Dynamic Programming -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Given an array <code>nums</code> of integers, return <em>the length of the longest arithmetic subsequence in</em> <code>nums</code>.</p>
 
@@ -48,7 +63,11 @@
 	<li><code>0 &lt;= nums[i] &lt;= 500</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Dynamic Programming
 
@@ -66,6 +85,8 @@ The time complexity is $O(n \times (d + n))$, and the space complexity is $O(n \
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def longestArithSeqLength(self, nums: List[int]) -> int:
@@ -79,6 +100,8 @@ class Solution:
                 ans = max(ans, f[i][j])
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -97,6 +120,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -118,6 +143,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func longestArithSeqLength(nums []int) int {
 	n := len(nums)
@@ -137,6 +164,8 @@ func longestArithSeqLength(nums []int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function longestArithSeqLength(nums: number[]): number {
     const n = nums.length;
@@ -155,4 +184,6 @@ function longestArithSeqLength(nums: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -1,12 +1,24 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0600-0699/0690.Employee%20Importance/README.md
+tags:
+    - 树
+    - 深度优先搜索
+    - 广度优先搜索
+    - 数组
+    - 哈希表
+---
+
+<!-- problem:start -->
+
 # [690. 员工的重要性](https://leetcode.cn/problems/employee-importance)
 
 [English Version](/solution/0600-0699/0690.Employee%20Importance/README_EN.md)
 
-<!-- tags:树,深度优先搜索,广度优先搜索,数组,哈希表 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给定一个保存员工信息的数据结构，它包含了员工 <strong>唯一的 id </strong>，<strong>重要度 </strong>和 <strong>直系下属的 id </strong>。</p>
 
@@ -34,11 +46,17 @@
 	<li>员工数量不超过 2000 。</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 """
@@ -64,6 +82,8 @@ class Solution:
 
         return dfs(id)
 ```
+
+#### Java
 
 ```java
 /*
@@ -96,6 +116,8 @@ class Solution {
     }
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -131,4 +153,6 @@ var GetImportance = function (employees, id) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -1,12 +1,23 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/2700-2799/2734.Lexicographically%20Smallest%20String%20After%20Substring%20Operation/README.md
+rating: 1405
+source: 第 349 场周赛 Q2
+tags:
+    - 贪心
+    - 字符串
+---
+
+<!-- problem:start -->
+
 # [2734. 执行子串操作后的字典序最小字符串](https://leetcode.cn/problems/lexicographically-smallest-string-after-substring-operation)
 
 [English Version](/solution/2700-2799/2734.Lexicographically%20Smallest%20String%20After%20Substring%20Operation/README_EN.md)
 
-<!-- tags:贪心,字符串 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个仅由小写英文字母组成的字符串 <code>s</code> 。在一步操作中，你可以完成以下行为：</p>
 
@@ -57,11 +68,17 @@
 	<li><code>s</code> 仅由小写英文字母组成</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -77,6 +94,8 @@ class Solution:
             j += 1
         return s[:i] + "".join(chr(ord(c) - 1) for c in s[i:j]) + s[j:]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -99,6 +118,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -123,6 +144,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func smallestString(s string) string {
 	n := len(s)
@@ -143,6 +166,8 @@ func smallestString(s string) string {
 	return string(cs)
 }
 ```
+
+#### TypeScript
 
 ```ts
 function smallestString(s: string): string {
@@ -168,6 +193,8 @@ function smallestString(s: string): string {
     return cs.join('');
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -198,4 +225,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

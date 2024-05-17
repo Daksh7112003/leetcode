@@ -1,10 +1,23 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/2700-2799/2730.Find%20the%20Longest%20Semi-Repetitive%20Substring/README_EN.md
+rating: 1501
+source: Biweekly Contest 106 Q2
+tags:
+    - String
+    - Sliding Window
+---
+
+<!-- problem:start -->
+
 # [2730. Find the Longest Semi-Repetitive Substring](https://leetcode.com/problems/find-the-longest-semi-repetitive-substring)
 
 [中文文档](/solution/2700-2799/2730.Find%20the%20Longest%20Semi-Repetitive%20Substring/README.md)
 
-<!-- tags:String,Sliding Window -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a <strong>0-indexed</strong> string <code>s</code> that consists of digits from <code>0</code> to <code>9</code>.</p>
 
@@ -47,7 +60,11 @@
 	<li><code>&#39;0&#39; &lt;= s[i] &lt;= &#39;9&#39;</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Two Pointers
 
@@ -58,6 +75,8 @@ We use $cnt$ to record the number of pairs of adjacent characters that are equal
 The time complexity is $O(n)$, where $n$ is the length of the string. The space complexity is $O(1)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -72,6 +91,8 @@ class Solution:
             ans = max(ans, i - j + 1)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -89,6 +110,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -105,6 +128,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func longestSemiRepetitiveSubstring(s string) (ans int) {
@@ -124,6 +149,8 @@ func longestSemiRepetitiveSubstring(s string) (ans int) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function longestSemiRepetitiveSubstring(s: string): number {
     const n = s.length;
@@ -141,4 +168,6 @@ function longestSemiRepetitiveSubstring(s: string): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -1,12 +1,21 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0800-0899/0852.Peak%20Index%20in%20a%20Mountain%20Array/README.md
+tags:
+    - 数组
+    - 二分查找
+---
+
+<!-- problem:start -->
+
 # [852. 山脉数组的峰顶索引](https://leetcode.cn/problems/peak-index-in-a-mountain-array)
 
 [English Version](/solution/0800-0899/0852.Peak%20Index%20in%20a%20Mountain%20Array/README_EN.md)
 
-<!-- tags:数组,二分查找 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 符合下列属性的数组 <code>arr</code> 称为 <strong>山脉数组</strong> ：
 
@@ -57,11 +66,17 @@
 	<li>题目数据保证 <code>arr</code> 是一个山脉数组</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -75,6 +90,8 @@ class Solution:
                 left = mid + 1
         return left
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -93,6 +110,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -110,6 +129,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func peakIndexInMountainArray(arr []int) int {
 	left, right := 1, len(arr)-2
@@ -124,6 +145,8 @@ func peakIndexInMountainArray(arr []int) int {
 	return left
 }
 ```
+
+#### TypeScript
 
 ```ts
 function peakIndexInMountainArray(arr: number[]): number {
@@ -140,6 +163,8 @@ function peakIndexInMountainArray(arr: number[]): number {
     return left;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -158,6 +183,8 @@ impl Solution {
     }
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -181,4 +208,6 @@ var peakIndexInMountainArray = function (arr) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -1,12 +1,20 @@
+---
+comments: true
+difficulty: 简单
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/3000-3099/3062.Winner%20of%20the%20Linked%20List%20Game/README.md
+tags:
+    - 链表
+---
+
+<!-- problem:start -->
+
 # [3062. 链表游戏的获胜者 🔒](https://leetcode.cn/problems/winner-of-the-linked-list-game)
 
 [English Version](/solution/3000-3099/3062.Winner%20of%20the%20Linked%20List%20Game/README_EN.md)
 
-<!-- tags:链表 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给定长度为 <strong>偶数</strong>&nbsp;，包含整数的链表的&nbsp;<code>head</code>&nbsp;节点。</p>
 
@@ -75,7 +83,11 @@
 	<li>每个偶数编号节点的值都是偶数。</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：模拟
 
@@ -84,6 +96,8 @@
 时间复杂度 $O(n)$，其中 $n$ 是链表的长度。空间复杂度 $O(1)$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for singly-linked list.
@@ -106,6 +120,8 @@ class Solution:
             return "Even"
         return "Tie"
 ```
+
+#### Java
 
 ```java
 /**
@@ -137,6 +153,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 /**
@@ -170,6 +188,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 /**
  * Definition for singly-linked list.
@@ -198,6 +218,8 @@ func gameResult(head *ListNode) string {
 	return "Tie"
 }
 ```
+
+#### TypeScript
 
 ```ts
 /**
@@ -231,4 +253,6 @@ function gameResult(head: ListNode | null): string {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

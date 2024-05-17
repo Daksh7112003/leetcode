@@ -1,12 +1,21 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0400-0499/0481.Magical%20String/README.md
+tags:
+    - 双指针
+    - 字符串
+---
+
+<!-- problem:start -->
+
 # [481. 神奇字符串](https://leetcode.cn/problems/magical-string)
 
 [English Version](/solution/0400-0499/0481.Magical%20String/README_EN.md)
 
-<!-- tags:双指针,字符串 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>神奇字符串 <code>s</code> 仅由 <code>'1'</code> 和 <code>'2'</code> 组成，并需要遵守下面的规则：</p>
 
@@ -43,7 +52,11 @@
 	<li><code>1 &lt;= n &lt;= 10<sup>5</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：模拟构造过程
 
@@ -81,6 +94,8 @@
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def magicalString(self, n: int) -> int:
@@ -94,6 +109,8 @@ class Solution:
             i += 1
         return s[:n].count(1)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -117,6 +134,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -133,6 +152,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func magicalString(n int) (ans int) {
@@ -153,6 +174,8 @@ func magicalString(n int) (ans int) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function magicalString(n: number): number {
     const cs = [...'1221121'];
@@ -168,6 +191,8 @@ function magicalString(n: number): number {
     return cs.slice(0, n).reduce((r, c) => r + (c === '1' ? 1 : 0), 0);
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -194,4 +219,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

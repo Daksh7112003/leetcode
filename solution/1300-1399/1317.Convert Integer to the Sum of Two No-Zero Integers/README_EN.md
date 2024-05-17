@@ -1,10 +1,22 @@
+---
+comments: true
+difficulty: Easy
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/1300-1399/1317.Convert%20Integer%20to%20the%20Sum%20of%20Two%20No-Zero%20Integers/README_EN.md
+rating: 1277
+source: Weekly Contest 171 Q1
+tags:
+    - Math
+---
+
+<!-- problem:start -->
+
 # [1317. Convert Integer to the Sum of Two No-Zero Integers](https://leetcode.com/problems/convert-integer-to-the-sum-of-two-no-zero-integers)
 
 [中文文档](/solution/1300-1399/1317.Convert%20Integer%20to%20the%20Sum%20of%20Two%20No-Zero%20Integers/README.md)
 
-<!-- tags:Math -->
-
 ## Description
+
+<!-- description:start -->
 
 <p><strong>No-Zero integer</strong> is a positive integer that <strong>does not contain any <code>0</code></strong> in its decimal representation.</p>
 
@@ -44,11 +56,17 @@ Note that there are other valid answers as [8, 3] that can be accepted.
 	<li><code>2 &lt;= n &lt;= 10<sup>4</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -58,6 +76,8 @@ class Solution:
             if "0" not in str(a) + str(b):
                 return [a, b]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -71,6 +91,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -86,6 +108,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func getNoZeroIntegers(n int) []int {
 	for a := 1; ; a++ {
@@ -99,9 +123,15 @@ func getNoZeroIntegers(n int) []int {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -118,6 +148,8 @@ class Solution:
             if f(a) and f(b):
                 return [a, b]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -141,6 +173,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -163,6 +197,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func getNoZeroIntegers(n int) []int {
 	f := func(x int) bool {
@@ -184,4 +220,6 @@ func getNoZeroIntegers(n int) []int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

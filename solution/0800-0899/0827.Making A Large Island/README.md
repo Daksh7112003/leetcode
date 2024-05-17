@@ -1,12 +1,24 @@
+---
+comments: true
+difficulty: 困难
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0800-0899/0827.Making%20A%20Large%20Island/README.md
+tags:
+    - 深度优先搜索
+    - 广度优先搜索
+    - 并查集
+    - 数组
+    - 矩阵
+---
+
+<!-- problem:start -->
+
 # [827. 最大人工岛](https://leetcode.cn/problems/making-a-large-island)
 
 [English Version](/solution/0800-0899/0827.Making%20A%20Large%20Island/README_EN.md)
 
-<!-- tags:深度优先搜索,广度优先搜索,并查集,数组,矩阵 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个大小为 <code>n x n</code> 二进制矩阵 <code>grid</code> 。<strong>最多</strong> 只能将一格&nbsp;<code>0</code> 变成&nbsp;<code>1</code> 。</p>
 
@@ -49,7 +61,11 @@
 	<li><code>grid[i][j]</code> 为 <code>0</code> 或 <code>1</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：并查集
 
@@ -98,6 +114,8 @@ def union(a, b):
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def largestIsland(self, grid: List[List[int]]) -> int:
@@ -139,6 +157,8 @@ class Solution:
                     ans = max(ans, t)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -205,6 +225,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -265,6 +287,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func largestIsland(grid [][]int) int {
 	n := len(grid)
@@ -322,6 +346,8 @@ func largestIsland(grid [][]int) int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function largestIsland(grid: number[][]): number {
@@ -383,6 +409,8 @@ function largestIsland(grid: number[][]): number {
     return res;
 }
 ```
+
+#### Rust
 
 ```rust
 use std::collections::HashSet;
@@ -467,6 +495,10 @@ impl Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二：DFS
 
 我们也可以通过 DFS，找到每个岛屿。
@@ -478,6 +510,8 @@ impl Solution {
 时间复杂度 $O(n^2)$。其中 $n$ 为矩阵 `grid` 的边长。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -516,6 +550,8 @@ class Solution:
                     ans = max(ans, t)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -576,6 +612,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -634,6 +672,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func largestIsland(grid [][]int) int {
 	n := len(grid)
@@ -691,4 +731,6 @@ func largestIsland(grid [][]int) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

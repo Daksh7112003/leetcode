@@ -1,6 +1,16 @@
+---
+comments: true
+difficulty: 简单
+edit_url: https://github.com/doocs/leetcode/edit/main/lcof/%E9%9D%A2%E8%AF%95%E9%A2%9817.%20%E6%89%93%E5%8D%B0%E4%BB%8E1%E5%88%B0%E6%9C%80%E5%A4%A7%E7%9A%84n%E4%BD%8D%E6%95%B0/README.md
+---
+
+<!-- problem:start -->
+
 # [面试题 17. 打印从 1 到最大的 n 位数](https://leetcode.cn/problems/da-yin-cong-1dao-zui-da-de-nwei-shu-lcof/)
 
 ## 题目描述
+
+<!-- description:start -->
 
 <p>输入数字 <code>n</code>，按顺序打印出从 1 到最大的 n 位十进制数。比如输入 3，则打印出 1、2、3 一直到最大的 3 位数 999。</p>
 
@@ -19,7 +29,11 @@
 	<li>n 为正整数</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：模拟
 
@@ -30,6 +44,8 @@
 如果 $n$ 的值比较大，那么直接使用整数会溢出，因此可以使用字符串来模拟，参考以下代码中的 `print()` 函数。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -54,6 +70,8 @@ class Solution:
             dfs(0, i)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -90,6 +108,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -121,6 +141,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func printNumbers(n int) []int {
@@ -159,6 +181,8 @@ func print(n int) []string {
 }
 ```
 
+#### JavaScript
+
 ```js
 /**
  * @param {number} n
@@ -172,6 +196,8 @@ var printNumbers = function (n) {
     return res;
 };
 ```
+
+#### C#
 
 ```cs
 public class Solution {
@@ -188,4 +214,6 @@ public class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

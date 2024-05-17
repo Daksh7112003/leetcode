@@ -1,10 +1,19 @@
+---
+comments: true
+difficulty: 简单
+edit_url: https://github.com/doocs/leetcode/edit/main/lcci/10.05.Sparse%20Array%20Search/README.md
+---
+
+<!-- problem:start -->
+
 # [面试题 10.05. 稀疏数组搜索](https://leetcode.cn/problems/sparse-array-search-lcci)
 
 [中文文档](/lcci/10.05.Sparse%20Array%20Search/README.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
+
 <p>稀疏数组搜索。有个排好序的字符串数组，其中散布着一些空字符串，编写一种方法，找出给定字符串的位置。</p>
 
 <p><strong>示例1:</strong></p>
@@ -26,7 +35,11 @@
 	<li>words的长度在[1, 1000000]之间</li>
 </ol>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：二分搜索
 
@@ -40,6 +53,8 @@
 时间复杂度最坏情况下为 $O(n \times m)$，空间复杂度最坏情况下为 $O(n)$。其中 $n$ 和 $m$ 分别是字符串数组的长度和字符串 $s$ 的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -57,6 +72,8 @@ class Solution:
 
         return dfs(0, len(words) - 1)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -81,6 +98,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -104,6 +123,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func findString(words []string, s string) int {
 	var dfs func(i, j int) int
@@ -123,6 +144,8 @@ func findString(words []string, s string) int {
 	return dfs(0, len(words)-1)
 }
 ```
+
+#### TypeScript
 
 ```ts
 function findString(words: string[], s: string): number {
@@ -144,6 +167,33 @@ function findString(words: string[], s: string): number {
 }
 ```
 
+#### Swift
+
+```swift
+class Solution {
+    func findString(_ words: [String], _ s: String) -> Int {
+        return dfs(words, s, 0, words.count - 1)
+    }
+
+    private func dfs(_ words: [String], _ s: String, _ i: Int, _ j: Int) -> Int {
+        if i > j {
+            return -1
+        }
+        let mid = (i + j) >> 1
+        let left = dfs(words, s, i, mid - 1)
+        if left != -1 {
+            return left
+        }
+        if words[mid] == s {
+            return mid
+        }
+        return dfs(words, s, mid + 1, j)
+    }
+}
+```
+
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

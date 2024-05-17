@@ -1,12 +1,23 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0900-0999/0919.Complete%20Binary%20Tree%20Inserter/README.md
+tags:
+    - 树
+    - 广度优先搜索
+    - 设计
+    - 二叉树
+---
+
+<!-- problem:start -->
+
 # [919. 完全二叉树插入器](https://leetcode.cn/problems/complete-binary-tree-inserter)
 
 [English Version](/solution/0900-0999/0919.Complete%20Binary%20Tree%20Inserter/README_EN.md)
 
-<!-- tags:树,广度优先搜索,设计,二叉树 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p><strong>完全二叉树</strong> 是每一层（除最后一层外）都是完全填充（即，节点数达到最大）的，并且所有的节点都尽可能地集中在左侧。</p>
 
@@ -54,7 +65,11 @@ cBTInserter.get_root(); // 返回 [1, 2, 3, 4]</pre>
 	<li>每个测试用例最多调用&nbsp;<code>insert</code>&nbsp;和&nbsp;<code>get_root</code>&nbsp;操作&nbsp;<code>10<sup>4</sup></code>&nbsp;次</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：BFS
 
@@ -67,6 +82,8 @@ cBTInserter.get_root(); // 返回 [1, 2, 3, 4]</pre>
 时间复杂度方面，初始化时需要 $O(n)$ 的时间，插入节点和获取根节点的时间复杂度均为 $O(1)$。空间复杂度为 $O(n)$。其中 $n$ 为树中节点的数量。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for a binary tree node.
@@ -108,6 +125,8 @@ class CBTInserter:
 # param_1 = obj.insert(val)
 # param_2 = obj.get_root()
 ```
+
+#### Java
 
 ```java
 /**
@@ -170,6 +189,8 @@ class CBTInserter {
  */
 ```
 
+#### C++
+
 ```cpp
 /**
  * Definition for a binary tree node.
@@ -229,6 +250,8 @@ private:
  */
 ```
 
+#### Go
+
 ```go
 /**
  * Definition for a binary tree node.
@@ -284,6 +307,8 @@ func (this *CBTInserter) Get_root() *TreeNode {
  * param_2 := obj.Get_root();
  */
 ```
+
+#### TypeScript
 
 ```ts
 /**
@@ -343,6 +368,8 @@ class CBTInserter {
  * var param_2 = obj.get_root()
  */
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -406,4 +433,6 @@ CBTInserter.prototype.get_root = function () {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -1,10 +1,22 @@
+---
+comments: true
+difficulty: Hard
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0600-0699/0644.Maximum%20Average%20Subarray%20II/README_EN.md
+tags:
+    - Array
+    - Binary Search
+    - Prefix Sum
+---
+
+<!-- problem:start -->
+
 # [644. Maximum Average Subarray II 🔒](https://leetcode.com/problems/maximum-average-subarray-ii)
 
 [中文文档](/solution/0600-0699/0644.Maximum%20Average%20Subarray%20II/README.md)
 
-<!-- tags:Array,Binary Search,Prefix Sum -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You are given an integer array <code>nums</code> consisting of <code>n</code> elements, and an integer <code>k</code>.</p>
 
@@ -40,7 +52,11 @@ Note that we do not consider the subarrays of length &lt; 4.
 	<li><code>-10<sup>4</sup> &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Binary Search
 
@@ -80,6 +96,8 @@ The time complexity is $O(n \times \log M)$, where $n$ and $M$ are the length of
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def findMaxAverage(self, nums: List[int], k: int) -> float:
@@ -106,6 +124,8 @@ class Solution:
                 r = mid
         return l
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -150,6 +170,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -190,6 +212,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func findMaxAverage(nums []int, k int) float64 {
 	eps := 1e-5
@@ -227,6 +251,8 @@ func findMaxAverage(nums []int, k int) float64 {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function findMaxAverage(nums: number[], k: number): number {
     const eps = 1e-5;
@@ -263,4 +289,6 @@ function findMaxAverage(nums: number[], k: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

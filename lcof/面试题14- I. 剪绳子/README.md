@@ -1,6 +1,16 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/lcof/%E9%9D%A2%E8%AF%95%E9%A2%9814-%20I.%20%E5%89%AA%E7%BB%B3%E5%AD%90/README.md
+---
+
+<!-- problem:start -->
+
 # [面试题 14- I. 剪绳子](https://leetcode.cn/problems/jian-sheng-zi-lcof/)
 
 ## 题目描述
+
+<!-- description:start -->
 
 <p>给你一根长度为 <code>n</code> 的绳子，请把绳子剪成整数长度的 <code>m</code> 段（m、n都是整数，n&gt;1并且m&gt;1），每段绳子的长度记为 <code>k[0],k[1]...k[m-1]</code> 。请问 <code>k[0]*k[1]*...*k[m-1]</code> 可能的最大乘积是多少？例如，当绳子的长度是8时，我们把它剪成长度分别为2、3、3的三段，此时得到的最大乘积是18。</p>
 
@@ -24,7 +34,11 @@
 
 <p>注意：本题与主站 343 题相同：<a href="https://leetcode.cn/problems/integer-break/">https://leetcode.cn/problems/integer-break/</a></p>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：动态规划
 
@@ -40,6 +54,8 @@ $$
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def cuttingRope(self, n: int) -> int:
@@ -49,6 +65,8 @@ class Solution:
                 dp[i] = max(dp[i], dp[i - j] * j, (i - j) * j)
         return dp[n]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -64,6 +82,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -81,6 +101,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func cuttingRope(n int) int {
 	dp := make([]int, n+1)
@@ -93,6 +115,8 @@ func cuttingRope(n int) int {
 	return dp[n]
 }
 ```
+
+#### TypeScript
 
 ```ts
 function cuttingRope(n: number): number {
@@ -110,6 +134,8 @@ function cuttingRope(n: number): number {
 }
 ```
 
+#### Rust
+
 ```rust
 impl Solution {
     pub fn cutting_rope(n: i32) -> i32 {
@@ -121,6 +147,8 @@ impl Solution {
     }
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -142,6 +170,8 @@ var cuttingRope = function (n) {
 };
 ```
 
+#### C#
+
 ```cs
 public class Solution {
     public int CuttingRope(int n) {
@@ -161,6 +191,10 @@ public class Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start-->
+
 ### 方法二：数学
 
 当 $n \lt 4$，此时 $n$ 不能拆分成至少两个正整数的和，因此 $n - 1$ 是最大乘积。当 $n \ge 4$ 时，我们尽可能多地拆分 $3$，当剩下的最后一段为 $4$ 时，我们将其拆分为 $2 + 2$，这样乘积最大。
@@ -168,6 +202,8 @@ public class Solution {
 时间复杂度 $O(1)$，空间复杂度 $O(1)$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -180,6 +216,8 @@ class Solution:
             return pow(3, n // 3 - 1) * 4
         return pow(3, n // 3) * 2
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -197,6 +235,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -216,6 +256,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func cuttingRope(n int) int {
 	if n < 4 {
@@ -233,4 +275,6 @@ func cuttingRope(n int) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

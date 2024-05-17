@@ -1,8 +1,16 @@
+---
+comments: true
+difficulty: 困难
+edit_url: https://github.com/doocs/leetcode/edit/main/lcof/%E9%9D%A2%E8%AF%95%E9%A2%9851.%20%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%80%86%E5%BA%8F%E5%AF%B9/README.md
+---
+
+<!-- problem:start -->
+
 # [面试题 51. 数组中的逆序对](https://leetcode.cn/problems/shu-zu-zhong-de-ni-xu-dui-lcof/)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>在数组中的两个数字，如果前面一个数字大于后面的数字，则这两个数字组成一个逆序对。输入一个数组，求出这个数组中的逆序对的总数。</p>
 
@@ -19,7 +27,11 @@
 
 <p><code>0 &lt;= 数组长度 &lt;= 50000</code></p>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：归并排序
 
@@ -28,6 +40,8 @@
 时间复杂度 $O(n \times \log n)$，空间复杂度 $O(n)$。其中 $n$ 为数组长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -54,6 +68,8 @@ class Solution:
 
         return merge_sort(0, len(nums) - 1)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -96,6 +112,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -136,6 +154,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func reversePairs(nums []int) int {
 	n := len(nums)
@@ -173,6 +193,8 @@ func reversePairs(nums []int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function reversePairs(nums: number[]): number {
     const mergeSort = (l: number, r: number): number => {
@@ -206,6 +228,8 @@ function reversePairs(nums: number[]): number {
     return mergeSort(0, nums.length - 1);
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -244,6 +268,8 @@ var reversePairs = function (nums) {
     return mergeSort(0, nums.length - 1);
 };
 ```
+
+#### C#
 
 ```cs
 public class Solution {
@@ -288,6 +314,10 @@ public class Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start-->
+
 ### 方法二：树状数组
 
 树状数组，也称作“二叉索引树”（Binary Indexed Tree）或 Fenwick 树。 它可以高效地实现如下两个操作：
@@ -304,6 +334,8 @@ public class Solution {
 解决方案是直接遍历数组，每个位置先求出 `query(a[i])`，然后再修改树状数组 `update(a[i], 1)` 即可。当数的范围比较大时，需要进行离散化，即先进行去重并排序，然后对每个数字进行编号。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class BinaryIndexedTree:
@@ -336,6 +368,8 @@ class Solution:
             tree.update(x, 1)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -387,6 +421,8 @@ class BinaryIndexedTree {
 }
 ```
 
+#### C++
+
 ```cpp
 class BinaryIndexedTree {
 public:
@@ -431,6 +467,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func reversePairs(nums []int) (ans int) {
@@ -481,4 +519,6 @@ func (this *BinaryIndexedTree) query(x int) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

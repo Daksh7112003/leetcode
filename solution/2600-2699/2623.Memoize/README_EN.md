@@ -1,10 +1,18 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/2600-2699/2623.Memoize/README_EN.md
+---
+
+<!-- problem:start -->
+
 # [2623. Memoize](https://leetcode.com/problems/memoize)
 
 [中文文档](/solution/2600-2699/2623.Memoize/README.md)
 
-<!-- tags: -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Given a function <code>fn</code>, return a&nbsp;<strong>memoized</strong>&nbsp;version of that function.</p>
 
@@ -81,11 +89,17 @@ values = [[5],[]]
 	<li><code>fnName</code> is one of &quot;sum&quot;, &quot;factorial&quot; and&nbsp;&quot;fib&quot;</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### TypeScript
 
 ```ts
 type Fn = (...params: any) => any;
@@ -117,4 +131,6 @@ function memoize(fn: Fn): Fn {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

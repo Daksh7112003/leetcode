@@ -1,6 +1,16 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/lcof/%E9%9D%A2%E8%AF%95%E9%A2%9812.%20%E7%9F%A9%E9%98%B5%E4%B8%AD%E7%9A%84%E8%B7%AF%E5%BE%84/README.md
+---
+
+<!-- problem:start -->
+
 # [面试题 12. 矩阵中的路径](https://leetcode.cn/problems/ju-zhen-zhong-de-lu-jing-lcof/)
 
 ## 题目描述
+
+<!-- description:start -->
 
 <p>给定一个 <code>m x n</code> 二维字符网格 <code>board</code> 和一个字符串单词 <code>word</code> 。如果 <code>word</code> 存在于网格中，返回 <code>true</code> ；否则，返回 <code>false</code> 。</p>
 
@@ -42,7 +52,11 @@
 
 <p><strong>注意：</strong>本题与主站 79 题相同：<a href="https://leetcode.cn/problems/word-search/">https://leetcode.cn/problems/word-search/</a></p>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：枚举 + DFS
 
@@ -59,6 +73,8 @@
 时间复杂度 $O(m \times n \times 3^k)$，空间复杂度 $O(m \times n)$。其中 $m$ 和 $n$ 分别为矩阵的行数和列数，而 $k$ 为字符串 `word` 的长度。我们需要枚举矩阵中的每个位置，然后对于每个位置，我们最多需要搜索三个方向。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -77,6 +93,8 @@ class Solution:
         m, n = len(board), len(board[0])
         return any(dfs(i, j, 0) for i in range(m) for j in range(n))
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -119,6 +137,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -152,6 +172,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func exist(board [][]byte, word string) bool {
 	m, n := len(board), len(board[0])
@@ -183,6 +205,8 @@ func exist(board [][]byte, word string) bool {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function exist(board: string[][], word: string): boolean {
     const m = board.length;
@@ -212,6 +236,8 @@ function exist(board: string[][], word: string): boolean {
     return false;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -259,6 +285,8 @@ impl Solution {
 }
 ```
 
+#### JavaScript
+
 ```js
 /**
  * @param {character[][]} board
@@ -294,6 +322,8 @@ var exist = function (board, word) {
     return false;
 };
 ```
+
+#### C#
 
 ```cs
 public class Solution {
@@ -338,4 +368,6 @@ public class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

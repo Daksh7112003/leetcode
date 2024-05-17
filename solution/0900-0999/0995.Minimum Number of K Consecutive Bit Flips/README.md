@@ -1,12 +1,24 @@
+---
+comments: true
+difficulty: 困难
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0900-0999/0995.Minimum%20Number%20of%20K%20Consecutive%20Bit%20Flips/README.md
+tags:
+    - 位运算
+    - 队列
+    - 数组
+    - 前缀和
+    - 滑动窗口
+---
+
+<!-- problem:start -->
+
 # [995. K 连续位的最小翻转次数](https://leetcode.cn/problems/minimum-number-of-k-consecutive-bit-flips)
 
 [English Version](/solution/0900-0999/0995.Minimum%20Number%20of%20K%20Consecutive%20Bit%20Flips/README_EN.md)
 
-<!-- tags:位运算,队列,数组,前缀和,滑动窗口 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给定一个二进制数组 <code>nums</code> 和一个整数 <code>k</code> 。</p>
 
@@ -54,7 +66,11 @@
 	<li><code>1 &lt;= k &lt;= nums.length</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：差分数组
 
@@ -69,6 +85,8 @@
 时间复杂度 $O(n)$，空间复杂度 $O(n)$。这里 $n$ 是数组 $nums$ 的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -87,6 +105,8 @@ class Solution:
                 ans += 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -110,6 +130,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -136,6 +158,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minKBitFlips(nums []int, k int) int {
 	n := len(nums)
@@ -157,6 +181,8 @@ func minKBitFlips(nums []int, k int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function minKBitFlips(nums: number[], k: number): number {
     const n = nums.length;
@@ -177,6 +203,8 @@ function minKBitFlips(nums: number[], k: number): number {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -204,4 +232,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

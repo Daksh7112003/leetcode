@@ -1,10 +1,19 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/lcci/04.10.Check%20SubTree/README.md
+---
+
+<!-- problem:start -->
+
 # [面试题 04.10. 检查子树](https://leetcode.cn/problems/check-subtree-lcci)
 
 [English Version](/lcci/04.10.Check%20SubTree/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
+
 <p>检查子树。你有两棵非常大的二叉树：T1，有几万个节点；T2，有几万个节点。设计一个算法，判断 T2 是否为 T1 的子树。</p>
 
 <p>如果 T1 有这么一个节点 n，其子树与 T2 一模一样，则 T2 为 T1 的子树，也就是说，从节点 n 处把树砍断，得到的树与 T2 完全相同。</p>
@@ -27,7 +36,11 @@
 	<li>树的节点数目范围为[0, 20000]。</li>
 </ol>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：递归
 
@@ -40,6 +53,8 @@
 时间复杂度 $O(n^2)$，空间复杂度 $O(n)$。其中 $n$ 为 $t_1$ 的节点数。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for a binary tree node.
@@ -67,6 +82,8 @@ class Solution:
             return True
         return self.checkSubTree(t1.left, t2) or self.checkSubTree(t1.right, t2)
 ```
+
+#### Java
 
 ```java
 /**
@@ -103,6 +120,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 /**
@@ -141,6 +160,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 /**
  * Definition for a binary tree node.
@@ -173,6 +194,8 @@ func checkSubTree(t1 *TreeNode, t2 *TreeNode) bool {
 	return checkSubTree(t1.Left, t2) || checkSubTree(t1.Right, t2)
 }
 ```
+
+#### TypeScript
 
 ```ts
 /**
@@ -211,6 +234,8 @@ function checkSubTree(t1: TreeNode | null, t2: TreeNode | null): boolean {
     return checkSubTree(t1.left, t2) || checkSubTree(t1.right, t2);
 }
 ```
+
+#### Rust
 
 ```rust
 // Definition for a binary tree node.
@@ -269,6 +294,8 @@ impl Solution {
 }
 ```
 
+#### Swift
+
 ```swift
 /* class TreeNode {
 *    var val: Int
@@ -314,4 +341,6 @@ class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

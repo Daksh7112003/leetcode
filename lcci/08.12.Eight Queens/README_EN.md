@@ -1,8 +1,18 @@
+---
+comments: true
+difficulty: Hard
+edit_url: https://github.com/doocs/leetcode/edit/main/lcci/08.12.Eight%20Queens/README_EN.md
+---
+
+<!-- problem:start -->
+
 # [08.12. Eight Queens](https://leetcode.cn/problems/eight-queens-lcci)
 
 [中文文档](/lcci/08.12.Eight%20Queens/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Write an algorithm to print all ways of arranging n queens on an n x n&nbsp;chess board so that none of them share the same row, column, or diagonal. In this case, &quot;diagonal&quot; means all diagonals, not just the two that bisect the board.</p>
 
@@ -42,7 +52,11 @@
 
 </pre>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: DFS (Backtracking)
 
@@ -59,6 +73,8 @@ In the main function, we call $dfs(0)$ to start recursion, and finally return th
 The time complexity is $O(n^2 \times n!)$, and the space complexity is $O(n)$. Here, $n$ is the integer given in the problem.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -83,6 +99,8 @@ class Solution:
         dfs(0)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -128,6 +146,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -157,6 +177,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func solveNQueens(n int) (ans [][]string) {
@@ -195,6 +217,8 @@ func solveNQueens(n int) (ans [][]string) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function solveNQueens(n: number): string[][] {
     const col: number[] = Array(n).fill(0);
@@ -221,6 +245,8 @@ function solveNQueens(n: number): string[][] {
     return ans;
 }
 ```
+
+#### C#
 
 ```cs
 public class Solution {
@@ -261,6 +287,53 @@ public class Solution {
 }
 ```
 
+#### Swift
+
+```swift
+class Solution {
+    private var ans: [[String]] = []
+    private var col: [Int] = Array(repeating: 0, count: 0)
+    private var dg: [Int] = Array(repeating: 0, count: 0)
+    private var udg: [Int] = Array(repeating: 0, count: 0)
+    private var g: [[String]] = Array(repeating: Array(repeating: ".", count: 0), count: 0)
+    private var n: Int = 0
+
+    func solveNQueens(_ n: Int) -> [[String]] {
+        self.n = n
+        col = Array(repeating: 0, count: n)
+        dg = Array(repeating: 0, count: n * 2)
+        udg = Array(repeating: 0, count: n * 2)
+        g = Array(repeating: Array(repeating: ".", count: n), count: n)
+        dfs(0)
+        return ans
+    }
+
+    private func dfs(_ i: Int) {
+        guard i < n else {
+            let t = g.map { $0.joined() }
+            ans.append(t)
+            return
+        }
+        for j in 0..<n {
+            if col[j] + dg[i + j] + udg[n - i + j] == 0 {
+                g[i][j] = "Q"
+                col[j] = 1
+                dg[i + j] = 1
+                udg[n - i + j] = 1
+                dfs(i + 1)
+                col[j] = 0
+                dg[i + j] = 0
+                udg[n - i + j] = 0
+                g[i][j] = "."
+            }
+        }
+    }
+
+}
+```
+
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

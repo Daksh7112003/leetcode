@@ -1,12 +1,29 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/1700-1799/1738.Find%20Kth%20Largest%20XOR%20Coordinate%20Value/README.md
+rating: 1671
+source: 第 225 场周赛 Q3
+tags:
+    - 位运算
+    - 数组
+    - 分治
+    - 矩阵
+    - 前缀和
+    - 快速选择
+    - 排序
+    - 堆（优先队列）
+---
+
+<!-- problem:start -->
+
 # [1738. 找出第 K 大的异或坐标值](https://leetcode.cn/problems/find-kth-largest-xor-coordinate-value)
 
 [English Version](/solution/1700-1799/1738.Find%20Kth%20Largest%20XOR%20Coordinate%20Value/README_EN.md)
 
-<!-- tags:位运算,数组,分治,矩阵,前缀和,快速选择,排序,堆（优先队列） -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个二维矩阵 <code>matrix</code> 和一个整数 <code>k</code> ，矩阵大小为 <code>m x n</code> 由非负整数组成。</p>
 
@@ -52,7 +69,11 @@
 	<li><code>1 &lt;= k &lt;= m * n</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：二维前缀异或 + 排序或快速选择
 
@@ -74,6 +95,8 @@ $$
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def kthLargestValue(self, matrix: List[List[int]], k: int) -> int:
@@ -86,6 +109,8 @@ class Solution:
                 ans.append(s[i + 1][j + 1])
         return nlargest(k, ans)[-1]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -104,6 +129,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -124,6 +151,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func kthLargestValue(matrix [][]int, k int) int {
 	m, n := len(matrix), len(matrix[0])
@@ -142,6 +171,8 @@ func kthLargestValue(matrix [][]int, k int) int {
 	return ans[len(ans)-k]
 }
 ```
+
+#### TypeScript
 
 ```ts
 function kthLargestValue(matrix: number[][], k: number): number {
@@ -162,4 +193,6 @@ function kthLargestValue(matrix: number[][], k: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

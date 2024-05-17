@@ -1,12 +1,22 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0800-0899/0873.Length%20of%20Longest%20Fibonacci%20Subsequence/README.md
+tags:
+    - 数组
+    - 哈希表
+    - 动态规划
+---
+
+<!-- problem:start -->
+
 # [873. 最长的斐波那契子序列的长度](https://leetcode.cn/problems/length-of-longest-fibonacci-subsequence)
 
 [English Version](/solution/0800-0899/0873.Length%20of%20Longest%20Fibonacci%20Subsequence/README_EN.md)
 
-<!-- tags:数组,哈希表,动态规划 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>如果序列 <code>X_1, X_2, ..., X_n</code> 满足下列条件，就说它是 <em>斐波那契式 </em>的：</p>
 
@@ -51,7 +61,11 @@
 	</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：动态规划
 
@@ -59,6 +73,8 @@
 -   状态计算：`dp[j][i] = dp[k][j] + 1`（当且仅当 `k < j < i`，并且 `arr[k] + arr[j] == arr[i]`）, `ans = max(ans, dp[j][i])`。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -78,6 +94,8 @@ class Solution:
                     ans = max(ans, dp[j][i])
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -111,6 +129,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -140,6 +160,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func lenLongestFibSubseq(arr []int) int {
 	n := len(arr)
@@ -168,6 +190,8 @@ func lenLongestFibSubseq(arr []int) int {
 	return ans
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -203,4 +227,6 @@ var lenLongestFibSubseq = function (arr) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

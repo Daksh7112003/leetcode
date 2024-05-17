@@ -1,12 +1,22 @@
+---
+comments: true
+difficulty: 困难
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/3000-3099/3088.Make%20String%20Anti-palindrome/README.md
+tags:
+    - 贪心
+    - 字符串
+    - 排序
+---
+
+<!-- problem:start -->
+
 # [3088. 使字符串反回文 🔒](https://leetcode.cn/problems/make-string-anti-palindrome)
 
 [English Version](/solution/3000-3099/3088.Make%20String%20Anti-palindrome/README_EN.md)
 
-<!-- tags:贪心,字符串,排序 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>我们称一个长度为偶数的字符串&nbsp;<code>s</code>&nbsp;为&nbsp;<strong>反回文</strong>&nbsp;的，如果对于每一个下标&nbsp;<code>0 &lt;= i &lt; n</code>&nbsp;，<code>s[i] != s[n - i - 1]</code>。</p>
 
@@ -64,7 +74,11 @@
 	<li><code>s</code> 只包含小写英文字母。</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：贪心 + 排序
 
@@ -75,6 +89,8 @@
 时间复杂度 $O(n \times \log n)$，空间复杂度 $O(n)$。其中 $n$ 是字符串 $s$ 的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -94,6 +110,8 @@ class Solution:
                 i, j = i + 1, j + 1
         return "".join(cs)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -121,6 +139,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -145,6 +165,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func makeAntiPalindrome(s string) string {
 	cs := []byte(s)
@@ -167,6 +189,8 @@ func makeAntiPalindrome(s string) string {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function makeAntiPalindrome(s: string): string {
     const cs: string[] = s.split('').sort();
@@ -188,4 +212,6 @@ function makeAntiPalindrome(s: string): string {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

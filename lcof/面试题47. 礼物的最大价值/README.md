@@ -1,6 +1,16 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/lcof/%E9%9D%A2%E8%AF%95%E9%A2%9847.%20%E7%A4%BC%E7%89%A9%E7%9A%84%E6%9C%80%E5%A4%A7%E4%BB%B7%E5%80%BC/README.md
+---
+
+<!-- problem:start -->
+
 # [面试题 47. 礼物的最大价值](https://leetcode.cn/problems/li-wu-de-zui-da-jie-zhi-lcof/)
 
 ## 题目描述
+
+<!-- description:start -->
 
 <p>在一个 m*n 的棋盘的每一格都放有一个礼物，每个礼物都有一定的价值（价值大于 0）。你可以从棋盘的左上角开始拿格子里的礼物，并每次向右或者向下移动一格、直到到达棋盘的右下角。给定一个棋盘及其上面的礼物的价值，请计算你最多能拿到多少价值的礼物？</p>
 
@@ -26,7 +36,11 @@
 	<li><code>0 &lt; grid[0].length &lt;= 200</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：动态规划
 
@@ -44,6 +58,8 @@ $$
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def maxValue(self, grid: List[List[int]]) -> int:
@@ -54,6 +70,8 @@ class Solution:
                 f[i][j] = max(f[i - 1][j], f[i][j - 1]) + v
         return f[m][n]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -69,6 +87,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -86,6 +106,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func maxValue(grid [][]int) int {
 	m, n := len(grid), len(grid[0])
@@ -102,6 +124,8 @@ func maxValue(grid [][]int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function maxValue(grid: number[][]): number {
     const m = grid.length;
@@ -115,6 +139,8 @@ function maxValue(grid: number[][]): number {
     return f[m][n];
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -137,6 +163,8 @@ impl Solution {
 }
 ```
 
+#### JavaScript
+
 ```js
 /**
  * @param {number[][]} grid
@@ -155,6 +183,8 @@ var maxValue = function (grid) {
 };
 ```
 
+#### C#
+
 ```cs
 public class Solution {
     public int MaxValue(int[][] grid) {
@@ -172,9 +202,15 @@ public class Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start-->
+
 ### 方法二
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -186,6 +222,8 @@ class Solution:
                 f[i & 1][j] = max(f[i & 1 ^ 1][j], f[i & 1][j - 1]) + v
         return f[m & 1][n]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -201,6 +239,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -218,6 +258,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func maxValue(grid [][]int) int {
 	m, n := len(grid), len(grid[0])
@@ -234,6 +276,8 @@ func maxValue(grid [][]int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function maxValue(grid: number[][]): number {
     const m = grid.length;
@@ -247,6 +291,8 @@ function maxValue(grid: number[][]): number {
     return f[m & 1][n];
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -268,4 +314,6 @@ var maxValue = function (grid) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

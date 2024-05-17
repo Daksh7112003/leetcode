@@ -1,10 +1,22 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0400-0499/0494.Target%20Sum/README_EN.md
+tags:
+    - Array
+    - Dynamic Programming
+    - Backtracking
+---
+
+<!-- problem:start -->
+
 # [494. Target Sum](https://leetcode.com/problems/target-sum)
 
 [中文文档](/solution/0400-0499/0494.Target%20Sum/README.md)
 
-<!-- tags:Array,Dynamic Programming,Backtracking -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You are given an integer array <code>nums</code> and an integer <code>target</code>.</p>
 
@@ -47,11 +59,17 @@
 	<li><code>-1000 &lt;= target &lt;= 1000</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -69,6 +87,8 @@ class Solution:
                     dp[i][j] += dp[i - 1][j - nums[i - 1]]
         return dp[-1][-1]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -97,6 +117,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -116,6 +138,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func findTargetSumWays(nums []int, target int) int {
@@ -143,6 +167,8 @@ func findTargetSumWays(nums []int, target int) int {
 	return dp[m][n]
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -183,6 +209,8 @@ impl Solution {
 }
 ```
 
+#### JavaScript
+
 ```js
 /**
  * @param {number[]} nums
@@ -212,9 +240,15 @@ var findTargetSumWays = function (nums, target) {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -230,6 +264,8 @@ class Solution:
                 dp[j] += dp[j - v]
         return dp[-1]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -254,6 +290,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -270,6 +308,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func findTargetSumWays(nums []int, target int) int {
@@ -291,6 +331,8 @@ func findTargetSumWays(nums []int, target int) int {
 	return dp[n]
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -326,9 +368,15 @@ impl Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 3
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -347,4 +395,6 @@ class Solution:
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

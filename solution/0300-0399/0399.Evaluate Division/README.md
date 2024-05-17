@@ -1,12 +1,25 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0300-0399/0399.Evaluate%20Division/README.md
+tags:
+    - 深度优先搜索
+    - 广度优先搜索
+    - 并查集
+    - 图
+    - 数组
+    - 最短路
+---
+
+<!-- problem:start -->
+
 # [399. 除法求值](https://leetcode.cn/problems/evaluate-division)
 
 [English Version](/solution/0300-0399/0399.Evaluate%20Division/README_EN.md)
 
-<!-- tags:深度优先搜索,广度优先搜索,并查集,图,数组,最短路 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个变量对数组 <code>equations</code> 和一个实数值数组 <code>values</code> 作为已知条件，其中 <code>equations[i] = [A<sub>i</sub>, B<sub>i</sub>]</code> 和 <code>values[i]</code> 共同表示等式 <code>A<sub>i</sub> / B<sub>i</sub> = values[i]</code> 。每个 <code>A<sub>i</sub></code> 或 <code>B<sub>i</sub></code> 是一个表示单个变量的字符串。</p>
 
@@ -61,11 +74,17 @@
 	<li><code>A<sub>i</sub>, B<sub>i</sub>, C<sub>j</sub>, D<sub>j</sub></code> 由小写英文字母与数字组成</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -95,6 +114,8 @@ class Solution:
             for c, d in queries
         ]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -144,6 +165,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -186,6 +209,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func calcEquation(equations [][]string, values []float64, queries [][]string) []float64 {
 	p := make(map[string]string)
@@ -227,6 +252,8 @@ func calcEquation(equations [][]string, values []float64, queries [][]string) []
 	return ans
 }
 ```
+
+#### Rust
 
 ```rust
 use std::collections::HashMap;
@@ -317,4 +344,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

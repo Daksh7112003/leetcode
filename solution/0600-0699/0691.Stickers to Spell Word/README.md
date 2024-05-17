@@ -1,12 +1,25 @@
+---
+comments: true
+difficulty: 困难
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0600-0699/0691.Stickers%20to%20Spell%20Word/README.md
+tags:
+    - 位运算
+    - 数组
+    - 字符串
+    - 动态规划
+    - 回溯
+    - 状态压缩
+---
+
+<!-- problem:start -->
+
 # [691. 贴纸拼词](https://leetcode.cn/problems/stickers-to-spell-word)
 
 [English Version](/solution/0600-0699/0691.Stickers%20to%20Spell%20Word/README_EN.md)
 
-<!-- tags:位运算,数组,字符串,动态规划,回溯,状态压缩 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>我们有 <code>n</code> 种不同的贴纸。每个贴纸上都有一个小写的英文单词。</p>
 
@@ -48,11 +61,17 @@
 	<li><code>stickers[i]</code>&nbsp;和&nbsp;<code>target</code>&nbsp;由小写英文单词组成</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：BFS + 状态压缩
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -80,6 +99,8 @@ class Solution:
             ans += 1
         return -1
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -122,6 +143,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -159,6 +182,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func minStickers(stickers []string, target string) int {
@@ -198,6 +223,8 @@ func minStickers(stickers []string, target string) int {
 	return -1
 }
 ```
+
+#### Rust
 
 ```rust
 use std::collections::{ HashSet, VecDeque };
@@ -244,4 +271,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

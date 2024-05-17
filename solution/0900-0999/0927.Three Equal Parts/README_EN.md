@@ -1,10 +1,21 @@
+---
+comments: true
+difficulty: Hard
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0900-0999/0927.Three%20Equal%20Parts/README_EN.md
+tags:
+    - Array
+    - Math
+---
+
+<!-- problem:start -->
+
 # [927. Three Equal Parts](https://leetcode.com/problems/three-equal-parts)
 
 [中文文档](/solution/0900-0999/0927.Three%20Equal%20Parts/README.md)
 
-<!-- tags:Array,Math -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You are given an array <code>arr</code> which consists of only zeros and ones, divide the array into <strong>three non-empty parts</strong> such that all of these parts represent the same binary value.</p>
 
@@ -40,7 +51,11 @@
 	<li><code>arr[i]</code> is <code>0</code> or <code>1</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Counting + Three Pointers
 
@@ -74,6 +89,8 @@ Similar problems:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def threeEqualParts(self, arr: List[int]) -> List[int]:
@@ -96,6 +113,8 @@ class Solution:
             i, j, k = i + 1, j + 1, k + 1
         return [i - 1, j] if k == n else [-1, -1]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -135,6 +154,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -159,6 +180,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func threeEqualParts(arr []int) []int {
@@ -193,6 +216,8 @@ func threeEqualParts(arr []int) []int {
 	return []int{-1, -1}
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -230,4 +255,6 @@ var threeEqualParts = function (arr) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

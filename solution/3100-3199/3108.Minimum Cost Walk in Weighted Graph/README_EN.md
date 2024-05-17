@@ -1,10 +1,25 @@
+---
+comments: true
+difficulty: Hard
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/3100-3199/3108.Minimum%20Cost%20Walk%20in%20Weighted%20Graph/README_EN.md
+rating: 2108
+source: Weekly Contest 392 Q4
+tags:
+    - Bit Manipulation
+    - Union Find
+    - Graph
+    - Array
+---
+
+<!-- problem:start -->
+
 # [3108. Minimum Cost Walk in Weighted Graph](https://leetcode.com/problems/minimum-cost-walk-in-weighted-graph)
 
 [中文文档](/solution/3100-3199/3108.Minimum%20Cost%20Walk%20in%20Weighted%20Graph/README.md)
 
-<!-- tags:Bit Manipulation,Union Find,Graph,Array -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>There is an undirected weighted graph with <code>n</code> vertices labeled from <code>0</code> to <code>n - 1</code>.</p>
 
@@ -61,7 +76,11 @@
 	<li><code>s<sub>i</sub> !=&nbsp;t<sub>i</sub></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Greedy + Union Find
 
@@ -78,6 +97,8 @@ Finally, for each query $(s, t)$, we first judge whether $s$ equals $t$. If they
 The time complexity is $O((n + m + q) \times \alpha(n))$, and the space complexity is $O(n)$. Here, $n$, $m$, and $q$ represent the number of nodes, edges, and queries, respectively, and $\alpha(n)$ represents the inverse function of the Ackermann function.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class UnionFind:
@@ -123,6 +144,8 @@ class Solution:
 
         return [f(s, t) for s, t in query]
 ```
+
+#### Java
 
 ```java
 class UnionFind {
@@ -199,6 +222,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class UnionFind {
 public:
@@ -271,6 +296,8 @@ private:
 };
 ```
 
+#### Go
+
 ```go
 type unionFind struct {
 	p, size []int
@@ -342,6 +369,8 @@ func minimumCost(n int, edges [][]int, query [][]int) (ans []int) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 class UnionFind {
     p: number[];
@@ -403,4 +432,6 @@ function minimumCost(n: number, edges: number[][], query: number[][]): number[] 
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

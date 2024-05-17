@@ -1,12 +1,23 @@
-# [2872. 可以被 K 整除连通块的最大数目](https://leetcode.cn/problems/maximum-number-of-k-divisible-components/)
+---
+comments: true
+difficulty: 困难
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/2800-2899/2872.Maximum%20Number%20of%20K-Divisible%20Components/README.md
+rating: 1967
+source: 第 114 场双周赛 Q4
+tags:
+    - 树
+    - 深度优先搜索
+---
+
+<!-- problem:start -->
+
+# [2872. 可以被 K 整除连通块的最大数目](https://leetcode.cn/problems/maximum-number-of-k-divisible-components)
 
 [English Version](/solution/2800-2899/2872.Maximum%20Number%20of%20K-Divisible%20Components/README_EN.md)
 
-<!-- tags:树,深度优先搜索 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一棵 <code>n</code>&nbsp;个节点的无向树，节点编号为&nbsp;<code>0</code>&nbsp;到&nbsp;<code>n - 1</code>&nbsp;。给你整数&nbsp;<code>n</code>&nbsp;和一个长度为 <code>n - 1</code>&nbsp;的二维整数数组&nbsp;<code>edges</code>&nbsp;，其中&nbsp;<code>edges[i] = [a<sub>i</sub>, b<sub>i</sub>]</code>&nbsp;表示树中节点&nbsp;<code>a<sub>i</sub></code> 和&nbsp;<code>b<sub>i</sub></code>&nbsp;有一条边。</p>
 
@@ -60,7 +71,11 @@
 	<li>输入保证&nbsp;<code>edges</code>&nbsp;是一棵无向树。</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：DFS
 
@@ -71,6 +86,8 @@
 时间复杂度 $O(n)$，空间复杂度 $O(n)$。其中 $n$ 是树中的节点数。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -94,6 +111,8 @@ class Solution:
         dfs(0, -1)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -129,6 +148,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -156,6 +177,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func maxKDivisibleComponents(n int, edges [][]int, values []int, k int) (ans int) {
 	g := make([][]int, n)
@@ -181,6 +204,8 @@ func maxKDivisibleComponents(n int, edges [][]int, values []int, k int) (ans int
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function maxKDivisibleComponents(
@@ -214,9 +239,15 @@ function maxKDivisibleComponents(
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二
 
 <!-- tabs:start -->
+
+#### Java
 
 ```java
 class Solution {
@@ -257,4 +288,6 @@ class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -1,10 +1,23 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0600-0699/0648.Replace%20Words/README_EN.md
+tags:
+    - Trie
+    - Array
+    - Hash Table
+    - String
+---
+
+<!-- problem:start -->
+
 # [648. Replace Words](https://leetcode.com/problems/replace-words)
 
 [中文文档](/solution/0600-0699/0648.Replace%20Words/README.md)
 
-<!-- tags:Trie,Array,Hash Table,String -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>In English, we have a concept called <strong>root</strong>, which can be followed by some other word to form another longer word - let&#39;s call this word <strong>successor</strong>. For example, when the <strong>root</strong> <code>&quot;help&quot;</code> is followed by the <strong>successor</strong> word <code>&quot;ful&quot;</code>, we can form a new word <code>&quot;helpful&quot;</code>.</p>
 
@@ -42,11 +55,17 @@
 	<li><code>sentence</code> does not have leading or trailing spaces.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Trie:
@@ -87,6 +106,8 @@ class Solution:
         return " ".join(ans)
 ```
 
+#### Java
+
 ```java
 class Solution {
     public String replaceWords(List<String> dictionary, String sentence) {
@@ -106,6 +127,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Trie {
@@ -167,6 +190,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 type Trie struct {
 	children [26]*Trie
@@ -221,6 +246,8 @@ func replaceWords(dictionary []string, sentence string) string {
 	return ans.String()[:ans.Len()-1]
 }
 ```
+
+#### TypeScript
 
 ```ts
 class Trie {
@@ -277,9 +304,15 @@ function replaceWords(dictionary: string[], sentence: string): string {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Java
 
 ```java
 class Trie {
@@ -332,4 +365,6 @@ class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

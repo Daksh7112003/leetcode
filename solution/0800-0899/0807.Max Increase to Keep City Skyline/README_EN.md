@@ -1,10 +1,22 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0800-0899/0807.Max%20Increase%20to%20Keep%20City%20Skyline/README_EN.md
+tags:
+    - Greedy
+    - Array
+    - Matrix
+---
+
+<!-- problem:start -->
+
 # [807. Max Increase to Keep City Skyline](https://leetcode.com/problems/max-increase-to-keep-city-skyline)
 
 [中文文档](/solution/0800-0899/0807.Max%20Increase%20to%20Keep%20City%20Skyline/README.md)
 
-<!-- tags:Greedy,Array,Matrix -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>There is a city composed of <code>n x n</code> blocks, where each block contains a single building shaped like a vertical square prism. You are given a <strong>0-indexed</strong> <code>n x n</code> integer matrix <code>grid</code> where <code>grid[r][c]</code> represents the <strong>height</strong> of the building located in the block at row <code>r</code> and column <code>c</code>.</p>
 
@@ -47,11 +59,17 @@ gridNew = [ [8, 4, 8, 7],
 	<li><code>0 &lt;= grid[r][c] &lt;= 100</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -64,6 +82,8 @@ class Solution:
             for j in range(len(grid[0]))
         )
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -88,6 +108,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -110,6 +132,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func maxIncreaseKeepingSkyline(grid [][]int) int {
 	m, n := len(grid), len(grid[0])
@@ -130,6 +154,8 @@ func maxIncreaseKeepingSkyline(grid [][]int) int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function maxIncreaseKeepingSkyline(grid: number[][]): number {
@@ -156,4 +182,6 @@ function maxIncreaseKeepingSkyline(grid: number[][]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

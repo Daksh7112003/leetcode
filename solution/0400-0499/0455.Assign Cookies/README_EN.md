@@ -1,10 +1,23 @@
+---
+comments: true
+difficulty: Easy
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0400-0499/0455.Assign%20Cookies/README_EN.md
+tags:
+    - Greedy
+    - Array
+    - Two Pointers
+    - Sorting
+---
+
+<!-- problem:start -->
+
 # [455. Assign Cookies](https://leetcode.com/problems/assign-cookies)
 
 [中文文档](/solution/0400-0499/0455.Assign%20Cookies/README.md)
 
-<!-- tags:Greedy,Array,Two Pointers,Sorting -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Assume you are an awesome parent and want to give your children some cookies. But, you should give each child at most one cookie.</p>
 
@@ -40,11 +53,17 @@ You need to output 2.
 	<li><code>1 &lt;= g[i], s[j] &lt;= 2<sup>31</sup> - 1</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -60,6 +79,8 @@ class Solution:
             j += 1
         return len(g)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -81,6 +102,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -101,6 +124,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func findContentChildren(g []int, s []int) int {
 	sort.Ints(g)
@@ -119,6 +144,8 @@ func findContentChildren(g []int, s []int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function findContentChildren(g: number[], s: number[]): number {
     g.sort((a, b) => a - b);
@@ -136,6 +163,8 @@ function findContentChildren(g: number[], s: number[]): number {
     return m;
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -162,4 +191,6 @@ var findContentChildren = function (g, s) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

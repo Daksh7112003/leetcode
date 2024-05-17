@@ -1,12 +1,21 @@
+---
+comments: true
+difficulty: 困难
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/3000-3099/3018.Maximum%20Number%20of%20Removal%20Queries%20That%20Can%20Be%20Processed%20I/README.md
+tags:
+    - 数组
+    - 动态规划
+---
+
+<!-- problem:start -->
+
 # [3018. 可处理的最大删除操作数 I 🔒](https://leetcode.cn/problems/maximum-number-of-removal-queries-that-can-be-processed-i)
 
 [English Version](/solution/3000-3099/3018.Maximum%20Number%20of%20Removal%20Queries%20That%20Can%20Be%20Processed%20I/README_EN.md)
 
-<!-- tags:数组,动态规划 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给定一个下标&nbsp;<strong>从&nbsp;0 开始</strong>&nbsp;的数组&nbsp;<code>nums</code> 和一个下标&nbsp;<strong>从</strong>&nbsp;<strong>0 开始&nbsp;</strong>的数组&nbsp;<code>queries</code>。</p>
 
@@ -79,7 +88,11 @@
 	<li><code>1 &lt;= nums[i], queries[i] &lt;= 10<sup>9</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：动态规划
 
@@ -96,6 +109,8 @@
 时间复杂度 $O(n^2)$，空间复杂度 $O(n^2)$。其中 $n$ 为数组 $nums$ 的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -117,6 +132,8 @@ class Solution:
                     return m
         return max(f[i][i] + (nums[i] >= queries[f[i][i]]) for i in range(n))
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -148,6 +165,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -177,6 +196,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func maximumProcessableQueries(nums []int, queries []int) (ans int) {
@@ -218,6 +239,8 @@ func maximumProcessableQueries(nums []int, queries []int) (ans int) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function maximumProcessableQueries(nums: number[], queries: number[]): number {
     const n = nums.length;
@@ -252,4 +275,6 @@ function maximumProcessableQueries(nums: number[], queries: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

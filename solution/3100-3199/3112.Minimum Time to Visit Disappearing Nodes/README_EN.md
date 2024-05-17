@@ -1,10 +1,25 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/3100-3199/3112.Minimum%20Time%20to%20Visit%20Disappearing%20Nodes/README_EN.md
+rating: 1756
+source: Biweekly Contest 128 Q3
+tags:
+    - Graph
+    - Array
+    - Shortest Path
+    - Heap (Priority Queue)
+---
+
+<!-- problem:start -->
+
 # [3112. Minimum Time to Visit Disappearing Nodes](https://leetcode.com/problems/minimum-time-to-visit-disappearing-nodes)
 
 [中文文档](/solution/3100-3199/3112.Minimum%20Time%20to%20Visit%20Disappearing%20Nodes/README.md)
 
-<!-- tags:Graph,Array,Shortest Path,Heap (Priority Queue) -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>There is an undirected graph of <code>n</code> nodes. You are given a 2D array <code>edges</code>, where <code>edges[i] = [u<sub>i</sub>, v<sub>i</sub>, length<sub>i</sub>]</code> describes an edge between node <code>u<sub>i</sub></code> and node <code>v<sub>i</sub></code> with a traversal time of <code>length<sub>i</sub></code> units.</p>
 
@@ -80,7 +95,11 @@
 	<li><code>1 &lt;= disappear[i] &lt;= 10<sup>5</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Heap Optimized Dijkstra
 
@@ -98,6 +117,8 @@ Finally, we traverse the $dist$ array. If $dist[i] < disappear[i]$, then $answer
 The time complexity is $O(m \times \log m)$, and the space complexity is $O(m)$, where $m$ is the number of edges.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -121,6 +142,8 @@ class Solution:
                     heappush(q, (dist[v], v))
         return [a if a < b else -1 for a, b in zip(dist, disappear)]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -159,6 +182,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -203,6 +228,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func minimumTime(n int, edges [][]int, disappear []int) []int {
@@ -262,4 +289,6 @@ func (h *hp) Pop() any          { a := *h; v := a[len(a)-1]; *h = a[:len(a)-1]; 
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

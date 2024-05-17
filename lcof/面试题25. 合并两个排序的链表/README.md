@@ -1,6 +1,16 @@
+---
+comments: true
+difficulty: 简单
+edit_url: https://github.com/doocs/leetcode/edit/main/lcof/%E9%9D%A2%E8%AF%95%E9%A2%9825.%20%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%8E%92%E5%BA%8F%E7%9A%84%E9%93%BE%E8%A1%A8/README.md
+---
+
+<!-- problem:start -->
+
 # [面试题 25. 合并两个排序的链表](https://leetcode.cn/problems/he-bing-liang-ge-pai-xu-de-lian-biao-lcof/)
 
 ## 题目描述
+
+<!-- description:start -->
 
 <p>输入两个递增排序的链表，合并这两个链表并使新链表中的节点仍然是递增排序的。</p>
 
@@ -15,7 +25,11 @@
 
 <p>注意：本题与主站 21 题相同：<a href="https://leetcode.cn/problems/merge-two-sorted-lists/">https://leetcode.cn/problems/merge-two-sorted-lists/</a></p>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：迭代
 
@@ -28,6 +42,8 @@
 时间复杂度 $O(m + n)$，空间复杂度 $O(1)$。其中 $m$ 和 $n$ 分别为两个链表的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for singly-linked list.
@@ -51,6 +67,8 @@ class Solution:
         cur.next = l1 or l2
         return dummy.next
 ```
+
+#### Java
 
 ```java
 /**
@@ -80,6 +98,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 /**
@@ -111,6 +131,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 /**
  * Definition for singly-linked list.
@@ -140,6 +162,8 @@ func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
 	return dummy.Next
 }
 ```
+
+#### TypeScript
 
 ```ts
 /**
@@ -171,6 +195,8 @@ function mergeTwoLists(l1: ListNode | null, l2: ListNode | null): ListNode | nul
     return dummy.next;
 }
 ```
+
+#### Rust
 
 ```rust
 // Definition for singly-linked list.
@@ -221,6 +247,8 @@ impl Solution {
 }
 ```
 
+#### JavaScript
+
 ```js
 /**
  * Definition for singly-linked list.
@@ -251,6 +279,8 @@ var mergeTwoLists = function (l1, l2) {
     return dummy.next;
 };
 ```
+
+#### C#
 
 ```cs
 /**
@@ -283,6 +313,10 @@ public class Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start-->
+
 ### 方法二：递归
 
 我们先判断 `l1` 和 `l2` 中有没有一个为空，如果有一个为空，那么我们直接返回另一个链表即可。
@@ -295,6 +329,8 @@ public class Solution {
 时间复杂度 $O(m + n)$，空间复杂度 $O(m + n)$。其中 $m$ 和 $n$ 分别为两个链表的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for singly-linked list.
@@ -315,6 +351,8 @@ class Solution:
             l2.next = self.mergeTwoLists(l1, l2.next)
             return l2
 ```
+
+#### Java
 
 ```java
 /**
@@ -343,6 +381,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 /**
@@ -373,6 +413,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 /**
  * Definition for singly-linked list.
@@ -397,6 +439,8 @@ func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
 	}
 }
 ```
+
+#### TypeScript
 
 ```ts
 /**
@@ -423,6 +467,8 @@ function mergeTwoLists(l1: ListNode | null, l2: ListNode | null): ListNode | nul
     return l2;
 }
 ```
+
+#### Rust
 
 ```rust
 // Definition for singly-linked list.
@@ -464,6 +510,8 @@ impl Solution {
 }
 ```
 
+#### JavaScript
+
 ```js
 /**
  * Definition for singly-linked list.
@@ -490,6 +538,8 @@ var mergeTwoLists = function (l1, l2) {
     }
 };
 ```
+
+#### C#
 
 ```cs
 /**
@@ -521,4 +571,6 @@ public class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -1,12 +1,24 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0200-0299/0215.Kth%20Largest%20Element%20in%20an%20Array/README.md
+tags:
+    - 数组
+    - 分治
+    - 快速选择
+    - 排序
+    - 堆（优先队列）
+---
+
+<!-- problem:start -->
+
 # [215. 数组中的第 K 个最大元素](https://leetcode.cn/problems/kth-largest-element-in-an-array)
 
 [English Version](/solution/0200-0299/0215.Kth%20Largest%20Element%20in%20an%20Array/README_EN.md)
 
-<!-- tags:数组,分治,快速选择,排序,堆（优先队列） -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给定整数数组 <code>nums</code> 和整数 <code>k</code>，请返回数组中第 <code><strong>k</strong></code> 个最大的元素。</p>
 
@@ -38,7 +50,11 @@
 	<li><code>-10<sup>4</sup>&nbsp;&lt;= nums[i] &lt;= 10<sup>4</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：排序
 
@@ -47,6 +63,8 @@
 时间复杂度 $O(n \times \log n)$，其中 $n$ 表示数组 $nums$ 的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -74,6 +92,8 @@ class Solution:
         n = len(nums)
         return quick_sort(0, n - 1, n - k)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -107,6 +127,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -130,6 +152,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func findKthLargest(nums []int, k int) int {
@@ -167,6 +191,8 @@ func quickSort(nums []int, left, right, k int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function findKthLargest(nums: number[], k: number): number {
     const n = nums.length;
@@ -195,6 +221,8 @@ function findKthLargest(nums: number[], k: number): number {
     return nums[k - 1];
 }
 ```
+
+#### Rust
 
 ```rust
 use rand::Rng;
@@ -230,6 +258,10 @@ impl Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二：Partition
 
 我们注意到，并不是所有时候，都需要整个数组进入有序状态，只需要**局部有序**，或者说，从大到小排序，只要 $[0..k)$ 位置的元素有序，那么就能确定结果，此处使用**快速排序**。
@@ -239,6 +271,8 @@ impl Solution {
 时间复杂度 $O(n)$，其中 $n$ 表示数组 $nums$ 的长度。
 
 <!-- tabs:start -->
+
+#### Rust
 
 ```rust
 use rand::Rng;
@@ -273,4 +307,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -1,10 +1,22 @@
+---
+comments: true
+difficulty: Easy
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0200-0299/0246.Strobogrammatic%20Number/README_EN.md
+tags:
+    - Hash Table
+    - Two Pointers
+    - String
+---
+
+<!-- problem:start -->
+
 # [246. Strobogrammatic Number 🔒](https://leetcode.com/problems/strobogrammatic-number)
 
 [中文文档](/solution/0200-0299/0246.Strobogrammatic%20Number/README.md)
 
-<!-- tags:Hash Table,Two Pointers,String -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Given a string <code>num</code> which represents an integer, return <code>true</code> <em>if</em> <code>num</code> <em>is a <strong>strobogrammatic number</strong></em>.</p>
 
@@ -41,7 +53,11 @@
 	<li><code>num</code> does not contain any leading zeros except for zero itself.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Two Pointers Simulation
 
@@ -52,6 +68,8 @@ We define two pointers $i$ and $j$, pointing to the left and right ends of the s
 The time complexity is $O(n)$, where $n$ is the length of the string. The space complexity is $O(1)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -65,6 +83,8 @@ class Solution:
             i, j = i + 1, j - 1
         return True
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -80,6 +100,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -97,6 +119,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func isStrobogrammatic(num string) bool {
 	d := []int{0, 1, -1, -1, -1, -1, 9, -1, 8, 6}
@@ -112,4 +136,6 @@ func isStrobogrammatic(num string) bool {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

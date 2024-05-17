@@ -1,10 +1,27 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/2800-2899/2856.Minimum%20Array%20Length%20After%20Pair%20Removals/README_EN.md
+rating: 1749
+source: Biweekly Contest 113 Q2
+tags:
+    - Greedy
+    - Array
+    - Hash Table
+    - Two Pointers
+    - Binary Search
+    - Counting
+---
+
+<!-- problem:start -->
+
 # [2856. Minimum Array Length After Pair Removals](https://leetcode.com/problems/minimum-array-length-after-pair-removals)
 
 [中文文档](/solution/2800-2899/2856.Minimum%20Array%20Length%20After%20Pair%20Removals/README.md)
 
-<!-- tags:Greedy,Array,Hash Table,Two Pointers,Binary Search,Counting -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a <strong>0-indexed</strong> <strong>sorted</strong> array of integers <code>nums</code>.</p>
 
@@ -66,7 +83,11 @@ Hence, the minimum achievable length is 1.
 	<li><code>nums</code> is sorted in <strong>non-decreasing</strong> order.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Greedy + Priority Queue (Max Heap)
 
@@ -75,6 +96,8 @@ We use a hash table $cnt$ to count the occurrence of each element in the array $
 The time complexity is $O(n \times \log n)$, and the space complexity is $O(n)$. Here, $n$ is the length of the array $nums$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -94,6 +117,8 @@ class Solution:
             ans -= 2
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -124,6 +149,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -157,6 +184,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func minLengthAfterRemovals(nums []int) int {
@@ -196,6 +225,8 @@ func (h *hp) push(v int) { heap.Push(h, v) }
 func (h *hp) pop() int   { return heap.Pop(h).(int) }
 ```
 
+#### TypeScript
+
 ```ts
 function minLengthAfterRemovals(nums: number[]): number {
     const cnt: Map<number, number> = new Map();
@@ -224,4 +255,6 @@ function minLengthAfterRemovals(nums: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

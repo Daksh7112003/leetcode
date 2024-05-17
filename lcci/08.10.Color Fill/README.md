@@ -1,10 +1,19 @@
+---
+comments: true
+difficulty: 简单
+edit_url: https://github.com/doocs/leetcode/edit/main/lcci/08.10.Color%20Fill/README.md
+---
+
+<!-- problem:start -->
+
 # [面试题 08.10. 颜色填充](https://leetcode.cn/problems/color-fill-lcci)
 
 [English Version](/lcci/08.10.Color%20Fill/README_EN.md)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
+
 <p>颜色填充。编写函数，实现许多图片编辑软件都支持的“颜色填充”功能。给定一个屏幕（以二维数组表示，元素为颜色值）、一个点和一个新的颜色值，将新颜色值填入这个点的周围区域，直到原来的颜色值全都改变。</p>
 
 <p> <strong>示例1:</strong></p>
@@ -29,7 +38,11 @@ sr = 1, sc = 1, newColor = 2
 <li>image[i][j] 和 newColor 表示的颜色值在范围 [0, 65535]内。</li>
 </ol>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：DFS
 
@@ -38,6 +51,8 @@ sr = 1, sc = 1, newColor = 2
 时间复杂度 $O(m \times n)$，空间复杂度 $O(m \times n)$。其中 $m$ 和 $n$ 分别为图像的行数和列数。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -62,6 +77,8 @@ class Solution:
         dfs(sr, sc)
         return image
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -91,6 +108,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -113,6 +132,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func floodFill(image [][]int, sr int, sc int, newColor int) [][]int {
 	oc := image[sr][sc]
@@ -132,6 +153,8 @@ func floodFill(image [][]int, sr int, sc int, newColor int) [][]int {
 	return image
 }
 ```
+
+#### TypeScript
 
 ```ts
 function floodFill(image: number[][], sr: number, sc: number, newColor: number): number[][] {
@@ -158,6 +181,8 @@ function floodFill(image: number[][], sr: number, sc: number, newColor: number):
     return image;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -192,7 +217,40 @@ impl Solution {
 }
 ```
 
+#### Swift
+
+```swift
+class Solution {
+    private var dirs = [-1, 0, 1, 0, -1]
+    private var image: [[Int]] = []
+    private var nc: Int = 0
+    private var oc: Int = 0
+
+    func floodFill(_ image: inout [[Int]], _ sr: Int, _ sc: Int, _ newColor: Int) -> [[Int]] {
+        self.nc = newColor
+        self.oc = image[sr][sc]
+        self.image = image
+        dfs(sr, sc)
+        return self.image
+    }
+
+    private func dfs(_ i: Int, _ j: Int) {
+        if i < 0 || i >= image.count || j < 0 || j >= image[0].count || image[i][j] != oc || image[i][j] == nc {
+            return
+        }
+        image[i][j] = nc
+        for k in 0..<4 {
+            dfs(i + dirs[k], j + dirs[k + 1])
+        }
+    }
+}
+```
+
 <!-- tabs:end -->
+
+<!-- solution:end -->
+
+<!-- solution:start-->
 
 ### 方法二：BFS
 
@@ -201,6 +259,8 @@ impl Solution {
 时间复杂度 $O(m \times n)$，空间复杂度 $O(m \times n)$。其中 $m$ 和 $n$ 分别为图像的行数和列数。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -222,6 +282,8 @@ class Solution:
                     image[x][y] = newColor
         return image
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -251,6 +313,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -278,6 +342,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func floodFill(image [][]int, sr int, sc int, newColor int) [][]int {
 	if image[sr][sc] == newColor {
@@ -301,6 +367,8 @@ func floodFill(image [][]int, sr int, sc int, newColor int) [][]int {
 	return image
 }
 ```
+
+#### TypeScript
 
 ```ts
 function floodFill(image: number[][], sr: number, sc: number, newColor: number): number[][] {
@@ -327,4 +395,6 @@ function floodFill(image: number[][], sr: number, sc: number, newColor: number):
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

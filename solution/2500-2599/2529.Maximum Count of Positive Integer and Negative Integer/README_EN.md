@@ -1,10 +1,24 @@
+---
+comments: true
+difficulty: Easy
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/2500-2599/2529.Maximum%20Count%20of%20Positive%20Integer%20and%20Negative%20Integer/README_EN.md
+rating: 1195
+source: Weekly Contest 327 Q1
+tags:
+    - Array
+    - Binary Search
+    - Counting
+---
+
+<!-- problem:start -->
+
 # [2529. Maximum Count of Positive Integer and Negative Integer](https://leetcode.com/problems/maximum-count-of-positive-integer-and-negative-integer)
 
 [中文文档](/solution/2500-2599/2529.Maximum%20Count%20of%20Positive%20Integer%20and%20Negative%20Integer/README.md)
 
-<!-- tags:Array,Binary Search,Counting -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Given an array <code>nums</code> sorted in <strong>non-decreasing</strong> order, return <em>the maximum between the number of positive integers and the number of negative integers.</em></p>
 
@@ -51,7 +65,11 @@
 <p>&nbsp;</p>
 <p><strong>Follow up:</strong> Can you solve the problem in <code>O(log(n))</code> time complexity?</p>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Traversal
 
@@ -61,6 +79,8 @@ The time complexity is $O(n)$, where $n$ is the length of the array. The space c
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def maximumCount(self, nums: List[int]) -> int:
@@ -68,6 +88,8 @@ class Solution:
         b = sum(x < 0 for x in nums)
         return max(a, b)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -84,6 +106,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -102,6 +126,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func maximumCount(nums []int) int {
 	var a, b int
@@ -116,6 +142,8 @@ func maximumCount(nums []int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function maximumCount(nums: number[]): number {
     let [a, b] = [0, 0];
@@ -129,6 +157,8 @@ function maximumCount(nums: number[]): number {
     return Math.max(a, b);
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -149,6 +179,8 @@ impl Solution {
 }
 ```
 
+#### C
+
 ```c
 #define max(a, b) (a > b ? a : b)
 
@@ -167,6 +199,10 @@ int maximumCount(int* nums, int numsSize) {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2: Binary Search
 
 Since the array is sorted in non-decreasing order, we can use binary search to find the index $i$ of the first element that is greater than or equal to $1$, and the index $j$ of the first element that is greater than or equal to $0$. The number of positive integers is $a = n - i$, and the number of negative integers is $b = j$. We return the larger of $a$ and $b$.
@@ -175,6 +211,8 @@ The time complexity is $O(\log n)$, where $n$ is the length of the array. The sp
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def maximumCount(self, nums: List[int]) -> int:
@@ -182,6 +220,8 @@ class Solution:
         b = bisect_left(nums, 0)
         return max(a, b)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -206,6 +246,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -217,6 +259,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func maximumCount(nums []int) int {
 	a := len(nums) - sort.SearchInts(nums, 1)
@@ -224,6 +268,8 @@ func maximumCount(nums []int) int {
 	return max(a, b)
 }
 ```
+
+#### TypeScript
 
 ```ts
 function maximumCount(nums: number[]): number {
@@ -245,6 +291,8 @@ function maximumCount(nums: number[]): number {
     return Math.max(a, b);
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -270,6 +318,8 @@ impl Solution {
     }
 }
 ```
+
+#### C
 
 ```c
 #define max(a, b) (a > b ? a : b)
@@ -297,4 +347,6 @@ int maximumCount(int* nums, int numsSize) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

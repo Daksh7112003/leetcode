@@ -1,10 +1,21 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0400-0499/0467.Unique%20Substrings%20in%20Wraparound%20String/README_EN.md
+tags:
+    - String
+    - Dynamic Programming
+---
+
+<!-- problem:start -->
+
 # [467. Unique Substrings in Wraparound String](https://leetcode.com/problems/unique-substrings-in-wraparound-string)
 
 [中文文档](/solution/0400-0499/0467.Unique%20Substrings%20in%20Wraparound%20String/README.md)
 
-<!-- tags:String,Dynamic Programming -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>We define the string <code>base</code> to be the infinite wraparound string of <code>&quot;abcdefghijklmnopqrstuvwxyz&quot;</code>, so <code>base</code> will look like this:</p>
 
@@ -47,11 +58,17 @@
 	<li><code>s</code> consists of lowercase English letters.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -67,6 +84,8 @@ class Solution:
             dp[idx] = max(dp[idx], k)
         return sum(dp)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -91,6 +110,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -111,6 +132,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func findSubstringInWraproundString(p string) int {
@@ -133,6 +156,8 @@ func findSubstringInWraproundString(p string) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function findSubstringInWraproundString(p: string): number {
     const n = p.length;
@@ -151,6 +176,8 @@ function findSubstringInWraproundString(p: string): number {
     return dp.reduce((r, v) => r + v);
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -176,4 +203,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

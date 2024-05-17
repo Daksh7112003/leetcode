@@ -1,8 +1,18 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/lcci/10.02.Group%20Anagrams/README_EN.md
+---
+
+<!-- problem:start -->
+
 # [10.02. Group Anagrams](https://leetcode.cn/problems/group-anagrams-lcci)
 
 [中文文档](/lcci/10.02.Group%20Anagrams/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Write a method to sort an array of strings so that all the anagrams are in the same group.</p>
 
@@ -33,7 +43,11 @@
 	<li>The order of your output does not&nbsp;matter.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Hash Table
 
@@ -55,6 +69,8 @@ The time complexity is $O(n\times k\times \log k)$, where $n$ and $k$ are the le
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
@@ -64,6 +80,8 @@ class Solution:
             d[k].append(s)
         return list(d.values())
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -79,6 +97,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -97,6 +117,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func groupAnagrams(strs []string) (ans [][]string) {
 	d := map[string][]string{}
@@ -113,6 +135,8 @@ func groupAnagrams(strs []string) (ans [][]string) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function groupAnagrams(strs: string[]): string[][] {
     const d: Map<string, string[]> = new Map();
@@ -127,7 +151,26 @@ function groupAnagrams(strs: string[]): string[][] {
 }
 ```
 
+#### Swift
+
+```swift
+class Solution {
+    func groupAnagrams(_ strs: [String]) -> [[String]] {
+        var d = [String: [String]]()
+        for s in strs {
+            let t = String(s.sorted())
+            d[t, default: []].append(s)
+        }
+        return Array(d.values)
+    }
+}
+```
+
 <!-- tabs:end -->
+
+<!-- solution:end -->
+
+<!-- solution:start -->
 
 ### Solution 2: Counting
 
@@ -136,6 +179,8 @@ We can also change the sorting part in Solution 1 to counting, that is, use the 
 The time complexity is $O(n\times (k + C))$. Where $n$ and $k$ are the length of the string array and the maximum length of the string, respectively, and $C$ is the size of the character set. In this problem, $C = 26$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -148,6 +193,8 @@ class Solution:
             d[tuple(cnt)].append(s)
         return list(d.values())
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -171,6 +218,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -196,6 +245,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func groupAnagrams(strs []string) (ans [][]string) {
 	d := map[[26]int][]string{}
@@ -215,4 +266,6 @@ func groupAnagrams(strs []string) (ans [][]string) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

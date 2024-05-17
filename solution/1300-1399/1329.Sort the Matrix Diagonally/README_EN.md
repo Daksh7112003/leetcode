@@ -1,10 +1,24 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/1300-1399/1329.Sort%20the%20Matrix%20Diagonally/README_EN.md
+rating: 1548
+source: Biweekly Contest 18 Q3
+tags:
+    - Array
+    - Matrix
+    - Sorting
+---
+
+<!-- problem:start -->
+
 # [1329. Sort the Matrix Diagonally](https://leetcode.com/problems/sort-the-matrix-diagonally)
 
 [中文文档](/solution/1300-1399/1329.Sort%20the%20Matrix%20Diagonally/README.md)
 
-<!-- tags:Array,Matrix,Sorting -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>A <strong>matrix diagonal</strong> is a diagonal line of cells starting from some cell in either the topmost row or leftmost column and going in the bottom-right direction until reaching the matrix&#39;s end. For example, the <strong>matrix diagonal</strong> starting from <code>mat[2][0]</code>, where <code>mat</code> is a <code>6 x 3</code> matrix, includes cells <code>mat[2][0]</code>, <code>mat[3][1]</code>, and <code>mat[4][2]</code>.</p>
 
@@ -35,7 +49,11 @@
 	<li><code>1 &lt;= mat[i][j] &lt;= 100</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Sorting
 
@@ -48,6 +66,8 @@ Finally, we fill the sorted elements of each diagonal back into the original mat
 The time complexity is $O(m \times n \times \log \min(m, n))$, and the space complexity is $O(m \times n)$. Where $m$ and $n$ are the number of rows and columns in the matrix, respectively.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -64,6 +84,8 @@ class Solution:
                 mat[i][j] = g[m - i + j].pop()
         return mat
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -88,6 +110,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -114,6 +138,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func diagonalSort(mat [][]int) [][]int {
 	m, n := len(mat), len(mat[0])
@@ -137,6 +163,8 @@ func diagonalSort(mat [][]int) [][]int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function diagonalSort(mat: number[][]): number[][] {
     const [m, n] = [mat.length, mat[0].length];
@@ -157,6 +185,8 @@ function diagonalSort(mat: number[][]): number[][] {
     return mat;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -181,6 +211,8 @@ impl Solution {
     }
 }
 ```
+
+#### C#
 
 ```cs
 public class Solution {
@@ -213,4 +245,6 @@ public class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -1,12 +1,24 @@
+---
+comments: true
+difficulty: 简单
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0500-0599/0594.Longest%20Harmonious%20Subsequence/README.md
+tags:
+    - 数组
+    - 哈希表
+    - 计数
+    - 排序
+    - 滑动窗口
+---
+
+<!-- problem:start -->
+
 # [594. 最长和谐子序列](https://leetcode.cn/problems/longest-harmonious-subsequence)
 
 [English Version](/solution/0500-0599/0594.Longest%20Harmonious%20Subsequence/README_EN.md)
 
-<!-- tags:数组,哈希表,计数,排序,滑动窗口 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>和谐数组是指一个数组里元素的最大值和最小值之间的差别 <strong>正好是 <code>1</code></strong> 。</p>
 
@@ -47,11 +59,17 @@
 	<li><code>-10<sup>9</sup> <= nums[i] <= 10<sup>9</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -63,6 +81,8 @@ class Solution:
                 ans = max(ans, counter[num] + counter[num + 1])
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -81,6 +101,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -101,6 +123,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func findLHS(nums []int) int {
 	counter := make(map[int]int)
@@ -119,9 +143,15 @@ func findLHS(nums []int) int {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -135,4 +165,6 @@ class Solution:
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

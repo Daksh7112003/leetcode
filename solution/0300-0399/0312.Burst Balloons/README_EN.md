@@ -1,10 +1,21 @@
+---
+comments: true
+difficulty: Hard
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0300-0399/0312.Burst%20Balloons/README_EN.md
+tags:
+    - Array
+    - Dynamic Programming
+---
+
+<!-- problem:start -->
+
 # [312. Burst Balloons](https://leetcode.com/problems/burst-balloons)
 
 [中文文档](/solution/0300-0399/0312.Burst%20Balloons/README.md)
 
-<!-- tags:Array,Dynamic Programming -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You are given <code>n</code> balloons, indexed from <code>0</code> to <code>n - 1</code>. Each balloon is painted with a number on it represented by an array <code>nums</code>. You are asked to burst all the balloons.</p>
 
@@ -38,11 +49,17 @@ coins =  3*1*5    +   3*5*8   +  1*3*8  + 1*8*1 = 167</pre>
 	<li><code>0 &lt;= nums[i] &lt;= 100</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -59,6 +76,8 @@ class Solution:
                     )
         return dp[0][-1]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -83,6 +102,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -103,6 +124,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func maxCoins(nums []int) int {
@@ -128,6 +151,8 @@ func maxCoins(nums []int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function maxCoins(nums: number[]): number {
     let n = nums.length;
@@ -147,4 +172,6 @@ function maxCoins(nums: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

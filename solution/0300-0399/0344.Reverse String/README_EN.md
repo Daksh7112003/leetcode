@@ -1,10 +1,21 @@
+---
+comments: true
+difficulty: Easy
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0300-0399/0344.Reverse%20String/README_EN.md
+tags:
+    - Two Pointers
+    - String
+---
+
+<!-- problem:start -->
+
 # [344. Reverse String](https://leetcode.com/problems/reverse-string)
 
 [中文文档](/solution/0300-0399/0344.Reverse%20String/README.md)
 
-<!-- tags:Two Pointers,String -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Write a function that reverses a string. The input string is given as an array of characters <code>s</code>.</p>
 
@@ -26,11 +37,17 @@
 	<li><code>s[i]</code> is a <a href="https://en.wikipedia.org/wiki/ASCII#Printable_characters" target="_blank">printable ascii character</a>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -40,6 +57,8 @@ class Solution:
             s[i], s[j] = s[j], s[i]
             i, j = i + 1, j - 1
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -53,6 +72,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -64,6 +85,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func reverseString(s []byte) {
 	for i, j := 0, len(s)-1; i < j; i, j = i+1, j-1 {
@@ -71,6 +94,8 @@ func reverseString(s []byte) {
 	}
 }
 ```
+
+#### TypeScript
 
 ```ts
 /**
@@ -82,6 +107,8 @@ function reverseString(s: string[]): void {
     }
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -97,6 +124,8 @@ impl Solution {
 }
 ```
 
+#### JavaScript
+
 ```js
 /**
  * @param {character[]} s
@@ -111,15 +140,23 @@ var reverseString = function (s) {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
     def reverseString(self, s: List[str]) -> None:
         s[:] = s[::-1]
 ```
+
+#### TypeScript
 
 ```ts
 /**
@@ -132,4 +169,6 @@ function reverseString(s: string[]): void {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

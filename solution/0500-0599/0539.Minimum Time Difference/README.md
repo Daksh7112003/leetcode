@@ -1,12 +1,23 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0500-0599/0539.Minimum%20Time%20Difference/README.md
+tags:
+    - 数组
+    - 数学
+    - 字符串
+    - 排序
+---
+
+<!-- problem:start -->
+
 # [539. 最小时间差](https://leetcode.cn/problems/minimum-time-difference)
 
 [English Version](/solution/0500-0599/0539.Minimum%20Time%20Difference/README_EN.md)
 
-<!-- tags:数组,数学,字符串,排序 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给定一个 24 小时制（小时:分钟 <strong>"HH:MM"</strong>）的时间列表，找出列表中任意两个时间的最小时间差并以分钟数表示。</p>
 
@@ -35,11 +46,17 @@
 	<li><code>timePoints[i]</code> 格式为 <strong>"HH:MM"</strong></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -53,6 +70,8 @@ class Solution:
             res = min(res, mins[i] - mins[i - 1])
         return res
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -76,6 +95,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -94,6 +115,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func findMinDifference(timePoints []string) int {
@@ -117,6 +140,8 @@ func findMinDifference(timePoints []string) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function findMinDifference(timePoints: string[]): number {
     const mins = timePoints
@@ -138,4 +163,6 @@ function findMinDifference(timePoints: string[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

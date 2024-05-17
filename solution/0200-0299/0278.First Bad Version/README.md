@@ -1,12 +1,21 @@
+---
+comments: true
+difficulty: 简单
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0200-0299/0278.First%20Bad%20Version/README.md
+tags:
+    - 二分查找
+    - 交互
+---
+
+<!-- problem:start -->
+
 # [278. 第一个错误的版本](https://leetcode.cn/problems/first-bad-version)
 
 [English Version](/solution/0200-0299/0278.First%20Bad%20Version/README_EN.md)
 
-<!-- tags:二分查找,交互 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>你是产品经理，目前正在带领一个团队开发新的产品。不幸的是，你的产品的最新版本没有通过质量检测。由于每个版本都是基于之前的版本开发的，所以错误的版本之后的所有版本都是错的。</p>
 
@@ -42,11 +51,17 @@
 	<li><code>1 <= bad <= n <= 2<sup>31</sup> - 1</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # The isBadVersion API is already defined for you.
@@ -71,6 +86,8 @@ class Solution:
         return left
 ```
 
+#### Java
+
 ```java
 /* The isBadVersion API is defined in the parent class VersionControl.
       boolean isBadVersion(int version); */
@@ -90,6 +107,8 @@ public class Solution extends VersionControl {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 // The API isBadVersion is defined for you.
@@ -111,6 +130,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 /**
@@ -135,6 +156,8 @@ func firstBadVersion(n int) int {
 }
 ```
 
+#### Rust
+
 ```rust
 // The API isBadVersion is defined for you.
 // isBadVersion(version:i32)-> bool;
@@ -156,6 +179,8 @@ impl Solution {
     }
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -195,4 +220,6 @@ var solution = function (isBadVersion) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

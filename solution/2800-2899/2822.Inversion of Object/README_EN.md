@@ -1,10 +1,18 @@
+---
+comments: true
+difficulty: Easy
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/2800-2899/2822.Inversion%20of%20Object/README_EN.md
+---
+
+<!-- problem:start -->
+
 # [2822. Inversion of Object 🔒](https://leetcode.com/problems/inversion-of-object)
 
 [中文文档](/solution/2800-2899/2822.Inversion%20of%20Object/README.md)
 
-<!-- tags: -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Given an object or an array&nbsp;<code>obj</code>, return an inverted object or array&nbsp;<code>invertedObj</code>.</p>
 
@@ -47,11 +55,17 @@
 	<li><code>2 &lt;= JSON.stringify(obj).length &lt;= 10<sup>5</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### TypeScript
 
 ```ts
 function invertObject(obj: Record<any, any>): Record<any, any> {
@@ -73,4 +87,6 @@ function invertObject(obj: Record<any, any>): Record<any, any> {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

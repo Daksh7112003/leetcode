@@ -1,6 +1,16 @@
+---
+comments: true
+difficulty: 简单
+edit_url: https://github.com/doocs/leetcode/edit/main/lcof/%E9%9D%A2%E8%AF%95%E9%A2%9810-%20II.%20%E9%9D%92%E8%9B%99%E8%B7%B3%E5%8F%B0%E9%98%B6%E9%97%AE%E9%A2%98/README.md
+---
+
+<!-- problem:start -->
+
 # [面试题 10- II. 青蛙跳台阶问题](https://leetcode.cn/problems/qing-wa-tiao-tai-jie-wen-ti-lcof/)
 
 ## 题目描述
+
+<!-- description:start -->
 
 <p>一只青蛙一次可以跳上1级台阶，也可以跳上2级台阶。求该青蛙跳上一个 <code>n</code>&nbsp;级的台阶总共有多少种跳法。</p>
 
@@ -33,7 +43,11 @@
 
 <p>&nbsp;</p>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：递推
 
@@ -45,6 +59,8 @@
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def numWays(self, n: int) -> int:
@@ -53,6 +69,8 @@ class Solution:
             a, b = b, (a + b) % 1000000007
         return a
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -67,6 +85,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -83,6 +103,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func numWays(n int) int {
 	a, b := 1, 1
@@ -92,6 +114,8 @@ func numWays(n int) int {
 	return a
 }
 ```
+
+#### TypeScript
 
 ```ts
 function numWays(n: number): number {
@@ -104,6 +128,8 @@ function numWays(n: number): number {
 }
 ```
 
+#### Rust
+
 ```rust
 impl Solution {
     pub fn num_ways(n: i32) -> i32 {
@@ -115,6 +141,8 @@ impl Solution {
     }
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -129,6 +157,8 @@ var numWays = function (n) {
     return a;
 };
 ```
+
+#### C#
 
 ```cs
 public class Solution {
@@ -146,4 +176,6 @@ public class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

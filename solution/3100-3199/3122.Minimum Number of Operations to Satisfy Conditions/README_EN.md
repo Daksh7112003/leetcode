@@ -1,10 +1,24 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/3100-3199/3122.Minimum%20Number%20of%20Operations%20to%20Satisfy%20Conditions/README_EN.md
+rating: 1904
+source: Weekly Contest 394 Q3
+tags:
+    - Array
+    - Dynamic Programming
+    - Matrix
+---
+
+<!-- problem:start -->
+
 # [3122. Minimum Number of Operations to Satisfy Conditions](https://leetcode.com/problems/minimum-number-of-operations-to-satisfy-conditions)
 
 [中文文档](/solution/3100-3199/3122.Minimum%20Number%20of%20Operations%20to%20Satisfy%20Conditions/README.md)
 
-<!-- tags:Array,Dynamic Programming,Matrix -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a 2D matrix <code>grid</code> of size <code>m x n</code>. In one <strong>operation</strong>, you can change the value of <strong>any</strong> cell to <strong>any</strong> non-negative number. You need to perform some <strong>operations</strong> such that each cell <code>grid[i][j]</code> is:</p>
 
@@ -72,7 +86,11 @@
 	<li><code>0 &lt;= grid[i][j] &lt;= 9</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Dynamic Programming
 
@@ -91,6 +109,8 @@ Finally, we only need to find the minimum value of $f[n-1][j]$.
 The time complexity is $O(n \times (m + C^2))$, and the space complexity is $O(n \times C)$. Where $m$ and $n$ represent the number of rows and columns in the matrix respectively; and $C$ represents the number of types of numbers, here $C = 10$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -111,6 +131,8 @@ class Solution:
                             f[i][j] = min(f[i][j], f[i - 1][k] + m - cnt[j])
         return min(f[-1])
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -149,6 +171,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -179,6 +203,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func minimumOperations(grid [][]int) int {
@@ -213,6 +239,8 @@ func minimumOperations(grid [][]int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function minimumOperations(grid: number[][]): number {
     const m = grid.length;
@@ -245,4 +273,6 @@ function minimumOperations(grid: number[][]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

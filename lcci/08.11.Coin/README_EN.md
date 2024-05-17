@@ -1,8 +1,18 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/lcci/08.11.Coin/README_EN.md
+---
+
+<!-- problem:start -->
+
 # [08.11. Coin](https://leetcode.cn/problems/coin-lcci)
 
 [中文文档](/lcci/08.11.Coin/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given an infinite number of quarters (25 cents), dimes (10 cents), nickels (5 cents), and pennies (1 cent), write code to calculate the number of ways of representing n cents.&nbsp;(The result may be large, so you should return it modulo 1000000007)</p>
 <p><strong>Example1:</strong></p>
@@ -43,7 +53,11 @@
 	<li>0 &lt;= n&nbsp;&lt;= 1000000</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Dynamic Programming
 
@@ -77,6 +91,8 @@ The time complexity is $O(C \times n)$, and the space complexity is $O(C \times 
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def waysToChange(self, n: int) -> int:
@@ -91,6 +107,8 @@ class Solution:
                     f[i][j] = (f[i][j] + f[i][j - c]) % mod
         return f[-1][n]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -111,6 +129,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -134,6 +154,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func waysToChange(n int) int {
 	const mod int = 1e9 + 7
@@ -155,6 +177,8 @@ func waysToChange(n int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function waysToChange(n: number): number {
     const mod = 10 ** 9 + 7;
@@ -173,13 +197,42 @@ function waysToChange(n: number): number {
 }
 ```
 
+#### Swift
+
+```swift
+class Solution {
+    func waysToChange(_ n: Int) -> Int {
+        let mod = Int(1e9 + 7)
+        let coins = [25, 10, 5, 1]
+        var f = Array(repeating: Array(repeating: 0, count: n + 1), count: 5)
+        f[0][0] = 1
+
+        for i in 1...4 {
+            for j in 0...n {
+                f[i][j] = f[i - 1][j]
+                if j >= coins[i - 1] {
+                    f[i][j] = (f[i][j] + f[i][j - coins[i - 1]]) % mod
+                }
+            }
+        }
+        return f[4][n]
+    }
+}
+```
+
 <!-- tabs:end -->
+
+<!-- solution:end -->
+
+<!-- solution:start -->
 
 ### Solution 2: Dynamic Programming (Space Optimization)
 
 We notice that the calculation of $f[i][j]$ is only related to $f[i−1][..]$. Therefore, we can remove the first dimension and optimize the space complexity to $O(n)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -192,6 +245,8 @@ class Solution:
                 f[j] = (f[j] + f[j - c]) % mod
         return f[n]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -209,6 +264,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -229,6 +286,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func waysToChange(n int) int {
 	const mod int = 1e9 + 7
@@ -243,6 +302,8 @@ func waysToChange(n int) int {
 	return f[n]
 }
 ```
+
+#### TypeScript
 
 ```ts
 function waysToChange(n: number): number {
@@ -261,4 +322,6 @@ function waysToChange(n: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

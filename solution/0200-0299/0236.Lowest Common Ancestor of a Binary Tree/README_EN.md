@@ -1,10 +1,22 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0200-0299/0236.Lowest%20Common%20Ancestor%20of%20a%20Binary%20Tree/README_EN.md
+tags:
+    - Tree
+    - Depth-First Search
+    - Binary Tree
+---
+
+<!-- problem:start -->
+
 # [236. Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree)
 
 [中文文档](/solution/0200-0299/0236.Lowest%20Common%20Ancestor%20of%20a%20Binary%20Tree/README.md)
 
-<!-- tags:Tree,Depth-First Search,Binary Tree -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.</p>
 
@@ -45,7 +57,11 @@
 	<li><code>p</code> and <code>q</code> will exist in the tree.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Recursion
 
@@ -58,6 +74,8 @@ Otherwise, we recursively traverse the left and right subtrees, and record the r
 The time complexity is $O(n)$, and the space complexity is $O(n)$. Here, $n$ is the number of nodes in the binary tree.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for a binary tree node.
@@ -78,6 +96,8 @@ class Solution:
         right = self.lowestCommonAncestor(root.right, p, q)
         return root if left and right else (left or right)
 ```
+
+#### Java
 
 ```java
 /**
@@ -103,6 +123,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 /**
@@ -130,6 +152,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 /**
  * Definition for a binary tree node.
@@ -154,6 +178,8 @@ func lowestCommonAncestor(root, p, q *TreeNode) *TreeNode {
 	return right
 }
 ```
+
+#### TypeScript
 
 ```ts
 /**
@@ -183,6 +209,8 @@ function lowestCommonAncestor(
     return left && right ? root : left || right;
 }
 ```
+
+#### Rust
 
 ```rust
 // Definition for a binary tree node.
@@ -235,6 +263,8 @@ impl Solution {
 }
 ```
 
+#### JavaScript
+
 ```js
 /**
  * Definition for a binary tree node.
@@ -261,4 +291,6 @@ var lowestCommonAncestor = function (root, p, q) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -1,12 +1,21 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0100-0199/0151.Reverse%20Words%20in%20a%20String/README.md
+tags:
+    - 双指针
+    - 字符串
+---
+
+<!-- problem:start -->
+
 # [151. 反转字符串中的单词](https://leetcode.cn/problems/reverse-words-in-a-string)
 
 [English Version](/solution/0100-0199/0151.Reverse%20Words%20in%20a%20String/README_EN.md)
 
-<!-- tags:双指针,字符串 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个字符串 <code>s</code> ，请你反转字符串中 <strong>单词</strong> 的顺序。</p>
 
@@ -58,7 +67,11 @@
 
 <p><strong>进阶：</strong>如果字符串在你使用的编程语言中是一种可变数据类型，请尝试使用&nbsp;<code>O(1)</code> 额外空间复杂度的 <strong>原地</strong> 解法。</p>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：使用语言自带的函数
 
@@ -68,11 +81,15 @@
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def reverseWords(self, s: str) -> str:
         return ' '.join(reversed(s.split()))
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -83,6 +100,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -114,6 +133,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func reverseWords(s string) string {
 	words := strings.Split(s, " ")
@@ -127,11 +148,15 @@ func reverseWords(s string) string {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function reverseWords(s: string): string {
     return s.trim().split(/\s+/).reverse().join(' ');
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -140,6 +165,8 @@ impl Solution {
     }
 }
 ```
+
+#### C#
 
 ```cs
 public class Solution {
@@ -151,6 +178,10 @@ public class Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二：双指针
 
 我们可以使用双指针 $i$ 和 $j$，每次找到一个单词，将其添加到结果列表中，最后将结果列表反转，再拼接成字符串即可。
@@ -158,6 +189,8 @@ public class Solution {
 时间复杂度 $O(n)$，空间复杂度 $O(n)$。其中 $n$ 为字符串的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -175,6 +208,8 @@ class Solution:
                 i = j
         return ' '.join(ans[::-1])
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -203,4 +238,6 @@ class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

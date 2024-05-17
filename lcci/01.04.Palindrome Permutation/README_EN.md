@@ -1,8 +1,18 @@
+---
+comments: true
+difficulty: Easy
+edit_url: https://github.com/doocs/leetcode/edit/main/lcci/01.04.Palindrome%20Permutation/README_EN.md
+---
+
+<!-- problem:start -->
+
 # [01.04. Palindrome Permutation](https://leetcode.cn/problems/palindrome-permutation-lcci)
 
 [中文文档](/lcci/01.04.Palindrome%20Permutation/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>Given a string, write a function to check if it is a permutation of a palin&shy; drome. A palindrome is a word or phrase that is the same forwards and backwards. A permutation is a rearrangement of letters. The palindrome does not need to be limited to just dictionary words.</p>
 
@@ -18,7 +28,11 @@
 
 </pre>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Hash Table
 
@@ -28,12 +42,16 @@ The time complexity is $O(n)$, and the space complexity is $O(n)$. Here, $n$ is 
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def canPermutePalindrome(self, s: str) -> bool:
         cnt = Counter(s)
         return sum(v & 1 for v in cnt.values()) < 2
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -50,6 +68,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -68,6 +88,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func canPermutePalindrome(s string) bool {
 	vis := map[rune]bool{}
@@ -85,6 +107,8 @@ func canPermutePalindrome(s string) bool {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function canPermutePalindrome(s: string): boolean {
     const set = new Set<string>();
@@ -98,6 +122,8 @@ function canPermutePalindrome(s: string): boolean {
     return set.size <= 1;
 }
 ```
+
+#### Rust
 
 ```rust
 use std::collections::HashSet;
@@ -116,6 +142,8 @@ impl Solution {
     }
 }
 ```
+
+#### Swift
 
 ```swift
 class Solution {
@@ -137,6 +165,10 @@ class Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2: Another Implementation of Hash Table
 
 We use a hash table $vis$ to store whether each character has appeared. If it has appeared, we remove the character from the hash table; otherwise, we add the character to the hash table.
@@ -146,6 +178,8 @@ Finally, we check whether the number of characters in the hash table is less tha
 The time complexity is $O(n)$, and the space complexity is $O(n)$. Here, $n$ is the length of the string.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -158,6 +192,8 @@ class Solution:
                 vis.add(c)
         return len(vis) < 2
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -173,6 +209,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -193,4 +231,6 @@ public:
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

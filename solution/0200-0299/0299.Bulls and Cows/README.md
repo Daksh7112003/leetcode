@@ -1,12 +1,22 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0200-0299/0299.Bulls%20and%20Cows/README.md
+tags:
+    - 哈希表
+    - 字符串
+    - 计数
+---
+
+<!-- problem:start -->
+
 # [299. 猜数字游戏](https://leetcode.cn/problems/bulls-and-cows)
 
 [English Version](/solution/0200-0299/0299.Bulls%20and%20Cows/README_EN.md)
 
-<!-- tags:哈希表,字符串,计数 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>你在和朋友一起玩 <a href="https://baike.baidu.com/item/%E7%8C%9C%E6%95%B0%E5%AD%97/83200?fromtitle=Bulls+and+Cows&amp;fromid=12003488&amp;fr=aladdin" target="_blank">猜数字（Bulls and Cows）</a>游戏，该游戏规则如下：</p>
 
@@ -56,7 +66,11 @@
 	<li><code>secret</code> 和 <code>guess</code> 仅由数字组成</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：计数
 
@@ -72,6 +86,8 @@
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def getHint(self, secret: str, guess: str) -> str:
@@ -86,6 +102,8 @@ class Solution:
         y = sum(min(cnt1[c], cnt2[c]) for c in cnt1)
         return f"{x}A{y}B"
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -109,6 +127,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -134,6 +154,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func getHint(secret string, guess string) string {
 	x, y := 0, 0
@@ -156,6 +178,8 @@ func getHint(secret string, guess string) string {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function getHint(secret: string, guess: string): string {
     const cnt1: number[] = Array(10).fill(0);
@@ -176,6 +200,8 @@ function getHint(secret: string, guess: string): string {
     return `${x}A${y}B`;
 }
 ```
+
+#### PHP
 
 ```php
 class Solution {
@@ -207,4 +233,6 @@ class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

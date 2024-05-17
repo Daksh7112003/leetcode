@@ -1,12 +1,21 @@
+---
+comments: true
+difficulty: 简单
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0700-0799/0704.Binary%20Search/README.md
+tags:
+    - 数组
+    - 二分查找
+---
+
+<!-- problem:start -->
+
 # [704. 二分查找](https://leetcode.cn/problems/binary-search)
 
 [English Version](/solution/0700-0799/0704.Binary%20Search/README_EN.md)
 
-<!-- tags:数组,二分查找 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给定一个&nbsp;<code>n</code>&nbsp;个元素有序的（升序）整型数组&nbsp;<code>nums</code> 和一个目标值&nbsp;<code>target</code> &nbsp;，写一个函数搜索&nbsp;<code>nums</code>&nbsp;中的 <code>target</code>，如果目标值存在返回下标，否则返回 <code>-1</code>。</p>
 
@@ -35,7 +44,11 @@
 	<li><code>nums</code>&nbsp;的每个元素都将在&nbsp;<code>[-9999, 9999]</code>之间。</li>
 </ol>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：二分查找
 
@@ -52,6 +65,8 @@
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
@@ -64,6 +79,8 @@ class Solution:
                 left = mid + 1
         return left if nums[left] == target else -1
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -82,6 +99,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -98,6 +117,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func search(nums []int, target int) int {
@@ -116,6 +137,8 @@ func search(nums []int, target int) int {
 	return -1
 }
 ```
+
+#### Rust
 
 ```rust
 use std::cmp::Ordering;
@@ -143,6 +166,8 @@ impl Solution {
 }
 ```
 
+#### JavaScript
+
 ```js
 /**
  * @param {number[]} nums
@@ -164,6 +189,8 @@ var search = function (nums, target) {
 };
 ```
 
+#### C#
+
 ```cs
 public class Solution {
     public int Search(int[] nums, int target) {
@@ -183,4 +210,6 @@ public class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

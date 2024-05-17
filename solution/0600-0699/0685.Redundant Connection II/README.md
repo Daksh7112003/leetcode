@@ -1,12 +1,23 @@
+---
+comments: true
+difficulty: 困难
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0600-0699/0685.Redundant%20Connection%20II/README.md
+tags:
+    - 深度优先搜索
+    - 广度优先搜索
+    - 并查集
+    - 图
+---
+
+<!-- problem:start -->
+
 # [685. 冗余连接 II](https://leetcode.cn/problems/redundant-connection-ii)
 
 [English Version](/solution/0600-0699/0685.Redundant%20Connection%20II/README_EN.md)
 
-<!-- tags:深度优先搜索,广度优先搜索,并查集,图 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>在本问题中，有根树指满足以下条件的 <strong>有向</strong> 图。该树只有一个根节点，所有其他节点都是该根节点的后继。该树除了根节点之外的每一个节点都有且只有一个父节点，而根节点没有父节点。</p>
 
@@ -43,7 +54,11 @@
 	<li><code>1 <= u<sub>i</sub>, v<sub>i</sub> <= n</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：并查集
 
@@ -52,6 +67,8 @@
 每个节点都只有一个入度时，则说明是一个有向环，删最后一条出现的边即可。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class UnionFind:
@@ -92,6 +109,8 @@ class Solution:
             return [p[v], v]
         return edges[conflict]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -157,6 +176,8 @@ class UnionFind {
 }
 ```
 
+#### C++
+
 ```cpp
 class UnionFind {
 public:
@@ -207,6 +228,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 type unionFind struct {
@@ -270,4 +293,6 @@ func findRedundantDirectedConnection(edges [][]int) []int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

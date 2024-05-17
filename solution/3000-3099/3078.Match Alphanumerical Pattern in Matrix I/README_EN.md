@@ -1,10 +1,23 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/3000-3099/3078.Match%20Alphanumerical%20Pattern%20in%20Matrix%20I/README_EN.md
+tags:
+    - Array
+    - Hash Table
+    - String
+    - Matrix
+---
+
+<!-- problem:start -->
+
 # [3078. Match Alphanumerical Pattern in Matrix I 🔒](https://leetcode.com/problems/match-alphanumerical-pattern-in-matrix-i)
 
 [中文文档](/solution/3000-3099/3078.Match%20Alphanumerical%20Pattern%20in%20Matrix%20I/README.md)
 
-<!-- tags:Array,Hash Table,String,Matrix -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a 2D integer matrix <code>board</code> and a 2D character matrix <code>pattern</code>. Where <code>0 &lt;= board[r][c] &lt;= 9</code> and each element of <code>pattern</code> is either a digit or a lowercase English letter.</p>
 
@@ -166,7 +179,11 @@
 	<li><code>pattern[i][j]</code> is either a digit represented as a string or a lowercase English letter.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Enumeration
 
@@ -177,6 +194,8 @@ We can enumerate each possible sub-matrix's top-left position $(i, j)$ in the `b
 The time complexity is $O(m \times n \times r \times c)$, where $m$ and $n$ are the number of rows and columns in the matrix `board`, and $r$ and $c$ are the number of rows and columns in the matrix `pattern`. The space complexity is $O(|\Sigma|)$, where $\Sigma$ is the character set. In this problem, $\Sigma$ includes numbers and lowercase letters, so $|\Sigma| \leq 36$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -207,6 +226,8 @@ class Solution:
                     return [i, j]
         return [-1, -1]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -254,6 +275,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -298,6 +321,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func findPattern(board [][]int, pattern []string) []int {
 	m, n := len(board), len(board[0])
@@ -338,6 +363,8 @@ func findPattern(board [][]int, pattern []string) []int {
 	return []int{-1, -1}
 }
 ```
+
+#### TypeScript
 
 ```ts
 function findPattern(board: number[][], pattern: string[]): number[] {
@@ -389,4 +416,6 @@ function findPattern(board: number[][], pattern: string[]): number[] {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

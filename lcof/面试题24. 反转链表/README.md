@@ -1,6 +1,16 @@
+---
+comments: true
+difficulty: 简单
+edit_url: https://github.com/doocs/leetcode/edit/main/lcof/%E9%9D%A2%E8%AF%95%E9%A2%9824.%20%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/README.md
+---
+
+<!-- problem:start -->
+
 # [面试题 24. 反转链表](https://leetcode.cn/problems/fan-zhuan-lian-biao-lcof/)
 
 ## 题目描述
+
+<!-- description:start -->
 
 <p>定义一个函数，输入一个链表的头节点，反转该链表并输出反转后链表的头节点。</p>
 
@@ -21,7 +31,11 @@
 
 <p><strong>注意</strong>：本题与主站 206 题相同：<a href="https://leetcode.cn/problems/reverse-linked-list/">https://leetcode.cn/problems/reverse-linked-list/</a></p>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：头插法
 
@@ -30,6 +44,8 @@
 时间复杂度 $O(n)$，空间复杂度 $O(1)$。其中 $n$ 为链表的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for singly-linked list.
@@ -50,6 +66,8 @@ class Solution:
             curr = next
         return dummy.next
 ```
+
+#### Java
 
 ```java
 /**
@@ -74,6 +92,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 /**
@@ -100,6 +120,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 /**
  * Definition for singly-linked list.
@@ -120,6 +142,8 @@ func reverseList(head *ListNode) *ListNode {
 	return dummy.Next
 }
 ```
+
+#### TypeScript
 
 ```ts
 /**
@@ -146,6 +170,8 @@ function reverseList(head: ListNode | null): ListNode | null {
     return dummy.next;
 }
 ```
+
+#### Rust
 
 ```rust
 // Definition for singly-linked list.
@@ -179,6 +205,8 @@ impl Solution {
 }
 ```
 
+#### JavaScript
+
 ```js
 /**
  * Definition for singly-linked list.
@@ -203,6 +231,8 @@ var reverseList = function (head) {
     return dummy.next;
 };
 ```
+
+#### C#
 
 ```cs
 /**
@@ -230,6 +260,10 @@ public class Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start-->
+
 ### 方法二：递归
 
 递归反转链表的第二个节点到尾部的所有节点，然后 $head$ 插在反转后的链表的尾部。
@@ -237,6 +271,8 @@ public class Solution {
 时间复杂度 $O(n)$，空间复杂度 $O(n)$。其中 $n$ 为链表的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for singly-linked list.
@@ -255,6 +291,8 @@ class Solution:
         head.next = None
         return ans
 ```
+
+#### Java
 
 ```java
 /**
@@ -277,6 +315,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 /**
@@ -301,6 +341,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 /**
  * Definition for singly-linked list.
@@ -319,6 +361,8 @@ func reverseList(head *ListNode) *ListNode {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 /**
@@ -344,6 +388,8 @@ function reverseList(head: ListNode | null): ListNode | null {
 }
 ```
 
+#### JavaScript
+
 ```js
 /**
  * Definition for singly-linked list.
@@ -366,6 +412,8 @@ var reverseList = function (head) {
     return ans;
 };
 ```
+
+#### C#
 
 ```cs
 /**
@@ -391,4 +439,6 @@ public class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

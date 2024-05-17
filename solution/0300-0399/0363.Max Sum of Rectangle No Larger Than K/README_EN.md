@@ -1,10 +1,24 @@
+---
+comments: true
+difficulty: Hard
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0300-0399/0363.Max%20Sum%20of%20Rectangle%20No%20Larger%20Than%20K/README_EN.md
+tags:
+    - Array
+    - Binary Search
+    - Matrix
+    - Ordered Set
+    - Prefix Sum
+---
+
+<!-- problem:start -->
+
 # [363. Max Sum of Rectangle No Larger Than K](https://leetcode.com/problems/max-sum-of-rectangle-no-larger-than-k)
 
 [中文文档](/solution/0300-0399/0363.Max%20Sum%20of%20Rectangle%20No%20Larger%20Than%20K/README.md)
 
-<!-- tags:Array,Binary Search,Matrix,Ordered Set,Prefix Sum -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Given an <code>m x n</code> matrix <code>matrix</code> and an integer <code>k</code>, return <em>the max sum of a rectangle in the matrix such that its sum is no larger than</em> <code>k</code>.</p>
 
@@ -40,11 +54,17 @@
 <p>&nbsp;</p>
 <p><strong>Follow up:</strong> What if the number of rows is much larger than the number of columns?</p>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 from sortedcontainers import SortedSet
@@ -69,6 +89,8 @@ class Solution:
                     ts.add(s)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -101,6 +123,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -132,6 +156,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func maxSumSubmatrix(matrix [][]int, k int) int {
 	m, n := len(matrix), len(matrix[0])
@@ -159,6 +185,8 @@ func maxSumSubmatrix(matrix [][]int, k int) int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function maxSumSubmatrix(matrix: number[][], k: number): number {
@@ -830,4 +858,6 @@ class TreeMultiSet<T = number> {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

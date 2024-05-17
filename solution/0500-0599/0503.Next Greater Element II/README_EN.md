@@ -1,10 +1,22 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0500-0599/0503.Next%20Greater%20Element%20II/README_EN.md
+tags:
+    - Stack
+    - Array
+    - Monotonic Stack
+---
+
+<!-- problem:start -->
+
 # [503. Next Greater Element II](https://leetcode.com/problems/next-greater-element-ii)
 
 [中文文档](/solution/0500-0599/0503.Next%20Greater%20Element%20II/README.md)
 
-<!-- tags:Stack,Array,Monotonic Stack -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Given a circular integer array <code>nums</code> (i.e., the next element of <code>nums[nums.length - 1]</code> is <code>nums[0]</code>), return <em>the <strong>next greater number</strong> for every element in</em> <code>nums</code>.</p>
 
@@ -36,11 +48,17 @@ The second 1&#39;s next greater number needs to search circularly, which is also
 	<li><code>-10<sup>9</sup> &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -54,6 +72,8 @@ class Solution:
             stk.append(i % n)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -72,6 +92,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -92,6 +114,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func nextGreaterElements(nums []int) []int {
 	n := len(nums)
@@ -111,6 +135,8 @@ func nextGreaterElements(nums []int) []int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function nextGreaterElements(nums: number[]): number[] {
     const stack: number[] = [],
@@ -127,6 +153,8 @@ function nextGreaterElements(nums: number[]): number[] {
     return res;
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -150,9 +178,15 @@ var nextGreaterElements = function (nums) {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -169,6 +203,8 @@ class Solution:
             stk.append(nums[i])
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -192,6 +228,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -209,6 +247,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func nextGreaterElements(nums []int) []int {
@@ -231,6 +271,8 @@ func nextGreaterElements(nums []int) []int {
 	return ans
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -257,4 +299,6 @@ var nextGreaterElements = function (nums) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

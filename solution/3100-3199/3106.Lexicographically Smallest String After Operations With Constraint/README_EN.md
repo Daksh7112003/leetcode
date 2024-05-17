@@ -1,10 +1,23 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/3100-3199/3106.Lexicographically%20Smallest%20String%20After%20Operations%20With%20Constraint/README_EN.md
+rating: 1515
+source: Weekly Contest 392 Q2
+tags:
+    - Greedy
+    - String
+---
+
+<!-- problem:start -->
+
 # [3106. Lexicographically Smallest String After Operations With Constraint](https://leetcode.com/problems/lexicographically-smallest-string-after-operations-with-constraint)
 
 [中文文档](/solution/3100-3199/3106.Lexicographically%20Smallest%20String%20After%20Operations%20With%20Constraint/README.md)
 
-<!-- tags:Greedy,String -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a string <code>s</code> and an integer <code>k</code>.</p>
 
@@ -66,7 +79,11 @@
 	<li><code>s</code> consists only of lowercase English letters.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Enumeration
 
@@ -77,6 +94,8 @@ After the traversal, we get a string that meets the conditions.
 The time complexity is $O(n \times |\Sigma|)$, and the space complexity is $O(n)$. Here, $n$ is the length of the string $s$, and $|\Sigma|$ is the size of the character set. In this problem, $|\Sigma| \leq 26$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -93,6 +112,8 @@ class Solution:
                     break
         return "".join(cs)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -114,6 +135,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -134,6 +157,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func getSmallestString(s string, k int) string {
 	cs := []byte(s)
@@ -150,6 +175,8 @@ func getSmallestString(s string, k int) string {
 	return string(cs)
 }
 ```
+
+#### TypeScript
 
 ```ts
 function getSmallestString(s: string, k: number): string {
@@ -170,4 +197,6 @@ function getSmallestString(s: string, k: number): string {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

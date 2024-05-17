@@ -1,12 +1,22 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0000-0099/0003.Longest%20Substring%20Without%20Repeating%20Characters/README.md
+tags:
+    - 哈希表
+    - 字符串
+    - 滑动窗口
+---
+
+<!-- problem:start -->
+
 # [3. 无重复字符的最长子串](https://leetcode.cn/problems/longest-substring-without-repeating-characters)
 
 [English Version](/solution/0000-0099/0003.Longest%20Substring%20Without%20Repeating%20Characters/README_EN.md)
 
-<!-- tags:哈希表,字符串,滑动窗口 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给定一个字符串 <code>s</code> ，请你找出其中不含有重复字符的&nbsp;<strong>最长 <span data-keyword="substring-nonempty">子串</span></strong><strong>&nbsp;</strong>的长度。</p>
 
@@ -46,7 +56,11 @@
 	<li><code>s</code>&nbsp;由英文字母、数字、符号和空格组成</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：双指针 + 哈希表
 
@@ -71,6 +85,8 @@ for (int i = 0, j = 0; i < n; ++i) {
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
@@ -84,6 +100,8 @@ class Solution:
             ans = max(ans, j - i + 1)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -103,6 +121,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -121,6 +141,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func lengthOfLongestSubstring(s string) (ans int) {
 	ss := [128]bool{}
@@ -136,6 +158,8 @@ func lengthOfLongestSubstring(s string) (ans int) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function lengthOfLongestSubstring(s: string): number {
     let ans = 0;
@@ -150,6 +174,8 @@ function lengthOfLongestSubstring(s: string): number {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 use std::collections::HashSet;
@@ -175,6 +201,8 @@ impl Solution {
 }
 ```
 
+#### JavaScript
+
 ```js
 /**
  * @param {string} s
@@ -194,6 +222,8 @@ var lengthOfLongestSubstring = function (s) {
 };
 ```
 
+#### C#
+
 ```cs
 public class Solution {
     public int LengthOfLongestSubstring(string s) {
@@ -210,6 +240,8 @@ public class Solution {
     }
 }
 ```
+
+#### PHP
 
 ```php
 class Solution {
@@ -231,6 +263,8 @@ class Solution {
     }
 }
 ```
+
+#### Swift
 
 ```swift
 class Solution {
@@ -254,6 +288,8 @@ class Solution {
 }
 ```
 
+#### Nim
+
 ```nim
 proc lengthOfLongestSubstring(s: string): int =
   var
@@ -276,4 +312,6 @@ proc lengthOfLongestSubstring(s: string): int =
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

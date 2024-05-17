@@ -1,6 +1,16 @@
+---
+comments: true
+difficulty: 简单
+edit_url: https://github.com/doocs/leetcode/edit/main/lcof/%E9%9D%A2%E8%AF%95%E9%A2%9850.%20%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E5%AD%97%E7%AC%A6/README.md
+---
+
+<!-- problem:start -->
+
 # [面试题 50. 第一个只出现一次的字符](https://leetcode.cn/problems/di-yi-ge-zhi-chu-xian-yi-ci-de-zi-fu-lcof/)
 
 ## 题目描述
+
+<!-- description:start -->
 
 <p>在字符串 s 中找出第一个只出现一次的字符。如果没有，返回一个单空格。 s 只包含小写字母。</p>
 
@@ -24,7 +34,11 @@
 
 <p><code>0 &lt;= s 的长度 &lt;= 50000</code></p>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：数组或哈希表
 
@@ -33,6 +47,8 @@
 时间复杂度 $O(n)$，空间复杂度 $O(C)$。其中 $n$ 为字符串长度；而 $C$ 为字符集大小，本题中 $C=26$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -43,6 +59,8 @@ class Solution:
                 return c
         return " "
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -62,6 +80,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -80,6 +100,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func firstUniqChar(s string) byte {
 	cnt := [26]int{}
@@ -95,6 +117,8 @@ func firstUniqChar(s string) byte {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function firstUniqChar(s: string): string {
     const map = new Map();
@@ -109,6 +133,8 @@ function firstUniqChar(s: string): string {
     return ' ';
 }
 ```
+
+#### Rust
 
 ```rust
 use std::collections::HashMap;
@@ -127,6 +153,8 @@ impl Solution {
     }
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -147,6 +175,8 @@ var firstUniqChar = function (s) {
 };
 ```
 
+#### C#
+
 ```cs
 public class Solution {
     public char FirstUniqChar(string s) {
@@ -166,4 +196,6 @@ public class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

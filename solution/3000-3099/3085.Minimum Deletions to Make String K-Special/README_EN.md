@@ -1,10 +1,26 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/3000-3099/3085.Minimum%20Deletions%20to%20Make%20String%20K-Special/README_EN.md
+rating: 1764
+source: Weekly Contest 389 Q3
+tags:
+    - Greedy
+    - Hash Table
+    - String
+    - Counting
+    - Sorting
+---
+
+<!-- problem:start -->
+
 # [3085. Minimum Deletions to Make String K-Special](https://leetcode.com/problems/minimum-deletions-to-make-string-k-special)
 
 [中文文档](/solution/3000-3099/3085.Minimum%20Deletions%20to%20Make%20String%20K-Special/README.md)
 
-<!-- tags:Greedy,Hash Table,String,Counting,Sorting -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a string <code>word</code> and an integer <code>k</code>.</p>
 
@@ -54,7 +70,11 @@
 	<li><code>word</code> consists only of lowercase English letters.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Counting + Enumeration
 
@@ -69,6 +89,8 @@ Traverse each element $x$ in the array $nums$. If $x < v$, it means that we need
 The time complexity is $O(n \times |\Sigma|)$, and the space complexity is $O(|\Sigma|)$. Here, $n$ is the length of the string, and $|\Sigma|$ is the size of the character set. In this problem, $|\Sigma| = 26$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -85,6 +107,8 @@ class Solution:
         nums = Counter(word).values()
         return min(f(v) for v in range(len(word) + 1))
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -122,6 +146,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -157,6 +183,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minimumDeletions(word string, k int) int {
 	freq := [26]int{}
@@ -188,6 +216,8 @@ func minimumDeletions(word string, k int) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function minimumDeletions(word: string, k: number): number {
     const freq: number[] = Array(26).fill(0);
@@ -212,4 +242,6 @@ function minimumDeletions(word: string, k: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

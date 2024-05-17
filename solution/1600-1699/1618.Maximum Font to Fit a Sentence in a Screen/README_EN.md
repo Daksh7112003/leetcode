@@ -1,10 +1,23 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/1600-1699/1618.Maximum%20Font%20to%20Fit%20a%20Sentence%20in%20a%20Screen/README_EN.md
+tags:
+    - Array
+    - String
+    - Binary Search
+    - Interactive
+---
+
+<!-- problem:start -->
+
 # [1618. Maximum Font to Fit a Sentence in a Screen 🔒](https://leetcode.com/problems/maximum-font-to-fit-a-sentence-in-a-screen)
 
 [中文文档](/solution/1600-1699/1618.Maximum%20Font%20to%20Fit%20a%20Sentence%20in%20a%20Screen/README.md)
 
-<!-- tags:Array,String,Binary Search,Interactive -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a string <code>text</code>. We want to display <code>text</code> on a screen of width <code>w</code> and height <code>h</code>. You can choose any font size from array <code>fonts</code>, which contains the available font sizes <strong>in ascending order</strong>.</p>
 
@@ -102,11 +115,17 @@ interface FontInfo {
 
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # """
@@ -147,6 +166,8 @@ class Solution:
         return fonts[left] if check(fonts[left]) else -1
 ```
 
+#### Java
+
 ```java
 /**
  * // This is the FontInfo's API interface.
@@ -185,6 +206,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 /**
  * // This is the FontInfo's API interface.
@@ -222,6 +245,8 @@ public:
     }
 };
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -278,4 +303,6 @@ var maxFont = function (text, w, h, fonts, fontInfo) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

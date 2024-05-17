@@ -1,6 +1,16 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/lcof/%E9%9D%A2%E8%AF%95%E9%A2%9856%20-%20I.%20%E6%95%B0%E7%BB%84%E4%B8%AD%E6%95%B0%E5%AD%97%E5%87%BA%E7%8E%B0%E7%9A%84%E6%AC%A1%E6%95%B0/README.md
+---
+
+<!-- problem:start -->
+
 # [面试题 56 - I. 数组中数字出现的次数](https://leetcode.cn/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-lcof/)
 
 ## 题目描述
+
+<!-- description:start -->
 
 <p>一个整型数组 <code>nums</code> 里除两个数字之外，其他数字都出现了两次。请写程序找出这两个只出现一次的数字。要求时间复杂度是O(n)，空间复杂度是O(1)。</p>
 
@@ -27,7 +37,11 @@
 
 <p>&nbsp;</p>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：位运算
 
@@ -41,6 +55,8 @@
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def singleNumbers(self, nums: List[int]) -> List[int]:
@@ -53,6 +69,8 @@ class Solution:
         b = xs ^ a
         return [a, b]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -73,6 +91,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -95,6 +115,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func singleNumbers(nums []int) []int {
 	xs := 0
@@ -113,6 +135,8 @@ func singleNumbers(nums []int) []int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function singleNumbers(nums: number[]): number[] {
     let xs = 0;
@@ -130,6 +154,8 @@ function singleNumbers(nums: number[]): number[] {
     return [a, b];
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -153,6 +179,8 @@ var singleNumbers = function (nums) {
 };
 ```
 
+#### C#
+
 ```cs
 public class Solution {
     public int[] SingleNumbers(int[] nums) {
@@ -175,4 +203,6 @@ public class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -1,12 +1,22 @@
+---
+comments: true
+difficulty: 简单
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/3000-3099/3063.Linked%20List%20Frequency/README.md
+tags:
+    - 哈希表
+    - 链表
+    - 计数
+---
+
+<!-- problem:start -->
+
 # [3063. 链表频率 🔒](https://leetcode.cn/problems/linked-list-frequency)
 
 [English Version](/solution/3000-3099/3063.Linked%20List%20Frequency/README_EN.md)
 
-<!-- tags:哈希表,链表,计数 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给定包含 <code>k</code> 个&nbsp;<strong>不同&nbsp;</strong>元素的链表的&nbsp;<code>head</code>&nbsp;节点，创建一个长度为&nbsp;<code>k</code>&nbsp;的链表，以 <strong>任何顺序</strong> 返回链表中所有 <strong>不同元素</strong> 出现的 <strong>频率</strong>。返回这个链表的头节点。</p>
 
@@ -53,7 +63,11 @@
 	<li><code>1 &lt;= Node.val &lt;= 10<sup>5</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：哈希表
 
@@ -62,6 +76,8 @@
 时间复杂度 $O(n)$，空间复杂度 $O(n)$。其中 $n$ 为链表的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for singly-linked list.
@@ -80,6 +96,8 @@ class Solution:
             dummy.next = ListNode(val, dummy.next)
         return dummy.next
 ```
+
+#### Java
 
 ```java
 /**
@@ -106,6 +124,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 /**
@@ -134,6 +154,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 /**
  * Definition for singly-linked list.
@@ -154,6 +176,8 @@ func frequenciesOfElements(head *ListNode) *ListNode {
 	return dummy.Next
 }
 ```
+
+#### TypeScript
 
 ```ts
 /**
@@ -183,4 +207,6 @@ function frequenciesOfElements(head: ListNode | null): ListNode | null {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

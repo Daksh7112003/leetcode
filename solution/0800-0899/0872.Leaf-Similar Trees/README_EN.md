@@ -1,10 +1,22 @@
+---
+comments: true
+difficulty: Easy
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0800-0899/0872.Leaf-Similar%20Trees/README_EN.md
+tags:
+    - Tree
+    - Depth-First Search
+    - Binary Tree
+---
+
+<!-- problem:start -->
+
 # [872. Leaf-Similar Trees](https://leetcode.com/problems/leaf-similar-trees)
 
 [中文文档](/solution/0800-0899/0872.Leaf-Similar%20Trees/README.md)
 
-<!-- tags:Tree,Depth-First Search,Binary Tree -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Consider all the leaves of a binary tree, from&nbsp;left to right order, the values of those&nbsp;leaves form a <strong>leaf value sequence</strong><em>.</em></p>
 
@@ -39,11 +51,17 @@
 	<li>Both of the given trees will have values in the range <code>[0, 200]</code>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 # Definition for a binary tree node.
@@ -62,6 +80,8 @@ class Solution:
 
         return dfs(root1) == dfs(root2)
 ```
+
+#### Java
 
 ```java
 /**
@@ -100,6 +120,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 /**
  * Definition for a binary tree node.
@@ -129,6 +151,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 /**
  * Definition for a binary tree node.
@@ -154,6 +178,8 @@ func leafSimilar(root1 *TreeNode, root2 *TreeNode) bool {
 	return reflect.DeepEqual(dfs(root1), dfs(root2))
 }
 ```
+
+#### Rust
 
 ```rust
 // Definition for a binary tree node.
@@ -214,6 +240,8 @@ impl Solution {
 }
 ```
 
+#### JavaScript
+
 ```js
 var leafSimilar = function (root1, root2) {
     const dfs = root => {
@@ -234,4 +262,6 @@ var leafSimilar = function (root1, root2) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

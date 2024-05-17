@@ -1,10 +1,25 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/2400-2499/2462.Total%20Cost%20to%20Hire%20K%20Workers/README_EN.md
+rating: 1763
+source: Weekly Contest 318 Q3
+tags:
+    - Array
+    - Two Pointers
+    - Simulation
+    - Heap (Priority Queue)
+---
+
+<!-- problem:start -->
+
 # [2462. Total Cost to Hire K Workers](https://leetcode.com/problems/total-cost-to-hire-k-workers)
 
 [中文文档](/solution/2400-2499/2462.Total%20Cost%20to%20Hire%20K%20Workers/README.md)
 
-<!-- tags:Array,Two Pointers,Simulation,Heap (Priority Queue) -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a <strong>0-indexed</strong> integer array <code>costs</code> where <code>costs[i]</code> is the cost of hiring the <code>i<sup>th</sup></code> worker.</p>
 
@@ -58,7 +73,11 @@ The total hiring cost is 4.
 	<li><code>1 &lt;= k, candidates &lt;= costs.length</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Priority Queue (Min Heap)
 
@@ -75,6 +94,8 @@ After the loop ends, we return the answer.
 The time complexity is $O(n \times \log n)$, and the space complexity is $O(n)$. Where $n$ is the length of the array $costs$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -103,6 +124,8 @@ class Solution:
                 r -= 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -140,6 +163,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -174,6 +199,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func totalCost(costs []int, k int, candidates int) (ans int64) {
@@ -220,6 +247,8 @@ func (h *hp) Push(v any)   { *h = append(*h, v.(pair)) }
 func (h *hp) Pop() any     { a := *h; v := a[len(a)-1]; *h = a[:len(a)-1]; return v }
 ```
 
+#### TypeScript
+
 ```ts
 function totalCost(costs: number[], k: number, candidates: number): number {
     const n = costs.length;
@@ -254,4 +283,6 @@ function totalCost(costs: number[], k: number, candidates: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

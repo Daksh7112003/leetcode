@@ -1,10 +1,25 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0600-0699/0621.Task%20Scheduler/README_EN.md
+tags:
+    - Greedy
+    - Array
+    - Hash Table
+    - Counting
+    - Sorting
+    - Heap (Priority Queue)
+---
+
+<!-- problem:start -->
+
 # [621. Task Scheduler](https://leetcode.com/problems/task-scheduler)
 
 [中文文档](/solution/0600-0699/0621.Task%20Scheduler/README.md)
 
-<!-- tags:Greedy,Array,Hash Table,Counting,Sorting,Heap (Priority Queue) -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You are given an array of CPU <code>tasks</code>, each represented by letters&nbsp;A&nbsp;to Z, and a cooling time, <code>n</code>. Each cycle or interval allows the completion of one task. Tasks can be completed in any order, but there&#39;s a constraint: <strong>identical</strong> tasks must be separated by at least <code>n</code> intervals due to cooling time.</p>
 
@@ -101,11 +116,17 @@ font-size: 0.85rem;
 	<li><code>0 &lt;= n &lt;= 100</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -115,6 +136,8 @@ class Solution:
         s = sum(v == x for v in cnt.values())
         return max(len(tasks), (x - 1) * (n + 1) + s)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -137,6 +160,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -157,6 +182,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func leastInterval(tasks []byte, n int) int {
 	cnt := make([]int, 26)
@@ -175,6 +202,8 @@ func leastInterval(tasks []byte, n int) int {
 	return max(len(tasks), (x-1)*(n+1)+s)
 }
 ```
+
+#### C#
 
 ```cs
 public class Solution {
@@ -196,4 +225,6 @@ public class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -1,10 +1,24 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0200-0299/0200.Number%20of%20Islands/README_EN.md
+tags:
+    - Depth-First Search
+    - Breadth-First Search
+    - Union Find
+    - Array
+    - Matrix
+---
+
+<!-- problem:start -->
+
 # [200. Number of Islands](https://leetcode.com/problems/number-of-islands)
 
 [中文文档](/solution/0200-0299/0200.Number%20of%20Islands/README.md)
 
-<!-- tags:Depth-First Search,Breadth-First Search,Union Find,Array,Matrix -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Given an <code>m x n</code> 2D binary grid <code>grid</code> which represents a map of <code>&#39;1&#39;</code>s (land) and <code>&#39;0&#39;</code>s (water), return <em>the number of islands</em>.</p>
 
@@ -45,11 +59,17 @@
 	<li><code>grid[i][j]</code> is <code>&#39;0&#39;</code> or <code>&#39;1&#39;</code>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -71,6 +91,8 @@ class Solution:
                     ans += 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -108,6 +130,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -138,6 +162,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func numIslands(grid [][]byte) int {
 	m, n := len(grid), len(grid[0])
@@ -164,6 +190,8 @@ func numIslands(grid [][]byte) int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function numIslands(grid: string[][]): number {
@@ -192,6 +220,8 @@ function numIslands(grid: string[][]): number {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 const DIRS: [i32; 5] = [-1, 0, 1, 0, -1];
@@ -229,6 +259,8 @@ impl Solution {
     }
 }
 ```
+
+#### C#
 
 ```cs
 using System;
@@ -275,9 +307,15 @@ public class Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -303,6 +341,8 @@ class Solution:
                     ans += 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -346,6 +386,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -385,6 +427,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func numIslands(grid [][]byte) int {
 	m, n := len(grid), len(grid[0])
@@ -416,6 +460,8 @@ func numIslands(grid [][]byte) int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function numIslands(grid: string[][]): number {
@@ -449,6 +495,8 @@ function numIslands(grid: string[][]): number {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 use std::collections::VecDeque;
@@ -496,9 +544,15 @@ impl Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 3
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -524,6 +578,8 @@ class Solution:
             for j in range(n)
         )
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -570,6 +626,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -608,6 +666,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func numIslands(grid [][]byte) int {
@@ -648,6 +708,8 @@ func numIslands(grid [][]byte) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function numIslands(grid: string[][]): number {
     const m = grid.length;
@@ -687,6 +749,8 @@ function numIslands(grid: string[][]): number {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 const DIRS: [usize; 3] = [1, 0, 1];
@@ -735,4 +799,6 @@ impl Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

@@ -1,8 +1,15 @@
+---
+comments: true
+edit_url: https://github.com/doocs/leetcode/edit/main/lcof2/%E5%89%91%E6%8C%87%20Offer%20II%20033.%20%E5%8F%98%E4%BD%8D%E8%AF%8D%E7%BB%84/README.md
+---
+
+<!-- problem:start -->
+
 # [剑指 Offer II 033. 变位词组](https://leetcode.cn/problems/sfvd7V)
 
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给定一个字符串数组 <code>strs</code> ，将&nbsp;<strong>变位词&nbsp;</strong>组合在一起。 可以按任意顺序返回结果列表。</p>
 
@@ -43,7 +50,11 @@
 
 <p><meta charset="UTF-8" />注意：本题与主站 49&nbsp;题相同：&nbsp;<a href="https://leetcode.cn/problems/group-anagrams/">https://leetcode.cn/problems/group-anagrams/</a></p>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：哈希表
 
@@ -65,6 +76,8 @@
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
@@ -74,6 +87,8 @@ class Solution:
             d[k].append(s)
         return list(d.values())
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -89,6 +104,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -107,6 +124,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func groupAnagrams(strs []string) (ans [][]string) {
 	d := map[string][]string{}
@@ -122,6 +141,8 @@ func groupAnagrams(strs []string) (ans [][]string) {
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function groupAnagrams(strs: string[]): string[][] {
@@ -139,6 +160,10 @@ function groupAnagrams(strs: string[]): string[][] {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start-->
+
 ### 方法二：计数
 
 我们也可以将方法一中的排序部分改为计数，也就是说，将每个字符串 $s$ 中的字符以及出现的次数作为 `key`，将字符串 $s$ 作为 `value` 存入哈希表当中。
@@ -146,6 +171,8 @@ function groupAnagrams(strs: string[]): string[][] {
 时间复杂度 $O(n\times (k + C))$。其中 $n$ 和 $k$ 分别是字符串数组的长度和字符串的最大长度，而 $C$ 是字符集的大小，本题中 $C = 26$。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -158,6 +185,8 @@ class Solution:
             d[tuple(cnt)].append(s)
         return list(d.values())
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -181,6 +210,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -206,6 +237,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func groupAnagrams(strs []string) (ans [][]string) {
 	d := map[[26]int][]string{}
@@ -225,4 +258,6 @@ func groupAnagrams(strs []string) (ans [][]string) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

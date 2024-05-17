@@ -1,10 +1,23 @@
+---
+comments: true
+difficulty: Easy
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/2800-2899/2815.Max%20Pair%20Sum%20in%20an%20Array/README_EN.md
+rating: 1295
+source: Weekly Contest 358 Q1
+tags:
+    - Array
+    - Hash Table
+---
+
+<!-- problem:start -->
+
 # [2815. Max Pair Sum in an Array](https://leetcode.com/problems/max-pair-sum-in-an-array)
 
 [中文文档](/solution/2800-2899/2815.Max%20Pair%20Sum%20in%20an%20Array/README.md)
 
-<!-- tags:Array,Hash Table -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a <strong>0-indexed</strong> integer array <code>nums</code>. You have to find the <strong>maximum</strong> sum of a pair of numbers from <code>nums</code> such that the maximum <strong>digit </strong>in both numbers are equal.</p>
 
@@ -37,7 +50,11 @@ It can be shown that there are no other pairs with equal maximum digits, so the 
 	<li><code>1 &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Enumeration
 
@@ -46,6 +63,8 @@ First, we initialize the answer variable $ans=-1$. Next, we directly enumerate a
 The time complexity is $O(n^2 \times \log M)$, where $n$ is the length of the array and $M$ is the maximum value in the array.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -58,6 +77,8 @@ class Solution:
                     ans = v
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -85,6 +106,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -111,6 +134,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func maxSum(nums []int) int {
 	ans := -1
@@ -131,6 +156,8 @@ func maxSum(nums []int) int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function maxSum(nums: number[]): number {
@@ -157,4 +184,6 @@ function maxSum(nums: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

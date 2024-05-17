@@ -1,10 +1,21 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0100-0199/0151.Reverse%20Words%20in%20a%20String/README_EN.md
+tags:
+    - Two Pointers
+    - String
+---
+
+<!-- problem:start -->
+
 # [151. Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string)
 
 [中文文档](/solution/0100-0199/0151.Reverse%20Words%20in%20a%20String/README.md)
 
-<!-- tags:Two Pointers,String -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Given an input string <code>s</code>, reverse the order of the <strong>words</strong>.</p>
 
@@ -50,7 +61,11 @@
 <p>&nbsp;</p>
 <p><b data-stringify-type="bold">Follow-up:&nbsp;</b>If the string data type is mutable in your language, can&nbsp;you solve it&nbsp;<b data-stringify-type="bold">in-place</b>&nbsp;with&nbsp;<code data-stringify-type="code">O(1)</code>&nbsp;extra space?</p>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Use Language Built-in Functions
 
@@ -60,11 +75,15 @@ Time complexity $O(n)$, space complexity $O(n)$, where $n$ is the length of the 
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def reverseWords(self, s: str) -> str:
         return ' '.join(reversed(s.split()))
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -75,6 +94,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -106,6 +127,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func reverseWords(s string) string {
 	words := strings.Split(s, " ")
@@ -119,11 +142,15 @@ func reverseWords(s string) string {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function reverseWords(s: string): string {
     return s.trim().split(/\s+/).reverse().join(' ');
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -132,6 +159,8 @@ impl Solution {
     }
 }
 ```
+
+#### C#
 
 ```cs
 public class Solution {
@@ -143,6 +172,10 @@ public class Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2: Two Pointers
 
 We can use two pointers $i$ and $j$, each time we find a word, add it to the result list, then reverse the result list, and finally join the list into a string.
@@ -150,6 +183,8 @@ We can use two pointers $i$ and $j$, each time we find a word, add it to the res
 Time complexity $O(n)$, space complexity $O(n)$, where $n$ is the length of the string.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -167,6 +202,8 @@ class Solution:
                 i = j
         return ' '.join(ans[::-1])
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -195,4 +232,6 @@ class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

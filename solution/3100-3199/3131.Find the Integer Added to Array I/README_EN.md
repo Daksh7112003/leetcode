@@ -1,10 +1,22 @@
+---
+comments: true
+difficulty: Easy
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/3100-3199/3131.Find%20the%20Integer%20Added%20to%20Array%20I/README_EN.md
+rating: 1160
+source: Weekly Contest 395 Q1
+tags:
+    - Array
+---
+
+<!-- problem:start -->
+
 # [3131. Find the Integer Added to Array I](https://leetcode.com/problems/find-the-integer-added-to-array-i)
 
 [中文文档](/solution/3100-3199/3131.Find%20the%20Integer%20Added%20to%20Array%20I/README.md)
 
-<!-- tags: -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You are given two arrays of equal length, <code>nums1</code> and <code>nums2</code>.</p>
 
@@ -78,7 +90,11 @@
 	<li>The test cases are generated in a way that there is an integer <code>x</code> such that <code>nums1</code> can become equal to <code>nums2</code> by adding <code>x</code> to each element of <code>nums1</code>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Calculate Minimum Difference
 
@@ -88,11 +104,15 @@ The time complexity is $O(n)$, where $n$ is the length of the array. The space c
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def addedInteger(self, nums1: List[int], nums2: List[int]) -> int:
         return min(nums2) - min(nums1)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -101,6 +121,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -111,11 +133,15 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func addedInteger(nums1 []int, nums2 []int) int {
 	return slices.Min(nums2) - slices.Min(nums1)
 }
 ```
+
+#### TypeScript
 
 ```ts
 function addedInteger(nums1: number[], nums2: number[]): number {
@@ -125,4 +151,6 @@ function addedInteger(nums1: number[], nums2: number[]): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

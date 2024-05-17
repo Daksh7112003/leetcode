@@ -1,12 +1,21 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0400-0499/0454.4Sum%20II/README.md
+tags:
+    - 数组
+    - 哈希表
+---
+
+<!-- problem:start -->
+
 # [454. 四数相加 II](https://leetcode.cn/problems/4sum-ii)
 
 [English Version](/solution/0400-0499/0454.4Sum%20II/README_EN.md)
 
-<!-- tags:数组,哈希表 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你四个整数数组 <code>nums1</code>、<code>nums2</code>、<code>nums3</code> 和 <code>nums4</code> ，数组长度都是 <code>n</code> ，请你计算有多少个元组 <code>(i, j, k, l)</code> 能满足：</p>
 
@@ -48,7 +57,11 @@
 	<li><code>-2<sup>28</sup> &lt;= nums1[i], nums2[i], nums3[i], nums4[i] &lt;= 2<sup>28</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：哈希表
 
@@ -60,6 +73,8 @@
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def fourSumCount(
@@ -68,6 +83,8 @@ class Solution:
         cnt = Counter(a + b for a in nums1 for b in nums2)
         return sum(cnt[-(c + d)] for c in nums3 for d in nums4)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -88,6 +105,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -110,6 +129,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func fourSumCount(nums1 []int, nums2 []int, nums3 []int, nums4 []int) (ans int) {
 	cnt := map[int]int{}
@@ -126,6 +147,8 @@ func fourSumCount(nums1 []int, nums2 []int, nums3 []int, nums4 []int) (ans int) 
 	return
 }
 ```
+
+#### TypeScript
 
 ```ts
 function fourSumCount(nums1: number[], nums2: number[], nums3: number[], nums4: number[]): number {
@@ -149,4 +172,6 @@ function fourSumCount(nums1: number[], nums2: number[], nums3: number[], nums4: 
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

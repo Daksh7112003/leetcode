@@ -1,10 +1,24 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/3000-3099/3091.Apply%20Operations%20to%20Make%20Sum%20of%20Array%20Greater%20Than%20or%20Equal%20to%20k/README_EN.md
+rating: 1521
+source: Weekly Contest 390 Q2
+tags:
+    - Greedy
+    - Math
+    - Enumeration
+---
+
+<!-- problem:start -->
+
 # [3091. Apply Operations to Make Sum of Array Greater Than or Equal to k](https://leetcode.com/problems/apply-operations-to-make-sum-of-array-greater-than-or-equal-to-k)
 
 [中文文档](/solution/3000-3099/3091.Apply%20Operations%20to%20Make%20Sum%20of%20Array%20Greater%20Than%20or%20Equal%20to%20k/README.md)
 
-<!-- tags:Greedy,Math,Enumeration -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You are given a <strong>positive</strong> integer <code>k</code>. Initially, you have an array <code>nums = [1]</code>.</p>
 
@@ -57,7 +71,11 @@ The total number of operations performed is <code>3 + 2 = 5</code>.</p>
 	<li><code>1 &lt;= k &lt;= 10<sup>5</sup></code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Enumeration
 
@@ -69,6 +87,8 @@ The time complexity is $O(k)$, where $k$ is the input positive integer $k$. The 
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def minOperations(self, k: int) -> int:
@@ -79,6 +99,8 @@ class Solution:
             ans = min(ans, a + b)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -93,6 +115,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -109,6 +133,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func minOperations(k int) int {
 	ans := k
@@ -120,6 +146,8 @@ func minOperations(k int) int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function minOperations(k: number): number {
@@ -135,4 +163,6 @@ function minOperations(k: number): number {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

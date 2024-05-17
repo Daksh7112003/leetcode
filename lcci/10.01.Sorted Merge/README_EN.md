@@ -1,8 +1,18 @@
+---
+comments: true
+difficulty: Easy
+edit_url: https://github.com/doocs/leetcode/edit/main/lcci/10.01.Sorted%20Merge/README_EN.md
+---
+
+<!-- problem:start -->
+
 # [10.01. Sorted Merge](https://leetcode.cn/problems/sorted-merge-lcci)
 
 [中文文档](/lcci/10.01.Sorted%20Merge/README.md)
 
 ## Description
+
+<!-- description:start -->
 
 <p>You are given two sorted arrays, A and B, where A has a large enough buffer at the end to hold B. Write a method to merge B into A in sorted order.</p>
 
@@ -22,7 +32,11 @@ B = [2,5,6],       n = 3
 
 <strong>Output:</strong>&nbsp;[1,2,2,3,5,6]</pre>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Two Pointers
 
@@ -31,6 +45,8 @@ We use two pointers $i$ and $j$ to point to the end of arrays $A$ and $B$ respec
 The time complexity is $O(m + n)$, and the space complexity is $O(1)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -44,6 +60,8 @@ class Solution:
                 A[k] = B[j]
                 j -= 1
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -59,6 +77,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -76,6 +96,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func merge(A []int, m int, B []int, n int) {
 	i, j := m-1, n-1
@@ -90,6 +112,8 @@ func merge(A []int, m int, B []int, n int) {
 	}
 }
 ```
+
+#### TypeScript
 
 ```ts
 /**
@@ -107,6 +131,8 @@ function merge(A: number[], m: number, B: number[], n: number): void {
 }
 ```
 
+#### Rust
+
 ```rust
 impl Solution {
     pub fn merge(a: &mut Vec<i32>, m: i32, b: &mut Vec<i32>, n: i32) {
@@ -123,6 +149,8 @@ impl Solution {
     }
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -144,6 +172,27 @@ var merge = function (A, m, B, n) {
 };
 ```
 
+#### Swift
+
+```swift
+class Solution {
+    func merge(_ A: inout [Int], _ m: Int, _ B: [Int], _ n: Int) {
+        var i = m - 1, j = n - 1
+        for k in stride(from: m + n - 1, through: 0, by: -1) {
+            if j < 0 || (i >= 0 && A[i] > B[j]) {
+                A[k] = A[i]
+                i -= 1
+            } else {
+                A[k] = B[j]
+                j -= 1
+            }
+        }
+    }
+}
+```
+
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

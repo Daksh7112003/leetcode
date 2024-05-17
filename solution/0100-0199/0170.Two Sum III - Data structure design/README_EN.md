@@ -1,10 +1,24 @@
+---
+comments: true
+difficulty: Easy
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0100-0199/0170.Two%20Sum%20III%20-%20Data%20structure%20design/README_EN.md
+tags:
+    - Design
+    - Array
+    - Hash Table
+    - Two Pointers
+    - Data Stream
+---
+
+<!-- problem:start -->
+
 # [170. Two Sum III - Data structure design 🔒](https://leetcode.com/problems/two-sum-iii-data-structure-design)
 
 [中文文档](/solution/0100-0199/0170.Two%20Sum%20III%20-%20Data%20structure%20design/README.md)
 
-<!-- tags:Design,Array,Hash Table,Two Pointers,Data Stream -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Design a data structure that accepts a stream of integers and checks if it has a pair of integers that sum up to a particular value.</p>
 
@@ -44,7 +58,11 @@ twoSum.find(7);  // No two integers sum up to 7, return false
 	<li>At most <code>10<sup>4</sup></code> calls will be made to <code>add</code> and <code>find</code>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Hash Table
 
@@ -62,6 +80,8 @@ Time complexity:
 Space complexity is $O(n)$, where $n$ is the size of the hash table `cnt`.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class TwoSum:
@@ -85,6 +105,8 @@ class TwoSum:
 # obj.add(number)
 # param_2 = obj.find(value)
 ```
+
+#### Java
 
 ```java
 class TwoSum {
@@ -116,6 +138,8 @@ class TwoSum {
  * boolean param_2 = obj.find(value);
  */
 ```
+
+#### C++
 
 ```cpp
 class TwoSum {
@@ -149,6 +173,8 @@ private:
  */
 ```
 
+#### Go
+
 ```go
 type TwoSum struct {
 	cnt map[int]int
@@ -180,6 +206,8 @@ func (this *TwoSum) Find(value int) bool {
  */
 ```
 
+#### TypeScript
+
 ```ts
 class TwoSum {
     private cnt: Map<number, number> = new Map();
@@ -210,4 +238,6 @@ class TwoSum {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

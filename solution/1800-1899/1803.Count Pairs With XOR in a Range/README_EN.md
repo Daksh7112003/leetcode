@@ -1,10 +1,24 @@
+---
+comments: true
+difficulty: Hard
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/1800-1899/1803.Count%20Pairs%20With%20XOR%20in%20a%20Range/README_EN.md
+rating: 2479
+source: Weekly Contest 233 Q4
+tags:
+    - Bit Manipulation
+    - Trie
+    - Array
+---
+
+<!-- problem:start -->
+
 # [1803. Count Pairs With XOR in a Range](https://leetcode.com/problems/count-pairs-with-xor-in-a-range)
 
 [中文文档](/solution/1800-1899/1803.Count%20Pairs%20With%20XOR%20in%20a%20Range/README.md)
 
-<!-- tags:Bit Manipulation,Trie,Array -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Given a <strong>(0-indexed)</strong> integer array <code>nums</code> and two integers <code>low</code> and <code>high</code>, return <em>the number of <strong>nice pairs</strong></em>.</p>
 
@@ -76,7 +90,11 @@
 
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: 0-1 Trie
 
@@ -104,6 +122,8 @@ We traverse the array `nums`. For each number $x$, we first search in the Trie f
 The time complexity is $O(n \times \log M)$, and the space complexity is $O(n \times \log M)$. Here, $n$ is the length of the array `nums`, and $M$ is the maximum value in the array `nums`. In this problem, we directly take $\log M = 16$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Trie:
@@ -145,6 +165,8 @@ class Solution:
             tree.insert(x)
         return ans
 ```
+
+#### Java
 
 ```java
 class Trie {
@@ -193,6 +215,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Trie {
@@ -249,6 +273,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 type Trie struct {
 	children [2]*Trie
@@ -299,4 +325,6 @@ func countPairs(nums []int, low int, high int) (ans int) {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

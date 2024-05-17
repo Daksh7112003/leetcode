@@ -1,10 +1,21 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/1800-1899/1858.Longest%20Word%20With%20All%20Prefixes/README_EN.md
+tags:
+    - Depth-First Search
+    - Trie
+---
+
+<!-- problem:start -->
+
 # [1858. Longest Word With All Prefixes 🔒](https://leetcode.com/problems/longest-word-with-all-prefixes)
 
 [中文文档](/solution/1800-1899/1858.Longest%20Word%20With%20All%20Prefixes/README.md)
 
-<!-- tags:Depth-First Search,Trie -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Given an array of strings <code>words</code>, find the <strong>longest</strong> string in <code>words</code> such that <strong>every prefix</strong> of it is also in <code>words</code>.</p>
 
@@ -68,7 +79,11 @@ However, &quot;apple&quot; is lexicographically smaller, so we return that.
 
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Trie
 
@@ -81,6 +96,8 @@ Next, we traverse `words`, for each word `w`, we start traversing from the root 
 The time complexity is $O(\sum_{w \in words} |w|)$, and the space complexity is $O(\sum_{w \in words} |w|)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Trie:
@@ -120,6 +137,8 @@ class Solution:
                 ans = w
         return ans
 ```
+
+#### Java
 
 ```java
 class Trie {
@@ -171,6 +190,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Trie {
@@ -226,6 +247,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 type Trie struct {
 	children [26]*Trie
@@ -275,6 +298,8 @@ func longestWord(words []string) string {
 }
 ```
 
+#### TypeScript
+
 ```ts
 class Trie {
     private children: (Trie | null)[] = Array(26).fill(null);
@@ -319,6 +344,8 @@ function longestWord(words: string[]): string {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 struct Trie {
@@ -375,6 +402,8 @@ impl Solution {
 }
 ```
 
+#### C#
+
 ```cs
 public class Trie {
     private Trie[] children = new Trie[26];
@@ -427,4 +456,6 @@ public class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

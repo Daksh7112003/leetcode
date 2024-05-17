@@ -1,12 +1,20 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/3000-3099/3054.Binary%20Tree%20Nodes/README.md
+tags:
+    - 数据库
+---
+
+<!-- problem:start -->
+
 # [3054. 二叉树节点 🔒](https://leetcode.cn/problems/binary-tree-nodes)
 
 [English Version](/solution/3000-3099/3054.Binary%20Tree%20Nodes/README_EN.md)
 
-<!-- tags:数据库 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>表：<font face="monospace"><code>Tree</code></font></p>
 
@@ -69,7 +77,11 @@ Tree 表：
 - 节点 2，4，7 是内部节点，因为它们充当结构中某些节点的父节点。
 </pre>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：左连接
 
@@ -78,6 +90,8 @@ Tree 表：
 因此，我们使用左连接来连接两次 `Tree` 表，连接条件是 `t1.N = t2.P`。那么如果 `t1.P` 为空，则 `t1.N` 是根节点；如果 `t2.P` 为空，则 `t1.N` 是叶子节点；否则 `t1.N` 是内部节点。
 
 <!-- tabs:start -->
+
+#### MySQL
 
 ```sql
 # Write your MySQL query statement below
@@ -92,4 +106,6 @@ ORDER BY 1;
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

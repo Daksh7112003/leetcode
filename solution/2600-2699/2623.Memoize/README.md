@@ -1,12 +1,18 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/2600-2699/2623.Memoize/README.md
+---
+
+<!-- problem:start -->
+
 # [2623. 记忆函数](https://leetcode.cn/problems/memoize)
 
 [English Version](/solution/2600-2699/2623.Memoize/README_EN.md)
 
-<!-- tags: -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>请你编写一个函数 <code>fn</code>，它接收另一个函数作为输入，并返回该函数的 <strong>记忆化</strong> 后的结果。</p>
 
@@ -84,7 +90,11 @@ values = [[5],[]]
 	<li><code>fnName </code>为 "sum", "factorial" 和 "fib" 中的一个</li>
 </ul>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：哈希表
 
@@ -93,6 +103,8 @@ values = [[5],[]]
 时间复杂度 $O(1)$，空间复杂度 $O(n)$。其中 $n$ 为函数的参数个数。
 
 <!-- tabs:start -->
+
+#### TypeScript
 
 ```ts
 type Fn = (...params: any) => any;
@@ -124,4 +136,6 @@ function memoize(fn: Fn): Fn {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

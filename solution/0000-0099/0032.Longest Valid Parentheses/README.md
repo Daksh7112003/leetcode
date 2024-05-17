@@ -1,12 +1,22 @@
+---
+comments: true
+difficulty: 困难
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0000-0099/0032.Longest%20Valid%20Parentheses/README.md
+tags:
+    - 栈
+    - 字符串
+    - 动态规划
+---
+
+<!-- problem:start -->
+
 # [32. 最长有效括号](https://leetcode.cn/problems/longest-valid-parentheses)
 
 [English Version](/solution/0000-0099/0032.Longest%20Valid%20Parentheses/README_EN.md)
 
-<!-- tags:栈,字符串,动态规划 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>给你一个只包含 <code>'('</code>&nbsp;和 <code>')'</code>&nbsp;的字符串，找出最长有效（格式正确且连续）括号<span data-keyword="substring">子串</span>的长度。</p>
 
@@ -48,7 +58,11 @@
 </div>
 </div>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：动态规划
 
@@ -75,6 +89,8 @@ $$
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def longestValidParentheses(self, s: str) -> int:
@@ -90,6 +106,8 @@ class Solution:
                         f[i] = f[i - 1] + 2 + f[j - 1]
         return max(f)
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -115,6 +133,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -139,6 +159,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func longestValidParentheses(s string) int {
 	n := len(s)
@@ -155,6 +177,8 @@ func longestValidParentheses(s string) int {
 	return slices.Max(f)
 }
 ```
+
+#### TypeScript
 
 ```ts
 function longestValidParentheses(s: string): number {
@@ -175,6 +199,8 @@ function longestValidParentheses(s: string): number {
     return Math.max(...f);
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -212,6 +238,8 @@ impl Solution {
 }
 ```
 
+#### JavaScript
+
 ```js
 /**
  * @param {string} s
@@ -235,6 +263,8 @@ var longestValidParentheses = function (s) {
     return Math.max(...f);
 };
 ```
+
+#### C#
 
 ```cs
 public class Solution {
@@ -262,6 +292,10 @@ public class Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### 方法二：使用栈
 
 -   使用栈来存储左括号的索引，栈底元素初始化为 `-1`，用于辅助计算有效括号的长度。
@@ -277,6 +311,8 @@ public class Solution {
 时间复杂度 $O(n)$，空间复杂度 $O(n)$。其中 $n$ 为字符串的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -294,6 +330,8 @@ class Solution:
                     ans = max(ans, i - stack[-1])
         return ans
 ```
+
+#### Go
 
 ```go
 func longestValidParentheses(s string) int {
@@ -317,6 +355,8 @@ func longestValidParentheses(s string) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function longestValidParentheses(s: string): number {
     let max_length: number = 0;
@@ -339,6 +379,8 @@ function longestValidParentheses(s: string): number {
 }
 ```
 
+#### Rust
+
 ```rust
 impl Solution {
     pub fn longest_valid_parentheses(s: String) -> i32 {
@@ -360,6 +402,8 @@ impl Solution {
     }
 }
 ```
+
+#### JavaScript
 
 ```js
 /**
@@ -384,6 +428,8 @@ var longestValidParentheses = function (s) {
     return ans;
 };
 ```
+
+#### PHP
 
 ```php
 class Solution {
@@ -418,4 +464,6 @@ class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

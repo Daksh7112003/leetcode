@@ -1,10 +1,22 @@
+---
+comments: true
+difficulty: Hard
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0200-0299/0248.Strobogrammatic%20Number%20III/README_EN.md
+tags:
+    - Recursion
+    - Array
+    - String
+---
+
+<!-- problem:start -->
+
 # [248. Strobogrammatic Number III 🔒](https://leetcode.com/problems/strobogrammatic-number-iii)
 
 [中文文档](/solution/0200-0299/0248.Strobogrammatic%20Number%20III/README.md)
 
-<!-- tags:Recursion,Array,String -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Given two strings low and high that represent two integers <code>low</code> and <code>high</code> where <code>low &lt;= high</code>, return <em>the number of <strong>strobogrammatic numbers</strong> in the range</em> <code>[low, high]</code>.</p>
 
@@ -28,7 +40,11 @@
 	<li><code>low</code> and <code>high</code> do not contain any leading zeros except for zero itself.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Recursion
 
@@ -53,6 +69,8 @@ Similar problems:
 -   [247. Strobogrammatic Number II](https://github.com/doocs/leetcode/blob/main/solution/0200-0299/0247.Strobogrammatic%20Number%20II/README_EN.md)
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -79,6 +97,8 @@ class Solution:
                     ans += 1
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -121,6 +141,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 using ll = long long;
 
@@ -156,6 +178,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func strobogrammaticInRange(low string, high string) int {
@@ -198,4 +222,6 @@ func strobogrammaticInRange(low string, high string) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

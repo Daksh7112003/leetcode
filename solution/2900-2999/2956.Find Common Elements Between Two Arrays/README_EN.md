@@ -1,10 +1,23 @@
+---
+comments: true
+difficulty: Easy
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/2900-2999/2956.Find%20Common%20Elements%20Between%20Two%20Arrays/README_EN.md
+rating: 1214
+source: Biweekly Contest 119 Q1
+tags:
+    - Array
+    - Hash Table
+---
+
+<!-- problem:start -->
+
 # [2956. Find Common Elements Between Two Arrays](https://leetcode.com/problems/find-common-elements-between-two-arrays)
 
 [中文文档](/solution/2900-2999/2956.Find%20Common%20Elements%20Between%20Two%20Arrays/README.md)
 
-<!-- tags:Array,Hash Table -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>You are given two <strong>0-indexed</strong> integer arrays <code>nums1</code> and <code>nums2</code> of sizes <code>n</code> and <code>m</code>, respectively.</p>
 
@@ -46,7 +59,11 @@
 	<li><code>1 &lt;= nums1[i], nums2[i] &lt;= 100</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Hash Table or Array
 
@@ -62,12 +79,16 @@ The time complexity is $O(n + m)$, and the space complexity is $O(n + m)$. Here,
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def findIntersectionValues(self, nums1: List[int], nums2: List[int]) -> List[int]:
         s1, s2 = set(nums1), set(nums2)
         return [sum(x in s2 for x in nums1), sum(x in s1 for x in nums2)]
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -91,6 +112,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -116,6 +139,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func findIntersectionValues(nums1 []int, nums2 []int) []int {
 	s1 := [101]int{}
@@ -136,6 +161,8 @@ func findIntersectionValues(nums1 []int, nums2 []int) []int {
 	return ans
 }
 ```
+
+#### TypeScript
 
 ```ts
 function findIntersectionValues(nums1: number[], nums2: number[]): number[] {
@@ -160,4 +187,6 @@ function findIntersectionValues(nums1: number[], nums2: number[]): number[] {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

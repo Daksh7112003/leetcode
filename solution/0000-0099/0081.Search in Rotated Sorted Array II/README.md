@@ -1,12 +1,21 @@
+---
+comments: true
+difficulty: 中等
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0000-0099/0081.Search%20in%20Rotated%20Sorted%20Array%20II/README.md
+tags:
+    - 数组
+    - 二分查找
+---
+
+<!-- problem:start -->
+
 # [81. 搜索旋转排序数组 II](https://leetcode.cn/problems/search-in-rotated-sorted-array-ii)
 
 [English Version](/solution/0000-0099/0081.Search%20in%20Rotated%20Sorted%20Array%20II/README_EN.md)
 
-<!-- tags:数组,二分查找 -->
-
 ## 题目描述
 
-<!-- 这里写题目描述 -->
+<!-- description:start -->
 
 <p>已知存在一个按非降序排列的整数数组 <code>nums</code> ，数组中的值不必互不相同。</p>
 
@@ -53,7 +62,11 @@
 
 <p>&nbsp;</p>
 
+<!-- description:end -->
+
 ## 解法
+
+<!-- solution:start -->
 
 ### 方法一：二分查找
 
@@ -70,6 +83,8 @@
 时间复杂度近似 $O(\log n)$，空间复杂度 $O(1)$。其中 $n$ 为数组的长度。
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -92,6 +107,8 @@ class Solution:
                 r -= 1
         return nums[l] == target
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -119,6 +136,8 @@ class Solution {
     }
 }
 ```
+
+#### C++
 
 ```cpp
 class Solution {
@@ -148,6 +167,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func search(nums []int, target int) bool {
 	l, r := 0, len(nums)-1
@@ -172,6 +193,8 @@ func search(nums []int, target int) bool {
 	return nums[l] == target
 }
 ```
+
+#### TypeScript
 
 ```ts
 function search(nums: number[], target: number): boolean {
@@ -200,4 +223,6 @@ function search(nums: number[], target: number): boolean {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

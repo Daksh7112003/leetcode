@@ -1,10 +1,22 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0400-0499/0433.Minimum%20Genetic%20Mutation/README_EN.md
+tags:
+    - Breadth-First Search
+    - Hash Table
+    - String
+---
+
+<!-- problem:start -->
+
 # [433. Minimum Genetic Mutation](https://leetcode.com/problems/minimum-genetic-mutation)
 
 [中文文档](/solution/0400-0499/0433.Minimum%20Genetic%20Mutation/README.md)
 
-<!-- tags:Breadth-First Search,Hash Table,String -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>A gene string can be represented by an 8-character long string, with choices from <code>&#39;A&#39;</code>, <code>&#39;C&#39;</code>, <code>&#39;G&#39;</code>, and <code>&#39;T&#39;</code>.</p>
 
@@ -44,11 +56,17 @@
 	<li><code>startGene</code>, <code>endGene</code>, and <code>bank[i]</code> consist of only the characters <code>[&#39;A&#39;, &#39;C&#39;, &#39;G&#39;, &#39;T&#39;]</code>.</li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -68,6 +86,8 @@ class Solution:
                         s.remove(next)
         return -1
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -105,6 +125,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -138,6 +160,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func minMutation(start string, end string, bank []string) int {
@@ -176,6 +200,8 @@ func minMutation(start string, end string, bank []string) int {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function minMutation(start: string, end: string, bank: string[]): number {
     const queue = [start];
@@ -206,6 +232,8 @@ function minMutation(start: string, end: string, bank: string[]): number {
     return -1;
 }
 ```
+
+#### Rust
 
 ```rust
 use std::collections::VecDeque;
@@ -244,9 +272,15 @@ impl Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -269,6 +303,8 @@ class Solution:
         dfs(start, 0)
         return -1 if ans == inf else ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -308,6 +344,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -341,6 +379,8 @@ public:
     }
 };
 ```
+
+#### Go
 
 ```go
 func minMutation(start string, end string, bank []string) int {
@@ -382,4 +422,6 @@ func minMutation(start string, end string, bank []string) int {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

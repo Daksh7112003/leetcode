@@ -1,10 +1,21 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/0000-0099/0039.Combination%20Sum/README_EN.md
+tags:
+    - Array
+    - Backtracking
+---
+
+<!-- problem:start -->
+
 # [39. Combination Sum](https://leetcode.com/problems/combination-sum)
 
 [中文文档](/solution/0000-0099/0039.Combination%20Sum/README.md)
 
-<!-- tags:Array,Backtracking -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Given an array of <strong>distinct</strong> integers <code>candidates</code> and a target integer <code>target</code>, return <em>a list of all <strong>unique combinations</strong> of </em><code>candidates</code><em> where the chosen numbers sum to </em><code>target</code><em>.</em> You may return the combinations in <strong>any order</strong>.</p>
 
@@ -48,7 +59,11 @@ These are the only two combinations.
 	<li><code>1 &lt;= target &lt;= 40</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1: Sorting + Pruning + Backtracking
 
@@ -70,6 +85,8 @@ Similar problems:
 
 <!-- tabs:start -->
 
+#### Python3
+
 ```python
 class Solution:
     def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
@@ -90,6 +107,8 @@ class Solution:
         dfs(0, target)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -121,6 +140,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -148,6 +169,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func combinationSum(candidates []int, target int) (ans [][]int) {
 	sort.Ints(candidates)
@@ -172,6 +195,8 @@ func combinationSum(candidates []int, target int) (ans [][]int) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function combinationSum(candidates: number[], target: number): number[][] {
     candidates.sort((a, b) => a - b);
@@ -195,6 +220,8 @@ function combinationSum(candidates: number[], target: number): number[][] {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -221,6 +248,8 @@ impl Solution {
     }
 }
 ```
+
+#### C#
 
 ```cs
 public class Solution {
@@ -254,6 +283,10 @@ public class Solution {
 
 <!-- tabs:end -->
 
+<!-- solution:end -->
+
+<!-- solution:start -->
+
 ### Solution 2: Sorting + Pruning + Backtracking(Another Form)
 
 We can also change the implementation logic of the function $dfs(i, s)$ to another form. In the function $dfs(i, s)$, we first check whether $s$ is $0$. If it is, we add the current search path $t$ to the answer $ans$, and then return. If $i \geq n$ or $s \lt candidates[i]$, the path is invalid, so we return directly. Otherwise, we consider two situations, one is not selecting the element of the current index, that is, recursively calling the function $dfs(i + 1, s)$, and the other is selecting the element of the current index, that is, recursively calling the function $dfs(i, s - candidates[i])$.
@@ -261,6 +294,8 @@ We can also change the implementation logic of the function $dfs(i, s)$ to anoth
 The time complexity is $O(2^n \times n)$, and the space complexity is $O(n)$. Here, $n$ is the length of the array $candidates$. Due to pruning, the actual time complexity is much less than $O(2^n \times n)$.
 
 <!-- tabs:start -->
+
+#### Python3
 
 ```python
 class Solution:
@@ -282,6 +317,8 @@ class Solution:
         dfs(0, target)
         return ans
 ```
+
+#### Java
 
 ```java
 class Solution {
@@ -312,6 +349,8 @@ class Solution {
 }
 ```
 
+#### C++
+
 ```cpp
 class Solution {
 public:
@@ -338,6 +377,8 @@ public:
 };
 ```
 
+#### Go
+
 ```go
 func combinationSum(candidates []int, target int) (ans [][]int) {
 	sort.Ints(candidates)
@@ -361,6 +402,8 @@ func combinationSum(candidates []int, target int) (ans [][]int) {
 }
 ```
 
+#### TypeScript
+
 ```ts
 function combinationSum(candidates: number[], target: number): number[][] {
     candidates.sort((a, b) => a - b);
@@ -383,6 +426,8 @@ function combinationSum(candidates: number[], target: number): number[][] {
     return ans;
 }
 ```
+
+#### Rust
 
 ```rust
 impl Solution {
@@ -408,6 +453,8 @@ impl Solution {
     }
 }
 ```
+
+#### C#
 
 ```cs
 public class Solution {
@@ -437,6 +484,8 @@ public class Solution {
     }
 }
 ```
+
+#### PHP
 
 ```php
 class Solution {
@@ -478,4 +527,6 @@ class Solution {
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->

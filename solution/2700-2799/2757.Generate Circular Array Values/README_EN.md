@@ -1,10 +1,18 @@
+---
+comments: true
+difficulty: Medium
+edit_url: https://github.com/doocs/leetcode/edit/main/solution/2700-2799/2757.Generate%20Circular%20Array%20Values/README_EN.md
+---
+
+<!-- problem:start -->
+
 # [2757. Generate Circular Array Values 🔒](https://leetcode.com/problems/generate-circular-array-values)
 
 [中文文档](/solution/2700-2799/2757.Generate%20Circular%20Array%20Values/README.md)
 
-<!-- tags: -->
-
 ## Description
+
+<!-- description:start -->
 
 <p>Given a <strong>circular</strong> array <code>arr</code> and an integer&nbsp;<code>startIndex</code>, return a generator object&nbsp;<code>gen</code> that yields values from <code>arr</code>.</p>
 
@@ -70,11 +78,17 @@
 	<li><code>0 &lt;= startIndex &lt;&nbsp;arr.length</code></li>
 </ul>
 
+<!-- description:end -->
+
 ## Solutions
+
+<!-- solution:start -->
 
 ### Solution 1
 
 <!-- tabs:start -->
+
+#### TypeScript
 
 ```ts
 function* cycleGenerator(arr: number[], startIndex: number): Generator<number, void, number> {
@@ -95,4 +109,6 @@ function* cycleGenerator(arr: number[], startIndex: number): Generator<number, v
 
 <!-- tabs:end -->
 
-<!-- end -->
+<!-- solution:end -->
+
+<!-- problem:end -->
